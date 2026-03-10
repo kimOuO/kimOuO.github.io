@@ -313,7 +313,7 @@
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item">
-        <div class="stat-number"><span>8</span>+</div>
+        <div class="stat-number"><span>9</span>+</div>
         <div class="stat-label">Projects</div>
       </div>
       <div class="stat-item">
@@ -442,7 +442,34 @@
     </div>
     <div class="projects-grid">
 
-      <!-- Project 1: Featured -->
+      <!-- Project 1: Featured Thesis -->
+      <div class="project-card featured">
+        <div class="project-featured-badge">★ 大學部實務專題</div>
+        <div class="project-title">利用閒置時間改善 SSD GC 之 Long Tail Latency</div>
+        <div class="project-period">2024 · 國立臺灣科技大學 電子工程系 112學年度實務專題 · 指導教授：吳晉賢</div>
+        <p class="project-desc">
+          針對 SSD Garbage Collection 觸發長尾延遲問題，以強化學習（Deep Q-Learning）預測系統閒置時間，
+          讓 GC 在 Idle Time 執行，降低強制 GC 的觸發頻率。核心挑戰在於以 Cython 橋接 Python RL Agent 與
+          C++ SSD 模擬器 MQSim，實現跨語言環境整合。
+        </p>
+        <ul class="project-achievements">
+          <li>設計 Deep Q-Learning 模型（DQN），以 2×2×4 個 state、respond time 百分位數為 reward，訓練 GC 時機預測</li>
+          <li>使用 Cython 將 Python RL agent 與 C++ MQSim 模擬器打通，解決跨語言變數交換問題</li>
+          <li>實驗結果：RL 策略有效降低 99th percentile Long Tail Latency 的高延遲發生次數</li>
+          <li>負責機器學習演算法設計、模型架構實作與 Cython 環境設置</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Reinforcement Learning</span>
+          <span class="tag">Deep Q-Learning</span>
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">Cython</span>
+          <span class="tag">MQSim</span>
+          <span class="tag">SSD / Storage</span>
+        </div>
+      </div>
+
+      <!-- Project 2: Featured -->
       <div class="project-card featured">
         <div class="project-featured-badge">★ Featured Project</div>
         <div class="project-title">AI/ML Dashboard Agentic</div>
