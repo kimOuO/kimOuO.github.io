@@ -535,21 +535,22 @@
         <div class="project-title">O-RAN Open Source 部署與研究</div>
         <div class="project-period">2025 · 技術研究 / 系統部署</div>
         <p class="project-desc">
-          在 Ubuntu 24.04 環境下部署 O-RAN SC release L/M（master），
-          建置完整 SMO / OAM 系統，涵蓋 Infrastructure、Common 各層服務的容器化部署與除錯。
+          在 Ubuntu 24.04 環境下部署 O-RAN SC release L/M，建置完整 SMO / OAM 系統。
+          核心挑戰在於 Kubernetes 叢集配置，以及打通 Docker 與 K8s 之間的跨平台網路架構。
         </p>
         <ul class="project-achievements">
           <li>部署 O-RAN SC OAM / SMO 及 O1 / O-DU / O-RU 模擬器</li>
-          <li>配置 DNS（/etc/hosts）、Traefik Gateway、Kafka-UI 等核心服務</li>
-          <li>排查並修復 Docker API 版本衝突、Kafka TLS 等實際部署問題</li>
-          <li>深入理解 O-RAN 架構、RIC 概念與開放式無線接取網路產業脈絡</li>
+          <li>建置 Kubernetes 叢集，配置 Pod 網路與 Service 路由</li>
+          <li>設計並打通 Docker 與 K8s 之間的跨平台網路通訊架構</li>
+          <li>配置 DNS、Traefik Gateway、Kafka-UI，排查 Docker API 版本衝突與 Kafka TLS 問題</li>
         </ul>
         <div class="project-tags">
           <span class="tag">O-RAN</span>
-          <span class="tag">Docker Compose</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Docker</span>
+          <span class="tag">K8s Networking</span>
           <span class="tag">Traefik</span>
           <span class="tag">Kafka</span>
-          <span class="tag">Ubuntu</span>
           <span class="tag">SMO / OAM</span>
         </div>
       </div>
