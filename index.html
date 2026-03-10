@@ -446,17 +446,16 @@
       <div class="project-card featured">
         <div class="project-featured-badge">★ 大學部實務專題</div>
         <div class="project-title">利用閒置時間改善 SSD GC 之 Long Tail Latency</div>
-        <div class="project-period">2024 · 國立臺灣科技大學 電子工程系 112學年度實務專題 · 指導教授：吳晉賢</div>
+        <div class="project-period">2024 · 國立臺灣科技大學 電子工程系 · 指導教授：吳晉賢</div>
         <p class="project-desc">
-          針對 SSD Garbage Collection 觸發長尾延遲問題，以強化學習（Deep Q-Learning）預測系統閒置時間，
-          讓 GC 在 Idle Time 執行，降低強制 GC 的觸發頻率。核心挑戰在於以 Cython 橋接 Python RL Agent 與
-          C++ SSD 模擬器 MQSim，實現跨語言環境整合。
+          以 Deep Q-Learning 預測 SSD 系統閒置時間，主動在 Idle Time 排程 GC，降低 Forced GC 觸發頻率以改善長尾延遲。
+          以 Cython 橋接 Python RL Agent 與 C++ SSD 模擬器 MQSim 實現跨語言整合。
         </p>
         <ul class="project-achievements">
-          <li>設計 Deep Q-Learning 模型（DQN），state 空間 2×2×4（16 種組合），reward 以 70th / 90th / 99th percentile respond time 為基準，action 二元（執行 GC / 不執行）</li>
-          <li>使用 Cython 橋接 Python RL Agent 與 C++ MQSim 模擬器（嘗試 ctypes 後改用 Cython），解決跨語言變數交換問題；訓練以每輪 100,000 筆 SNIA IOTTA 企業伺服器 I/O trace 驗證，完成後執行 long memory training 並儲存模型</li>
-          <li>實驗結果（MQSim NVMe MLC Flash 配置）：在最高響應延遲時間段（~4.95×10⁷ time unit 區間）RL 策略的高延遲事件次數明顯少於原始 trace，4.8–4.9×10⁷ 區間兩者曲線接近重疊</li>
-          <li>中段響應時間與 baseline 幾乎相同，驗證 RL 排程策略在不拖累正常 I/O 效能的前提下，選擇性抑制尾端極端延遲事件</li>
+          <li>State 空間 <strong>16 種組合</strong>（2×2×4），Reward 設計涵蓋 70th / 90th / 99th percentile respond time</li>
+          <li>以 <strong>100,000 筆</strong> SNIA IOTTA 企業伺服器 I/O trace 在 MQSim（NVMe MLC Flash）上完整驗證</li>
+          <li>最高延遲時間段 RL 策略高延遲事件次數明顯低於原始 trace，中段效能與 baseline 幾乎相同</li>
+          <li>Cython 橋接 Python / C++ 跨語言整合，成功解決 ctypes 無法處理的 C++ 變數交換問題</li>
         </ul>
         <div class="project-tags">
           <span class="tag">Reinforcement Learning</span>
@@ -471,27 +470,29 @@
 
       <!-- Project 2: Featured -->
       <div class="project-card featured">
-        <div class="project-featured-badge">★ Featured Project</div>
-        <div class="project-title">AI/ML Dashboard Agentic — KubeFlow 智慧化平台</div>
-        <div class="project-period">2025 · Prompt Engineering / Agentic AI / 前端開發</div>
+        <div class="project-featured-badge">★ 國際展示</div>
+        <div class="project-title">6G AI/ML 推論平台 — O-RAN × KubeFlow × Agentic AI</div>
+        <div class="project-period">2024 – 2025 · 國科會 / 國立臺灣科技大學 · EuCNC 2024 比利時 · COSCUP 2024</div>
         <p class="project-desc">
-          以 Dify 為核心開發 KubeFlow Pipeline 智慧化平台，讓使用者透過自然語言生成 Pipeline 程式碼、自動化超參數設定與多步驟平台操作。
-          採用 6-actor 模組化 Prompt 架構（Driver Code、Role、Constraint、Knowledge、QA Example、Regression），
-          以時序圖設計 Prompt 框架並壓縮為高效 Prompt。
+          參與國科會 6G AI/ML 推論平台開發與維運，覆蓋 O-RAN 基礎架構、KubeFlow 訓練環境與 Dify 智慧化操作介面。
+          平台以 AR/VR QoS 為核心應用，於 EuCNC 2024（比利時）及 COSCUP 2024 對外展示。
         </p>
         <ul class="project-achievements">
-          <li>負責設計 <strong>Training Pipeline</strong> 與 <strong>Log Analysis</strong> 2 個模組的完整 Prompt，涵蓋 Research → Draft → QA → Regression → Compress 五階段 SOP</li>
-          <li>設計 6-actor 模組化 Prompt 架構（Driver Code / Role / Constraint / Knowledge / QA / Regression），統一跨模組 debug 流程</li>
-          <li>平台共支援 5 種 Pipeline 類型（Preprocessing / Training / Retrain / Tuning / Evaluation）的 AI 程式碼生成</li>
-          <li>實作 Log-based prompt debugging：執行時回傳內部 log，分析 Prompt 各步驟行為後再壓縮，提升 Prompt 穩定性</li>
+          <li><strong>EuCNC 2024</strong>（比利時，6 月）AR/VR QoS 即時推論現場展示；<strong>COSCUP 2024</strong> O-RAN + AI/ML 平台成果發表</li>
+          <li>雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
+          <li>Dify 智慧化平台支援 <strong>5 種 KubeFlow Pipeline 類型</strong>的自然語言程式碼生成</li>
+          <li><strong>6-actor 模組化 Prompt 架構</strong>，完成 Training Pipeline 與 Log Analysis <strong>2 個完整模組</strong>的 5 階段 SOP 設計</li>
         </ul>
         <div class="project-tags">
+          <span class="tag">KubeFlow</span>
+          <span class="tag">O-RAN</span>
           <span class="tag">Dify</span>
           <span class="tag">Prompt Engineering</span>
-          <span class="tag">KubeFlow Pipeline</span>
-          <span class="tag">AI Agent</span>
-          <span class="tag">React</span>
-          <span class="tag">TypeScript</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Kafka</span>
+          <span class="tag">AR/VR QoS</span>
+          <span class="tag">6G</span>
         </div>
         <a class="project-link" href="https://github.com/kimOuO/aiml_dashboard_agentic" target="_blank">→ GitHub</a>
       </div>
@@ -506,10 +507,10 @@
           內建學習狀態追蹤 API 與 LLM 智能問答，讓學習者在閱讀過程中即時與 AI 互動、確認理解程度。
         </p>
         <ul class="project-achievements">
-          <li><strong>分級學習內容系統</strong>：依英文程度將故事內容分級，學習者依能力選擇適合的閱讀材料，降低學習門檻</li>
-          <li><strong>學習狀態追蹤 API</strong>：設計並實作內嵌式 API，記錄使用者閱讀進度、完成狀態與學習歷程，供後端分析與進度呈現</li>
-          <li><strong>LLM 智能問答 Chat</strong>：整合 LLM 提供上下文感知的問題回答，學習者可針對故事內容提問，AI 即時解釋詞彙、語境與文章意涵</li>
-          <li>參與 system design、software planning、API implementation 與 QA testing 完整開發週期；撰寫 Dockerfile、配置 Nginx 反向代理、串接 Harbor 私有 Registry，維護 Git Workflow 確保協作品質</li>
+          <li>英文故事內容依程度<strong>分級選材</strong>，內建<strong>學習進度追蹤 API</strong> 記錄閱讀狀態與完成歷程</li>
+          <li><strong>LLM 智能問答 Chat</strong> 整合，學習者針對故事即時提問，AI 解釋詞彙、語境與文意</li>
+          <li>赴美（洛杉磯）實習，參與 system design、API implementation、QA testing <strong>完整開發週期</strong></li>
+          <li>Docker + Nginx + Harbor 容器化部署，Git Workflow 多人協作管理</li>
         </ul>
         <div class="project-tags">
           <span class="tag">LLM</span>
@@ -524,36 +525,6 @@
         </div>
       </div>
 
-      <!-- Project 4 -->
-      <div class="project-card featured">
-        <div class="project-featured-badge">★ 國際展示</div>
-        <div class="project-title">6G AI/ML 推論平台 — 雙節點容器架構維運</div>
-        <div class="project-period">2024 – 2025 · 國立臺灣科技大學 / 國科會 · O-RAN + AI/ML Platform · AR/VR QoS 應用</div>
-        <p class="project-desc">
-          參與國科會 6G AI/ML 推論平台維運，負責 KubeFlow 訓練環境、部署腳本維護與 bug 修復。
-          平台採雙節點架構（Agent Node + Inference Node），Docker Space 與 Kubernetes Space 混合部署，
-          共涵蓋 20+ 個容器化服務，並對外於 EuCNC 2024（比利時）及 COSCUP 2024 進行展示。
-        </p>
-        <ul class="project-achievements">
-          <li><strong>EuCNC 2024 比利時展示</strong>（2024年6月）：平台搭載 AR/VR 即時 QoS 應用，於歐洲 6G/5G 頂級學術研討會現場展示推論能力</li>
-          <li><strong>COSCUP 2024 發表</strong>：以 O-RAN + AI/ML 平台主題發表，呈現 AR/VR QoS 服務從訓練到推論的完整 MLOps 流程</li>
-          <li><strong>雙節點混合部署架構</strong>：Agent Node（Docker Space）部署 Dashboard、authenticate_middleware、inference_connector、metadata_mgt 等 Agent Layer，搭配 2 個 PostgreSQL + MongoDB 資料庫、Kafka + Zookeeper + Kafdrop 訊息佇列、Harbor 私有映像倉庫；Kubernetes Space 部署 inference_unit_routing_mgt、model_deployment_mgt、inference_node_mgt、system_status_mgt 共 4 個推論管理服務</li>
-          <li><strong>Inference Node</strong>：獨立 K8s 叢集負責 application_source_mgt、closed_loop_data、inference_host，掛載 NFS 共享推論檔案系統，支援閉環資料回饋</li>
-          <li>維護 KubeFlow 訓練環境、撰寫部署腳本、修復跨容器服務介接 bug，確保多系統容器穩定運行</li>
-        </ul>
-        <div class="project-tags">
-          <span class="tag">KubeFlow</span>
-          <span class="tag">Kubernetes</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Kafka</span>
-          <span class="tag">Harbor</span>
-          <span class="tag">MLOps</span>
-          <span class="tag">O-RAN</span>
-          <span class="tag">AR/VR QoS</span>
-          <span class="tag">6G</span>
-          <span class="tag">NFS</span>
-        </div>
-      </div>
 
       <!-- Project 6 -->
       <div class="project-card featured">
@@ -566,12 +537,10 @@
           並自行開發 4 支 rApp 完成端對端 VES fault 事件流驗證。
         </p>
         <ul class="project-achievements">
-          <li><strong>SMO / OAM 層（Docker Compose）</strong>：依序啟動 Infrastructure → Common（Kafka、Traefik）→ OAM Components（SDN-R、VES Collector、ODLUX GUI）共 3 組 Stack；設定 11 筆 DNS 條目，透過 port-forward 443→35401 存取 ODLUX GUI，確認 VES fault → Kafka → SDN-R → MariaDB → ODLUX 端對端流程</li>
-          <li><strong>NonRT RIC 層（Kubernetes）</strong>：建置 K8s 叢集，部署 nonrtric namespace；以 Helm chartmuseum 建置本地 Chart 倉庫，完成 13 個 subchart 的 dependency update / package / upload 流程，成功啟動 PolicyManagementService、InformationService（ICS）、ServiceManager 等 10+ 元件</li>
-          <li><strong>Docker × K8s 網路整合</strong>：設定 Harbor 私有 Registry（insecure-registries）、修改 CRI-O containerd 信任設定、調整 Kafka advertised.listeners 至 SMO IP（192.168.199.154:9092），解決跨網段容器映像拉取與訊息傳遞問題</li>
-          <li><strong>4 支 rApp 開發（FastAPI + uvicorn）</strong>：minimal-rapp（CAPIF APF/AEF provider 註冊 + Service API 發布）、consumer-rapp（API discovery + 呼叫）、fault-rapp（R1 / ICS InfoType 訂閱）、ics-fault-rapp（ICS delivery callback 接收端）；全部打包映像後部署至 K8s</li>
-          <li><strong>CAPIF Core 整合</strong>：完成 APF/AEF provider 註冊、Service API 發布與 API discovery，驗證 R1 interface ServiceManager（port-forward 31575→35403）正常路由</li>
-          <li><strong>端對端驗證</strong>：設定 DMaaP Adapter ConfigMap 指向 SMO Kafka，建立 ICS InfoType（SmoFaultInformationType）及 InfoJob 訂閱，確認 VES fault → SMO Kafka → DMaaP Adapter → ICS → ics-fault-rapp POST /ics/delivery 回傳 HTTP 200，完成完整資料流驗證</li>
+          <li>SMO/OAM 層 <strong>3 組 Docker Compose Stack</strong>（11 筆 DNS），VES fault → Kafka → SDN-R → ODLUX 端對端驗證完成</li>
+          <li>NonRT RIC 層封裝 <strong>13 個 Helm subchart</strong> 上傳 chartmuseum，nonrtric namespace <strong>10+ 元件</strong>成功啟動</li>
+          <li>自行開發 <strong>4 支 rApp</strong>（FastAPI），完成 CAPIF 註冊、ICS InfoType 訂閱，VES → ICS delivery <strong>HTTP 200</strong> 驗證通過</li>
+          <li>Docker × K8s 跨平台網路整合：Harbor insecure-registry、CRI-O 信任設定、Kafka advertised.listeners 全部打通</li>
         </ul>
         <div class="project-tags">
           <span class="tag">O-RAN SC</span>
