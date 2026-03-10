@@ -453,10 +453,10 @@
           C++ SSD 模擬器 MQSim，實現跨語言環境整合。
         </p>
         <ul class="project-achievements">
-          <li>設計 Deep Q-Learning 模型（DQN），以 2×2×4 個 state、respond time 百分位數為 reward，訓練 GC 時機預測</li>
+          <li>設計 Deep Q-Learning 模型（DQN），以 2×2×4 個 state、respond time 各百分位數為 reward，訓練 GC 排程決策</li>
           <li>使用 Cython 橋接 Python RL Agent 與 C++ MQSim 模擬器，解決跨語言變數交換問題</li>
-          <li>實驗結果：99th percentile 長尾延遲範圍內，RL 策略使高延遲發生次數減少 <strong>10–25%</strong>，尾端極端延遲區段降幅達 <strong>~25%</strong></li>
-          <li>中段響應時間表現與 baseline 相當，證明 RL 策略在不犧牲正常效能下有效抑制極端延遲</li>
+          <li>以 SNIA IOTTA 企業伺服器 I/O trace（每輪 100,000 筆）在 MQSim 上驗證，99th percentile 長尾延遲範圍內 RL 策略一致性地降低高延遲事件發生次數</li>
+          <li>中段響應時間與 baseline 幾乎相同，證明 RL 策略在不影響正常效能的前提下抑制極端延遲</li>
         </ul>
         <div class="project-tags">
           <span class="tag">Reinforcement Learning</span>
