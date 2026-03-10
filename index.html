@@ -3,15 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name - Portfolio</title>
-  <meta name="description" content="Personal portfolio of 黃耀慶 - 履歷" />
+  <title>Yao-Ching Huang | 黃耀慶</title>
+  <meta name="description" content="黃耀慶的個人履歷 — 全端工程師 / 系統整合工程師，國立臺灣科技大學電子工程系" />
   <style>
-    /* ===== RESET & BASE ===== */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --black: #000000;
@@ -20,13 +15,12 @@
       --gray-100: #f8f9fa;
       --gray-200: #e9ecef;
       --gray-300: #dee2e6;
-      --gray-400: #ced4da;
       --gray-500: #adb5bd;
       --gray-600: #6c757d;
       --gray-700: #495057;
       --gray-800: #343a40;
-      --font: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-      --nav-height: 60px;
+      --font: 'Inter', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+      --nav-h: 60px;
       --gap: 24px;
     }
 
@@ -35,7 +29,7 @@
     body {
       font-family: var(--font);
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.65;
       color: var(--black);
       background: var(--white);
     }
@@ -43,1216 +37,723 @@
     a { color: inherit; text-decoration: none; }
     a:hover { color: var(--red); }
     ul { list-style: none; }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 var(--gap);
-    }
-
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--gap); }
     section { padding: 80px 0; }
 
-    /* ===== NAVBAR ===== */
+    /* ── NAVBAR ── */
     #navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: var(--nav-height);
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
       background: var(--white);
       border-bottom: 1px solid var(--black);
       z-index: 1000;
-      display: flex;
-      align-items: center;
+      display: flex; align-items: center;
     }
-
-    #navbar .container {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-brand {
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
+    #navbar .container { width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { font-size: 1rem; font-weight: 700; letter-spacing: -0.01em; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--red); }
-
     .nav-lang {
-      font-size: 0.8rem;
-      border: 1px solid var(--black);
-      padding: 3px 10px;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
+      font-size: 0.75rem; border: 1px solid var(--black);
+      padding: 3px 10px; cursor: pointer; transition: background 0.2s, color 0.2s;
     }
-
-    .nav-lang:hover {
-      background: var(--black);
-      color: var(--white);
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
-
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--black);
-      transition: 0.3s;
-    }
-
-    /* Mobile nav */
+    .nav-lang:hover { background: var(--black); color: var(--white); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--black); }
     .mobile-menu {
-      display: none;
-      position: fixed;
-      top: var(--nav-height);
-      left: 0; right: 0;
-      background: var(--white);
-      border-bottom: 1px solid var(--black);
-      padding: 24px;
-      flex-direction: column;
-      gap: 20px;
-      z-index: 999;
+      display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
+      background: var(--white); border-bottom: 1px solid var(--black);
+      padding: 24px; flex-direction: column; gap: 20px; z-index: 999;
     }
-
     .mobile-menu.open { display: flex; }
     .mobile-menu a { font-size: 1rem; font-weight: 500; }
 
-    /* ===== HERO ===== */
+    /* ── HERO ── */
     #hero {
-      padding-top: calc(var(--nav-height) + 60px);
+      padding-top: calc(var(--nav-h) + 64px);
       padding-bottom: 80px;
       border-bottom: 1px solid var(--black);
     }
-
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 48px;
-      align-items: start;
+      grid-template-columns: 1fr 290px;
+      gap: 48px; align-items: start;
     }
-
     .hero-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gray-600);
-      margin-bottom: 16px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gray-600); margin-bottom: 16px;
     }
-
     .hero-name {
-      font-size: 4rem;
-      font-weight: 700;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      margin-bottom: 8px;
+      font-size: 3.8rem; font-weight: 700;
+      line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 6px;
     }
-
-    .hero-name-zh {
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: var(--gray-600);
-      margin-bottom: 24px;
-    }
-
-    .hero-title {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--gray-700);
-      margin-bottom: 8px;
-      line-height: 1.5;
-    }
-
+    .hero-name-zh { font-size: 1.4rem; font-weight: 500; color: var(--gray-600); margin-bottom: 24px; }
+    .hero-title { font-size: 0.95rem; font-weight: 500; color: var(--gray-700); margin-bottom: 6px; line-height: 1.6; }
     .hero-title span { color: var(--red); font-weight: 700; }
-
-    .hero-desc {
-      font-size: 0.9rem;
-      color: var(--gray-600);
-      margin-top: 20px;
-      margin-bottom: 24px;
-      max-width: 520px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 20px;
-    }
-
+    .hero-desc { font-size: 0.9rem; color: var(--gray-600); margin-top: 18px; margin-bottom: 24px; max-width: 540px; line-height: 1.75; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
     .tag {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      padding: 4px 12px;
-      border: 1px solid var(--black);
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+      padding: 4px 12px; border: 1px solid var(--black);
     }
-
-    .tag.red {
-      background: var(--red);
-      color: var(--white);
-      border-color: var(--red);
-    }
+    .tag.red { background: var(--red); color: var(--white); border-color: var(--red); }
 
     /* Sidebar */
-    .hero-sidebar {
-      border: 1px solid var(--black);
-      padding: 24px;
-    }
-
+    .hero-sidebar { border: 1px solid var(--black); padding: 24px; }
     .avatar-wrap {
-      width: 140px;
-      height: 140px;
-      border: 2px solid var(--black);
-      margin-bottom: 20px;
-      overflow: hidden;
-      background: var(--gray-100);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      color: var(--gray-500);
+      width: 100%; aspect-ratio: 1/1; max-width: 160px;
+      border: 2px solid var(--black); margin-bottom: 20px;
+      background: var(--gray-100); display: flex; align-items: center;
+      justify-content: center; font-size: 0.72rem; color: var(--gray-500); overflow: hidden;
     }
-
     .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; }
-
     .sidebar-info { font-size: 0.8rem; color: var(--gray-700); }
     .sidebar-info p { margin-bottom: 6px; }
     .sidebar-info strong { color: var(--black); }
+    .contact-links { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+    .contact-links a { font-size: 0.8rem; color: var(--red); word-break: break-all; }
 
-    .contact-links {
-      margin-top: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .contact-links a {
-      font-size: 0.8rem;
-      color: var(--red);
-      word-break: break-all;
-    }
-
-    /* ===== STATS ===== */
-    #stats {
-      background: var(--gray-100);
-      padding: 48px 0;
-      border-bottom: 1px solid var(--black);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      text-align: center;
-    }
-
-    .stat-item { padding: 16px; }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
+    /* ── STATS ── */
+    #stats { background: var(--gray-100); padding: 48px 0; border-bottom: 1px solid var(--black); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+    .stat-item { padding: 16px 8px; }
+    .stat-number { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
     .stat-number span { color: var(--red); }
+    .stat-label { font-size: 0.72rem; color: var(--gray-600); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
 
-    .stat-label {
-      font-size: 0.8rem;
-      color: var(--gray-600);
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    /* ===== SECTION HEADERS ===== */
+    /* ── SECTION HEADER ── */
     .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-      margin-bottom: 48px;
-      border-bottom: 2px solid var(--black);
-      padding-bottom: 16px;
+      display: flex; align-items: baseline; gap: 16px;
+      margin-bottom: 48px; border-bottom: 2px solid var(--black); padding-bottom: 14px;
     }
+    .section-number { font-size: 0.72rem; color: var(--red); font-weight: 700; letter-spacing: 0.1em; }
+    .section-title { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; }
 
-    .section-number {
-      font-size: 0.75rem;
-      color: var(--red);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    /* ===== ABOUT ===== */
+    /* ── ABOUT ── */
     #about { border-bottom: 1px solid var(--black); }
+    .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; }
+    .about-text p { margin-bottom: 16px; color: var(--gray-700); font-size: 0.925rem; }
+    .about-highlights { border-left: 2px solid var(--black); padding-left: 24px; }
+    .highlight-item { margin-bottom: 22px; }
+    .hl-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500); margin-bottom: 4px; }
+    .hl-value { font-size: 0.88rem; font-weight: 600; }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 48px;
-    }
-
-    .about-text p {
-      margin-bottom: 16px;
-      color: var(--gray-700);
-      font-size: 0.95rem;
-    }
-
-    .about-highlights {
-      border-left: 2px solid var(--black);
-      padding-left: 24px;
-    }
-
-    .highlight-item {
-      margin-bottom: 20px;
-    }
-
-    .highlight-item .hl-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gray-500);
-      margin-bottom: 4px;
-    }
-
-    .highlight-item .hl-value {
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    /* ===== EXPERIENCE ===== */
+    /* ── EXPERIENCE ── */
     #experience { border-bottom: 1px solid var(--black); }
-
     .exp-item {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 32px;
-      padding: 32px 0;
-      border-bottom: 1px solid var(--gray-200);
+      display: grid; grid-template-columns: 190px 1fr; gap: 32px;
+      padding: 32px 0; border-bottom: 1px solid var(--gray-200);
     }
-
     .exp-item:last-child { border-bottom: none; }
-
-    .exp-date {
-      font-size: 0.8rem;
-      color: var(--gray-600);
-      font-weight: 500;
-      padding-top: 4px;
-    }
-
-    .exp-content {}
-
-    .exp-role {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .exp-company {
-      font-size: 0.9rem;
-      color: var(--red);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .exp-bullets { margin-top: 12px; }
-
+    .exp-date { font-size: 0.8rem; color: var(--gray-600); font-weight: 500; padding-top: 3px; }
+    .exp-role { font-size: 1.05rem; font-weight: 700; margin-bottom: 3px; }
+    .exp-company { font-size: 0.88rem; color: var(--red); font-weight: 600; margin-bottom: 12px; }
+    .exp-bullets { margin-top: 10px; }
     .exp-bullets li {
-      font-size: 0.875rem;
-      color: var(--gray-700);
-      margin-bottom: 6px;
-      padding-left: 20px;
-      position: relative;
+      font-size: 0.875rem; color: var(--gray-700); margin-bottom: 5px;
+      padding-left: 20px; position: relative;
     }
+    .exp-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--red); font-size: 0.8rem; }
+    .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .exp-tags .tag { font-size: 0.68rem; padding: 2px 8px; background: var(--gray-100); border-color: var(--gray-300); }
 
-    .exp-bullets li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--red);
-      font-size: 0.8rem;
-    }
-
-    .exp-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 12px;
-    }
-
-    .exp-tags .tag {
-      font-size: 0.7rem;
-      padding: 2px 8px;
-      background: var(--gray-100);
-      border-color: var(--gray-300);
-    }
-
-    /* ===== PROJECTS ===== */
+    /* ── PROJECTS ── */
     #projects { border-bottom: 1px solid var(--black); }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--gap);
-    }
-
-    .project-card {
-      border: 1px solid var(--black);
-      padding: 28px;
-      transition: border-color 0.2s;
-    }
-
+    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gap); }
+    .project-card { border: 1px solid var(--black); padding: 26px; transition: border-color 0.2s; position: relative; }
     .project-card:hover { border-color: var(--red); }
-
-    .project-card.featured {
-      border: 2px solid var(--red);
-    }
-
-    .project-featured-badge {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 12px;
-    }
-
-    .project-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .project-period {
-      font-size: 0.75rem;
-      color: var(--gray-500);
-      margin-bottom: 12px;
-    }
-
-    .project-desc {
-      font-size: 0.875rem;
-      color: var(--gray-700);
-      margin-bottom: 16px;
-    }
-
-    .project-achievements {
-      margin-bottom: 16px;
-    }
-
+    .project-card.featured { border: 2px solid var(--red); }
+    .project-featured-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+    .project-title { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .project-period { font-size: 0.72rem; color: var(--gray-500); margin-bottom: 12px; }
+    .project-desc { font-size: 0.855rem; color: var(--gray-700); margin-bottom: 14px; line-height: 1.65; }
+    .project-achievements { margin-bottom: 14px; }
     .project-achievements li {
-      font-size: 0.8rem;
-      color: var(--gray-700);
-      margin-bottom: 4px;
-      padding-left: 16px;
-      position: relative;
+      font-size: 0.8rem; color: var(--gray-700); margin-bottom: 4px;
+      padding-left: 16px; position: relative;
     }
+    .project-achievements li::before { content: '→'; position: absolute; left: 0; color: var(--red); font-size: 0.75rem; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .project-tags .tag { font-size: 0.68rem; padding: 2px 8px; border-color: var(--gray-300); color: var(--gray-700); }
+    .project-link { font-size: 0.75rem; color: var(--red); margin-top: 10px; display: inline-block; }
 
-    .project-achievements li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--red);
-      font-size: 0.75rem;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .project-tags .tag {
-      font-size: 0.7rem;
-      padding: 2px 8px;
-      border-color: var(--gray-300);
-      color: var(--gray-700);
-    }
-
-    /* ===== PUBLICATIONS ===== */
-    #publications { border-bottom: 1px solid var(--black); }
-
-    .pub-subsection { margin-bottom: 48px; }
-
-    .pub-subsection-title {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gray-600);
-      border-left: 3px solid var(--red);
-      padding-left: 12px;
-      margin-bottom: 20px;
-    }
-
-    .pub-item {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--gray-200);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 16px;
-      align-items: start;
-    }
-
-    .pub-item:last-child { border-bottom: none; }
-
-    .pub-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .pub-authors {
-      font-size: 0.8rem;
-      color: var(--gray-600);
-      margin-bottom: 4px;
-    }
-
-    .pub-venue {
-      font-size: 0.8rem;
-      color: var(--red);
-      font-weight: 500;
-    }
-
-    .pub-badge {
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 3px 8px;
-      border: 1px solid var(--gray-300);
-      color: var(--gray-600);
-      white-space: nowrap;
-      height: fit-content;
-    }
-
-    .pub-badge.accepted {
-      border-color: var(--red);
-      color: var(--red);
-    }
-
-    /* Talks & Patents */
-    .talk-item, .patent-item {
-      padding: 16px 0;
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .talk-item:last-child, .patent-item:last-child { border-bottom: none; }
-
-    .talk-title, .patent-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .talk-meta, .patent-meta {
-      font-size: 0.8rem;
-      color: var(--gray-600);
-    }
-
-    .talk-meta span, .patent-meta span {
-      color: var(--red);
-      font-weight: 500;
-    }
-
-    /* ===== EDUCATION ===== */
+    /* ── EDUCATION & SKILLS ── */
     #education { border-bottom: 1px solid var(--black); }
-
-    .edu-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .sub-title {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gray-600); border-left: 3px solid var(--red);
+      padding-left: 12px; margin-bottom: 24px;
     }
-
-    .edu-item {
-      padding: 24px 0;
-      border-bottom: 1px solid var(--gray-200);
-    }
-
+    .edu-item { padding: 20px 0; border-bottom: 1px solid var(--gray-200); }
     .edu-item:last-child { border-bottom: none; }
-
-    .edu-degree {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .edu-school {
-      font-size: 0.875rem;
-      color: var(--red);
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .edu-period {
-      font-size: 0.8rem;
-      color: var(--gray-500);
-      margin-bottom: 8px;
-    }
-
-    .edu-detail {
-      font-size: 0.8rem;
-      color: var(--gray-700);
-    }
+    .edu-degree { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .edu-school { font-size: 0.875rem; color: var(--red); font-weight: 600; margin-bottom: 4px; }
+    .edu-period { font-size: 0.78rem; color: var(--gray-500); margin-bottom: 8px; }
+    .edu-detail { font-size: 0.82rem; color: var(--gray-700); }
+    .edu-detail li { padding-left: 14px; position: relative; margin-bottom: 3px; }
+    .edu-detail li::before { content: '·'; position: absolute; left: 0; color: var(--red); }
 
     /* Awards */
-    .awards-list { }
+    .award-item { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--gray-200); }
+    .award-item:last-child { border-bottom: none; }
+    .award-year { font-size: 0.78rem; font-weight: 700; color: var(--gray-500); min-width: 36px; padding-top: 2px; }
+    .award-name { font-size: 0.875rem; font-weight: 600; }
+    .award-desc { font-size: 0.78rem; color: var(--gray-600); margin-top: 3px; }
 
-    .award-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .award-year {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--gray-500);
-      min-width: 40px;
-    }
-
-    .award-name {
-      font-size: 0.875rem;
-      font-weight: 600;
-    }
-
-    /* Skills */
-    .skills-section { margin-top: 48px; }
-
-    .skills-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    .skills-table tr {
-      border-bottom: 1px solid var(--gray-200);
-    }
-
+    /* Skills Table */
+    .skills-section { margin-top: 0; }
+    .skills-table { width: 100%; border-collapse: collapse; }
+    .skills-table tr { border-bottom: 1px solid var(--gray-200); }
     .skills-table tr:last-child { border-bottom: none; }
-
-    .skills-table td {
-      padding: 12px 16px;
-      font-size: 0.875rem;
-      vertical-align: top;
-    }
-
+    .skills-table td { padding: 11px 14px; font-size: 0.855rem; vertical-align: top; }
     .skills-table td:first-child {
-      font-weight: 700;
-      color: var(--gray-700);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      width: 180px;
-      border-right: 1px solid var(--gray-200);
+      font-weight: 700; color: var(--gray-700); font-size: 0.7rem;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      width: 150px; border-right: 1px solid var(--gray-200);
     }
+    .skills-table td:last-child { color: var(--gray-700); }
 
-    .skills-table td:last-child {
-      color: var(--gray-700);
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--black);
-      color: var(--white);
-      padding: 32px 0;
-      text-align: center;
-      font-size: 0.8rem;
-    }
-
-    footer a { color: var(--gray-400); }
+    /* ── FOOTER ── */
+    footer { background: var(--black); color: var(--white); padding: 32px 0; text-align: center; font-size: 0.8rem; }
+    footer a { color: var(--gray-500); }
     footer a:hover { color: var(--white); }
 
-    /* ===== RESPONSIVE ===== */
+    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .hero-name { font-size: 2.5rem; }
       .hero-grid { grid-template-columns: 1fr; }
       .hero-sidebar { display: none; }
-
       .nav-links { display: none; }
       .hamburger { display: flex; }
-
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
-
       .about-grid { grid-template-columns: 1fr; }
       .about-highlights { border-left: none; border-top: 2px solid var(--black); padding-left: 0; padding-top: 24px; }
-
-      .exp-item { grid-template-columns: 1fr; gap: 8px; }
-
+      .exp-item { grid-template-columns: 1fr; gap: 6px; }
       .projects-grid { grid-template-columns: 1fr; }
-
-      .pub-item { grid-template-columns: 1fr; }
-
       .edu-grid { grid-template-columns: 1fr; }
-
-      section { padding: 60px 0; }
+      section { padding: 56px 0; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <nav id="navbar">
-    <div class="container">
-      <div class="nav-brand">Your Name</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><span class="nav-lang">中文</span></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-    <a href="#education">Education</a>
+<!-- ── NAVBAR ── -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-brand">YC Huang</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><span class="nav-lang">EN</span></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="選單">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+</div>
 
-  <!-- ===== HERO ===== -->
-  <section id="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <!-- Left: Main Content -->
-        <div class="hero-left">
-          <p class="hero-label">Portfolio / Resume</p>
-          <h1 class="hero-name">Your Full Name</h1>
-          <p class="hero-name-zh">你的中文名字</p>
-          <p class="hero-title">
-            <span>Your Title</span>, Your Institution &amp;<br>
-            Your Role, Your Company
-          </p>
-          <p class="hero-desc">
-            Brief description of yourself — your research focus, current affiliation, and what makes you unique. This is your elevator pitch in 2–3 sentences.
-          </p>
-          <div class="tags">
-            <span class="tag red">Keyword 1</span>
-            <span class="tag">Keyword 2</span>
-            <span class="tag">Keyword 3</span>
-            <span class="tag">Keyword 4</span>
-            <span class="tag">Keyword 5</span>
-          </div>
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <p class="hero-label">Portfolio / Resume</p>
+        <h1 class="hero-name">Yao-Ching Huang</h1>
+        <p class="hero-name-zh">黃耀慶</p>
+        <p class="hero-title">
+          <span>電子工程系學士</span>，國立臺灣科技大學<br>
+          應徵方向：軟體工程師 / 全端工程師 / 系統整合工程師
+        </p>
+        <p class="hero-desc">
+          具備前後端開發、系統整合、API 設計與部署實作經驗。曾參與 SparkAmplify 冬季實習，
+          培養從需求理解、功能設計、技術選型到測試部署的完整工程觀。
+          擅長將不同技術模組整合為可運作的系統，並持續自學 Kubernetes、n8n、Dify 等新技術。
+        </p>
+        <div class="tags">
+          <span class="tag red">Full-Stack Dev</span>
+          <span class="tag">System Integration</span>
+          <span class="tag">API Design</span>
+          <span class="tag">AI Workflow</span>
+          <span class="tag">Docker / K8s</span>
+          <span class="tag">React · Django</span>
         </div>
-        <!-- Right: Sidebar -->
-        <div class="hero-sidebar">
-          <div class="avatar-wrap">
-            <!-- Replace src with your actual photo URL or path -->
-            <img src="assets/avatar.jpg" alt="Your Name" onerror="this.style.display='none';this.parentElement.textContent='180×180'" />
-          </div>
-          <div class="sidebar-info">
-            <p><strong>Status:</strong> Available / Not Available</p>
-            <p><strong>Location:</strong> City, Country</p>
-            <p><strong>Institution:</strong> Your University</p>
-            <p><strong>Department:</strong> Your Department</p>
-          </div>
-          <div class="contact-links">
-            <a href="mailto:your@email.com">your@email.com</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-            <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
-          </div>
+      </div>
+      <div class="hero-sidebar">
+        <div class="avatar-wrap">
+          <!-- 放上你的大頭照：<img src="assets/avatar.jpg" alt="黃耀慶" /> -->
+          Photo
+        </div>
+        <div class="sidebar-info">
+          <p><strong>學校：</strong>國立臺灣科技大學</p>
+          <p><strong>系所：</strong>電子工程學系</p>
+          <p><strong>身份：</strong>大學部（在學中）</p>
+          <p><strong>GPA：</strong>89.73 / 班排 5/37</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:kim36991294@gmail.com">kim36991294@gmail.com</a>
+          <a href="https://github.com/kimOuO" target="_blank">github.com/kimOuO</a>
+          <a href="tel:0958831242">0958-831-242</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== STATS ===== -->
-  <section id="stats">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-number"><span>X</span>+ Projects</div>
-          <div class="stat-label">Completed</div>
+<!-- ── STATS ── -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number"><span>7</span>+</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">89<span>.</span>73</div>
+        <div class="stat-label">GPA Average</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5<span>/</span>37</div>
+        <div class="stat-label">Class Rank</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><span>1</span></div>
+        <div class="stat-label">Internship</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2 class="section-title">About</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          目前就讀國立臺灣科技大學電子工程學系，具備前後端開發、系統整合、API 設計與部署實作經驗。
+          曾參與 SparkAmplify 冬季實習，涵蓋 system design、software planning、API implementation、
+          AI agent workflow integration 與 QA testing 等完整開發週期。
+        </p>
+        <p>
+          擅長將不同元件與技術整合成可運作的系統，包含前端介面、後端服務、資料庫、容器化部署與裝置串接。
+          除課內學習外，也持續自學 Kubernetes、n8n、Dify，並具備 Git 協作、技術文件整理與跨模組開發經驗。
+        </p>
+        <p>
+          具備快速學習與主動自學能力，對實作、系統流程與跨領域整合具高度興趣，
+          願意從需求分析、開發、測試到部署完整參與每個環節。
+        </p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <div class="hl-label">Research Interests</div>
+          <div class="hl-value">全端開發 · 系統整合 · AI Workflow</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number"><span>X</span> Patents</div>
-          <div class="stat-label">Pending / Granted</div>
+        <div class="highlight-item">
+          <div class="hl-label">Affiliation</div>
+          <div class="hl-value">國立臺灣科技大學</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number"><span>X</span> Papers</div>
-          <div class="stat-label">Publications</div>
+        <div class="highlight-item">
+          <div class="hl-label">Internship</div>
+          <div class="hl-value">SparkAmplify（2026 冬季）</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number"><span>X</span> Talks</div>
-          <div class="stat-label">Conference Talks</div>
+        <div class="highlight-item">
+          <div class="hl-label">Status</div>
+          <div class="hl-value">大學部在學 · 積極求職中</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number"><span>X</span>%</div>
-          <div class="stat-label">Key Achievement</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number"><span>X</span>+ Members</div>
-          <div class="stat-label">Team Led</div>
+        <div class="highlight-item">
+          <div class="hl-label">Award</div>
+          <div class="hl-value">太空新星飛揚計畫 表現優異</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== ABOUT ===== -->
-  <section id="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-number">01</span>
-        <h2 class="section-title">About</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            Write a detailed paragraph about yourself here. Describe your research interests, professional background, and what drives your work. This is where you expand on your elevator pitch from the hero section.
-          </p>
-          <p>
-            You can talk about specific achievements, collaborations, or noteworthy experiences. For example, mention any notable exhibitions, collaborations with companies or institutions, or awards you've received.
-          </p>
-          <p>
-            Include what you are currently working on and your future goals or research direction.
-          </p>
-        </div>
-        <div class="about-highlights">
-          <div class="highlight-item">
-            <div class="hl-label">Research Focus</div>
-            <div class="hl-value">Your Research Area</div>
-          </div>
-          <div class="highlight-item">
-            <div class="hl-label">Affiliation</div>
-            <div class="hl-value">Your Institution</div>
-          </div>
-          <div class="highlight-item">
-            <div class="hl-label">Collaborators</div>
-            <div class="hl-value">Company A, Company B</div>
-          </div>
-          <div class="highlight-item">
-            <div class="hl-label">Status</div>
-            <div class="hl-value">Ph.D. Candidate / Professional</div>
-          </div>
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2 class="section-title">Experience</h2>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">2026.01 – 2026.02</div>
+      <div class="exp-content">
+        <div class="exp-role">冬季實習生 Winter Intern</div>
+        <div class="exp-company">SparkAmplify</div>
+        <ul class="exp-bullets">
+          <li>參與完整系統開發流程，涵蓋 system design and analysis、software application planning and development</li>
+          <li>負責 API design and implementation，設計前後端通訊介面與資料流程</li>
+          <li>整合 AI agent and workflow，協助建置自動化工作流程與 AI 功能模組</li>
+          <li>執行 QA testing and deployment，確保系統穩定性與上線品質</li>
+          <li>培養從需求理解、功能設計、技術選型、文件撰寫到測試部署的整體工程觀</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">System Design</span>
+          <span class="tag">API Design</span>
+          <span class="tag">AI Workflow</span>
+          <span class="tag">QA Testing</span>
+          <span class="tag">Docker</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===== EXPERIENCE ===== -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-number">02</span>
-        <h2 class="section-title">Experience</h2>
+    <div class="exp-item">
+      <div class="exp-date">2024.07 – 2024.09</div>
+      <div class="exp-content">
+        <div class="exp-role">研發實戰參與者</div>
+        <div class="exp-company">經濟部產業發展署 — 太空產業供應鏈暨網通產業新星飛揚計畫</div>
+        <ul class="exp-bullets">
+          <li>修業期滿，積極學習參與研發實戰，表現優異獲頒證明</li>
+          <li>深入了解太空產業供應鏈與網通產業技術脈絡</li>
+          <li>強化跨領域技術研究與報告整理能力</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">技術研究</span>
+          <span class="tag">產業應用</span>
+          <span class="tag">文件整理</span>
+        </div>
       </div>
+    </div>
 
-      <!-- Experience Item 1 (Current) -->
-      <div class="exp-item">
-        <div class="exp-date">Aug 2024 – Present</div>
-        <div class="exp-content">
-          <div class="exp-role">Your Current Job Title</div>
-          <div class="exp-company">Your Current Company / Institution</div>
-          <ul class="exp-bullets">
-            <li>Key responsibility or achievement #1</li>
-            <li>Key responsibility or achievement #2</li>
-            <li>Key responsibility or achievement #3</li>
-          </ul>
-          <div class="exp-tags">
-            <span class="tag">Tech 1</span>
-            <span class="tag">Tech 2</span>
-            <span class="tag">Tech 3</span>
-          </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="projects-grid">
+
+      <!-- Project 1: Featured -->
+      <div class="project-card featured">
+        <div class="project-featured-badge">★ Internship Project</div>
+        <div class="project-title">Rapid Data Labeling &amp; Training Set Generation Tool</div>
+        <div class="project-period">2026 · SparkAmplify 實習專案 · 全端與系統整合開發</div>
+        <p class="project-desc">
+          參與 RapidData Labeler 專案，涵蓋需求整理、架構設計、前後端開發、資料庫規劃、
+          通訊流程與部署文件整理。從 motivation、user stories、use case 到 demo、deployment 完整參與。
+        </p>
+        <ul class="project-achievements">
+          <li>設計並實作前後端 API 介面與 WebSocket 即時通訊流程</li>
+          <li>規劃 MySQL + Redis 資料庫架構，支援標註資料儲存與快取</li>
+          <li>使用 Docker Compose 完成系統容器化部署</li>
+          <li>建立可供後續模型訓練使用的資料標註與資料集生成流程</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Django</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Redis</span>
+          <span class="tag">WebSocket</span>
+          <span class="tag">Docker Compose</span>
+          <span class="tag">JWT</span>
         </div>
       </div>
 
-      <!-- Experience Item 2 -->
-      <div class="exp-item">
-        <div class="exp-date">Jan 2022 – Jul 2024</div>
-        <div class="exp-content">
-          <div class="exp-role">Previous Job Title</div>
-          <div class="exp-company">Previous Company</div>
-          <ul class="exp-bullets">
-            <li>Key responsibility or achievement #1</li>
-            <li>Key responsibility or achievement #2</li>
-          </ul>
-          <div class="exp-tags">
-            <span class="tag">Tech A</span>
-            <span class="tag">Tech B</span>
-          </div>
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-title">AI/ML Dashboard Agentic</div>
+        <div class="project-period">2025 · 前端功能修改 / AI Workflow 介面整合</div>
+        <p class="project-desc">
+          參與 AI/ML dashboard 專案之前端功能調整與介面優化，強化 AI agent / workflow
+          類型系統的前端展示與可用性，熟悉模組化前端結構與功能擴充方式。
+        </p>
+        <ul class="project-achievements">
+          <li>調整使用者操作流程與前端互動邏輯</li>
+          <li>強化 AI agent / workflow 系統的前端展示元件</li>
+          <li>熟悉模組化前端架構與功能擴充實作</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">AI Workflow</span>
+          <span class="tag">Frontend</span>
+        </div>
+        <a class="project-link" href="https://github.com/kimOuO/aiml_dashboard_agentic" target="_blank">→ GitHub</a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-title">Calculus Project — 微積分課程系統</div>
+        <div class="project-period">2024 · 前後端分離系統開發</div>
+        <p class="project-desc">
+          獨立建置前後端分離系統，前端負責介面呈現與使用者互動，後端負責業務邏輯與資料處理，
+          實作完整 full-stack 開發流程與版本管理。
+        </p>
+        <ul class="project-achievements">
+          <li>實作前後端分離架構，提升功能模組化與維護性</li>
+          <li>後端 REST API 設計與資料處理邏輯實作</li>
+          <li>前端介面呈現、使用者互動與 API 串接</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Full-Stack</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Frontend</span>
+          <span class="tag">Backend</span>
+        </div>
+        <a class="project-link" href="https://github.com/kimOuO/Calculus-Project" target="_blank">→ GitHub (Backend)</a>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="project-title">FlashTicket System — 高時效事件自動化流程</div>
+        <div class="project-period">2024 · 系統開發 / 自動化流程實作</div>
+        <p class="project-desc">
+          開發高時效性操作情境下的自動化流程系統，設計流程控制與執行機制，
+          強化對效能、穩定性與使用流程的理解。
+        </p>
+        <ul class="project-achievements">
+          <li>實作自動化流程與系統操作邏輯</li>
+          <li>針對高時效性操作設計流程控制機制</li>
+          <li>強化對效能與系統穩定性的工程理解</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Automation</span>
+          <span class="tag">Python</span>
+          <span class="tag">System Design</span>
+        </div>
+        <a class="project-link" href="https://github.com/kimOuO/FlashTicket_system" target="_blank">→ GitHub</a>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card">
+        <div class="project-title">ESP32-CAM 影像傳輸與即時處理</div>
+        <div class="project-period">2023 · 個人實作專案 · 嵌入式 × 網路通訊</div>
+        <p class="project-desc">
+          使用 ESP32-CAM 建立影像傳輸流程，基於 HTTP 與網頁介面完成裝置控制與即時資料傳遞，
+          探索嵌入式裝置與應用端之整合方式。
+        </p>
+        <ul class="project-achievements">
+          <li>建立 HTTP server 與路由，完成裝置控制介面</li>
+          <li>實作即時影像串流傳輸</li>
+          <li>探索嵌入式裝置與前端介面串接整合</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">ESP32</span>
+          <span class="tag">C/C++</span>
+          <span class="tag">HTTP</span>
+          <span class="tag">Embedded</span>
         </div>
       </div>
 
-      <!-- Experience Item 3 -->
-      <div class="exp-item">
-        <div class="exp-date">Jun 2020 – Dec 2021</div>
-        <div class="exp-content">
-          <div class="exp-role">Earlier Job Title</div>
-          <div class="exp-company">Earlier Company</div>
-          <ul class="exp-bullets">
-            <li>Key responsibility or achievement #1</li>
-            <li>Key responsibility or achievement #2</li>
-          </ul>
-          <div class="exp-tags">
-            <span class="tag">Tech X</span>
-            <span class="tag">Tech Y</span>
-          </div>
+      <!-- Project 6 -->
+      <div class="project-card">
+        <div class="project-title">TensorRT 神經網路模型優化</div>
+        <div class="project-period">2023 · 個人研究 / 模型部署優化</div>
+        <p class="project-desc">
+          研究 TensorRT 加速流程與模型優化方法，了解模型推論優化、部署效能與實務加速概念，
+          建立對 AI deployment pipeline 的基礎理解。
+        </p>
+        <ul class="project-achievements">
+          <li>研究 TensorRT 加速流程與量化方法</li>
+          <li>實作模型加速相關步驟並分析效能差異</li>
+          <li>建立對 AI model deployment 的實務理解</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">TensorRT</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">CUDA</span>
+          <span class="tag">AI Deployment</span>
         </div>
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-number">03</span>
-        <h2 class="section-title">Projects</h2>
-      </div>
-      <div class="projects-grid">
-
-        <!-- Featured Project -->
-        <div class="project-card featured">
-          <div class="project-featured-badge">★ Featured Project</div>
-          <div class="project-title">Your Main Project Title</div>
-          <div class="project-period">2025 – Present · Team of X</div>
-          <p class="project-desc">
-            Brief description of what this project is about, the problem it solves, and its significance.
-          </p>
-          <ul class="project-achievements">
-            <li>Key achievement or metric (e.g., 70% improvement)</li>
-            <li>Patent pending in multiple countries</li>
-            <li>Another notable achievement</li>
-          </ul>
-          <div class="project-tags">
-            <span class="tag">Tech 1</span>
-            <span class="tag">Tech 2</span>
-            <span class="tag">Tech 3</span>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-title">Project Title 2</div>
-          <div class="project-period">2023 – 2024 · Team of X</div>
-          <p class="project-desc">
-            Brief description of this project and its goals.
-          </p>
-          <ul class="project-achievements">
-            <li>Achievement or outcome #1</li>
-            <li>Achievement or outcome #2</li>
-          </ul>
-          <div class="project-tags">
-            <span class="tag">Tech A</span>
-            <span class="tag">Tech B</span>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-title">Project Title 3</div>
-          <div class="project-period">2022 – 2023</div>
-          <p class="project-desc">
-            Brief description of this project.
-          </p>
-          <ul class="project-achievements">
-            <li>Achievement or metric (e.g., 99.75% accuracy)</li>
-            <li>Platform or deployment detail</li>
-          </ul>
-          <div class="project-tags">
-            <span class="tag">Tech X</span>
-            <span class="tag">Tech Y</span>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-title">Project Title 4</div>
-          <div class="project-period">2021</div>
-          <p class="project-desc">
-            Brief description of this project.
-          </p>
-          <ul class="project-achievements">
-            <li>Achievement or outcome #1</li>
-            <li>Achievement or outcome #2</li>
-          </ul>
-          <div class="project-tags">
-            <span class="tag">Tech P</span>
-            <span class="tag">Tech Q</span>
-          </div>
-        </div>
-
-      </div>
+<!-- ── EDUCATION & SKILLS ── -->
+<section id="education">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2 class="section-title">Education &amp; Skills</h2>
     </div>
-  </section>
+    <div class="edu-grid">
 
-  <!-- ===== PUBLICATIONS ===== -->
-  <section id="publications">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-number">04</span>
-        <h2 class="section-title">Publications &amp; Research</h2>
-      </div>
+      <!-- Left: Education + Awards -->
+      <div>
+        <div class="sub-title">Degrees</div>
 
-      <!-- Journal / Conference Papers -->
-      <div class="pub-subsection">
-        <div class="pub-subsection-title">Journal &amp; Conference Papers</div>
-
-        <div class="pub-item">
-          <div>
-            <div class="pub-title">Your Paper Title Goes Here</div>
-            <div class="pub-authors">Author 1, <strong>Your Name</strong>, Author 3</div>
-            <div class="pub-venue">Conference/Journal Name · Year</div>
-          </div>
-          <div class="pub-badge accepted">Accepted</div>
+        <div class="edu-item">
+          <div class="edu-degree">B.S. in Electronic Engineering</div>
+          <div class="edu-school">國立臺灣科技大學 電子工程學系</div>
+          <div class="edu-period">2021 – 在學中（預計 2025 畢業）</div>
+          <ul class="edu-detail">
+            <li>總平均成績：89.73</li>
+            <li>班級排名：5 / 37（前 13.5%）</li>
+            <li>系排名：13 / 109（前 11.9%）</li>
+          </ul>
         </div>
 
-        <div class="pub-item">
-          <div>
-            <div class="pub-title">Another Paper Title</div>
-            <div class="pub-authors">Author A, <strong>Your Name</strong>, Author C</div>
-            <div class="pub-venue">Another Conference · Year</div>
-          </div>
-          <div class="pub-badge">Published</div>
-        </div>
+        <div style="margin-top: 40px;">
+          <div class="sub-title">Honors &amp; Awards</div>
 
-        <div class="pub-item">
-          <div>
-            <div class="pub-title">Third Paper Title</div>
-            <div class="pub-authors"><strong>Your Name</strong>, Co-Author</div>
-            <div class="pub-venue">IEEE Journal · Year</div>
-          </div>
-          <div class="pub-badge">Published</div>
-        </div>
-
-      </div>
-
-      <!-- Conference Talks -->
-      <div class="pub-subsection">
-        <div class="pub-subsection-title">Conference Talks</div>
-
-        <div class="talk-item">
-          <div class="talk-title">Your Talk Title</div>
-          <div class="talk-meta"><span>Conference Name Year</span> · Location or Online</div>
-        </div>
-
-        <div class="talk-item">
-          <div class="talk-title">Another Talk Title</div>
-          <div class="talk-meta"><span>Conference Name Year</span> · Location</div>
-        </div>
-
-      </div>
-
-      <!-- Technical Reports -->
-      <div class="pub-subsection">
-        <div class="pub-subsection-title">Technical Reports</div>
-
-        <div class="talk-item">
-          <div class="talk-title">Report Title or Standard Contribution</div>
-          <div class="talk-meta">Report ID · <span>Organization</span> · Year</div>
-        </div>
-
-      </div>
-
-      <!-- Patents -->
-      <div class="pub-subsection">
-        <div class="pub-subsection-title">Patents (Pending)</div>
-
-        <div class="patent-item">
-          <div class="patent-title">Your Patent Title</div>
-          <div class="patent-meta">Filed: <span>Country A, Country B</span> · Status: Pending</div>
-        </div>
-
-        <div class="patent-item">
-          <div class="patent-title">Another Patent Title</div>
-          <div class="patent-meta">Filed: <span>Country A</span> · Status: Pending</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EDUCATION ===== -->
-  <section id="education">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-number">05</span>
-        <h2 class="section-title">Education &amp; Skills</h2>
-      </div>
-
-      <div class="edu-grid">
-
-        <!-- Education Column -->
-        <div>
-          <div class="pub-subsection-title" style="margin-bottom:24px;">Degrees</div>
-
-          <div class="edu-item">
-            <div class="edu-degree">Ph.D. in Your Field</div>
-            <div class="edu-school">Your University</div>
-            <div class="edu-period">2020 – Present</div>
-            <div class="edu-detail">Thesis: Your thesis topic or research area</div>
+          <div class="award-item">
+            <div class="award-year">2024</div>
+            <div>
+              <div class="award-name">太空產業供應鏈暨網通產業新星飛揚計畫 — 表現優異</div>
+              <div class="award-desc">經濟部產業發展署 · 2024.07 – 2024.09</div>
+            </div>
           </div>
 
-          <div class="edu-item">
-            <div class="edu-degree">Master's in Your Field</div>
-            <div class="edu-school">Your University</div>
-            <div class="edu-period">2019 – 2020</div>
-            <div class="edu-detail">Direct promotion to Ph.D. program</div>
-          </div>
-
-          <div class="edu-item">
-            <div class="edu-degree">Bachelor's in Your Field</div>
-            <div class="edu-school">Your University</div>
-            <div class="edu-period">2015 – 2019</div>
-          </div>
-
-          <!-- Awards -->
-          <div style="margin-top:48px;">
-            <div class="pub-subsection-title" style="margin-bottom:24px;">Honors &amp; Awards</div>
-            <div class="awards-list">
-              <div class="award-item">
-                <div class="award-year">2024</div>
-                <div class="award-name">Award Name — Issuing Organization</div>
-              </div>
-              <div class="award-item">
-                <div class="award-year">2023</div>
-                <div class="award-name">Another Award — Issuing Organization</div>
-              </div>
-              <div class="award-item">
-                <div class="award-year">2022</div>
-                <div class="award-name">Innovation Award — Category / Event</div>
-              </div>
+          <div class="award-item">
+            <div class="award-year">2026</div>
+            <div>
+              <div class="award-name">學海築夢實習計畫 — SparkAmplify 冬季實習</div>
+              <div class="award-desc">SparkAmplify · 2026.01 – 2026.02</div>
             </div>
           </div>
         </div>
 
-        <!-- Skills Column -->
-        <div>
-          <div class="pub-subsection-title" style="margin-bottom:24px;">Technical Skills</div>
-          <div class="skills-section">
-            <table class="skills-table">
-              <tbody>
-                <tr>
-                  <td>AI / Agentic AI</td>
-                  <td>Tool 1, Tool 2, Framework 1, Framework 2</td>
-                </tr>
-                <tr>
-                  <td>Architecture</td>
-                  <td>Pattern 1, Pattern 2, Standard 1</td>
-                </tr>
-                <tr>
-                  <td>Methodology</td>
-                  <td>DevOps, MLOps, Microservices, Terraform</td>
-                </tr>
-                <tr>
-                  <td>Languages</td>
-                  <td>Python, Go, C/C++, JavaScript, Java</td>
-                </tr>
-                <tr>
-                  <td>Platforms</td>
-                  <td>AWS, Azure, GCP, Kubernetes, Docker</td>
-                </tr>
-                <tr>
-                  <td>AI/ML Frameworks</td>
-                  <td>TensorFlow, PyTorch, HuggingFace, LangChain</td>
-                </tr>
-                <tr>
-                  <td>Full-Stack</td>
-                  <td>React, Next.js, FastAPI, Django, Node.js</td>
-                </tr>
-                <tr>
-                  <td>Databases</td>
-                  <td>PostgreSQL, Redis, MongoDB, Neo4j</td>
-                </tr>
-              </tbody>
-            </table>
+        <div style="margin-top: 40px;">
+          <div class="sub-title">Research</div>
+          <div class="edu-item">
+            <div class="edu-degree">O-RAN 技術研究與簡報整理</div>
+            <div class="edu-period">技術研究 / 文件整理</div>
+            <ul class="edu-detail">
+              <li>研究 O-RAN 架構、RAN Development History、Use Case</li>
+              <li>整理 O-RAN Architecture 與 Challenges and Future Outlook</li>
+              <li>強化快速吸收新技術並輸出報告的能力</li>
+            </ul>
           </div>
         </div>
-
       </div>
+
+      <!-- Right: Skills -->
+      <div>
+        <div class="sub-title">Technical Skills</div>
+        <div class="skills-section">
+          <table class="skills-table">
+            <tbody>
+              <tr>
+                <td>Languages</td>
+                <td>Python、JavaScript / TypeScript、C / C++、HTML / CSS、Verilog、MATLAB</td>
+              </tr>
+              <tr>
+                <td>Frontend</td>
+                <td>React、TypeScript、HTML/CSS</td>
+              </tr>
+              <tr>
+                <td>Backend</td>
+                <td>Django、Node.js、REST API、WebSocket、JWT</td>
+              </tr>
+              <tr>
+                <td>Database</td>
+                <td>MySQL、Redis</td>
+              </tr>
+              <tr>
+                <td>DevOps</td>
+                <td>Docker、Docker Compose、Ubuntu / Linux、WSL、Git</td>
+              </tr>
+              <tr>
+                <td>AI / ML</td>
+                <td>PyTorch、TensorRT、CUDA、AI agent / workflow integration</td>
+              </tr>
+              <tr>
+                <td>Self-Learning</td>
+                <td>Kubernetes、n8n、Dify、AI Workflow Integration</td>
+              </tr>
+              <tr>
+                <td>Others</td>
+                <td>ESP32 嵌入式開發、HTTP / WebSocket 通訊、系統整合與部署</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top: 40px;">
+          <div class="sub-title">Personal Traits</div>
+          <ul style="margin-top:8px;">
+            <li style="font-size:0.875rem;color:var(--gray-700);padding:8px 0 8px 20px;border-bottom:1px solid var(--gray-200);position:relative;">
+              <span style="position:absolute;left:0;color:var(--red);">→</span>
+              具備快速學習與主動自學能力
+            </li>
+            <li style="font-size:0.875rem;color:var(--gray-700);padding:8px 0 8px 20px;border-bottom:1px solid var(--gray-200);position:relative;">
+              <span style="position:absolute;left:0;color:var(--red);">→</span>
+              能將不同技術模組整合為完整可運作系統
+            </li>
+            <li style="font-size:0.875rem;color:var(--gray-700);padding:8px 0 8px 20px;border-bottom:1px solid var(--gray-200);position:relative;">
+              <span style="position:absolute;left:0;color:var(--red);">→</span>
+              習慣整理技術文件與架構內容
+            </li>
+            <li style="font-size:0.875rem;color:var(--gray-700);padding:8px 0 8px 20px;border-bottom:1px solid var(--gray-200);position:relative;">
+              <span style="position:absolute;left:0;color:var(--red);">→</span>
+              對實作、系統流程與跨領域整合具高度興趣
+            </li>
+            <li style="font-size:0.875rem;color:var(--gray-700);padding:8px 0 8px 20px;position:relative;">
+              <span style="position:absolute;left:0;color:var(--red);">→</span>
+              願意從需求、開發、測試到部署完整參與
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container">
-      <p>© 2025 Your Name. All rights reserved.</p>
-      <p style="margin-top:8px; color: var(--gray-500);">
-        <a href="mailto:your@email.com">your@email.com</a>
-        &nbsp;·&nbsp;
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        &nbsp;·&nbsp;
-        <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
-      </p>
-    </div>
-  </footer>
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <p>© 2026 Yao-Ching Huang 黃耀慶. All rights reserved.</p>
+    <p style="margin-top:8px;color:var(--gray-500);">
+      <a href="mailto:kim36991294@gmail.com">kim36991294@gmail.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/kimOuO" target="_blank">GitHub</a>
+      &nbsp;·&nbsp;
+      <a href="tel:0958831242">0958-831-242</a>
+    </p>
+  </div>
+</footer>
 
-  <!-- ===== JAVASCRIPT ===== -->
-  <script>
-    // Mobile menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen);
+<script>
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
     });
+  });
 
-    // Close mobile menu on link click
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
-      });
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => {
+          l.style.color = '';
+          if (l.getAttribute('href') === '#' + e.target.id) l.style.color = 'var(--red)';
+        });
+      }
     });
-
-    // Highlight active nav link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => {
-            link.style.color = '';
-            if (link.getAttribute('href') === '#' + entry.target.id) {
-              link.style.color = 'var(--red)';
-            }
-          });
-        }
-      });
-    }, { threshold: 0.4 });
-
-    sections.forEach(s => observer.observe(s));
-  </script>
-
+  }, { threshold: 0.35 });
+  sections.forEach(s => io.observe(s));
+</script>
 </body>
 </html>
