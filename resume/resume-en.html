@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Yao-Ching Huang — Resume</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9pt; line-height: 1.45; color: #222; }
+  a { color: #222; text-decoration: none; }
+
+  /* Header */
+  .header { text-align: center; border-bottom: 2px solid #222; padding-bottom: 6px; margin-bottom: 8px; }
+  .header h1 { font-size: 18pt; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 2px; }
+  .header .contact { font-size: 8.5pt; color: #444; }
+  .header .contact span { margin: 0 6px; }
+
+  /* Section */
+  .section { margin-bottom: 7px; }
+  .section-title { font-size: 10pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #999; padding-bottom: 2px; margin-bottom: 5px; }
+
+  /* Two-col layout */
+  .two-col { display: flex; }
+  .col-left { margin-right: 20px; }
+  .col-left { flex: 1.15; }
+  .col-right { flex: 0.85; }
+
+  /* Items */
+  .item { margin-bottom: 6px; }
+  .item-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .item-title { font-weight: 700; font-size: 9.5pt; }
+  .item-date { font-size: 8pt; color: #555; white-space: nowrap; }
+  .item-sub { font-size: 8.5pt; color: #444; font-style: italic; }
+  ul { padding-left: 14px; }
+  li { margin-bottom: 1px; }
+
+  /* Skills */
+  .skill-row { margin-bottom: 2px; }
+  .skill-cat { font-weight: 700; display: inline; }
+  .skill-val { display: inline; color: #333; }
+
+  /* Summary */
+  .summary { font-size: 9pt; color: #333; margin-bottom: 8px; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Yao-Ching Huang</h1>
+  <div class="contact">
+    <span>kim36991294@gmail.com</span>
+    <span>|</span>
+    <span>github.com/kimOuO</span>
+    <span>|</span>
+    <span>+886-958-831-242</span>
+  </div>
+</div>
+
+<div class="summary">
+  M.S. student in Electronic Engineering at NTUST. Experienced in full-stack development, containerized deployment, Kubernetes operations, CI/CD pipeline setup, and AI Agent development. Skilled at integrating diverse tech modules into production-ready systems. Seeking roles in Full-Stack / Cloud / AI Engineering.
+</div>
+
+<div class="two-col">
+<div class="col-left">
+
+  <div class="section">
+    <div class="section-title">Experience</div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Winter Intern — SparkAmplify</span>
+        <span class="item-date">Jan 2026 – Feb 2026</span>
+      </div>
+      <div class="item-sub">US Internship (Los Angeles) via Study Abroad Program</div>
+      <ul>
+        <li>Built frontend-backend separated deployment with Docker, Nginx reverse proxy, and Harbor image registry</li>
+        <li>Established Git Workflow (branching strategy, PR review) and CI/CD pipeline with GitHub Actions</li>
+        <li>Authored platform architecture docs, K8s/Docker deployment diagrams, and Use Case flow charts</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Calculus Teaching Assistant — NTUST</span>
+        <span class="item-date">Sep 2025 – Present</span>
+      </div>
+      <ul>
+        <li>Independently built a grade registration &amp; exam management system (React + Django + DB)</li>
+        <li>Developed auto-exam AI Agent with Tool Use, embedding Word tool to generate complete exam documents</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">R&amp;D Training — Space &amp; ICT New Star Program</span>
+        <span class="item-date">Jul 2024 – Sep 2024</span>
+      </div>
+      <div class="item-sub">Industrial Development Administration, MOEA</div>
+      <ul>
+        <li>Completed industry R&amp;D training program and received certification</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">IT Consultant (Part-time) — Ying-Na Industrial Co.</span>
+        <span class="item-date">Part-time</span>
+      </div>
+      <ul>
+        <li>Managed database backups and served as internal IT troubleshooting consultant</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">6G AI/ML Training/Inference Platform — O-RAN × KubeFlow × Agent AI</span>
+        <span class="item-date">2024 – 2025</span>
+      </div>
+      <div class="item-sub">NSTC / NTUST · Demonstrated at EuCNC 2024 (Belgium) &amp; COSCUP 2024</div>
+      <ul>
+        <li>Operated 20+ container services across dual-node hybrid deployment (Docker + Kubernetes)</li>
+        <li>Integrated intent-driven platform with AI Agent to control the system</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">MySphere — Graded English Story Learning Platform</span>
+        <span class="item-date">2025 – 2026</span>
+      </div>
+      <div class="item-sub">Study Abroad Program × SparkAmplify (LA) × Tung Hua Book Co.</div>
+      <ul>
+        <li>Built learning progress tracking API and LLM-powered Q&amp;A Chat; managed database and API development</li>
+        <li>Set up Docker + Nginx deployment, Harbor image management, and GitHub Actions CI/CD</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Improving SSD GC Long Tail Latency Using Idle Time</span>
+        <span class="item-date">2024</span>
+      </div>
+      <div class="item-sub">B.S. Thesis · NTUST · Advisor: Prof. Chin-Hsien Wu</div>
+      <ul>
+        <li>Applied Deep Q-Learning for RL-based GC scheduling; validated with 100K SNIA IOTTA traces on MQSim</li>
+        <li>Bridged Python/C++ via Cython; effectively reduced long tail latency occurrence</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<div class="col-right">
+
+  <div class="section">
+    <div class="section-title">Education</div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">M.S. in Electronic Engineering</span>
+        <span class="item-date">2025 – Present</span>
+      </div>
+      <div class="item-sub">National Taiwan Univ. of Science &amp; Technology</div>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">B.S. in Electronic Engineering</span>
+        <span class="item-date">2021 – 2025</span>
+      </div>
+      <div class="item-sub">National Taiwan Univ. of Science &amp; Technology</div>
+      <ul>
+        <li>GPA: 89.73 / 100</li>
+        <li>Class Rank: 5/37 (Top 13.5%)</li>
+        <li>Dept. Rank: 13/120 (Top 10.8%)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+
+    <div class="skill-row"><span class="skill-cat">Languages: </span><span class="skill-val">Python, JavaScript/TypeScript, C/C++, HTML/CSS</span></div>
+    <div class="skill-row"><span class="skill-cat">Frontend: </span><span class="skill-val">React, TypeScript</span></div>
+    <div class="skill-row"><span class="skill-cat">Backend: </span><span class="skill-val">Django, Node.js, REST API, WebSocket, JWT</span></div>
+    <div class="skill-row"><span class="skill-cat">Database: </span><span class="skill-val">MySQL, Redis</span></div>
+    <div class="skill-row"><span class="skill-cat">DevOps/Cloud: </span><span class="skill-val">Kubernetes, Helm, Docker, Docker Compose, GitHub Actions, CI/CD, Harbor, Nginx, Linux, Git</span></div>
+    <div class="skill-row"><span class="skill-cat">AI/ML: </span><span class="skill-val">PyTorch, TensorRT, CUDA, AI Agent, Tool Use, Workflow Integration</span></div>
+    <div class="skill-row"><span class="skill-cat">Docs: </span><span class="skill-val">Architecture diagrams, K8s/Docker deployment diagrams, Use Case flow charts</span></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Research</div>
+    <div class="item">
+      <div class="item-title">O-RAN SC Dual-Layer Architecture Deployment</div>
+      <div class="item-sub">2025 · O-RAN SC Release L/M</div>
+      <ul>
+        <li>Deployed SMO/OAM layer (3 Docker Compose Stacks) and NonRT RIC layer (13 Helm subcharts on K8s)</li>
+        <li>Docker × Kubernetes cross-platform network integration</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Honors</div>
+    <div class="item">
+      <ul>
+        <li>Study Abroad Dream Program — SparkAmplify Winter Internship (2026)</li>
+        <li>Space New Star Program — Industrial Development Admin, MOEA (2024)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>
