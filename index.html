@@ -318,7 +318,7 @@
         <div class="stat-label">GPA Average</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">5<span>/</span>37</div>
+        <div class="stat-number">13<span>/</span>120</div>
         <div class="stat-label">Dept. Rank</div>
       </div>
       <div class="stat-item">
@@ -432,46 +432,19 @@
     </div>
     <div class="projects-grid">
 
-      <!-- Project 1: Featured Thesis -->
-      <div class="project-card featured">
-        <div class="project-featured-badge">★ 大學部實務專題</div>
-        <div class="project-title">利用閒置時間改善 SSD GC 之 Long Tail Latency</div>
-        <div class="project-period">2024 · 國立臺灣科技大學 電子工程系 · 指導教授：吳晉賢</div>
-        <p class="project-desc">
-          以 Deep Q-Learning 預測 SSD 系統閒置時間，主動在 Idle Time 排程 GC，降低 Forced GC 觸發頻率以改善長尾延遲。
-          以 Cython 橋接 Python RL Agent 與 C++ SSD 模擬器 MQSim 實現跨語言整合。
-        </p>
-        <ul class="project-achievements">
-          <li>State 空間 <strong>16 種組合</strong>（2×2×4），Reward 設計涵蓋 70th / 90th / 99th percentile respond time</li>
-          <li>以 <strong>100,000 筆</strong> SNIA IOTTA 企業伺服器 I/O trace 在 MQSim（NVMe MLC Flash）上完整驗證</li>
-          <li>最高延遲時間段 RL 策略高延遲事件次數明顯低於原始 trace，中段效能與 baseline 幾乎相同</li>
-          <li>Cython 橋接 Python / C++ 跨語言整合，成功解決 ctypes 無法處理的 C++ 變數交換問題</li>
-        </ul>
-        <div class="project-tags">
-          <span class="tag">Reinforcement Learning</span>
-          <span class="tag">Deep Q-Learning</span>
-          <span class="tag">Python</span>
-          <span class="tag">C++</span>
-          <span class="tag">Cython</span>
-          <span class="tag">MQSim</span>
-          <span class="tag">SSD / Storage</span>
-        </div>
-      </div>
-
       <!-- Project 2: Featured -->
       <div class="project-card featured">
         <div class="project-featured-badge">★ 國際展示</div>
-        <div class="project-title">6G AI/ML 推論平台 — O-RAN × KubeFlow × Agentic AI</div>
+        <div class="project-title">6G AI/ML 訓練／推論平台 — O-RAN × KubeFlow × Agent AI</div>
         <div class="project-period">2024 – 2025 · 國科會 / 國立臺灣科技大學 · EuCNC 2024 比利時 · COSCUP 2024</div>
         <p class="project-desc">
-          參與國科會 6G AI/ML 推論平台開發與維運，覆蓋 O-RAN 基礎架構、KubeFlow 訓練環境與 Dify 智慧化操作介面。
+          參與國科會 6G AI/ML 訓練／推論平台開發與維運，覆蓋 O-RAN 基礎架構、KubeFlow 訓練環境與 Dify 智慧化操作介面。
           平台以 AR/VR QoS 為核心應用，於 EuCNC 2024（比利時）及 COSCUP 2024 對外展示。
         </p>
         <ul class="project-achievements">
           <li><strong>EuCNC 2024</strong>（比利時，6 月）AR/VR QoS 即時推論現場展示；<strong>COSCUP 2024</strong> O-RAN + AI/ML 平台成果發表</li>
           <li>雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
-          <li>Dify 智慧化平台支援 <strong>5 種 KubeFlow Pipeline 類型</strong>的自然語言程式碼生成</li>
-          <li><strong>6-actor 模組化 Prompt 架構</strong>，完成 Training Pipeline 與 Log Analysis <strong>2 個完整模組</strong>的 5 階段 SOP 設計</li>
+          <li>串接意圖驅動平台，以 <strong>AI Agent</strong> 形式控制平台</li>
         </ul>
         <div class="project-tags">
           <span class="tag">KubeFlow</span>
@@ -487,8 +460,9 @@
         <a class="project-link" href="https://github.com/kimOuO/aiml_dashboard_agentic" target="_blank">→ GitHub</a>
       </div>
 
-      <!-- Project 3 -->
-      <div class="project-card">
+      <!-- Project 3: Featured -->
+      <div class="project-card featured">
+        <div class="project-featured-badge">★ 赴美實習</div>
         <div class="project-title">MySphere — 英文分級故事學習平台</div>
         <div class="project-period">2025 – 2026 · 學海計畫 × SparkAmplify（洛杉磯）× 東華書局 · 赴美實習 2026/01–02</div>
         <p class="project-desc">
@@ -498,56 +472,48 @@
         </p>
         <ul class="project-achievements">
           <li><strong>東華書局合作</strong>，平台服務書局周邊英文學習需求，英文故事依程度<strong>分級選材</strong></li>
-          <li>內建<strong>學習進度追蹤 API</strong> 記錄閱讀狀態與完成歷程，<strong>LLM 智能問答 Chat</strong> 針對故事即時解釋詞彙與文意</li>
-          <li>赴美（洛杉磯）實習，參與 system design、API implementation、QA testing <strong>完整開發週期</strong></li>
-          <li>Docker + Nginx + Harbor 容器化部署，Git Workflow 多人協作管理</li>
+          <li>內建<strong>學習進度追蹤 API</strong> 與 <strong>LLM 智能問答 Chat</strong>，負責資料庫管理與 API 開發</li>
+          <li>Docker 容器化部署、Nginx 反向代理轉發，搭建完整服務架構</li>
+          <li>建立 <strong>Harbor</strong> Image 管理流程與 <strong>GitHub Actions CI/CD</strong>，規範團隊 Git Workflow 協作</li>
         </ul>
         <div class="project-tags">
           <span class="tag">LLM</span>
-          <span class="tag">AI Chat</span>
-          <span class="tag">Full-Stack</span>
           <span class="tag">REST API</span>
           <span class="tag">Docker</span>
           <span class="tag">Nginx</span>
           <span class="tag">Harbor</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Database</span>
           <span class="tag">Git Workflow</span>
           <span class="tag">學海計畫</span>
         </div>
       </div>
 
-
-      <!-- Project 6 -->
-      <div class="project-card featured">
-        <div class="project-featured-badge">★ 系統整合研究</div>
-        <div class="project-title">O-RAN SC 雙層架構部署與 rApp 開發</div>
-        <div class="project-period">2025 · O-RAN SC Release L/M · Ubuntu 24.04 (59G RAM / 100G SSD) · 技術研究 / 系統部署</div>
+      <!-- Project: 大學部實務專題 -->
+      <div class="project-card">
+        <div class="project-title">利用閒置時間改善 SSD GC 之 Long Tail Latency</div>
+        <div class="project-period">2024 · 國立臺灣科技大學 電子工程系 · 指導教授：吳晉賢</div>
         <p class="project-desc">
-          完整部署 O-RAN SC 雙層架構：SMO/OAM 層以 Docker Compose 3 組 Stack 建置，NonRT RIC 層以 Kubernetes 叢集部署於 nonrtric namespace。
-          核心挑戰在於打通 Docker 與 K8s 的跨平台網路（Harbor insecure-registry、CRI-O 設定、Kafka advertised.listeners），
-          並自行開發 4 支 rApp 完成端對端 VES fault 事件流驗證。
+          以 Deep Q-Learning 預測 SSD 系統閒置時間，主動在 Idle Time 排程 GC，降低 Forced GC 觸發頻率以改善長尾延遲。
+          以 Cython 橋接 Python RL Agent 與 C++ SSD 模擬器 MQSim 實現跨語言整合。
         </p>
         <ul class="project-achievements">
-          <li>SMO/OAM 層 <strong>3 組 Docker Compose Stack</strong>（11 筆 DNS），VES fault → Kafka → SDN-R → ODLUX 端對端驗證完成</li>
-          <li>NonRT RIC 層封裝 <strong>13 個 Helm subchart</strong> 上傳 chartmuseum，nonrtric namespace <strong>10+ 元件</strong>成功啟動</li>
-          <li>自行開發 <strong>4 支 rApp</strong>（FastAPI），完成 CAPIF 註冊、ICS InfoType 訂閱，VES → ICS delivery <strong>HTTP 200</strong> 驗證通過</li>
-          <li>Docker × K8s 跨平台網路整合：Harbor insecure-registry、CRI-O 信任設定、Kafka advertised.listeners 全部打通</li>
+          <li>使用強化學習架構，以 <strong>Deep Q-Learning</strong> 方式實踐</li>
+          <li>以 <strong>100,000 筆</strong> SNIA IOTTA 企業伺服器 I/O trace 在 MQSim（NVMe MLC Flash）上完整驗證</li>
+          <li>有效降低長尾延遲發生機率</li>
+          <li>Cython 橋接 Python / C++ 跨語言整合，成功解決 ctypes 無法處理的 C++ 變數交換問題</li>
         </ul>
         <div class="project-tags">
-          <span class="tag">O-RAN SC</span>
-          <span class="tag">Kubernetes</span>
-          <span class="tag">Docker Compose</span>
-          <span class="tag">NonRT RIC</span>
-          <span class="tag">rApp</span>
-          <span class="tag">CAPIF</span>
-          <span class="tag">ICS / DMaaP</span>
-          <span class="tag">Kafka</span>
-          <span class="tag">Helm</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">Harbor</span>
-          <span class="tag">SMO / OAM</span>
+          <span class="tag">Reinforcement Learning</span>
+          <span class="tag">Deep Q-Learning</span>
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">Cython</span>
+          <span class="tag">MQSim</span>
+          <span class="tag">SSD / Storage</span>
         </div>
       </div>
-
 
     </div>
   </div>
@@ -606,12 +572,12 @@
         <div style="margin-top: 40px;">
           <div class="sub-title">Research</div>
           <div class="edu-item">
-            <div class="edu-degree">O-RAN 技術研究與簡報整理</div>
-            <div class="edu-period">技術研究 / 文件整理</div>
+            <div class="edu-degree">O-RAN SC 雙層架構研究與部署</div>
+            <div class="edu-period">2025 · O-RAN SC Release L/M</div>
             <ul class="edu-detail">
-              <li>研究 O-RAN 架構、RAN Development History、Use Case</li>
-              <li>整理 O-RAN Architecture 與 Challenges and Future Outlook</li>
-              <li>強化快速吸收新技術並輸出報告的能力</li>
+              <li>完整部署 SMO/OAM 層（3 組 Docker Compose Stack）與 NonRT RIC 層（13 個 Helm subchart，K8s 部署）</li>
+              <li>實踐 Docker × Kubernetes 跨平台網路整合</li>
+              <li>研究 O-RAN 架構、RAN 發展歷程與應用場景</li>
             </ul>
           </div>
         </div>
