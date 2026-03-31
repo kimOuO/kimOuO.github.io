@@ -249,7 +249,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
-      <li><span class="nav-lang">EN</span></li>
+      <li><span class="nav-lang" id="desktopLangBtn">EN</span></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="選單">
       <span></span><span></span><span></span>
@@ -261,6 +261,7 @@
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
   <a href="#education">Education</a>
+  <span class="nav-lang" id="mobileLangBtn">EN</span>
 </div>
 
 <!-- ── HERO ── -->
@@ -271,11 +272,11 @@
         <p class="hero-label">Portfolio / Resume</p>
         <h1 class="hero-name">Yao-Ching Huang</h1>
         <p class="hero-name-zh">黃耀慶</p>
-        <p class="hero-title">
+        <p class="hero-title" data-i18n="hero-title">
           <span>電子工程研究所 碩士一年級</span>，國立臺灣科技大學<br>
           應徵方向：軟體工程師 / 全端工程師 / 系統整合工程師
         </p>
-        <p class="hero-desc">
+        <p class="hero-desc" data-i18n="hero-desc">
           具備前後端開發、系統整合、API 設計與部署實作經驗。曾參與 SparkAmplify 冬季實習，
           培養從需求理解、功能設計、技術選型到測試部署的完整工程觀。
           擅長將不同技術模組整合為可運作的系統，並持續自學 Kubernetes、n8n、Dify 等新技術。
@@ -294,10 +295,10 @@
           <img src="avatar.jpg" alt="黃耀慶" />
         </div>
         <div class="sidebar-info">
-          <p><strong>學校：</strong>國立臺灣科技大學</p>
-          <p><strong>系所：</strong>電子工程研究所</p>
-          <p><strong>身份：</strong>碩士一年級（在學中）</p>
-          <p><strong>學士 GPA：</strong>89.73 / 班排 5/37</p>
+          <p data-i18n="sidebar-school"><strong>學校：</strong>國立臺灣科技大學</p>
+          <p data-i18n="sidebar-dept"><strong>系所：</strong>電子工程研究所</p>
+          <p data-i18n="sidebar-status"><strong>身份：</strong>碩士一年級（在學中）</p>
+          <p data-i18n="sidebar-gpa"><strong>學士 GPA：</strong>89.73 / 班排 5/37</p>
         </div>
         <div class="contact-links">
           <a href="mailto:kim36991294@gmail.com">kim36991294@gmail.com</a>
@@ -338,16 +339,16 @@
     </div>
     <div class="about-grid">
       <div class="about-text">
-        <p>
+        <p data-i18n="about-p1">
           目前就讀國立臺灣科技大學電子工程研究所碩士班，具備前後端開發、系統整合、API 設計與部署實作經驗。
           曾參與 SparkAmplify 冬季實習，涵蓋 system design、software planning、API implementation、
           AI agent workflow integration 與 QA testing 等完整開發週期。
         </p>
-        <p>
+        <p data-i18n="about-p2">
           擅長將不同元件與技術整合成可運作的系統，包含前端介面、後端服務、資料庫、容器化部署與裝置串接。
           除課內學習外，也持續自學 Kubernetes、n8n、Dify，並具備 Git 協作、技術文件整理與跨模組開發經驗。
         </p>
-        <p>
+        <p data-i18n="about-p3">
           具備快速學習與主動自學能力，對實作、系統流程與跨領域整合具高度興趣，
           願意從需求分析、開發、測試到部署完整參與每個環節。
         </p>
@@ -355,23 +356,23 @@
       <div class="about-highlights">
         <div class="highlight-item">
           <div class="hl-label">Research Interests</div>
-          <div class="hl-value">全端開發 · 系統整合 · AI Workflow</div>
+          <div class="hl-value" data-i18n="hl-research">全端開發 · 系統整合 · AI Workflow</div>
         </div>
         <div class="highlight-item">
           <div class="hl-label">Affiliation</div>
-          <div class="hl-value">國立臺灣科技大學</div>
+          <div class="hl-value" data-i18n="hl-affiliation">國立臺灣科技大學</div>
         </div>
         <div class="highlight-item">
           <div class="hl-label">Internship</div>
-          <div class="hl-value">SparkAmplify（2026 冬季）</div>
+          <div class="hl-value" data-i18n="hl-intern1">SparkAmplify（2026 冬季）</div>
         </div>
         <div class="highlight-item">
           <div class="hl-label">Internship</div>
-          <div class="hl-value">太空新星飛揚計畫</div>
+          <div class="hl-value" data-i18n="hl-intern2">太空新星飛揚計畫</div>
         </div>
         <div class="highlight-item">
           <div class="hl-label">Status</div>
-          <div class="hl-value">碩士一年級在學 · 積極求職中</div>
+          <div class="hl-value" data-i18n="hl-status">碩士一年級在學 · 積極求職中</div>
         </div>
       </div>
     </div>
@@ -389,14 +390,14 @@
     <div class="exp-item">
       <div class="exp-date">2026.01 – 2026.02</div>
       <div class="exp-content">
-        <div class="exp-role">冬季實習生 Winter Intern</div>
+        <div class="exp-role" data-i18n="exp1-role">冬季實習生 Winter Intern</div>
         <div class="exp-company">SparkAmplify</div>
         <ul class="exp-bullets">
-          <li>使用 Git 進行版本控制，建立並維護 Git Workflow 協作流程（分支策略、PR 審核）</li>
-          <li>操作 Harbor 私有 Docker Registry，管理 Docker Image 的推送、拉取與版本控管</li>
-          <li>撰寫 Dockerfile，執行 Docker Build 並完成容器化部署流程</li>
-          <li>建置前後端分離部署架構，分別部署前端靜態資源與後端服務</li>
-          <li>調整 Nginx 設定，配置反向代理轉發規則，串接 Harbor Registry 與後端服務</li>
+          <li data-i18n="exp1-b1">使用 Git 進行版本控制，建立並維護 Git Workflow 協作流程（分支策略、PR 審核）</li>
+          <li data-i18n="exp1-b2">操作 Harbor 私有 Docker Registry，管理 Docker Image 的推送、拉取與版本控管</li>
+          <li data-i18n="exp1-b3">撰寫 Dockerfile，執行 Docker Build 並完成容器化部署流程</li>
+          <li data-i18n="exp1-b4">建置前後端分離部署架構，分別部署前端靜態資源與後端服務</li>
+          <li data-i18n="exp1-b5">調整 Nginx 設定，配置反向代理轉發規則，串接 Harbor Registry 與後端服務</li>
         </ul>
         <div class="exp-tags">
           <span class="tag">Git</span>
@@ -404,7 +405,7 @@
           <span class="tag">Docker</span>
           <span class="tag">Harbor</span>
           <span class="tag">Nginx</span>
-          <span class="tag">前後端分離部署</span>
+          <span class="tag" data-i18n="exp1-tag1">前後端分離部署</span>
         </div>
       </div>
     </div>
@@ -412,23 +413,23 @@
     <div class="exp-item">
       <div class="exp-date">2024.07 – 2024.09</div>
       <div class="exp-content">
-        <div class="exp-role">研發實戰參與者</div>
-        <div class="exp-company">經濟部產業發展署 — 太空產業供應鏈暨網通產業新星飛揚計畫</div>
+        <div class="exp-role" data-i18n="exp2-role">研發實戰參與者</div>
+        <div class="exp-company" data-i18n="exp2-company">經濟部產業發展署 — 太空產業供應鏈暨網通產業新星飛揚計畫</div>
         <ul class="exp-bullets">
-          <li>參與產業研發實戰培訓，修業期滿獲頒證明</li>
+          <li data-i18n="exp2-b1">參與產業研發實戰培訓，修業期滿獲頒證明</li>
         </ul>
       </div>
     </div>
 
     <div class="exp-item">
-      <div class="exp-date">2025.09 – 現在</div>
+      <div class="exp-date" data-i18n="exp3-date">2025.09 – 現在</div>
       <div class="exp-content">
-        <div class="exp-role">微積分課程助教</div>
-        <div class="exp-company">國立臺灣科技大學</div>
+        <div class="exp-role" data-i18n="exp3-role">微積分課程助教</div>
+        <div class="exp-company" data-i18n="exp3-company">國立臺灣科技大學</div>
         <ul class="exp-bullets">
-          <li>協助教授課程教學，負責批改作業、解答學生課業疑問</li>
-          <li>為方便課務銜接與管理，獨立以 React + Django + DB 全端開發成績登記與考卷管理系統</li>
-          <li>開發自動出題 Agent，結合 AI 自動生成考卷內容</li>
+          <li data-i18n="exp3-b1">協助教授課程教學，負責批改作業、解答學生課業疑問</li>
+          <li data-i18n="exp3-b2">為方便課務銜接與管理，獨立以 React + Django + DB 全端開發成績登記與考卷管理系統</li>
+          <li data-i18n="exp3-b3">開發自動出題 AI Agent，透過 Tool Use 內嵌 Word 工具，自主生成完整考卷文件</li>
         </ul>
         <div class="exp-tags">
           <span class="tag">React</span>
@@ -436,24 +437,24 @@
           <span class="tag">Full-Stack</span>
           <span class="tag">Database</span>
           <span class="tag">AI Agent</span>
-          <span class="tag">教學</span>
+          <span class="tag" data-i18n="exp3-tag1">教學</span>
         </div>
       </div>
     </div>
 
     <div class="exp-item">
-      <div class="exp-date">兼職</div>
+      <div class="exp-date" data-i18n="exp4-date">兼職</div>
       <div class="exp-content">
-        <div class="exp-role">資訊管理顧問（兼職）</div>
-        <div class="exp-company">應拿實業有限公司</div>
+        <div class="exp-role" data-i18n="exp4-role">資訊管理顧問（兼職）</div>
+        <div class="exp-company" data-i18n="exp4-company">應拿實業有限公司</div>
         <ul class="exp-bullets">
-          <li>負責公司資料庫定期備份與維護，確保營運資料安全</li>
-          <li>擔任內部電腦與資訊系統問題顧問，排除軟硬體故障</li>
+          <li data-i18n="exp4-b1">負責公司資料庫定期備份與維護，確保營運資料安全</li>
+          <li data-i18n="exp4-b2">擔任內部電腦與資訊系統問題顧問，排除軟硬體故障</li>
         </ul>
         <div class="exp-tags">
           <span class="tag">Database</span>
-          <span class="tag">備份管理</span>
-          <span class="tag">IT 支援</span>
+          <span class="tag" data-i18n="exp4-tag1">備份管理</span>
+          <span class="tag" data-i18n="exp4-tag2">IT 支援</span>
         </div>
       </div>
     </div>
@@ -472,17 +473,17 @@
 
       <!-- Project 2: Featured -->
       <div class="project-card featured">
-        <div class="project-featured-badge">★ 國際展示</div>
+        <div class="project-featured-badge" data-i18n="proj1-badge">★ 國際展示</div>
         <div class="project-title">6G AI/ML 訓練／推論平台 — O-RAN × KubeFlow × Agent AI</div>
-        <div class="project-period">2024 – 2025 · 國科會 / 國立臺灣科技大學 · EuCNC 2024 比利時 · COSCUP 2024</div>
-        <p class="project-desc">
+        <div class="project-period" data-i18n="proj1-period">2024 – 2025 · 國科會 / 國立臺灣科技大學 · EuCNC 2024 比利時 · COSCUP 2024</div>
+        <p class="project-desc" data-i18n="proj1-desc">
           參與國科會 6G AI/ML 訓練／推論平台開發與維運，覆蓋 O-RAN 基礎架構、KubeFlow 訓練環境與 Dify 智慧化操作介面。
           平台以 AR/VR QoS 為核心應用，於 EuCNC 2024（比利時）及 COSCUP 2024 對外展示。
         </p>
         <ul class="project-achievements">
-          <li><strong>EuCNC 2024</strong>（比利時，6 月）AR/VR QoS 即時推論現場展示；<strong>COSCUP 2024</strong> O-RAN + AI/ML 平台成果發表</li>
-          <li>雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
-          <li>串接意圖驅動平台，以 <strong>AI Agent</strong> 形式控制平台</li>
+          <li data-i18n="proj1-a1"><strong>EuCNC 2024</strong>（比利時，6 月）AR/VR QoS 即時推論現場展示；<strong>COSCUP 2024</strong> O-RAN + AI/ML 平台成果發表</li>
+          <li data-i18n="proj1-a2">雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
+          <li data-i18n="proj1-a3">串接意圖驅動平台，以 <strong>AI Agent</strong> 形式控制平台</li>
         </ul>
         <div class="project-tags">
           <span class="tag">KubeFlow</span>
@@ -500,19 +501,19 @@
 
       <!-- Project 3: Featured -->
       <div class="project-card featured">
-        <div class="project-featured-badge">★ 赴美實習</div>
-        <div class="project-title">MySphere — 英文分級故事學習平台</div>
-        <div class="project-period">2025 – 2026 · 學海計畫 × SparkAmplify（洛杉磯）× 東華書局 · 赴美實習 2026/01–02</div>
-        <p class="project-desc">
+        <div class="project-featured-badge" data-i18n="proj2-badge">★ 赴美實習</div>
+        <div class="project-title" data-i18n="proj2-title">MySphere — 英文分級故事學習平台</div>
+        <div class="project-period" data-i18n="proj2-period">2025 – 2026 · 學海計畫 × SparkAmplify（洛杉磯）× 東華書局 · 赴美實習 2026/01–02</div>
+        <p class="project-desc" data-i18n="proj2-desc">
           透過學海計畫赴美，與洛杉磯新創公司 SparkAmplify 及東華書局合作開發 MySphere。
           平台依英文程度分級提供互動故事內容，內建學習狀態追蹤 API 與 LLM 智能問答，
           讓學習者在閱讀過程中即時與 AI 互動、確認理解程度。
         </p>
         <ul class="project-achievements">
-          <li><strong>東華書局合作</strong>，平台服務書局周邊英文學習需求，英文故事依程度<strong>分級選材</strong></li>
-          <li>內建<strong>學習進度追蹤 API</strong> 與 <strong>LLM 智能問答 Chat</strong>，負責資料庫管理與 API 開發</li>
-          <li>Docker 容器化部署、Nginx 反向代理轉發，搭建完整服務架構</li>
-          <li>建立 <strong>Harbor</strong> Image 管理流程與 <strong>GitHub Actions CI/CD</strong>，規範團隊 Git Workflow 協作</li>
+          <li data-i18n="proj2-a1"><strong>東華書局合作</strong>，平台服務書局周邊英文學習需求，英文故事依程度<strong>分級選材</strong></li>
+          <li data-i18n="proj2-a2">內建<strong>學習進度追蹤 API</strong> 與 <strong>LLM 智能問答 Chat</strong>，負責資料庫管理與 API 開發</li>
+          <li data-i18n="proj2-a3">Docker 容器化部署、Nginx 反向代理轉發，搭建完整服務架構</li>
+          <li data-i18n="proj2-a4">建立 <strong>Harbor</strong> Image 管理流程與 <strong>GitHub Actions CI/CD</strong>，規範團隊 Git Workflow 協作</li>
         </ul>
         <div class="project-tags">
           <span class="tag">LLM</span>
@@ -524,23 +525,23 @@
           <span class="tag">CI/CD</span>
           <span class="tag">Database</span>
           <span class="tag">Git Workflow</span>
-          <span class="tag">學海計畫</span>
+          <span class="tag" data-i18n="proj2-tag1">學海計畫</span>
         </div>
       </div>
 
       <!-- Project: 大學部實務專題 -->
       <div class="project-card">
-        <div class="project-title">利用閒置時間改善 SSD GC 之 Long Tail Latency</div>
-        <div class="project-period">2024 · 國立臺灣科技大學 電子工程系 · 指導教授：吳晉賢</div>
-        <p class="project-desc">
+        <div class="project-title" data-i18n="proj3-title">利用閒置時間改善 SSD GC 之 Long Tail Latency</div>
+        <div class="project-period" data-i18n="proj3-period">2024 · 國立臺灣科技大學 電子工程系 · 指導教授：吳晉賢</div>
+        <p class="project-desc" data-i18n="proj3-desc">
           以 Deep Q-Learning 預測 SSD 系統閒置時間，主動在 Idle Time 排程 GC，降低 Forced GC 觸發頻率以改善長尾延遲。
           以 Cython 橋接 Python RL Agent 與 C++ SSD 模擬器 MQSim 實現跨語言整合。
         </p>
         <ul class="project-achievements">
-          <li>使用強化學習架構，以 <strong>Deep Q-Learning</strong> 方式實踐</li>
-          <li>以 <strong>100,000 筆</strong> SNIA IOTTA 企業伺服器 I/O trace 在 MQSim（NVMe MLC Flash）上完整驗證</li>
-          <li>有效降低長尾延遲發生機率</li>
-          <li>Cython 橋接 Python / C++ 跨語言整合，成功解決 ctypes 無法處理的 C++ 變數交換問題</li>
+          <li data-i18n="proj3-a1">使用強化學習架構，以 <strong>Deep Q-Learning</strong> 方式實踐</li>
+          <li data-i18n="proj3-a2">以 <strong>100,000 筆</strong> SNIA IOTTA 企業伺服器 I/O trace 在 MQSim（NVMe MLC Flash）上完整驗證</li>
+          <li data-i18n="proj3-a3">有效降低長尾延遲發生機率</li>
+          <li data-i18n="proj3-a4">Cython 橋接 Python / C++ 跨語言整合，成功解決 ctypes 無法處理的 C++ 變數交換問題</li>
         </ul>
         <div class="project-tags">
           <span class="tag">Reinforcement Learning</span>
@@ -572,18 +573,18 @@
 
         <div class="edu-item">
           <div class="edu-degree">M.S. in Electronic Engineering</div>
-          <div class="edu-school">國立臺灣科技大學 電子工程研究所</div>
-          <div class="edu-period">2025 – 在學中（碩士一年級）</div>
+          <div class="edu-school" data-i18n="edu-ms-school">國立臺灣科技大學 電子工程研究所</div>
+          <div class="edu-period" data-i18n="edu-ms-period">2025 – 在學中（碩士一年級）</div>
         </div>
 
         <div class="edu-item">
           <div class="edu-degree">B.S. in Electronic Engineering</div>
-          <div class="edu-school">國立臺灣科技大學 電子工程學系</div>
-          <div class="edu-period">2021 – 2025（已畢業）</div>
+          <div class="edu-school" data-i18n="edu-bs-school">國立臺灣科技大學 電子工程學系</div>
+          <div class="edu-period" data-i18n="edu-bs-period">2021 – 2025（已畢業）</div>
           <ul class="edu-detail">
-            <li>總平均成績：89.73</li>
-            <li>班級排名：5 / 37（前 13.5%）</li>
-            <li>系排名：13 / 109（前 11.9%）</li>
+            <li data-i18n="edu-bs-gpa">總平均成績：89.73</li>
+            <li data-i18n="edu-bs-class">班級排名：5 / 37（前 13.5%）</li>
+            <li data-i18n="edu-bs-dept">系排名：13 / 109（前 11.9%）</li>
           </ul>
         </div>
 
@@ -593,15 +594,15 @@
           <div class="award-item">
             <div class="award-year">2024</div>
             <div>
-              <div class="award-name">太空新星飛揚計畫</div>
-              <div class="award-desc">經濟部產業發展署 · 2024.07 – 2024.09</div>
+              <div class="award-name" data-i18n="award1-name">太空新星飛揚計畫</div>
+              <div class="award-desc" data-i18n="award1-desc">經濟部產業發展署 · 2024.07 – 2024.09</div>
             </div>
           </div>
 
           <div class="award-item">
             <div class="award-year">2026</div>
             <div>
-              <div class="award-name">學海築夢實習計畫 — SparkAmplify 冬季實習</div>
+              <div class="award-name" data-i18n="award2-name">學海築夢實習計畫 — SparkAmplify 冬季實習</div>
               <div class="award-desc">SparkAmplify · 2026.01 – 2026.02</div>
             </div>
           </div>
@@ -610,12 +611,12 @@
         <div style="margin-top: 40px;">
           <div class="sub-title">Research</div>
           <div class="edu-item">
-            <div class="edu-degree">O-RAN SC 雙層架構研究與部署</div>
+            <div class="edu-degree" data-i18n="research-title">O-RAN SC 雙層架構研究與部署</div>
             <div class="edu-period">2025 · O-RAN SC Release L/M</div>
             <ul class="edu-detail">
-              <li>完整部署 SMO/OAM 層（3 組 Docker Compose Stack）與 NonRT RIC 層（13 個 Helm subchart，K8s 部署）</li>
-              <li>實踐 Docker × Kubernetes 跨平台網路整合</li>
-              <li>研究 O-RAN 架構、RAN 發展歷程與應用場景</li>
+              <li data-i18n="research-b1">完整部署 SMO/OAM 層（3 組 Docker Compose Stack）與 NonRT RIC 層（13 個 Helm subchart，K8s 部署）</li>
+              <li data-i18n="research-b2">實踐 Docker × Kubernetes 跨平台網路整合</li>
+              <li data-i18n="research-b3">研究 O-RAN 架構、RAN 發展歷程與應用場景</li>
             </ul>
           </div>
         </div>
@@ -657,11 +658,11 @@
               </tr>
               <tr>
                 <td>Documentation</td>
-                <td>平台系統分層文件、K8s / Docker 部署架構圖、Use Case 流程圖</td>
+                <td data-i18n="skill-doc">平台系統分層文件、K8s / Docker 部署架構圖、Use Case 流程圖</td>
               </tr>
               <tr>
                 <td>Others</td>
-                <td>ESP32 嵌入式開發、HTTP / WebSocket 通訊、系統整合與部署</td>
+                <td data-i18n="skill-others">ESP32 嵌入式開發、HTTP / WebSocket 通訊、系統整合與部署</td>
               </tr>
             </tbody>
           </table>
@@ -672,23 +673,23 @@
           <ul style="margin-top:8px;">
             <li style="font-size:0.875rem;color:var(--gray-700);padding:8px 0 8px 20px;border-bottom:1px solid var(--gray-200);position:relative;">
               <span style="position:absolute;left:0;color:var(--red);">→</span>
-              具備快速學習與主動自學能力
+              <span data-i18n="trait1">具備快速學習與主動自學能力</span>
             </li>
             <li style="font-size:0.875rem;color:var(--gray-700);padding:8px 0 8px 20px;border-bottom:1px solid var(--gray-200);position:relative;">
               <span style="position:absolute;left:0;color:var(--red);">→</span>
-              能將不同技術模組整合為完整可運作系統
+              <span data-i18n="trait2">能將不同技術模組整合為完整可運作系統</span>
             </li>
             <li style="font-size:0.875rem;color:var(--gray-700);padding:8px 0 8px 20px;border-bottom:1px solid var(--gray-200);position:relative;">
               <span style="position:absolute;left:0;color:var(--red);">→</span>
-              習慣整理技術文件與架構內容
+              <span data-i18n="trait3">習慣整理技術文件與架構內容</span>
             </li>
             <li style="font-size:0.875rem;color:var(--gray-700);padding:8px 0 8px 20px;border-bottom:1px solid var(--gray-200);position:relative;">
               <span style="position:absolute;left:0;color:var(--red);">→</span>
-              對實作、系統流程與跨領域整合具高度興趣
+              <span data-i18n="trait4">對實作、系統流程與跨領域整合具高度興趣</span>
             </li>
             <li style="font-size:0.875rem;color:var(--gray-700);padding:8px 0 8px 20px;position:relative;">
               <span style="position:absolute;left:0;color:var(--red);">→</span>
-              願意從需求、開發、測試到部署完整參與
+              <span data-i18n="trait5">願意從需求、開發、測試到部署完整參與</span>
             </li>
           </ul>
         </div>
@@ -726,6 +727,117 @@
       hamburger.setAttribute('aria-expanded', false);
     });
   });
+
+  // ── Language Toggle ──
+  const i18n = {
+    en: {
+      'hero-title': 'M.S. Student, Electronic Engineering, NTUST<br>Seeking: Software Engineer / Full-Stack Engineer / System Integration Engineer',
+      'hero-desc': 'Experienced in full-stack development, system integration, API design, and deployment. Completed a winter internship at SparkAmplify, gaining end-to-end engineering experience from requirement analysis to deployment. Skilled at integrating diverse tech modules into working systems, continuously self-learning Kubernetes, n8n, and Dify.',
+      'sidebar-school': '<strong>University:</strong> National Taiwan University of Science and Technology',
+      'sidebar-dept': '<strong>Department:</strong> Electronic Engineering (Graduate)',
+      'sidebar-status': '<strong>Status:</strong> 1st-year M.S. student (enrolled)',
+      'sidebar-gpa': '<strong>B.S. GPA:</strong> 89.73 / Class Rank 5/37',
+      'about-p1': 'Currently a graduate student at NTUST, Department of Electronic Engineering. Experienced in full-stack development, system integration, API design, and deployment. Completed a winter internship at SparkAmplify covering system design, software planning, API implementation, AI agent workflow integration, and QA testing.',
+      'about-p2': 'Skilled at integrating different components into working systems — frontend, backend, databases, containerized deployment, and device integration. Continuously self-learning Kubernetes, n8n, and Dify, with experience in Git collaboration, technical documentation, and cross-module development.',
+      'about-p3': 'Fast learner with strong self-motivation. Passionate about hands-on implementation, system workflows, and cross-domain integration. Willing to participate in every stage from requirements analysis to deployment.',
+      'hl-research': 'Full-Stack Dev · System Integration · AI Workflow',
+      'hl-affiliation': 'National Taiwan Univ. of Science & Technology',
+      'hl-intern1': 'SparkAmplify (Winter 2026)',
+      'hl-intern2': 'Space New Star Program',
+      'hl-status': '1st-year M.S. student · Actively seeking opportunities',
+      'exp1-role': 'Winter Intern',
+      'exp1-b1': 'Managed version control with Git, established and maintained Git Workflow (branching strategy, PR review)',
+      'exp1-b2': 'Operated Harbor private Docker Registry for image push, pull, and version management',
+      'exp1-b3': 'Wrote Dockerfiles, executed Docker builds, and completed containerized deployment',
+      'exp1-b4': 'Built frontend-backend separated deployment architecture for static resources and backend services',
+      'exp1-b5': 'Configured Nginx reverse proxy rules to connect Harbor Registry and backend services',
+      'exp1-tag1': 'Frontend-Backend Separation',
+      'exp2-role': 'R&D Training Participant',
+      'exp2-company': 'Industrial Development Administration, MOEA — Space & ICT New Star Program',
+      'exp2-b1': 'Completed industry R&D training program and received certification',
+      'exp3-date': '2025.09 – Present',
+      'exp3-role': 'Calculus Teaching Assistant',
+      'exp3-company': 'National Taiwan Univ. of Science & Technology',
+      'exp3-b1': 'Assisted in teaching, grading assignments, and answering student questions',
+      'exp3-b2': 'Independently built a grade registration and exam management system using React + Django + DB for course administration',
+      'exp3-b3': 'Developed an auto-exam AI Agent with Tool Use integration, embedding a Word tool to autonomously generate complete exam documents',
+      'exp3-tag1': 'Teaching',
+      'exp4-date': 'Part-time',
+      'exp4-role': 'IT Consultant (Part-time)',
+      'exp4-company': 'Ying-Na Industrial Co., Ltd.',
+      'exp4-b1': 'Managed regular database backups and maintenance to ensure data security',
+      'exp4-b2': 'Served as internal IT consultant for troubleshooting computer and system issues',
+      'exp4-tag1': 'Backup Mgmt',
+      'exp4-tag2': 'IT Support',
+      'proj1-badge': '★ International Demo',
+      'proj1-period': '2024 – 2025 · NSTC / NTUST · EuCNC 2024 Belgium · COSCUP 2024',
+      'proj1-desc': 'Contributed to the NSTC 6G AI/ML training/inference platform covering O-RAN infrastructure, KubeFlow training environment, and Dify intelligent interface. The platform focuses on AR/VR QoS and was demonstrated at EuCNC 2024 (Belgium) and COSCUP 2024.',
+      'proj1-a1': '<strong>EuCNC 2024</strong> (Belgium, June) live AR/VR QoS inference demo; <strong>COSCUP 2024</strong> O-RAN + AI/ML platform presentation',
+      'proj1-a2': 'Dual-node hybrid deployment (Agent Node + Inference Node) operating <strong>20+ container services</strong> across Docker Space / Kubernetes Space',
+      'proj1-a3': 'Integrated intent-driven platform to control the system via <strong>AI Agent</strong>',
+      'proj2-badge': '★ US Internship',
+      'proj2-title': 'MySphere — Graded English Story Learning Platform',
+      'proj2-period': '2025 – 2026 · Study Abroad Program × SparkAmplify (Los Angeles) × Tung Hua Book Co. · US Internship 2026/01–02',
+      'proj2-desc': 'Traveled to the US through the government study abroad program to co-develop MySphere with LA-based startup SparkAmplify and Tung Hua Book Co. The platform provides graded interactive English stories with learning progress tracking API and LLM-powered Q&A chat.',
+      'proj2-a1': '<strong>Tung Hua Book Co. partnership</strong>, serving English learning needs with <strong>graded story content</strong>',
+      'proj2-a2': 'Built <strong>learning progress tracking API</strong> and <strong>LLM Q&A Chat</strong>; responsible for database management and API development',
+      'proj2-a3': 'Docker containerized deployment with Nginx reverse proxy, building complete service architecture',
+      'proj2-a4': 'Established <strong>Harbor</strong> image management workflow and <strong>GitHub Actions CI/CD</strong>, standardized team Git Workflow',
+      'proj2-tag1': 'Study Abroad Program',
+      'proj3-title': 'Improving SSD GC Long Tail Latency Using Idle Time',
+      'proj3-period': '2024 · NTUST Dept. of Electronic Engineering · Advisor: Prof. Chin-Hsien Wu',
+      'proj3-desc': 'Used Deep Q-Learning to predict SSD idle time and proactively schedule GC during idle periods, reducing Forced GC frequency to improve long tail latency. Bridged Python RL Agent with C++ SSD simulator MQSim via Cython.',
+      'proj3-a1': 'Implemented reinforcement learning architecture using <strong>Deep Q-Learning</strong>',
+      'proj3-a2': 'Validated with <strong>100,000</strong> SNIA IOTTA enterprise server I/O traces on MQSim (NVMe MLC Flash)',
+      'proj3-a3': 'Effectively reduced long tail latency occurrence',
+      'proj3-a4': 'Cython bridging Python / C++ cross-language integration, resolved ctypes limitations for C++ variable exchange',
+      'edu-ms-school': 'NTUST, Graduate Institute of Electronic Engineering',
+      'edu-ms-period': '2025 – Present (1st-year M.S.)',
+      'edu-bs-school': 'NTUST, Dept. of Electronic Engineering',
+      'edu-bs-period': '2021 – 2025 (Graduated)',
+      'edu-bs-gpa': 'Overall GPA: 89.73',
+      'edu-bs-class': 'Class Rank: 5 / 37 (Top 13.5%)',
+      'edu-bs-dept': 'Dept. Rank: 13 / 109 (Top 11.9%)',
+      'award1-name': 'Space New Star Program',
+      'award1-desc': 'Industrial Development Administration, MOEA · 2024.07 – 2024.09',
+      'award2-name': 'Study Abroad Dream Program — SparkAmplify Winter Internship',
+      'research-title': 'O-RAN SC Dual-Layer Architecture Research & Deployment',
+      'research-b1': 'Deployed SMO/OAM layer (3 Docker Compose Stacks) and NonRT RIC layer (13 Helm subcharts, K8s deployment)',
+      'research-b2': 'Implemented Docker × Kubernetes cross-platform network integration',
+      'research-b3': 'Researched O-RAN architecture, RAN development history, and use cases',
+      'skill-doc': 'Platform system architecture docs, K8s / Docker deployment diagrams, Use Case flow diagrams',
+      'skill-others': 'ESP32 embedded dev, HTTP / WebSocket communication, system integration & deployment',
+      'trait1': 'Fast learner with strong self-motivation',
+      'trait2': 'Capable of integrating diverse tech modules into complete working systems',
+      'trait3': 'Accustomed to writing technical documentation and architecture diagrams',
+      'trait4': 'Passionate about hands-on implementation, system workflows, and cross-domain integration',
+      'trait5': 'Willing to participate in every stage from requirements to deployment',
+    }
+  };
+
+  let currentLang = 'zh';
+  const zhCache = {};
+
+  function toggleLang() {
+    const target = currentLang === 'zh' ? 'en' : 'zh';
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (currentLang === 'zh') {
+        zhCache[key] = el.innerHTML;
+        if (i18n.en[key]) el.innerHTML = i18n.en[key];
+      } else {
+        if (zhCache[key]) el.innerHTML = zhCache[key];
+      }
+    });
+    currentLang = target;
+    const label = currentLang === 'zh' ? 'EN' : '中文';
+    document.getElementById('desktopLangBtn').textContent = label;
+    document.getElementById('mobileLangBtn').textContent = label;
+    document.documentElement.lang = currentLang === 'zh' ? 'zh-TW' : 'en';
+  }
+
+  document.getElementById('desktopLangBtn').addEventListener('click', toggleLang);
+  document.getElementById('mobileLangBtn').addEventListener('click', toggleLang);
 
   // Active nav highlight on scroll
   const sections = document.querySelectorAll('section[id]');
