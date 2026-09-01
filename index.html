@@ -177,6 +177,12 @@
       padding-left: 16px; position: relative;
     }
     .project-achievements li::before { content: '→'; position: absolute; left: 0; color: var(--red); font-size: 0.75rem; }
+    .project-phase {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gray-600); margin: 12px 0 6px; padding-bottom: 3px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .project-phase:first-child { margin-top: 0; }
     .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
     .project-tags .tag { font-size: 0.68rem; padding: 2px 8px; border-color: var(--gray-300); color: var(--gray-700); }
     .project-link { font-size: 0.75rem; color: var(--red); margin-top: 10px; display: inline-block; }
@@ -478,25 +484,38 @@
       <!-- Project 2: Featured -->
       <div class="project-card featured">
         <div class="project-featured-badge" data-i18n="proj1-badge">★ 國際展示</div>
-        <div class="project-title">6G AI/ML 訓練／推論平台 — O-RAN × KubeFlow × Agent AI</div>
-        <div class="project-period" data-i18n="proj1-period">2024 – 2025 · 國科會 / 國立臺灣科技大學 · EuCNC 2024 比利時 · COSCUP 2024</div>
+        <div class="project-title">6G AI/ML 訓練／推論平台 — 建置維運 × 效能壓測</div>
+        <div class="project-period" data-i18n="proj1-period">2024 – 2026 · 國科會 / 國立臺灣科技大學 · EuCNC 2024 比利時 · COSCUP 2024</div>
         <p class="project-desc" data-i18n="proj1-desc">
-          參與國科會 6G AI/ML 訓練／推論平台開發與維運，覆蓋 O-RAN 基礎架構、KubeFlow 訓練環境與 Dify 智慧化操作介面。
-          平台以 AR/VR QoS 為核心應用，於 EuCNC 2024（比利時）及 COSCUP 2024 對外展示。
+          參與國科會 6G AI/ML 訓練／推論平台，從建置維運到效能壓測與缺陷修復完整參與。
+          平台覆蓋 O-RAN 基礎架構、KubeFlow 訓練環境與 Dify 智慧化操作介面，以 AR/VR QoS 為核心應用，
+          於 EuCNC 2024（比利時）及 COSCUP 2024 對外展示。
         </p>
+        <div class="project-phase" data-i18n="proj1-ph1">建置與維運 · 2024–2025</div>
         <ul class="project-achievements">
           <li data-i18n="proj1-a1"><strong>EuCNC 2024</strong>（比利時，6 月）AR/VR QoS 即時推論現場展示；<strong>COSCUP 2024</strong> O-RAN + AI/ML 平台成果發表</li>
           <li data-i18n="proj1-a2">雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
           <li data-i18n="proj1-a3">串接意圖驅動平台，以 <strong>AI Agent</strong> 形式控制平台</li>
         </ul>
+        <div class="project-phase" data-i18n="proj1-ph2">效能壓測與可用性修復 · 2026</div>
+        <ul class="project-achievements">
+          <li data-i18n="proj1-a4"><strong>串流化改寫</strong>資料集上傳／下載路徑（entrypoint、SDK、前處理 step 三層），entrypoint 記憶體用量自「≈2× 物件大小」降為與大小脫鉤的固定 <strong>140 MiB</strong>，GB 級下載自 495MB 必定 OOM 變為 <strong>4.7GB／112s／44.9 MB/s</strong> 通過驗收</li>
+          <li data-i18n="proj1-a5">以 <strong>Prometheus + Istio + cgroup 指標</strong>建立量測方法，對平台做物件大小（1→200GB）、並發（1→12）、多租戶（1→12）三軸加壓，累計<strong>定位 11 項缺陷、提交 6 項修復</strong></li>
+          <li data-i18n="proj1-a6">揭露可用性風險：上傳路徑逐級落地造成 <strong>2.7× 暫存放大</strong>，單一租戶上傳 94GB 即觸發節點 DiskPressure、驅逐 API 閘道 18 次導致全平台中斷</li>
+          <li data-i18n="proj1-a7">產出 <strong>~50 CPU-秒/GB</strong> 資源係數與各角色 memory limit 建議（file-operation 1Gi 峰值達 95%、seaweed-s3 需 ≥5Gi），作為平台容量配置依據</li>
+        </ul>
         <div class="project-tags">
           <span class="tag">KubeFlow</span>
           <span class="tag">O-RAN</span>
           <span class="tag">Dify</span>
-          <span class="tag">Prompt Engineering</span>
           <span class="tag">Kubernetes</span>
           <span class="tag">Docker</span>
           <span class="tag">Kafka</span>
+          <span class="tag">Prometheus</span>
+          <span class="tag">PromQL</span>
+          <span class="tag">Istio</span>
+          <span class="tag">cgroup / cAdvisor</span>
+          <span class="tag">SeaweedFS</span>
           <span class="tag">AR/VR QoS</span>
           <span class="tag">6G</span>
         </div>
@@ -653,6 +672,10 @@
                 <td>Kubernetes、Helm、Docker、Docker Compose、GitHub Actions、CI/CD、Harbor、Nginx、Ubuntu / Linux、Git</td>
               </tr>
               <tr>
+                <td>Observability</td>
+                <td>Prometheus、PromQL、Grafana、Istio Telemetry、cAdvisor / cgroup、node-exporter、kube-state-metrics、DCGM</td>
+              </tr>
+              <tr>
                 <td>AI / ML</td>
                 <td>PyTorch、TensorRT、CUDA、AI agent / workflow integration</td>
               </tr>
@@ -774,11 +797,17 @@
       'exp4-tag1': 'Backup Mgmt',
       'exp4-tag2': 'IT Support',
       'proj1-badge': '★ International Demo',
-      'proj1-period': '2024 – 2025 · NSTC / NTUST · EuCNC 2024 Belgium · COSCUP 2024',
-      'proj1-desc': 'Contributed to the NSTC 6G AI/ML training/inference platform covering O-RAN infrastructure, KubeFlow training environment, and Dify intelligent interface. The platform focuses on AR/VR QoS and was demonstrated at EuCNC 2024 (Belgium) and COSCUP 2024.',
+      'proj1-period': '2024 – 2026 · NSTC / NTUST · EuCNC 2024 Belgium · COSCUP 2024',
+      'proj1-desc': 'Contributed to the NSTC 6G AI/ML training/inference platform end to end — from build-out and operations through performance stress testing and defect remediation. The platform covers O-RAN infrastructure, a KubeFlow training environment, and a Dify intelligent interface, focuses on AR/VR QoS, and was demonstrated at EuCNC 2024 (Belgium) and COSCUP 2024.',
+      'proj1-ph1': 'Build-out &amp; Operations · 2024–2025',
       'proj1-a1': '<strong>EuCNC 2024</strong> (Belgium, June) live AR/VR QoS inference demo; <strong>COSCUP 2024</strong> O-RAN + AI/ML platform presentation',
       'proj1-a2': 'Dual-node hybrid deployment (Agent Node + Inference Node) operating <strong>20+ container services</strong> across Docker Space / Kubernetes Space',
       'proj1-a3': 'Integrated intent-driven platform to control the system via <strong>AI Agent</strong>',
+      'proj1-ph2': 'Stress Testing &amp; Availability Fixes · 2026',
+      'proj1-a4': '<strong>Re-architected the dataset upload/download path to streaming</strong> across three layers (entrypoint, SDK, preprocessing step), cutting entrypoint memory from <strong>≈2× object size to a flat 140 MiB</strong> — GB-scale downloads went from guaranteed OOM at 495 MB to <strong>4.7 GB / 112 s / 44.9 MB/s</strong> at acceptance',
+      'proj1-a5': 'Built the measurement methodology on <strong>Prometheus + Istio + cgroup metrics</strong> and loaded the platform along three axes — object size (1→200 GB), concurrency (1→12), multi-tenancy (1→12) — <strong>surfacing 11 defects and shipping 6 fixes</strong>',
+      'proj1-a6': 'Exposed an availability risk: the store-and-forward upload path amplifies scratch usage <strong>2.7×</strong>, so a single tenant uploading 94 GB triggers node DiskPressure, evicting the API gateway 18 times and taking down the whole platform',
+      'proj1-a7': 'Derived a <strong>~50 CPU-seconds/GB</strong> resource coefficient and per-role memory limit recommendations (file-operation peaked at 95% of its 1 GiB limit; seaweed-s3 requires ≥5 GiB) as the basis for platform capacity planning',
       'proj2-badge': '★ US Internship',
       'proj2-title': 'MySphere — Graded English Story Learning Platform',
       'proj2-period': '2025 – 2026 · Study Abroad Program × SparkAmplify (Los Angeles) × Tung Hua Book Co. · US Internship 2026/01–02',
