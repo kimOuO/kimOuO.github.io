@@ -42,12 +42,12 @@
   .name-light { font-weight: 400; color: #777; font-size: 13pt; }
   .subtitle { font-size: 10pt; color: #2c3e6b; font-weight: 600; margin-bottom: 10px; }
 
-  .main-sec { margin-bottom: 14px; }
+  .main-sec { margin-bottom: 11px; }
   .main-title { font-size: 10pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 2px solid #2c3e6b; padding-bottom: 2px; margin-bottom: 8px; color: #2c3e6b; }
 
   .about-text { font-size: 8.5pt; color: #333; line-height: 1.6; text-align: justify; }
 
-  .exp-card { margin-bottom: 8px; padding: 6px 7px; border: 1px solid #ddd; border-radius: 3px; background: #fafafa; }
+  .exp-card { margin-bottom: 6px; padding: 5px 7px; border: 1px solid #ddd; border-radius: 3px; background: #fafafa; }
   .exp-head { margin-bottom: 2px; }
   .exp-name { font-weight: 700; font-size: 9pt; }
   .exp-badge { font-size: 6.5pt; background: #2c3e6b; color: #fff; padding: 1px 5px; border-radius: 6px; margin-left: 4px; }
@@ -69,6 +69,16 @@
     body { background: none; }
     .page-wrap { margin: 0; box-shadow: none; }
   }
+
+  /* ── PDF button (screen only) ── */
+  .pdf-bar { position: fixed; top: 16px; right: 16px; z-index: 999; }
+  .pdf-bar button {
+    font: 600 11pt/1 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+    background: #2c3e6b; color: #fff; border: none; border-radius: 4px;
+    padding: 10px 16px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+  .pdf-bar button:hover { background: #1e2c50; }
+  @media print { .no-print, .pdf-bar { display: none !important; } }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -130,16 +140,16 @@
   <div class="main-sec">
     <div class="main-title">經歷</div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">SparkAmplify — 冬季實習生（赴美）</span><span class="exp-badge">實習</span></div>
-      <div class="exp-desc">建置前後端分離部署架構，使用 Docker 容器化、Nginx 反向代理與 Harbor 私有 Image Registry。建立並維護 Git Workflow 協作流程（分支策略、PR 審核），搭建 GitHub Actions CI/CD Pipeline。撰寫平台系統分層文件、K8s / Docker 部署架構圖與 Use Case 流程圖。</div>
+      <div class="exp-head"><span class="exp-name">SparkAmplify — 冬季實習生（赴美）／MySphere 專案</span><span class="exp-badge">實習</span></div>
+      <div class="exp-desc">透過學海築夢計畫赴美，於洛杉磯新創 SparkAmplify 與東華書局合作開發 MySphere 英文分級故事學習平台。負責資料庫管理與 API 開發，內建學習進度追蹤 API 與 LLM 智能問答 Chat。建置前後端分離部署架構（Docker 容器化、Nginx 反向代理、Harbor 私有 Image Registry），搭建 GitHub Actions CI/CD Pipeline 並規範團隊 Git Workflow（分支策略、PR 審核）。撰寫平台系統分層文件、K8s / Docker 部署架構圖與 Use Case 流程圖。</div>
     </div>
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">6G AI/ML 訓練／推論平台 — O-RAN × KubeFlow × Agent AI</span><span class="exp-badge">專案</span></div>
       <div class="exp-desc">參與國科會 6G AI/ML 平台開發與維運，雙節點混合部署（Agent Node + Inference Node）維運 20+ 容器服務，橫跨 Docker 與 Kubernetes。串接意圖驅動平台，以 AI Agent 形式控制平台。於 EuCNC 2024（比利時）進行 AR/VR QoS 即時推論展示，並於 COSCUP 2024 發表成果。</div>
     </div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">MySphere — 英文分級故事學習平台</span><span class="exp-badge">專案</span></div>
-      <div class="exp-desc">透過學海計畫赴美，與洛杉磯 SparkAmplify 及東華書局合作開發。負責資料庫管理與 API 開發，內建學習進度追蹤 API 與 LLM 智能問答 Chat。搭建 Docker 容器化部署與 Nginx 反向代理，建立 Harbor Image 管理流程與 GitHub Actions CI/CD，規範團隊 Git Workflow 協作。</div>
+      <div class="exp-head"><span class="exp-name">5G NR RAN 數位孿生平台 — 工研院產學合作</span><span class="exp-badge">產學合作</span></div>
+      <div class="exp-desc">2025.04 – 2025.12。負責 Digital Twin 平台開發：將 OAI / O-RAN 的 CU / DU / RU / UE 拆解為獨立 Django HTTP 微服務，實作 RRC / F1AP / MAC 排程 / A3 Handover 與 PM 統計；整合 Sionna RT GPU 光線追蹤物理層與 NVIDIA Omniverse 3D 場景，並開發 HTTP ↔ ASN.1 / SCTP E2 Adapter 對接實體 Near-RT RIC，使 xApp 能先於數位孿生驗證 Handover 與 PRB 控制決策再上線。以 Docker Compose 編排 10+ 服務與 Postgres 多資料庫，另建 Next.js Dashboard 監控 KPM / RC。</div>
     </div>
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">微積分課程助教 — 國立臺灣科技大學</span><span class="exp-badge">工作</span></div>
@@ -181,5 +191,19 @@
 </div>
 </div>
 
+
+<!-- ── PDF download (screen only) ── -->
+<div class="pdf-bar no-print">
+  <button type="button" onclick="window.print()">⬇ 下載 PDF</button>
+</div>
+<script>
+  // ?print=1 → 開啟後自動叫出列印/另存 PDF 對話框，內容永遠等於當前 HTML
+  (function () {
+    var p = new URLSearchParams(location.search);
+    if (p.get('print') === '1' || p.has('print')) {
+      window.addEventListener('load', function () { setTimeout(function () { window.print(); }, 400); });
+    }
+  })();
+</script>
 </body>
 </html>

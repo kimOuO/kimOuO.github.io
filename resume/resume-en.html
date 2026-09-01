@@ -10,7 +10,7 @@
   a { color: inherit; text-decoration: none; }
 
   /* ── PAGE LAYOUT via absolute positioning ── */
-  .page-wrap { position: relative; width: 210mm; height: 297mm; overflow: hidden; }
+  .page-wrap { position: relative; width: 210mm; min-height: 297mm; }
   .sidebar {
     position: absolute;
     top: 0; left: 0; bottom: 0;
@@ -120,6 +120,25 @@
 
   /* Clear float helper */
   .clearfix::after { content: ''; display: table; clear: both; }
+
+  /* ── PDF button (screen only) ── */
+  .pdf-bar { position: fixed; top: 16px; right: 16px; z-index: 999; }
+  .pdf-bar button {
+    font: 600 11pt/1 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+    background: #2c3e6b; color: #fff; border: none; border-radius: 4px;
+    padding: 10px 16px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+  .pdf-bar button:hover { background: #1e2c50; }
+  @media print { .no-print, .pdf-bar { display: none !important; } }
+
+  @media screen {
+    body { background: #eee; }
+    .page-wrap { margin: 20px auto; box-shadow: 0 2px 16px rgba(0,0,0,0.15); background: #fff; }
+  }
+  @media print {
+    body { background: none; }
+    .page-wrap { margin: 0; box-shadow: none; }
+  }
 </style>
 </head>
 <body>
@@ -209,11 +228,11 @@
 
     <div class="exp-card">
       <div class="exp-head">
-        <span class="exp-name">SparkAmplify — Winter Intern (US)</span>
+        <span class="exp-name">SparkAmplify — Winter Intern (US) / MySphere</span>
         <span class="exp-badge">Work</span>
       </div>
       <div class="exp-desc">
-        Built frontend-backend separated deployment with Docker containerization, Nginx reverse proxy, and Harbor private Image Registry. Established and maintained Git Workflow (branching strategy, PR review) and CI/CD pipeline with GitHub Actions. Authored platform architecture docs, K8s/Docker deployment diagrams, and Use Case flow charts.
+        Joined the LA-based startup SparkAmplify via the Study Abroad Dream Program, co-developing MySphere, an English graded-story learning platform, with Tung Hua Book Co. Managed database and API development, including a learning progress tracking API and an LLM-powered Q&amp;A Chat. Built frontend-backend separated deployment (Docker, Nginx reverse proxy, Harbor private Image Registry) with a GitHub Actions CI/CD pipeline and a standardized team Git Workflow (branching strategy, PR review). Authored platform architecture docs, K8s/Docker deployment diagrams, and Use Case flow charts.
       </div>
     </div>
 
@@ -229,11 +248,11 @@
 
     <div class="exp-card">
       <div class="exp-head">
-        <span class="exp-name">MySphere — English Story Learning Platform</span>
-        <span class="exp-badge">Project</span>
+        <span class="exp-name">5G NR RAN Digital Twin — ITRI Industry-Academia Project</span>
+        <span class="exp-badge">Collaboration</span>
       </div>
       <div class="exp-desc">
-        Developed via Study Abroad Program with SparkAmplify (LA) and Tung Hua Book Co. Built learning progress tracking API and LLM-powered Q&amp;A Chat; managed database and API development. Set up Docker + Nginx deployment, Harbor image management, and GitHub Actions CI/CD, standardizing team Git Workflow.
+        Apr 2025 – Dec 2025. Led Digital Twin development: decomposed the OAI/O-RAN CU / DU / RU / UE into independent Django HTTP microservices implementing RRC, F1AP, MAC scheduling, A3 handover, and PM reporting. Integrated a Sionna RT GPU ray-tracing physical layer and NVIDIA Omniverse 3D scenes, and built an HTTP-to-ASN.1/SCTP E2 Adapter to interface with a real Near-RT RIC, enabling xApps to validate handover and PRB control decisions in the twin before deploying to physical RAN. Orchestrated 10+ services and multi-database Postgres via Docker Compose, plus a Next.js dashboard for scenario control and KPM/RC monitoring.
       </div>
     </div>
 
@@ -306,5 +325,19 @@
 
 </div>
 
+
+<!-- ── PDF download (screen only) ── -->
+<div class="pdf-bar no-print">
+  <button type="button" onclick="window.print()">⬇ Download PDF</button>
+</div>
+<script>
+  // ?print=1 → 開啟後自動叫出列印/另存 PDF 對話框，內容永遠等於當前 HTML
+  (function () {
+    var p = new URLSearchParams(location.search);
+    if (p.get('print') === '1' || p.has('print')) {
+      window.addEventListener('load', function () { setTimeout(function () { window.print(); }, 400); });
+    }
+  })();
+</script>
 </body>
 </html>
