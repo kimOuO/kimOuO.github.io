@@ -596,10 +596,8 @@
           以 Cython 橋接 Python RL Agent 與 C++ SSD 模擬器 MQSim 實現跨語言整合。
         </p>
         <ul class="project-achievements">
-          <li data-i18n="proj3-a1">使用強化學習架構，以 <strong>Deep Q-Learning</strong> 方式實踐</li>
-          <li data-i18n="proj3-a2">以 <strong>100,000 筆</strong> SNIA IOTTA 企業伺服器 I/O trace 在 MQSim（NVMe MLC Flash）上完整驗證</li>
-          <li data-i18n="proj3-a3">有效降低長尾延遲發生機率</li>
-          <li data-i18n="proj3-a4">Cython 橋接 Python / C++ 跨語言整合，成功解決 ctypes 無法處理的 C++ 變數交換問題</li>
+          <li data-i18n="proj3-a1">以 <strong>Deep Q-Learning</strong> 預測系統閒置時間並主動排程 GC，降低 Forced GC 的觸發機率以改善長尾延遲</li>
+          <li data-i18n="proj3-a2">以 <strong>Cython</strong> 橋接 Python RL Agent 與 C++ 模擬器 <strong>MQSim</strong> 完成跨語言整合，並於企業級 I/O trace 上驗證可行性</li>
         </ul>
         <div class="project-tags">
           <span class="tag">Reinforcement Learning</span>
@@ -866,10 +864,8 @@
       'proj3-title': 'SSD Tail Latency Optimization — DQN-Based Idle-Time GC Scheduling',
       'proj3-period': '2024 · NTUST Dept. of Electronic Engineering',
       'proj3-desc': 'Used Deep Q-Learning to predict SSD idle time and proactively schedule GC during idle periods, reducing Forced GC frequency to improve long tail latency. Bridged Python RL Agent with C++ SSD simulator MQSim via Cython.',
-      'proj3-a1': 'Implemented reinforcement learning architecture using <strong>Deep Q-Learning</strong>',
-      'proj3-a2': 'Validated with <strong>100,000</strong> SNIA IOTTA enterprise server I/O traces on MQSim (NVMe MLC Flash)',
-      'proj3-a3': 'Effectively reduced long tail latency occurrence',
-      'proj3-a4': 'Cython bridging Python / C++ cross-language integration, resolved ctypes limitations for C++ variable exchange',
+      'proj3-a1': 'Used <strong>Deep Q-Learning</strong> to predict system idle time and proactively schedule GC, lowering the chance of forced GC and improving tail latency',
+      'proj3-a2': 'Bridged a Python RL agent and the C++ simulator <strong>MQSim</strong> via <strong>Cython</strong> for cross-language integration, validated against enterprise I/O traces',
       'edu-ms-school': 'NTUST, Graduate Institute of Electronic Engineering',
       'edu-ms-period': '2025 – Present (1st-year M.S.)',
       'edu-ms-lab': 'Mobilization Information Technology Lab · Advisor: Prof. Jenq-Shiou Leu',
