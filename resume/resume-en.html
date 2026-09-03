@@ -76,7 +76,7 @@
     margin-bottom: 10px;
   }
 
-  .main-sec { margin-bottom: 12px; }
+  .main-sec { margin-bottom: 9px; }
   .main-title {
     font-size: 9pt;
     font-weight: 700;
@@ -92,8 +92,8 @@
 
   /* Experience cards */
   .exp-card {
-    margin-bottom: 7px;
-    padding: 5px 7px;
+    margin-bottom: 5px;
+    padding: 4px 7px;
     border: 1px solid #ddd;
     border-radius: 3px;
     background: #fafafa;
@@ -108,10 +108,10 @@
     border-radius: 6px;
     margin-left: 4px;
   }
-  .exp-desc { font-size: 7.5pt; color: #444; line-height: 1.45; }
+  .exp-desc { font-size: 7.5pt; color: #444; line-height: 1.4; }
 
   /* Education */
-  .edu-row { margin-bottom: 7px; }
+  .edu-row { margin-bottom: 5px; }
   .edu-school { font-weight: 700; font-size: 9pt; }
   .edu-date { font-size: 7.5pt; color: #555; float: right; }
   .edu-degree { font-size: 7.5pt; color: #555; }
@@ -284,6 +284,7 @@
       <span class="edu-date">Sep 2025 - Present</span>
       <div class="edu-school">National Taiwan University of Science and Technology (NTUST)</div>
       <div class="edu-degree">M.S. in Electronic Engineering</div>
+      <div class="edu-detail">Information Technology Mobilization Lab &nbsp;|&nbsp; Advisor: Prof. Jenq-Shiou Leu</div>
     </div>
 
     <div class="edu-row clearfix">
@@ -301,7 +302,7 @@
 
     <div class="exp-card">
       <div class="exp-head">
-        <span class="exp-name">Improving SSD GC Long Tail Latency Using Idle Time</span>
+        <span class="exp-name">SSD Tail Latency Optimization — DQN-Based Idle-Time GC Scheduling</span>
         <span class="exp-badge">B.S. Thesis</span>
       </div>
       <div class="exp-desc">
@@ -335,8 +336,45 @@
   (function () {
     var p = new URLSearchParams(location.search);
     if (p.get('print') === '1' || p.has('print')) {
-      window.addEventListener('load', function () { setTimeout(function () { window.print(); }, 400); });
+      window.addEventListener('load', function () { setTimeout(function () { window.print(); }, 700); });
     }
+  })();
+</script>
+
+<script>
+  /* ── 自動縮排：內容超過 A4 一頁時，等比縮小主欄內容直到剛好塞滿 ──
+     內容變多時不會爆版／被裁切，也不用手動調 font-size 或間距。 */
+  (function () {
+    var A4_PX = 297 * 96 / 25.4;          // 297mm → px
+    var MIN_ZOOM = 0.72;                   // 縮太小會難讀，觸底就讓它溢出，提醒該精簡了
+    function fit() {
+      document.querySelectorAll('.page-wrap').forEach(function (wrap) {
+        ['.main', '.sidebar'].forEach(function (sel) {
+          var box = wrap.querySelector(sel);
+          if (!box) return;
+          var inner = box.querySelector(':scope > .fit-inner');
+          if (!inner) {
+            inner = document.createElement('div');
+            inner.className = 'fit-inner';
+            while (box.firstChild) inner.appendChild(box.firstChild);
+            box.appendChild(inner);
+          }
+          inner.style.zoom = '';
+          var cs = getComputedStyle(box);
+          var avail = A4_PX - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+          var need = inner.scrollHeight;
+          if (need > avail) {
+            var z = Math.max(MIN_ZOOM, (avail / need) - 0.004);
+            inner.style.zoom = z;
+            if (z === MIN_ZOOM) console.warn(sel + ' 內容過長，已達最小縮放 ' + MIN_ZOOM + '，建議精簡文字');
+          }
+        });
+      });
+    }
+    window.addEventListener('load', fit);
+    window.addEventListener('beforeprint', fit);
+    window.addEventListener('resize', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   })();
 </script>
 </body>

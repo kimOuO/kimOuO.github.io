@@ -426,8 +426,12 @@
         <div class="exp-role" data-i18n="exp2-role">研發實戰參與者</div>
         <div class="exp-company" data-i18n="exp2-company">經濟部產業發展署 — 太空產業供應鏈暨網通產業新星飛揚計畫</div>
         <ul class="exp-bullets">
-          <li data-i18n="exp2-b1">參與產業研發實戰培訓，修業期滿獲頒證明</li>
+          <li data-i18n="exp2-b1">入選經濟部產業發展署<strong>太空產業供應鏈暨網通產業新星飛揚計畫</strong>，投入室內空間感知平台相關題目之研發實戰，修業期滿獲頒結業證明</li>
         </ul>
+        <div class="exp-tags">
+          <span class="tag" data-i18n="exp2-tag1">新星飛揚計畫</span>
+          <span class="tag" data-i18n="exp2-tag2">產業實訓</span>
+        </div>
       </div>
     </div>
 
@@ -552,10 +556,41 @@
         </div>
       </div>
 
+      <!-- Project: 工研院產學合作 DT -->
+      <div class="project-card featured">
+        <div class="project-featured-badge" data-i18n="proj4-badge">★ 產學合作</div>
+        <div class="project-title" data-i18n="proj4-title">5G NR RAN 數位孿生平台 — 工研院產學合作</div>
+        <div class="project-period" data-i18n="proj4-period">2025.04 – 2025.12 · 工業技術研究院 × 國立臺灣科技大學</div>
+        <p class="project-desc" data-i18n="proj4-desc">
+          xApp 的控制決策過去只能在實體 RAN 上試錯，成本高且情境難重現。
+          本平台將 OAI / O-RAN 的 CU / DU / RU / UE 拆解為獨立微服務，重建可重播、可加壓的 5G NR 環境，
+          讓 xApp 先在數位孿生驗證 Handover 與 PRB 控制決策，再部署到實體 RAN。
+        </p>
+        <ul class="project-achievements">
+          <li data-i18n="proj4-a1">將 CU / DU / RU / UE <strong>拆解為 4 組獨立 Django HTTP 微服務</strong>，實作 RRC / F1AP / MAC 排程 / A3 Handover 與 PM 統計，模組可獨立替換與單獨驗證</li>
+          <li data-i18n="proj4-a2">整合 <strong>Sionna RT GPU 光線追蹤</strong>物理層與 <strong>NVIDIA Omniverse</strong> 3D 場景，以預運算 channel cache 取代逐 tick 光追，將模擬情境轉為<strong>可重播</strong>的劇本</li>
+          <li data-i18n="proj4-a3">開發 <strong>HTTP ↔ ASN.1 / SCTP E2 Adapter</strong>，讓數位孿生以標準 E2AP 對接<strong>實體 Near-RT RIC</strong>，xApp 無需改碼即可在孿生與實體環境間切換</li>
+          <li data-i18n="proj4-a4">以 <strong>Docker Compose 整合 10+ 服務</strong>與 Postgres 多資料庫一鍵啟動，另建 Next.js Dashboard 監控 KPM / RC / PRB quota，降低環境重建與除錯成本</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">O-RAN</span>
+          <span class="tag">5G NR</span>
+          <span class="tag">Digital Twin</span>
+          <span class="tag">E2AP / ASN.1</span>
+          <span class="tag">SCTP</span>
+          <span class="tag">Sionna RT</span>
+          <span class="tag">NVIDIA Omniverse</span>
+          <span class="tag">Django</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Docker Compose</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+
       <!-- Project: 大學部實務專題 -->
       <div class="project-card">
-        <div class="project-title" data-i18n="proj3-title">利用閒置時間改善 SSD GC 之 Long Tail Latency</div>
-        <div class="project-period" data-i18n="proj3-period">2024 · 國立臺灣科技大學 電子工程系 · 指導教授：吳晉賢</div>
+        <div class="project-title" data-i18n="proj3-title">SSD 長尾延遲優化 — Deep Q-Learning 閒置時間 GC 排程</div>
+        <div class="project-period" data-i18n="proj3-period">2024 · 國立臺灣科技大學 電子工程系</div>
         <p class="project-desc" data-i18n="proj3-desc">
           以 Deep Q-Learning 預測 SSD 系統閒置時間，主動在 Idle Time 排程 GC，降低 Forced GC 觸發頻率以改善長尾延遲。
           以 Cython 橋接 Python RL Agent 與 C++ SSD 模擬器 MQSim 實現跨語言整合。
@@ -598,6 +633,7 @@
           <div class="edu-degree">M.S. in Electronic Engineering</div>
           <div class="edu-school" data-i18n="edu-ms-school">國立臺灣科技大學 電子工程研究所</div>
           <div class="edu-period" data-i18n="edu-ms-period">2025 – 在學中（碩士一年級）</div>
+          <div class="edu-period" data-i18n="edu-ms-lab">資訊技術行動化實驗室 · 指導教授：呂政修</div>
         </div>
 
         <div class="edu-item">
@@ -781,7 +817,9 @@
       'exp1-tag1': 'Frontend-Backend Separation',
       'exp2-role': 'R&D Training Participant',
       'exp2-company': 'Industrial Development Administration, MOEA — Space & ICT New Star Program',
-      'exp2-b1': 'Completed industry R&D training program and received certification',
+      'exp2-b1': 'Selected for the MOEA <strong>Space Supply Chain &amp; ICT New Star Program</strong>; took part in industry R&amp;D on an indoor spatial-awareness platform, completing the program with certification',
+      'exp2-tag1': 'New Star Program',
+      'exp2-tag2': 'Industry Training',
       'exp3-date': '2025.09 – Present',
       'exp3-role': 'Calculus Teaching Assistant',
       'exp3-company': 'National Taiwan Univ. of Science & Technology',
@@ -808,6 +846,14 @@
       'proj1-a5': 'Built the measurement methodology on <strong>Prometheus + Istio + cgroup metrics</strong> and loaded the platform along three axes — object size (1→200 GB), concurrency (1→12), multi-tenancy (1→12) — <strong>surfacing 11 defects and shipping 6 fixes</strong>',
       'proj1-a6': 'Exposed an availability risk: the store-and-forward upload path amplifies scratch usage <strong>2.7×</strong>, so a single tenant uploading 94 GB triggers node DiskPressure, evicting the API gateway 18 times and taking down the whole platform',
       'proj1-a7': 'Derived a <strong>~50 CPU-seconds/GB</strong> resource coefficient and per-role memory limit recommendations (file-operation peaked at 95% of its 1 GiB limit; seaweed-s3 requires ≥5 GiB) as the basis for platform capacity planning',
+      'proj4-badge': '★ Industry Collaboration',
+      'proj4-title': '5G NR RAN Digital Twin — ITRI Industry-Academia Project',
+      'proj4-period': 'Apr 2025 – Dec 2025 · Industrial Technology Research Institute (ITRI) × NTUST',
+      'proj4-desc': 'xApp control decisions previously had to be trial-and-errored on physical RAN — expensive, and hard to reproduce a given scenario. This platform decomposes the OAI/O-RAN CU / DU / RU / UE into independent microservices, rebuilding a replayable, loadable 5G NR environment so xApps can validate handover and PRB control decisions in the twin before deploying to physical RAN.',
+      'proj4-a1': 'Decomposed CU / DU / RU / UE into <strong>4 independent Django HTTP microservices</strong> implementing RRC, F1AP, MAC scheduling, A3 handover, and PM reporting — each module independently replaceable and verifiable',
+      'proj4-a2': 'Integrated a <strong>Sionna RT GPU ray-tracing</strong> physical layer with <strong>NVIDIA Omniverse</strong> 3D scenes, replacing per-tick ray tracing with a precomputed channel cache to turn simulation scenarios into <strong>replayable</strong> scripts',
+      'proj4-a3': 'Built an <strong>HTTP ↔ ASN.1/SCTP E2 Adapter</strong> so the twin speaks standard E2AP to a <strong>real Near-RT RIC</strong>, letting xApps move between twin and physical environments without code changes',
+      'proj4-a4': 'Orchestrated <strong>10+ services</strong> and multi-database Postgres into a one-command <strong>Docker Compose</strong> stack, plus a Next.js dashboard for KPM / RC / PRB quota monitoring, cutting environment rebuild and debugging cost',
       'proj2-badge': '★ US Internship',
       'proj2-title': 'MySphere — Graded English Story Learning Platform',
       'proj2-period': '2025 – 2026 · Study Abroad Program × SparkAmplify (Los Angeles) × Tung Hua Book Co. · US Internship 2026/01–02',
@@ -817,8 +863,8 @@
       'proj2-a3': 'Docker containerized deployment with Nginx reverse proxy, building complete service architecture',
       'proj2-a4': 'Established <strong>Harbor</strong> image management workflow and <strong>GitHub Actions CI/CD</strong>, standardized team Git Workflow',
       'proj2-tag1': 'Study Abroad Program',
-      'proj3-title': 'Improving SSD GC Long Tail Latency Using Idle Time',
-      'proj3-period': '2024 · NTUST Dept. of Electronic Engineering · Advisor: Prof. Chin-Hsien Wu',
+      'proj3-title': 'SSD Tail Latency Optimization — DQN-Based Idle-Time GC Scheduling',
+      'proj3-period': '2024 · NTUST Dept. of Electronic Engineering',
       'proj3-desc': 'Used Deep Q-Learning to predict SSD idle time and proactively schedule GC during idle periods, reducing Forced GC frequency to improve long tail latency. Bridged Python RL Agent with C++ SSD simulator MQSim via Cython.',
       'proj3-a1': 'Implemented reinforcement learning architecture using <strong>Deep Q-Learning</strong>',
       'proj3-a2': 'Validated with <strong>100,000</strong> SNIA IOTTA enterprise server I/O traces on MQSim (NVMe MLC Flash)',
@@ -826,6 +872,7 @@
       'proj3-a4': 'Cython bridging Python / C++ cross-language integration, resolved ctypes limitations for C++ variable exchange',
       'edu-ms-school': 'NTUST, Graduate Institute of Electronic Engineering',
       'edu-ms-period': '2025 – Present (1st-year M.S.)',
+      'edu-ms-lab': 'Information Technology Mobilization Lab · Advisor: Prof. Jenq-Shiou Leu',
       'edu-bs-school': 'NTUST, Dept. of Electronic Engineering',
       'edu-bs-period': '2021 – 2025 (Graduated)',
       'edu-bs-gpa': 'Overall GPA: 89.73',

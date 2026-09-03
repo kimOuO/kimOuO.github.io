@@ -42,18 +42,18 @@
   .name-light { font-weight: 400; color: #777; font-size: 13pt; }
   .subtitle { font-size: 10pt; color: #2c3e6b; font-weight: 600; margin-bottom: 10px; }
 
-  .main-sec { margin-bottom: 11px; }
+  .main-sec { margin-bottom: 8px; }
   .main-title { font-size: 10pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 2px solid #2c3e6b; padding-bottom: 2px; margin-bottom: 8px; color: #2c3e6b; }
 
   .about-text { font-size: 8.5pt; color: #333; line-height: 1.6; text-align: justify; }
 
-  .exp-card { margin-bottom: 6px; padding: 5px 7px; border: 1px solid #ddd; border-radius: 3px; background: #fafafa; }
+  .exp-card { margin-bottom: 4px; padding: 4px 7px; border: 1px solid #ddd; border-radius: 3px; background: #fafafa; }
   .exp-head { margin-bottom: 2px; }
   .exp-name { font-weight: 700; font-size: 9pt; }
   .exp-badge { font-size: 6.5pt; background: #2c3e6b; color: #fff; padding: 1px 5px; border-radius: 6px; margin-left: 4px; }
-  .exp-desc { font-size: 7.5pt; color: #444; line-height: 1.5; }
+  .exp-desc { font-size: 7.5pt; color: #444; line-height: 1.42; }
 
-  .edu-row { margin-bottom: 8px; }
+  .edu-row { margin-bottom: 6px; }
   .edu-school { font-weight: 700; font-size: 9pt; }
   .edu-date { font-size: 7.5pt; color: #555; float: right; }
   .edu-degree { font-size: 7.5pt; color: #555; }
@@ -167,6 +167,7 @@
       <span class="edu-date">2025 – 在學中</span>
       <div class="edu-school">國立臺灣科技大學</div>
       <div class="edu-degree">電子工程研究所 碩士班</div>
+      <div class="edu-detail">資訊技術行動化實驗室｜指導教授：呂政修</div>
     </div>
     <div class="edu-row clearfix">
       <span class="edu-date">2021 – 2025</span>
@@ -178,7 +179,7 @@
   <div class="main-sec">
     <div class="main-title">研究與專題</div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">利用閒置時間改善 SSD GC 之 Long Tail Latency</span><span class="exp-badge">大學專題</span></div>
+      <div class="exp-head"><span class="exp-name">SSD 長尾延遲優化 — Deep Q-Learning 閒置時間 GC 排程</span><span class="exp-badge">大學專題</span></div>
       <div class="exp-desc">以 Deep Q-Learning 預測 SSD 閒置時間排程 GC，100,000 筆 SNIA IOTTA trace 驗證。Cython 橋接 Python / C++ 跨語言整合，有效降低長尾延遲。</div>
     </div>
     <div class="exp-card">
@@ -201,8 +202,45 @@
   (function () {
     var p = new URLSearchParams(location.search);
     if (p.get('print') === '1' || p.has('print')) {
-      window.addEventListener('load', function () { setTimeout(function () { window.print(); }, 400); });
+      window.addEventListener('load', function () { setTimeout(function () { window.print(); }, 700); });
     }
+  })();
+</script>
+
+<script>
+  /* ── 自動縮排：內容超過 A4 一頁時，等比縮小主欄內容直到剛好塞滿 ──
+     內容變多時不會爆版／被裁切，也不用手動調 font-size 或間距。 */
+  (function () {
+    var A4_PX = 297 * 96 / 25.4;          // 297mm → px
+    var MIN_ZOOM = 0.72;                   // 縮太小會難讀，觸底就讓它溢出，提醒該精簡了
+    function fit() {
+      document.querySelectorAll('.page-wrap').forEach(function (wrap) {
+        ['.main', '.sidebar'].forEach(function (sel) {
+          var box = wrap.querySelector(sel);
+          if (!box) return;
+          var inner = box.querySelector(':scope > .fit-inner');
+          if (!inner) {
+            inner = document.createElement('div');
+            inner.className = 'fit-inner';
+            while (box.firstChild) inner.appendChild(box.firstChild);
+            box.appendChild(inner);
+          }
+          inner.style.zoom = '';
+          var cs = getComputedStyle(box);
+          var avail = A4_PX - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+          var need = inner.scrollHeight;
+          if (need > avail) {
+            var z = Math.max(MIN_ZOOM, (avail / need) - 0.004);
+            inner.style.zoom = z;
+            if (z === MIN_ZOOM) console.warn(sel + ' 內容過長，已達最小縮放 ' + MIN_ZOOM + '，建議精簡文字');
+          }
+        });
+      });
+    }
+    window.addEventListener('load', fit);
+    window.addEventListener('beforeprint', fit);
+    window.addEventListener('resize', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   })();
 </script>
 </body>
