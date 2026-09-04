@@ -109,6 +109,8 @@
     margin-left: 4px;
   }
   .exp-desc { font-size: 7.5pt; color: #444; line-height: 1.4; }
+  .exp-desc ul { margin: 0; padding-left: 11px; }
+  .exp-desc li { margin-bottom: 1px; }
 
   /* Education */
   .edu-row { margin-bottom: 5px; }
@@ -227,7 +229,7 @@
   <div class="main-sec">
     <div class="main-title">About Myself</div>
     <div class="about-text">
-      Experienced in full-stack development, DevOps deployment, and AI Agent development. Explored RL to enhance SSD performance, integrated Dify with N8N for automated workflows, and operated Kubernetes clusters for 6G platform. Skilled in containerized deployment, CI/CD pipelines, and cross-platform system integration. Self-motivated and dedicated to applying academic knowledge to practical development.
+      Full-stack and DevOps engineer with hands-on Kubernetes operations, observability, and AI agent development. Interned at SparkAmplify in Los Angeles covering the full cycle from requirements to deployment, and led performance engineering and digital-twin development for NSTC and ITRI research projects.
     </div>
   </div>
 
@@ -237,31 +239,36 @@
     <div class="exp-card">
       <div class="exp-head">
         <span class="exp-name">SparkAmplify — Winter Intern (US) / MySphere</span>
-        <span class="exp-badge">Work</span>
+        <span class="exp-badge">Internship</span>
       </div>
-      <div class="exp-desc">
-        Joined the LA-based startup SparkAmplify via the Study Abroad Dream Program, co-developing MySphere, an English graded-story learning platform, with Tung Hua Book Co. Managed database and API development, including a learning progress tracking API and an LLM-powered Q&amp;A Chat. Built frontend-backend separated deployment (Docker, Nginx reverse proxy, Harbor private Image Registry) with a GitHub Actions CI/CD pipeline and a standardized team Git Workflow (branching strategy, PR review). Authored platform architecture docs, K8s/Docker deployment diagrams, and Use Case flow charts.
-      </div>
+      <div class="exp-desc"><ul>
+        <li>Co-developed a graded English story-learning platform with Tung Hua Book Co.; owned database and API work, progress tracking, and an LLM-powered Q&amp;A chat</li>
+        <li>Shipped Docker containerization, Nginx reverse proxy, and Harbor registry deployment with GitHub Actions CI/CD and a team Git workflow</li>
+      </ul></div>
     </div>
 
     <div class="exp-card">
       <div class="exp-head">
-        <span class="exp-name">6G AI/ML Platform — Operations, Agent Automation &amp; Performance Engineering</span>
+        <span class="exp-name">6G AI/ML Platform — NSTC Project</span>
         <span class="exp-badge">Project</span>
       </div>
-      <div class="exp-desc">
-        2024 &ndash; 2026. Operated 20+ container services across a dual-node deployment for the NSTC 6G AI/ML platform, mapping 20+ Kubeflow components and fixing cross-service defects (cascading Kafka topic cleanup, model metadata timing); demonstrated AR/VR QoS inference at EuCNC 2024 (Belgium) and presented at COSCUP 2024. Integrated the platform APIs into an intent-driven ML agent (Dify multi-actor ReAct), wrapping 17 low-level tools behind 10 skills and cutting user involvement from 6 steps to 2 decision points. In 2026, led performance engineering: built the Kubernetes observability stack (kube-prometheus-stack, DCGM, Istio, eBPF Retina; 2,515 metrics), designed four-axis systematic load testing that established hard capacity limits (386M parameters per card, 4 concurrent jobs), and debugged cross-node networking, object storage, and resource-configuration failures &mdash; lifting pod-to-pod throughput 894x and the single-object ceiling from 470 MB to 4.7 GB.
-      </div>
+      <div class="exp-desc"><ul>
+        <li>2024&ndash;2026. Operated 20+ container services across two nodes; mapped 20+ Kubeflow components and fixed cross-service defects</li>
+        <li>Integrated platform APIs into an intent-driven ML agent (Dify multi-actor ReAct), cutting user involvement from 6 steps to 2 decision points</li>
+        <li>Built the K8s observability stack (2,515 metrics) and debugged cross-node network/storage faults: 894x throughput gain, single-object ceiling 470 MB &rarr; 4.7 GB</li>
+        <li>Live AR/VR QoS inference demo at EuCNC 2024 (Belgium); presented at COSCUP 2024</li>
+      </ul></div>
     </div>
 
     <div class="exp-card">
       <div class="exp-head">
-        <span class="exp-name">5G NR RAN Digital Twin — ITRI Industry-Academia Project</span>
+        <span class="exp-name">5G NR RAN Digital Twin — ITRI Collaboration</span>
         <span class="exp-badge">Collaboration</span>
       </div>
-      <div class="exp-desc">
-        Apr 2025 – Dec 2025. Led Digital Twin development: decomposed the OAI/O-RAN CU / DU / RU / UE into independent Django HTTP microservices implementing RRC, F1AP, MAC scheduling, A3 handover, and PM reporting. Integrated a Sionna RT GPU ray-tracing physical layer and NVIDIA Omniverse 3D scenes, and built an HTTP-to-ASN.1/SCTP E2 Adapter to interface with a real Near-RT RIC, enabling xApps to validate handover and PRB control decisions in the twin before deploying to physical RAN. Orchestrated 10+ services and multi-database Postgres via Docker Compose, plus a Next.js dashboard for scenario control and KPM/RC monitoring.
-      </div>
+      <div class="exp-desc"><ul>
+        <li>Apr&ndash;Dec 2025. Split OAI/O-RAN CU/DU/RU/UE into Django microservices with a custom HTTP &harr; ASN.1/SCTP E2 adapter driving a real Near-RT RIC</li>
+        <li>Combined Sionna RT ray tracing with Omniverse to replace AODT&apos;s dedicated hardware; an ML calibrator cut mean error against OAI ground truth from 50.1% to 2.5%</li>
+      </ul></div>
     </div>
 
     <div class="exp-card">
@@ -269,19 +276,20 @@
         <span class="exp-name">Calculus Teaching Assistant — NTUST</span>
         <span class="exp-badge">Work</span>
       </div>
-      <div class="exp-desc">
-        Assisted in teaching, grading assignments, and answering student questions. Independently built a grade registration &amp; exam management system (React + Django + DB) to streamline course administration. Developed auto-exam AI Agent with Tool Use, embedding Word tool to autonomously generate exam documents.
-      </div>
+      <div class="exp-desc"><ul>
+        <li>Independently built a grade registration and exam management system (React + Django + DB)</li>
+        <li>Developed an auto-exam AI agent using Tool Use with an embedded Word tool</li>
+      </ul></div>
     </div>
 
     <div class="exp-card">
       <div class="exp-head">
-        <span class="exp-name">System Operations &amp; DB Admin — NTUST EE Dept. Office</span>
+        <span class="exp-name">System Ops &amp; DB Admin — NTUST EE Dept. Office</span>
         <span class="exp-badge">Work</span>
       </div>
-      <div class="exp-desc">
-        Sep 2026 – Aug 2027. Operate the department&apos;s advisor-matching system (PHP + MariaDB): scheduled database backups, defect fixes, and integration with the university student-records API; also administer the department server room network and day-to-day server operations.
-      </div>
+      <div class="exp-desc"><ul>
+        <li>Operate a PHP + MariaDB advisor-matching system integrated with the university student-records API; own database backups and server room administration</li>
+      </ul></div>
     </div>
 
     <div class="exp-card">
@@ -289,10 +297,11 @@
         <span class="exp-name">IT Consultant — Ying-Na Industrial Co.</span>
         <span class="exp-badge">Part-time</span>
       </div>
-      <div class="exp-desc">
-        Managed regular database backups and maintenance to ensure data security. Served as internal IT consultant for troubleshooting computer and system issues.
-      </div>
+      <div class="exp-desc"><ul>
+        <li>Scheduled database backups and maintenance; internal IT and systems support</li>
+      </ul></div>
     </div>
+
   </div>
 
   <div class="main-sec">

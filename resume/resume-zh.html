@@ -52,6 +52,8 @@
   .exp-name { font-weight: 700; font-size: 9pt; }
   .exp-badge { font-size: 6.5pt; background: #2c3e6b; color: #fff; padding: 1px 5px; border-radius: 6px; margin-left: 4px; }
   .exp-desc { font-size: 7.5pt; color: #444; line-height: 1.42; }
+  .exp-desc ul { margin: 0; padding-left: 11px; }
+  .exp-desc li { margin-bottom: 1px; }
 
   .edu-row { margin-bottom: 6px; }
   .edu-school { font-weight: 700; font-size: 9pt; }
@@ -140,36 +142,52 @@
 
   <div class="main-sec">
     <div class="main-title">關於我</div>
-    <div class="about-text">
-      具備前後端開發、系統整合、API 設計與容器化部署實戰經驗，同時熟悉 Kubernetes 叢集維運與 AI Agent 開發。曾透過學海築夢計畫赴美，於洛杉磯新創公司 SparkAmplify 進行冬季實習，完整參與從需求理解、功能設計、技術選型到測試部署的開發週期。擅長將不同技術模組整合為可運作的系統，包含前端介面、後端服務、資料庫與容器化部署，並持續深耕雲端基礎架構、CI/CD 與 AI Workflow。
-    </div>
+    <div class="about-text">具備前後端開發、系統整合與容器化部署經驗，熟悉 Kubernetes 叢集維運、可觀測性建置與 AI Agent 開發。曾赴美於洛杉磯新創 SparkAmplify 實習，完整參與從需求理解到測試部署的開發週期；並於國科會 6G 平台與工研院產學合作中負責效能工程與數位孿生開發。</div>
   </div>
 
   <div class="main-sec">
     <div class="main-title">經歷</div>
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">SparkAmplify — 冬季實習生（赴美）／MySphere 專案</span><span class="exp-badge">實習</span></div>
-      <div class="exp-desc">透過學海築夢計畫赴美，於洛杉磯新創 SparkAmplify 與東華書局合作開發 MySphere 英文分級故事學習平台。負責資料庫管理與 API 開發，內建學習進度追蹤 API 與 LLM 智能問答 Chat。建置前後端分離部署架構（Docker 容器化、Nginx 反向代理、Harbor 私有 Image Registry），搭建 GitHub Actions CI/CD Pipeline 並規範團隊 Git Workflow（分支策略、PR 審核）。撰寫平台系統分層文件、K8s / Docker 部署架構圖與 Use Case 流程圖。</div>
+      <div class="exp-desc"><ul>
+        <li>學海築夢計畫赴美，與東華書局合作開發英文分級故事學習平台；負責資料庫與 API 開發、學習進度追蹤與 LLM 問答 Chat</li>
+        <li>Docker 容器化、Nginx 反向代理與 Harbor Registry 部署，建立 GitHub Actions CI/CD 與團隊 Git Workflow</li>
+      </ul></div>
     </div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">6G AI/ML 訓練／推論平台 — 建置維運 × Agent × 效能工程</span><span class="exp-badge">專案</span></div>
-      <div class="exp-desc">2024 – 2026。參與國科會 6G AI/ML 平台開發與維運：雙節點混合部署維運 20+ 容器服務，盤點 Kubeflow 20+ 元件相依並修復 Kafka topic 連鎖刪除、model metadata 時序等跨服務缺陷；於 EuCNC 2024（比利時）進行 AR/VR QoS 即時推論展示、COSCUP 2024 發表成果。整合平台 API 為意圖驅動 ML Agent（Dify Multi-Actor ReAct），以 10 個高階 Skill 封裝 17 個低階工具，使用者介入自 6 步降為 2 個節點。2026 年主導效能工程：建置 Kubernetes 可觀測性堆疊（kube-prometheus-stack、DCGM、Istio、eBPF Retina，2,515 項指標），設計四軸系統性壓力測試並定出單卡 386M 參數、並行 4 任務之容量上限；排除跨節點網路、物件儲存與資源配置故障，使 pod 間吞吐提升 894 倍、單物件處理上限自 470 MB 提升至 4.7 GB。</div>
+      <div class="exp-head"><span class="exp-name">6G AI/ML 訓練／推論平台 — 國科會計畫</span><span class="exp-badge">專案</span></div>
+      <div class="exp-desc"><ul>
+        <li>2024 – 2026。維運雙節點 20+ 容器服務，盤點 Kubeflow 20+ 元件相依並修復跨服務缺陷</li>
+        <li>整合平台 API 為意圖驅動 ML Agent（Dify Multi-Actor ReAct），使用者介入自 6 步降為 2 個節點</li>
+        <li>建置 K8s 可觀測性堆疊（2,515 項指標），除錯跨節點網路與儲存故障：吞吐提升 894 倍、單物件上限自 470 MB 提升至 4.7 GB</li>
+        <li>EuCNC 2024（比利時）AR/VR QoS 即時推論展示、COSCUP 2024 發表</li>
+      </ul></div>
     </div>
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">5G NR RAN 數位孿生平台 — 工研院產學合作</span><span class="exp-badge">產學合作</span></div>
-      <div class="exp-desc">2025.04 – 2025.12。負責 Digital Twin 平台開發：將 OAI / O-RAN 的 CU / DU / RU / UE 拆解為獨立 Django HTTP 微服務，實作 RRC / F1AP / MAC 排程 / A3 Handover 與 PM 統計；整合 Sionna RT GPU 光線追蹤物理層與 NVIDIA Omniverse 3D 場景，並開發 HTTP ↔ ASN.1 / SCTP E2 Adapter 對接實體 Near-RT RIC，使 xApp 能先於數位孿生驗證 Handover 與 PRB 控制決策再上線。以 Docker Compose 編排 10+ 服務與 Postgres 多資料庫，另建 Next.js Dashboard 監控 KPM / RC。</div>
+      <div class="exp-desc"><ul>
+        <li>2025.04 – 12。拆解 OAI / O-RAN 的 CU / DU / RU / UE 為獨立 Django 微服務，自製 HTTP ↔ ASN.1 / SCTP E2 Adapter 對接實體 Near-RT RIC</li>
+        <li>整合 Sionna RT 光追與 Omniverse 取代 NVIDIA AODT 專用硬體；對齊 OAI ground truth，經 ML 校正器將平均誤差自 50.1% 降至 2.5%</li>
+      </ul></div>
     </div>
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">微積分課程助教 — 國立臺灣科技大學</span><span class="exp-badge">工作</span></div>
-      <div class="exp-desc">協助教授課程教學，負責批改作業與解答學生疑問。為方便課務管理，獨立以 React + Django + DB 全端開發成績登記與考卷管理系統。開發自動出題 AI Agent，透過 Tool Use 內嵌 Word 工具自主生成考卷文件。</div>
+      <div class="exp-desc"><ul>
+        <li>獨立以 React + Django + DB 全端開發成績登記與考卷管理系統</li>
+        <li>開發自動出題 AI Agent，透過 Tool Use 內嵌 Word 工具生成完整考卷</li>
+      </ul></div>
     </div>
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">系統維運與資料庫管理 — 台科大電子系系辦</span><span class="exp-badge">工作</span></div>
-      <div class="exp-desc">2026.09 – 2027.08。維運系上指導教授媒合系統（PHP + MariaDB），負責資料庫定期備份、功能修復與校方學籍資料 API 串接；並負責系所機房網路管理與伺服器日常維運。</div>
+      <div class="exp-desc"><ul>
+        <li>維運 PHP + MariaDB 指導教授媒合系統，串接校方學籍資料 API，負責資料庫備份與機房網管</li>
+      </ul></div>
     </div>
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">資訊管理顧問 — 應拿實業有限公司</span><span class="exp-badge">兼職</span></div>
-      <div class="exp-desc">負責公司資料庫定期備份與維護，確保營運資料安全。擔任內部電腦與資訊系統問題顧問，排除軟硬體故障。</div>
+      <div class="exp-desc"><ul>
+        <li>公司資料庫定期備份維護、內部電腦與資訊系統支援</li>
+      </ul></div>
     </div>
   </div>
 
