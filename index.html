@@ -521,6 +521,8 @@
         <ul class="project-achievements">
           <li data-i18n="proj1-a1"><strong>EuCNC 2024</strong>（比利時，6 月）AR/VR QoS 即時推論現場展示；<strong>COSCUP 2024</strong> O-RAN + AI/ML 平台成果發表</li>
           <li data-i18n="proj1-a2">雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
+          <li data-i18n="proj1-a3"><strong>盤點</strong> Kubeflow <strong>20+ 元件</strong>（Pipelines / Katib / KServe / Training Operator / Metadata）之職責、版本與服務相依，產出架構與 API 對照文件作為跨團隊除錯依據</li>
+          <li data-i18n="proj1-a7"><strong>修復</strong>跨服務缺陷：補上刪除 Project 時遺漏的 <strong>Kafka topic 連鎖清除</strong>、將 model metadata 自「訓練啟動即建立」改為<strong>依階段回報、訓練完成才落地</strong>，並排除 Harbor 多容器啟動相依導致的重啟失敗</li>
         </ul>
         <div class="project-phase" data-i18n="proj1-ph3">AI Agent 自動化 · 2025</div>
         <ul class="project-achievements">
@@ -900,6 +902,8 @@
       'proj1-ph1': 'Build-out &amp; Operations · 2024–2025',
       'proj1-a1': '<strong>EuCNC 2024</strong> (Belgium, June) live AR/VR QoS inference demo; <strong>COSCUP 2024</strong> O-RAN + AI/ML platform presentation',
       'proj1-a2': 'Dual-node hybrid deployment (Agent Node + Inference Node) operating <strong>20+ container services</strong> across Docker Space / Kubernetes Space',
+      'proj1-a3': '<strong>Mapped</strong> the responsibilities, versions, and service dependencies of <strong>20+ Kubeflow components</strong> (Pipelines, Katib, KServe, Training Operator, Metadata), producing architecture and API reference docs used as the team&apos;s debugging baseline',
+      'proj1-a7': '<strong>Fixed</strong> cross-service defects: added the missing <strong>cascading Kafka topic cleanup</strong> on project deletion, moved model metadata from &quot;created when training starts&quot; to <strong>stage-reported and persisted only on completion</strong>, and resolved Harbor restart failures caused by multi-container startup dependencies',
       'proj1-ph3': 'AI Agent Automation · 2025',
       'proj1-b1': '<strong>Integrated</strong> the platform APIs into an intent-driven ML agent (Dify multi-actor ReAct) that chains the full workflow automatically, cutting user involvement from 6 steps to <strong>2 decision points</strong>',
       'proj1-b2': '<strong>Wrapped</strong> 17 low-level platform tools behind <strong>10 high-level skills</strong>, isolating destructive APIs and reducing both LLM decision complexity and mis-operation risk',
