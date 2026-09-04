@@ -246,11 +246,11 @@
 
     <div class="exp-card">
       <div class="exp-head">
-        <span class="exp-name">6G AI/ML Platform — Operations &amp; Performance Engineering</span>
+        <span class="exp-name">6G AI/ML Platform — Operations, Agent Automation &amp; Performance Engineering</span>
         <span class="exp-badge">Project</span>
       </div>
       <div class="exp-desc">
-        2024 – 2026. Contributed to NSTC 6G AI/ML platform development. Operated 20+ container services across dual-node hybrid deployment (Agent Node + Inference Node) spanning Docker and Kubernetes; integrated intent-driven platform with AI Agent to control the system, demonstrated AR/VR QoS inference at EuCNC 2024 (Belgium) and presented at COSCUP 2024. In 2026, owned platform stress testing: built the measurement methodology on Prometheus + Istio + cgroup metrics, loaded the platform along object size (1&rarr;200 GB), concurrency and multi-tenancy axes, surfacing 11 defects and shipping 6 fixes; re-architected the upload/download path to streaming, cutting entrypoint memory from &asymp;2&times; object size to a flat 140 MiB and turning guaranteed OOM on GB-scale downloads into 44.9 MB/s at acceptance; derived a ~50 CPU-seconds/GB coefficient for capacity planning.
+        2024 &ndash; 2026. Operated 20+ container services across a dual-node deployment for the NSTC 6G AI/ML platform, mapping 20+ Kubeflow components and fixing cross-service defects (cascading Kafka topic cleanup, model metadata timing); demonstrated AR/VR QoS inference at EuCNC 2024 (Belgium) and presented at COSCUP 2024. Integrated the platform APIs into an intent-driven ML agent (Dify multi-actor ReAct), wrapping 17 low-level tools behind 10 skills and cutting user involvement from 6 steps to 2 decision points. In 2026, led performance engineering: built the observability stack (Prometheus / DCGM / Istio, 2,515 metrics) plus a custom MFU pipeline that exposed a 93&ndash;96% reported vs 11.7&ndash;46.1% actual utilization gap; root-caused a VXLAN tunnel-port fault for an 894x pod-to-pod throughput gain; re-architected the data path into three-layer streaming, lifting the single-object ceiling from ~470 MB to 4.7 GB with peak memory flat at 140 MiB; delivered 12 defect reports and 3 capacity models (R&sup2; 0.992&ndash;0.9999).
       </div>
     </div>
 

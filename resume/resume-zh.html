@@ -152,8 +152,8 @@
       <div class="exp-desc">透過學海築夢計畫赴美，於洛杉磯新創 SparkAmplify 與東華書局合作開發 MySphere 英文分級故事學習平台。負責資料庫管理與 API 開發，內建學習進度追蹤 API 與 LLM 智能問答 Chat。建置前後端分離部署架構（Docker 容器化、Nginx 反向代理、Harbor 私有 Image Registry），搭建 GitHub Actions CI/CD Pipeline 並規範團隊 Git Workflow（分支策略、PR 審核）。撰寫平台系統分層文件、K8s / Docker 部署架構圖與 Use Case 流程圖。</div>
     </div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">6G AI/ML 訓練／推論平台 — 建置維運 × 效能壓測</span><span class="exp-badge">專案</span></div>
-      <div class="exp-desc">2024 – 2026。參與國科會 6G AI/ML 平台開發與維運，雙節點混合部署（Agent Node + Inference Node）維運 20+ 容器服務，橫跨 Docker 與 Kubernetes；串接意圖驅動平台，以 AI Agent 形式控制平台，於 EuCNC 2024（比利時）進行 AR/VR QoS 即時推論展示，並於 COSCUP 2024 發表成果。2026 年負責平台效能壓測：以 Prometheus + Istio + cgroup 指標建立量測方法，對物件大小（1→200GB）、並發、多租戶三軸加壓，定位 11 項缺陷並提交 6 項修復；串流化改寫上傳／下載路徑，使 entrypoint 記憶體自「≈2× 物件大小」降為固定 140 MiB、GB 級下載自必定 OOM 變為 44.9 MB/s 通過驗收；產出 ~50 CPU-秒/GB 資源係數作為容量配置依據。</div>
+      <div class="exp-head"><span class="exp-name">6G AI/ML 訓練／推論平台 — 建置維運 × Agent × 效能工程</span><span class="exp-badge">專案</span></div>
+      <div class="exp-desc">2024 – 2026。參與國科會 6G AI/ML 平台開發與維運：雙節點混合部署維運 20+ 容器服務，盤點 Kubeflow 20+ 元件相依並修復 Kafka topic 連鎖刪除、model metadata 時序等跨服務缺陷；於 EuCNC 2024（比利時）進行 AR/VR QoS 即時推論展示、COSCUP 2024 發表成果。整合平台 API 為意圖驅動 ML Agent（Dify Multi-Actor ReAct），以 10 個高階 Skill 封裝 17 個低階工具，使用者介入自 6 步降為 2 個節點。2026 年主導效能工程：建立 Prometheus / DCGM / Istio 可觀測性體系（2,515 項指標）並自建 MFU 量測管線，揭露監控 93–96% 與實際算力 11.7–46.1% 的落差；定位 VXLAN 隧道埠故障使 pod 間吞吐提升 894 倍，三層串流化改造使單物件上限自 470 MB 提升至 4.7 GB、峰值記憶體脫鉤為 140 MiB；產出 12 份缺陷報告與 3 條容量模型（R² 0.992–0.9999）。</div>
     </div>
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">5G NR RAN 數位孿生平台 — 工研院產學合作</span><span class="exp-badge">產學合作</span></div>
