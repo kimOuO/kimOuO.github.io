@@ -510,7 +510,7 @@
       <!-- Project 2: Featured -->
       <div class="project-card featured">
         <div class="project-featured-badge" data-i18n="proj1-badge">★ 國際展示</div>
-        <div class="project-title">6G AI/ML 訓練／推論平台 — 建置維運 × 效能壓測</div>
+        <div class="project-title">6G AI/ML 訓練／推論平台 — 建置維運 × Agent 自動化 × 效能壓測</div>
         <div class="project-period" data-i18n="proj1-period">2024 – 2026 · 國科會 / 國立臺灣科技大學 · EuCNC 2024 比利時 · COSCUP 2024</div>
         <p class="project-desc" data-i18n="proj1-desc">
           參與國科會 6G AI/ML 訓練／推論平台，從建置維運到效能壓測與缺陷修復完整參與。
@@ -521,8 +521,15 @@
         <ul class="project-achievements">
           <li data-i18n="proj1-a1"><strong>EuCNC 2024</strong>（比利時，6 月）AR/VR QoS 即時推論現場展示；<strong>COSCUP 2024</strong> O-RAN + AI/ML 平台成果發表</li>
           <li data-i18n="proj1-a2">雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
-          <li data-i18n="proj1-a3">串接意圖驅動平台，以 <strong>AI Agent</strong> 形式控制平台</li>
         </ul>
+        <div class="project-phase" data-i18n="proj1-ph3">AI Agent 自動化 · 2025</div>
+        <ul class="project-achievements">
+          <li data-i18n="proj1-b1"><strong>整合</strong>平台 API 為<strong>意圖驅動的 ML Agent</strong>（Dify agent_strategy plugin，Multi-Actor ReAct），將「上傳資料→前處理→訓練→診斷→提議重訓→評估」全鏈自動接力，<strong>使用者僅需在「表達需求」與「同意重訓」2 個節點介入</strong></li>
+          <li data-i18n="proj1-b2"><strong>降低</strong> LLM 決策複雜度：以 <strong>10 個高階 Skill 封裝 17 個低階平台工具</strong>，低階工具對 LLM 隱藏、由 Skill 內部確定性編排，避免模型直接操作破壞性 API</li>
+          <li data-i18n="proj1-b3"><strong>設計獨立 context 的診斷 sub-loop</strong>：錯誤分析師拉取 log / code / Dockerfile 自動產出修補重跑，模型優化師依 underfit / overfit 指標提出重訓方案；採 <strong>Gemini + Claude 雙模型分工</strong>（主迴圈走串流、程式合成與診斷走強推理）</li>
+          <li data-i18n="proj1-b4"><strong>驗證</strong>涵蓋影像分類、時序分類、表格分類、時序迴歸、異常偵測 <strong>5 類任務</strong>，均以實際執行的 Kubeflow Pod 程式碼通過，並支援使用者自帶 Cython <code>.so</code> 模型定義</li>
+        </ul>
+
         <div class="project-phase" data-i18n="proj1-ph2">效能壓測與可用性修復 · 2026</div>
         <ul class="project-achievements">
           <li data-i18n="proj1-a4"><strong>串流化改寫</strong>資料集上傳／下載路徑（entrypoint、SDK、前處理 step 三層），entrypoint 記憶體用量自「≈2× 物件大小」降為與大小脫鉤的固定 <strong>140 MiB</strong>，GB 級下載自 495MB 必定 OOM 變為 <strong>4.7GB／112s／44.9 MB/s</strong> 通過驗收</li>
@@ -534,6 +541,8 @@
           <span class="tag">KubeFlow</span>
           <span class="tag">O-RAN</span>
           <span class="tag">Dify</span>
+          <span class="tag">AI Agent / ReAct</span>
+          <span class="tag">LLM Tool Use</span>
           <span class="tag">Kubernetes</span>
           <span class="tag">Docker</span>
           <span class="tag">Kafka</span>
@@ -893,7 +902,11 @@
       'proj1-ph1': 'Build-out &amp; Operations · 2024–2025',
       'proj1-a1': '<strong>EuCNC 2024</strong> (Belgium, June) live AR/VR QoS inference demo; <strong>COSCUP 2024</strong> O-RAN + AI/ML platform presentation',
       'proj1-a2': 'Dual-node hybrid deployment (Agent Node + Inference Node) operating <strong>20+ container services</strong> across Docker Space / Kubernetes Space',
-      'proj1-a3': 'Integrated intent-driven platform to control the system via <strong>AI Agent</strong>',
+      'proj1-ph3': 'AI Agent Automation · 2025',
+      'proj1-b1': '<strong>Integrated</strong> the platform APIs into an <strong>intent-driven ML agent</strong> (Dify agent_strategy plugin, multi-actor ReAct) that chains upload &rarr; preprocess &rarr; train &rarr; diagnose &rarr; propose retraining &rarr; evaluate automatically — <strong>the user steps in at only 2 points: stating the goal and approving a retrain</strong>',
+      'proj1-b2': '<strong>Reduced</strong> LLM decision complexity by <strong>wrapping 17 low-level platform tools behind 10 high-level skills</strong>; low-level tools stay hidden from the model and are orchestrated deterministically inside each skill, keeping destructive APIs out of the model&apos;s reach',
+      'proj1-b3': '<strong>Designed a diagnosis sub-loop with its own LLM context</strong>: an error analyst pulls logs, code, and Dockerfiles to emit an automatic patch-and-retry, while an optimizer reads underfit/overfit signals to propose a retrain — running a <strong>Gemini + Claude split</strong> (streaming main loop, stronger reasoning for code synthesis and diagnosis)',
+      'proj1-b4': '<strong>Validated</strong> across <strong>5 task families</strong> — image classification, time-series classification, tabular classification, time-series regression, and anomaly detection — each proven by Kubeflow pod code that actually ran, with support for user-supplied Cython <code>.so</code> model definitions',
       'proj1-ph2': 'Stress Testing &amp; Availability Fixes · 2026',
       'proj1-a4': '<strong>Re-architected the dataset upload/download path to streaming</strong> across three layers (entrypoint, SDK, preprocessing step), cutting entrypoint memory from <strong>≈2× object size to a flat 140 MiB</strong> — GB-scale downloads went from guaranteed OOM at 495 MB to <strong>4.7 GB / 112 s / 44.9 MB/s</strong> at acceptance',
       'proj1-a5': 'Built the measurement methodology on <strong>Prometheus + Istio + cgroup metrics</strong> and loaded the platform along three axes — object size (1→200 GB), concurrency (1→12), multi-tenancy (1→12) — <strong>surfacing 11 defects and shipping 6 fixes</strong>',
