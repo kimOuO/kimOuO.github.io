@@ -81,6 +81,21 @@
   }
   .pdf-bar button:hover { background: #1e2c50; }
   @media print { .no-print, .pdf-bar { display: none !important; } }
+
+  /* ── 強制列印底色（即使使用者沒勾「背景圖形」） ── */
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  @media print {
+    html, body { width: 210mm !important; }
+    .page-wrap { width: 210mm !important; }
+  }
+  /* 列印設定提示（僅螢幕） */
+  .print-hint {
+    position: fixed; top: 62px; right: 16px; z-index: 999; width: 210px;
+    background: #fffbe6; border: 1px solid #e0cf7a; border-radius: 4px;
+    padding: 9px 11px; font-size: 8.5pt; line-height: 1.55; color: #5c4a00;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .print-hint b { display: block; margin-bottom: 3px; }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -220,6 +235,14 @@
 
 
 <!-- ── PDF download (screen only) ── -->
+
+<div class="print-hint no-print">
+  <b>存 PDF 前請確認：</b>
+  ・目的地：另存為 PDF<br>
+  ・邊界（Margins）：<b style="display:inline">無 / None</b><br>
+  ・勾選<b style="display:inline">背景圖形</b><br>
+  ・縮放：100%
+</div>
 <div class="pdf-bar no-print">
   <button type="button" onclick="window.print()">⬇ 下載 PDF</button>
 </div>
