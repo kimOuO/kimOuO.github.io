@@ -531,11 +531,11 @@
           <li data-i18n="proj1-b3"><strong>設計</strong>獨立 context 診斷 sub-loop，自動產出修補重跑與重訓方案，涵蓋 <strong>5 類 ML 任務</strong>實機驗證</li>
         </ul>
 
-        <div class="project-phase" data-i18n="proj1-ph2">效能壓測與可用性修復 · 2026</div>
+        <div class="project-phase" data-i18n="proj1-ph2">可觀測性、壓測與 K8s 除錯 · 2026</div>
         <ul class="project-achievements">
-          <li data-i18n="proj1-a4"><strong>建立</strong>可觀測性體系（Prometheus / DCGM / Istio / Retina，<strong>2,515 項指標</strong>），並自建 <strong>MFU 算力利用率量測管線</strong>補足 vGPU 缺少 profiling 指標的缺口，揭露監控顯示 93–96%、實際僅 <strong>11.7–46.1%</strong> 的落差</li>
-          <li data-i18n="proj1-a5"><strong>定位</strong>跨節點傳輸故障根因為 <strong>VXLAN 隧道埠與 hypervisor 衝突</strong>，pod 間吞吐自 6.55 Mbit/s 提升至 <strong>5,858 Mbit/s（894 倍）</strong>，50 GB 測試自連續六次失敗變為首次即成功</li>
-          <li data-i18n="proj1-a6"><strong>重構</strong>資料傳輸路徑為<strong>三層串流化</strong>，單物件處理上限自約 470 MB 提升至 <strong>4.7 GB</strong>、服務峰值記憶體與物件大小<strong>脫鉤為固定 140 MiB</strong>；並定位四個微服務共同以 Django 開發伺服器執行之架構瓶頸</li>
+          <li data-i18n="proj1-a4"><strong>建置</strong> Kubernetes 可觀測性堆疊（kube-prometheus-stack、NVIDIA DCGM Exporter、Istio、eBPF Retina），涵蓋 <strong>2,515 項指標</strong>與 5 秒級 GPU 取樣，補上平台原本零監控的空白</li>
+          <li data-i18n="proj1-a5"><strong>設計</strong>系統性壓力測試（物件大小／模型規模／並發／多租戶四軸，N≥3 全程可重算），將平台容量自無依據轉為量化上限：<strong>單卡 386M 參數、並行 4 任務</strong></li>
+          <li data-i18n="proj1-a6"><strong>排除</strong>叢集跨節點網路、物件儲存與資源配置故障（CNI 隧道、SeaweedFS 逾時、liveness probe 誤殺、OOMKilled），使 pod 間吞吐提升 <strong>894 倍</strong>、單物件處理上限自 470 MB 提升至 <strong>4.7 GB</strong></li>
         </ul>
         <div class="project-tags">
           <span class="tag">KubeFlow</span>
@@ -910,7 +910,15 @@
       'proj1-b1': '<strong>Integrated</strong> the platform APIs into an intent-driven ML agent (Dify multi-actor ReAct) that chains the full workflow automatically, cutting user involvement from 6 steps to <strong>2 decision points</strong>',
       'proj1-b2': '<strong>Wrapped</strong> 17 low-level platform tools behind <strong>10 high-level skills</strong>, isolating destructive APIs and reducing both LLM decision complexity and mis-operation risk',
       'proj1-b3': '<strong>Designed</strong> an isolated-context diagnosis sub-loop that auto-generates patch-and-retry and retraining proposals, validated on real runs across <strong>5 ML task families</strong>',
-      'proj1-ph2': 'Stress Testing &amp; Availability Fixes · 2026',
+      'proj1-ph2': 'Observability, Load Testing &amp; K8s Debugging · 2026',
+      'proj1-a4': '<strong>Built</strong> the Kubernetes observability stack (kube-prometheus-stack, NVIDIA DCGM Exporter, Istio, eBPF Retina) covering <strong>2,515 metrics</strong> with 5-second GPU sampling, on a platform that previously had none',
+      'proj1-a5': '<strong>Designed</strong> systematic load testing across four axes — object size, model scale, concurrency, tenancy — with N&ge;3 repeats and fully recomputable results, turning platform capacity from guesswork into hard limits: <strong>386M parameters per card, 4 concurrent jobs</strong>',
+      'proj1-a6': '<strong>Debugged</strong> cross-node networking, object storage, and resource-configuration failures across the cluster (CNI tunneling, SeaweedFS timeouts, liveness-probe kills, OOMKills), lifting pod-to-pod throughput <strong>894x</strong> and the single-object ceiling from 470 MB to <strong>4.7 GB</strong>',
+      'proj1-ph3': 'AI Agent Automation · 2025',
+      'proj1-b1': '<strong>Integrated</strong> the platform APIs into an intent-driven ML agent (Dify multi-actor ReAct) that chains the full workflow automatically, cutting user involvement from 6 steps to <strong>2 decision points</strong>',
+      'proj1-b2': '<strong>Wrapped</strong> 17 low-level platform tools behind <strong>10 high-level skills</strong>, isolating destructive APIs and reducing both LLM decision complexity and mis-operation risk',
+      'proj1-b3': '<strong>Designed</strong> an isolated-context diagnosis sub-loop that auto-generates patch-and-retry and retraining proposals, validated on real runs across <strong>5 ML task families</strong>',
+      'proj1-ph2': 'Observability, Load Testing &amp; K8s Debugging · 2026',
       'proj1-a4': '<strong>Built</strong> the observability stack (Prometheus / DCGM / Istio / Retina, <strong>2,515 metrics</strong>) and a custom <strong>MFU pipeline</strong> to work around missing vGPU profiling counters, exposing a gap between the 93–96% utilization monitoring reported and the <strong>11.7–46.1%</strong> actually achieved',
       'proj1-a5': '<strong>Root-caused</strong> cross-node transfer failures to a <strong>VXLAN tunnel port conflicting with the hypervisor</strong>, lifting pod-to-pod throughput from 6.55 Mbit/s to <strong>5,858 Mbit/s — 894x</strong> and turning six consecutive 50 GB failures into a first-try pass',
       'proj1-a6': '<strong>Re-architected</strong> the data path into <strong>three-layer streaming</strong>, raising the single-object ceiling from ~470 MB to <strong>4.7 GB</strong> and decoupling peak service memory from object size at a flat <strong>140 MiB</strong>; also traced four microservices to a shared bottleneck — all running the Django dev server',
