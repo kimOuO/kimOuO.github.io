@@ -145,20 +145,21 @@
     /* ── EXPERIENCE ── */
     #experience { border-bottom: 1px solid var(--black); }
     .exp-item {
-      display: grid; grid-template-columns: 190px 1fr; gap: 32px;
-      padding: 32px 0; border-bottom: 1px solid var(--gray-200);
+      display: grid; grid-template-columns: 165px 1fr; gap: 26px;
+      padding: 20px 0; border-bottom: 1px solid var(--gray-200);
     }
+    .exp-summary { font-size: 0.82rem; color: var(--gray-600); margin-bottom: 8px; line-height: 1.6; }
     .exp-item:last-child { border-bottom: none; }
     .exp-date { font-size: 0.8rem; color: var(--gray-600); font-weight: 500; padding-top: 3px; }
     .exp-role { font-size: 1.05rem; font-weight: 700; margin-bottom: 3px; }
-    .exp-company { font-size: 0.88rem; color: var(--red); font-weight: 600; margin-bottom: 12px; }
-    .exp-bullets { margin-top: 10px; }
+    .exp-company { font-size: 0.88rem; color: var(--red); font-weight: 600; margin-bottom: 6px; }
+    .exp-bullets { margin-top: 6px; }
     .exp-bullets li {
       font-size: 0.875rem; color: var(--gray-700); margin-bottom: 5px;
       padding-left: 20px; position: relative;
     }
     .exp-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--red); font-size: 0.8rem; }
-    .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
     .exp-tags .tag { font-size: 0.68rem; padding: 2px 8px; background: var(--gray-100); border-color: var(--gray-300); }
 
     /* ── PROJECTS ── */
@@ -398,37 +399,14 @@
     </div>
 
     <div class="exp-item">
-      <div class="exp-date">2026.01 – 2026.02</div>
-      <div class="exp-content">
-        <div class="exp-role" data-i18n="exp1-role">冬季實習生 Winter Intern</div>
-        <div class="exp-company">SparkAmplify</div>
-        <ul class="exp-bullets">
-          <li data-i18n="exp1-b1">使用 Git 進行版本控制，建立並維護 Git Workflow 協作流程（分支策略、PR 審核）</li>
-          <li data-i18n="exp1-b2">操作 Harbor 私有 Docker Registry，管理 Docker Image 的推送、拉取與版本控管</li>
-          <li data-i18n="exp1-b3">撰寫 Dockerfile，執行 Docker Build 並完成容器化部署流程</li>
-          <li data-i18n="exp1-b4">建置前後端分離部署架構，分別部署前端靜態資源與後端服務</li>
-          <li data-i18n="exp1-b5">調整 Nginx 設定，配置反向代理轉發規則，串接 Harbor Registry 與後端服務</li>
-        </ul>
-        <div class="exp-tags">
-          <span class="tag">Git</span>
-          <span class="tag">Git Workflow</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Harbor</span>
-          <span class="tag">Nginx</span>
-          <span class="tag" data-i18n="exp1-tag1">前後端分離部署</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="exp-item">
       <div class="exp-date">2026.07</div>
       <div class="exp-content">
         <div class="exp-role" data-i18n="exp5-role">國際工作坊學員（赴韓）</div>
-        <div class="exp-company" data-i18n="exp5-company">韓國漢陽大學 6G 通訊研究中心 — AI 資通訊網路實作國際工作坊</div>
+        <div class="exp-company" data-i18n="exp5-company">韓國漢陽大學 6G 通訊研究中心</div>
+        <p class="exp-summary" data-i18n="exp5-sum">教育部雙語化學習計畫選送，全英語 O-RAN / AI-RAN 實作訓練。</p>
         <ul class="exp-bullets">
-          <li data-i18n="exp5-b1">經教育部 114 學年度<strong>大專校院學生雙語化學習計畫</strong>選送赴韓，全英語參與 <em>From O-RAN to AI-RAN: Practical 6G RAN Experimentation</em> 課程，結訓獲頒 Certificate of Attendance</li>
-          <li data-i18n="exp5-b2">實作部署 <strong>Open5GS + srsRAN gNB / UE + FlexRIC Near-RT RIC</strong> 完整環境，完成 <strong>KPM monitoring xApp</strong> 之 E2 訂閱與量測資料驗證</li>
-          <li data-i18n="exp5-b3">參訪 <strong>NVIDIA AODT</strong> 數位孿生模擬平台與 O-RU 波束量測環境，並參與 KPM-based xApp 之控制邏輯與驗證方式設計演練</li>
+          <li data-i18n="exp5-b1">部署 <strong>Open5GS + srsRAN + FlexRIC Near-RT RIC</strong>，完成 KPM monitoring xApp 之 E2 訂閱與量測驗證</li>
+          <li data-i18n="exp5-b2">參訪 <strong>NVIDIA AODT</strong> 數位孿生平台與 O-RU 波束量測環境，結訓獲頒 Certificate of Attendance</li>
         </ul>
         <div class="exp-tags">
           <span class="tag">O-RAN</span>
@@ -436,23 +414,26 @@
           <span class="tag">xApp / KPM</span>
           <span class="tag">FlexRIC</span>
           <span class="tag">srsRAN</span>
-          <span class="tag">Open5GS</span>
-          <span class="tag" data-i18n="exp5-tag1">國際交流</span>
         </div>
       </div>
     </div>
 
     <div class="exp-item">
-      <div class="exp-date">2024.07 – 2024.09</div>
+      <div class="exp-date">2026.01 – 2026.02</div>
       <div class="exp-content">
-        <div class="exp-role" data-i18n="exp2-role">研發實戰參與者</div>
-        <div class="exp-company" data-i18n="exp2-company">經濟部產業發展署 — 太空產業供應鏈暨網通產業新星飛揚計畫</div>
+        <div class="exp-role" data-i18n="exp1-role">冬季實習生 Winter Intern</div>
+        <div class="exp-company">SparkAmplify</div>
+        <p class="exp-summary" data-i18n="exp1-sum">赴美實習，負責 MySphere 學習平台的容器化部署與團隊協作流程建置。</p>
         <ul class="exp-bullets">
-          <li data-i18n="exp2-b1">入選經濟部產業發展署<strong>太空產業供應鏈暨網通產業新星飛揚計畫</strong>，投入室內空間感知平台相關題目之研發實戰，修業期滿獲頒結業證明</li>
+          <li data-i18n="exp1-b1">建立並維護 <strong>Git Workflow</strong> 協作流程（分支策略、PR 審核）</li>
+          <li data-i18n="exp1-b2">撰寫 Dockerfile 完成容器化部署，並以 <strong>Harbor</strong> 私有 Registry 管理 Image 版本</li>
+          <li data-i18n="exp1-b3">建置前後端分離架構，調整 <strong>Nginx</strong> 反向代理串接後端服務</li>
         </ul>
         <div class="exp-tags">
-          <span class="tag" data-i18n="exp2-tag1">新星飛揚計畫</span>
-          <span class="tag" data-i18n="exp2-tag2">產業實訓</span>
+          <span class="tag">Git Workflow</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Harbor</span>
+          <span class="tag">Nginx</span>
         </div>
       </div>
     </div>
@@ -462,18 +443,30 @@
       <div class="exp-content">
         <div class="exp-role" data-i18n="exp3-role">微積分課程助教</div>
         <div class="exp-company" data-i18n="exp3-company">國立臺灣科技大學</div>
+        <p class="exp-summary" data-i18n="exp3-sum">教學支援之餘，自行開發工具解決課務管理的重複作業。</p>
         <ul class="exp-bullets">
-          <li data-i18n="exp3-b1">協助教授課程教學，負責批改作業、解答學生課業疑問</li>
-          <li data-i18n="exp3-b2">為方便課務銜接與管理，獨立以 React + Django + DB 全端開發成績登記與考卷管理系統</li>
-          <li data-i18n="exp3-b3">開發自動出題 AI Agent，透過 Tool Use 內嵌 Word 工具，自主生成完整考卷文件</li>
+          <li data-i18n="exp3-b1">協助課程教學、批改作業與解答學生疑問</li>
+          <li data-i18n="exp3-b2">獨立以 <strong>React + Django + DB</strong> 全端開發成績登記與考卷管理系統</li>
+          <li data-i18n="exp3-b3">開發自動出題 <strong>AI Agent</strong>，透過 Tool Use 內嵌 Word 工具生成完整考卷</li>
         </ul>
         <div class="exp-tags">
           <span class="tag">React</span>
           <span class="tag">Django</span>
           <span class="tag">Full-Stack</span>
-          <span class="tag">Database</span>
           <span class="tag">AI Agent</span>
-          <span class="tag" data-i18n="exp3-tag1">教學</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">2024.07 – 2024.09</div>
+      <div class="exp-content">
+        <div class="exp-role" data-i18n="exp2-role">研發實戰參與者</div>
+        <div class="exp-company" data-i18n="exp2-company">經濟部產業發展署 — 新星飛揚計畫</div>
+        <p class="exp-summary" data-i18n="exp2-sum">入選經濟部產業實戰計畫，於業師指導下投入室內空間感知平台之研發。</p>
+        <div class="exp-tags">
+          <span class="tag" data-i18n="exp2-tag1">新星飛揚計畫</span>
+          <span class="tag" data-i18n="exp2-tag2">產業實訓</span>
         </div>
       </div>
     </div>
@@ -483,10 +476,7 @@
       <div class="exp-content">
         <div class="exp-role" data-i18n="exp4-role">資訊管理顧問（兼職）</div>
         <div class="exp-company" data-i18n="exp4-company">應拿實業有限公司</div>
-        <ul class="exp-bullets">
-          <li data-i18n="exp4-b1">負責公司資料庫定期備份與維護，確保營運資料安全</li>
-          <li data-i18n="exp4-b2">擔任內部電腦與資訊系統問題顧問，排除軟硬體故障</li>
-        </ul>
+        <p class="exp-summary" data-i18n="exp4-sum">負責公司資料庫備份維護與內部資訊系統支援。</p>
         <div class="exp-tags">
           <span class="tag">Database</span>
           <span class="tag" data-i18n="exp4-tag1">備份管理</span>
@@ -694,9 +684,8 @@
           <div class="award-item">
             <div class="award-year">2026</div>
             <div>
-              <div class="award-name" data-i18n="award3-name">AI 資通訊網路實作國際工作坊 — 韓國漢陽大學 6G 通訊研究中心</div>
-              <div class="award-desc" data-i18n="award3-desc">教育部 114 學年度大專校院學生雙語化學習計畫選送 · 2026.07 · 獲頒 Certificate of Attendance</div>
-              <div class="award-desc" data-i18n="award3-desc2">實作 Open5GS + srsRAN + FlexRIC Near-RT RIC 環境，完成 KPM monitoring xApp 之 E2 訂閱與量測驗證；參訪 NVIDIA AODT 數位孿生模擬平台與 O-RU 波束量測環境</div>
+              <div class="award-name" data-i18n="award3-name">教育部大專校院學生雙語化學習計畫</div>
+              <div class="award-desc" data-i18n="award3-desc">選送赴韓國漢陽大學 6G 通訊研究中心 · 2026.07</div>
             </div>
           </div>
 
@@ -867,21 +856,22 @@
       'hl-intern2': 'Space New Star Program',
       'hl-status': '1st-year M.S. student · Actively seeking opportunities',
       'exp1-role': 'Winter Intern',
-      'exp1-b1': 'Managed version control with Git, established and maintained Git Workflow (branching strategy, PR review)',
-      'exp1-b2': 'Operated Harbor private Docker Registry for image push, pull, and version management',
-      'exp1-b3': 'Wrote Dockerfiles, executed Docker builds, and completed containerized deployment',
-      'exp1-b4': 'Built frontend-backend separated deployment architecture for static resources and backend services',
-      'exp1-b5': 'Configured Nginx reverse proxy rules to connect Harbor Registry and backend services',
-      'exp1-tag1': 'Frontend-Backend Separation',
       'exp5-role': 'Workshop Participant (Korea)',
       'exp5-company': '6G Research Center, Hanyang University — International Workshop on AI-Enabled ICT Networks',
-      'exp5-b1': 'Selected through the MOE <strong>Bilingual Learning Program (AY 114)</strong> to attend in Korea; completed the English-taught course <em>From O-RAN to AI-RAN: Practical 6G RAN Experimentation</em> and received a Certificate of Attendance',
-      'exp5-b2': 'Deployed a full <strong>Open5GS + srsRAN gNB/UE + FlexRIC Near-RT RIC</strong> stack hands-on, completing E2 subscription and measurement validation for a <strong>KPM monitoring xApp</strong>',
-      'exp5-b3': 'Toured the <strong>NVIDIA AODT</strong> digital-twin simulation platform and the O-RU beam measurement lab; took part in a design exercise on KPM-based xApp control logic and validation',
-      'exp5-tag1': 'Intl. Exchange',
+      'exp5-role': 'Workshop Participant (Korea)',
+      'exp5-company': '6G Research Center, Hanyang University',
+      'exp5-sum': 'Selected through the MOE Bilingual Learning Program for English-taught hands-on O-RAN / AI-RAN training.',
+      'exp5-b1': 'Deployed <strong>Open5GS + srsRAN + FlexRIC Near-RT RIC</strong> and completed E2 subscription and measurement validation for a KPM monitoring xApp',
+      'exp5-b2': 'Toured the <strong>NVIDIA AODT</strong> digital-twin platform and O-RU beam measurement lab; received a Certificate of Attendance',
+      'exp1-sum': 'US internship: containerized deployment and team workflow for the MySphere learning platform.',
+      'exp1-b1': 'Established and maintained the <strong>Git workflow</strong> (branching strategy, PR review)',
+      'exp1-b2': 'Authored Dockerfiles for containerized deployment and managed image versions in a private <strong>Harbor</strong> registry',
+      'exp1-b3': 'Built a decoupled frontend/backend architecture with <strong>Nginx</strong> reverse proxy routing to backend services',
+      'exp3-sum': 'Alongside teaching support, built tooling to remove repetitive course-administration work.',
+      'exp2-sum': 'Selected for the MOEA industry R&D program; developed an indoor spatial-awareness platform under industry mentorship.',
+      'exp4-sum': 'Database backup and maintenance plus internal IT support.',
       'exp2-role': 'R&D Training Participant',
       'exp2-company': 'Industrial Development Administration, MOEA — Space & ICT New Star Program',
-      'exp2-b1': 'Selected for the MOEA <strong>Space Supply Chain &amp; ICT New Star Program</strong>; took part in industry R&amp;D on an indoor spatial-awareness platform, completing the program with certification',
       'exp2-tag1': 'New Star Program',
       'exp2-tag2': 'Industry Training',
       'exp3-date': '2025.09 – Present',
@@ -890,12 +880,9 @@
       'exp3-b1': 'Assisted in teaching, grading assignments, and answering student questions',
       'exp3-b2': 'Independently built a grade registration and exam management system using React + Django + DB for course administration',
       'exp3-b3': 'Developed an auto-exam AI Agent with Tool Use integration, embedding a Word tool to autonomously generate complete exam documents',
-      'exp3-tag1': 'Teaching',
       'exp4-date': 'Part-time',
       'exp4-role': 'IT Consultant (Part-time)',
       'exp4-company': 'Ying-Na Industrial Co., Ltd.',
-      'exp4-b1': 'Managed regular database backups and maintenance to ensure data security',
-      'exp4-b2': 'Served as internal IT consultant for troubleshooting computer and system issues',
       'exp4-tag1': 'Backup Mgmt',
       'exp4-tag2': 'IT Support',
       'proj1-badge': '★ International Demo',
@@ -970,9 +957,8 @@
       'award1-name': 'Space New Star Program',
       'award1-desc': 'Industrial Development Administration, MOEA · 2024.07 – 2024.09',
       'award2-name': 'Study Abroad Dream Program — SparkAmplify Winter Internship',
-      'award3-name': 'International Workshop on AI-Enabled ICT Networks — 6G Research Center, Hanyang University (Korea)',
-      'award3-desc': 'Selected through the MOE Bilingual Learning Program (AY 114) · Jul 2026 · Certificate of Attendance',
-      'award3-desc2': 'Hands-on deployment of Open5GS + srsRAN + FlexRIC Near-RT RIC; completed E2 subscription and measurement validation for a KPM monitoring xApp; toured the NVIDIA AODT digital-twin simulation platform and O-RU beam measurement lab',
+      'award3-name': 'MOE Bilingual Learning Program for College Students',
+      'award3-desc': 'Selected for the 6G Research Center, Hanyang University (Korea) · Jul 2026',
       'talk1-name': '2026 Smart Networks SIG Seminar — Commercialization and Industrial Applications of AI-RAN',
       'talk1-desc': 'Attended and presented project results · Sep 2026 · Taipei',
       'talk2-name': 'EuCNC 2024 (Belgium)',
