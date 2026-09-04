@@ -584,15 +584,15 @@
         <div class="project-title" data-i18n="proj4-title">5G NR RAN 數位孿生平台 — 工研院產學合作</div>
         <div class="project-period" data-i18n="proj4-period">2025.04 – 2025.12 · 工業技術研究院 × 國立臺灣科技大學</div>
         <p class="project-desc" data-i18n="proj4-desc">
-          xApp 的控制決策過去只能在實體 RAN 上試錯，成本高且情境難重現。
-          本平台將 OAI / O-RAN 的 CU / DU / RU / UE 拆解為獨立微服務，重建可重播、可加壓的 5G NR 環境，
-          讓 xApp 先在數位孿生驗證 Handover 與 PRB 控制決策，再部署到實體 RAN。
+          xApp 控制決策過去只能在實體 RAN 上試錯，環境成本高、故障情境難以重現；
+          而 NVIDIA AODT 等商用數位孿生又綁定特定硬體規格。
+          本平台以 Sionna RT 光追加數學通道模型自建輕量替代方案，讓 xApp 先在孿生環境重現問題、驗證修復，再部署到實體 RAN。
         </p>
         <ul class="project-achievements">
-          <li data-i18n="proj4-a1">將 CU / DU / RU / UE <strong>拆解為 4 組獨立 Django HTTP 微服務</strong>，實作 RRC / F1AP / MAC 排程 / A3 Handover 與 PM 統計，模組可獨立替換與單獨驗證</li>
-          <li data-i18n="proj4-a2">整合 <strong>Sionna RT GPU 光線追蹤</strong>物理層與 <strong>NVIDIA Omniverse</strong> 3D 場景，以預運算 channel cache 取代逐 tick 光追，將模擬情境轉為<strong>可重播</strong>的劇本</li>
-          <li data-i18n="proj4-a3">開發 <strong>HTTP ↔ ASN.1 / SCTP E2 Adapter</strong>，讓數位孿生以標準 E2AP 對接<strong>實體 Near-RT RIC</strong>，xApp 無需改碼即可在孿生與實體環境間切換</li>
-          <li data-i18n="proj4-a4">以 <strong>Docker Compose 整合 10+ 服務</strong>與 Postgres 多資料庫一鍵啟動，另建 Next.js Dashboard 監控 KPM / RC / PRB quota，降低環境重建與除錯成本</li>
+          <li data-i18n="proj4-a1"><strong>整合</strong> Sionna RT 光追與 Omniverse 3D，以數學通道模型取代 NVIDIA AODT 的專用硬體需求，於單機 GPU 重現場景建模、通道模擬與視覺化，並<strong>免除實體 UE 設備</strong>（直接注入流量、由 Sionna 計算通道誤差）</li>
+          <li data-i18n="proj4-a2"><strong>降低</strong>孿生與真實 RAN 的量測落差：以 OAI rfsim 為 ground truth 對齊，DL 吞吐 <strong>95%</strong>、PDCP Volume <strong>96%</strong>、PRB <strong>104%</strong>、UL 吞吐 <strong>90%</strong>，DL-UL 相關係數 <strong>0.99</strong>，6 項 KPM 主指標對齊 5 項</li>
+          <li data-i18n="proj4-a3"><strong>優化</strong>殘差誤差：自建<strong>可插拔 ML 校正器</strong>（quantile GBT，不污染 DT 物理層），PRB 誤差改善 <strong>29.8–304 倍</strong>、延遲誤差改善 <strong>81–470 倍</strong>，於 0.95–5 Mbps 負載區間均成立（含 &gt;3 Mbps 外推）</li>
+          <li data-i18n="proj4-a4"><strong>拆解</strong> CU / DU / RU / UE 為獨立 Django 微服務並自製 <strong>HTTP ↔ ASN.1 / SCTP E2 Adapter</strong>，xApp 無需改碼即可在孿生與實體 Near-RT RIC 間切換；Docker Compose 整合 10+ 服務一鍵啟動，支援 10 gNB / 多 cell、最長 24 小時劇本重播</li>
         </ul>
         <div class="project-tags">
           <span class="tag">O-RAN</span>
@@ -607,6 +607,8 @@
           <span class="tag">Docker Compose</span>
           <span class="tag">PostgreSQL</span>
         </div>
+        <a class="project-link" href="https://github.com/kimOuO/RAN-sim-OAI" target="_blank">→ GitHub · RAN-sim-OAI</a>
+        <a class="project-link" href="https://github.com/kimOuO/Omnivers_platform" target="_blank" style="margin-left:14px;">→ GitHub · Omnivers_platform</a>
       </div>
 
       <!-- Project: 大學部實務專題 -->
@@ -900,11 +902,11 @@
       'proj4-badge': '★ Industry Collaboration',
       'proj4-title': '5G NR RAN Digital Twin — ITRI Industry-Academia Project',
       'proj4-period': 'Apr 2025 – Dec 2025 · Industrial Technology Research Institute (ITRI) × NTUST',
-      'proj4-desc': 'xApp control decisions previously had to be trial-and-errored on physical RAN — expensive, and hard to reproduce a given scenario. This platform decomposes the OAI/O-RAN CU / DU / RU / UE into independent microservices, rebuilding a replayable, loadable 5G NR environment so xApps can validate handover and PRB control decisions in the twin before deploying to physical RAN.',
-      'proj4-a1': 'Decomposed CU / DU / RU / UE into <strong>4 independent Django HTTP microservices</strong> implementing RRC, F1AP, MAC scheduling, A3 handover, and PM reporting — each module independently replaceable and verifiable',
-      'proj4-a2': 'Integrated a <strong>Sionna RT GPU ray-tracing</strong> physical layer with <strong>NVIDIA Omniverse</strong> 3D scenes, replacing per-tick ray tracing with a precomputed channel cache to turn simulation scenarios into <strong>replayable</strong> scripts',
-      'proj4-a3': 'Built an <strong>HTTP ↔ ASN.1/SCTP E2 Adapter</strong> so the twin speaks standard E2AP to a <strong>real Near-RT RIC</strong>, letting xApps move between twin and physical environments without code changes',
-      'proj4-a4': 'Orchestrated <strong>10+ services</strong> and multi-database Postgres into a one-command <strong>Docker Compose</strong> stack, plus a Next.js dashboard for KPM / RC / PRB quota monitoring, cutting environment rebuild and debugging cost',
+      'proj4-desc': 'xApp control decisions previously had to be trial-and-errored on physical RAN — expensive, with failure scenarios hard to reproduce — while commercial digital twins such as NVIDIA AODT are tied to specific hardware. This platform builds a lightweight alternative on Sionna RT ray tracing plus analytical channel models, letting xApps reproduce faults and verify fixes in the twin before deploying to physical RAN.',
+      'proj4-a1': '<strong>Integrated</strong> Sionna RT ray tracing with Omniverse 3D, replacing NVIDIA AODT&apos;s dedicated hardware requirement with analytical channel models to reproduce scene modeling, channel simulation, and visualization on a single GPU — and <strong>eliminating physical UE equipment</strong> (traffic is injected directly; Sionna computes channel error)',
+      'proj4-a2': '<strong>Closed the measurement gap</strong> against real RAN: aligned to OAI rfsim as ground truth at <strong>95%</strong> DL throughput, <strong>96%</strong> PDCP volume, <strong>104%</strong> PRB, <strong>90%</strong> UL throughput, with a <strong>0.99</strong> DL-UL correlation — 5 of 6 primary KPMs aligned',
+      'proj4-a3': '<strong>Reduced</strong> residual error with a <strong>pluggable ML calibrator</strong> (quantile GBT, leaving DT physics untouched): <strong>29.8–304×</strong> improvement on PRB error and <strong>81–470×</strong> on delay error, holding across a 0.95–5 Mbps load range including extrapolation beyond 3 Mbps',
+      'proj4-a4': '<strong>Decomposed</strong> CU / DU / RU / UE into independent Django microservices with a custom <strong>HTTP ↔ ASN.1/SCTP E2 Adapter</strong>, so xApps switch between the twin and a physical Near-RT RIC without code changes; Docker Compose brings up 10+ services in one command, supporting 10 gNBs, multiple cells, and replay of scenarios up to 24 hours',
       'proj2-badge': '★ US Internship',
       'proj2-title': 'MySphere — Graded English Story Learning Platform',
       'proj2-period': '2025 – 2026 · Study Abroad Program × SparkAmplify (Los Angeles) × Tung Hua Book Co. · US Internship 2026/01–02',
