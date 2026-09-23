@@ -141,6 +141,10 @@
       <p>韓國漢陽大學 6G 研究中心 · 教育部雙語化學習計畫（2026）</p>
     </div>
     <div class="personality-item">
+      <strong>AI-RAN／O-RAN 實作工作坊</strong>
+      <p>國立陽明交通大學（2025.10）</p>
+    </div>
+    <div class="personality-item">
       <strong>學海築夢實習計畫</strong>
       <p>SparkAmplify 冬季實習（2026）</p>
     </div>
@@ -157,67 +161,89 @@
 
   <div class="main-sec">
     <div class="main-title">關於我</div>
-    <div class="about-text">具備前後端開發、系統整合與容器化部署經驗，熟悉 Kubernetes 叢集維運、可觀測性建置與 AI Agent 開發。曾赴美於洛杉磯新創 SparkAmplify 實習，完整參與從需求理解到測試部署的開發週期；並於國科會 6G 平台與工研院產學合作中負責效能工程與數位孿生開發。</div>
+    <div class="about-text">國立臺灣科技大學電子工程研究所碩士生，研究與專案聚焦雲原生平台、MLOps、AI Agent 與 O-RAN 系統整合，具備平台建置維運、系統整合、自動化到效能分析與故障定位的實作經驗。曾參與國科會 6G AI/ML 平台及工研院 O-RAN 數位孿生研發，具 Kubernetes／Docker、Kubeflow、AI Agent Workflow 與 5G RAN Simulator 開發經驗。工程實作重視量化驗證，曾使跨節點傳輸吞吐提升 894 倍，並將模擬系統主要指標平均誤差自 50.1% 降至 2.5%。具海外實習與國際技術交流經驗，期望投入雲端平台工程、MLOps、AI Infrastructure 或系統整合相關職務。</div>
   </div>
 
   <div class="main-sec">
     <div class="main-title">經歷</div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">SparkAmplify — 冬季實習生（赴美）／MySphere 專案</span><span class="exp-badge">實習</span></div>
+      <div class="exp-head"><span class="exp-name">系統維運與資料庫管理 — 台科大電子系系辦公室</span><span class="exp-badge">2026.09 – 在職</span></div>
       <div class="exp-desc"><ul>
-        <li>學海築夢計畫赴美，與東華書局合作開發英文分級故事學習平台；負責資料庫與 API 開發、學習進度追蹤與 LLM 問答 Chat</li>
-        <li>Docker 容器化、Nginx 反向代理與 Harbor Registry 部署，建立 GitHub Actions CI/CD 與團隊 Git Workflow</li>
+        <li>維運系上指導教授媒合系統（PHP + MariaDB）：教授名額上限控管、學生申請與異動審核流程</li>
+        <li>串接校方學籍資料 API，同步新生名單與在學狀態</li>
+        <li>負責資料庫定期備份、功能缺陷修復與系統重建／除錯文件維護</li>
+        <li>負責系所機房網路管理與伺服器日常維運</li>
       </ul></div>
     </div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">6G AI/ML 訓練／推論平台 — 國科會計畫</span><span class="exp-badge">專案</span></div>
+      <div class="exp-head"><span class="exp-name">產業研發專案成員 — 獵戶科技股份有限公司</span><span class="exp-badge">2026.07 – 09</span></div>
       <div class="exp-desc"><ul>
-        <li>2024 – 2026。維運雙節點 20+ 容器服務，盤點 Kubeflow 20+ 元件相依並修復跨服務缺陷</li>
-        <li>整合平台 API 為意圖驅動 ML Agent（Dify Multi-Actor ReAct），使用者介入自 6 步降為 2 個節點</li>
-        <li>建置 K8s 可觀測性堆疊（2,515 項指標），除錯跨節點網路與儲存故障：吞吐提升 894 倍、單物件上限自 470 MB 提升至 4.7 GB</li>
-        <li>EuCNC 2024（比利時）AR/VR QoS 即時推論展示、COSCUP 2024 發表</li>
+        <li>連續兩年入選經濟部產業研發實戰計畫，於業師指導下完成需求定義、技術選型、MVP 實作到測試驗證之完整開發迭代</li>
+        <li>研究室內定位平台之研發，並負責文件撰寫與整合技術</li>
       </ul></div>
     </div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">5G NR RAN 數位孿生平台 — 工研院產學合作</span><span class="exp-badge">產學合作</span></div>
+      <div class="exp-head"><span class="exp-name">後端／DevOps 工程師 — SparkAmplify（美國加州）</span><span class="exp-badge">2026.01 – 03</span></div>
       <div class="exp-desc"><ul>
-        <li>2025.04 – 12。拆解 OAI / O-RAN 的 CU / DU / RU / UE 為獨立 Django 微服務，自製 HTTP ↔ ASN.1 / SCTP E2 Adapter 對接實體 Near-RT RIC</li>
-        <li>整合 Sionna RT 光追與 Omniverse 取代 NVIDIA AODT 專用硬體；對齊 OAI ground truth，經 ML 校正器將平均誤差自 50.1% 降至 2.5%</li>
+        <li>負責資料庫管理與 API 開發，建置學習進度追蹤 API 與 LLM 智能問答 Chat</li>
+        <li>建置前後端分離部署架構：Docker 容器化、Nginx 反向代理、Harbor 私有 Image Registry</li>
+        <li>搭建 GitHub Actions CI/CD Pipeline，並規範團隊 Git Workflow（分支策略、PR 審核）</li>
+        <li>撰寫平台系統分層文件、K8s／Docker 部署架構圖與 Use Case 流程圖</li>
       </ul></div>
     </div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">微積分課程助教 — 國立臺灣科技大學</span><span class="exp-badge">工作</span></div>
+      <div class="exp-head"><span class="exp-name">微積分 EMI 課程助教 — 國立臺灣科技大學</span><span class="exp-badge">2025.09 – 在職</span></div>
       <div class="exp-desc"><ul>
-        <li>獨立以 React + Django + DB 全端開發成績登記與考卷管理系統</li>
-        <li>開發自動出題 AI Agent，透過 Tool Use 內嵌 Word 工具生成完整考卷</li>
+        <li>協助 EMI 全英語課程教學、設計考試題目與解答學生課業問題</li>
+        <li>為解決課務管理重複作業，獨立以 React + Django + 資料庫全端開發成績登記與考卷管理系統</li>
+        <li>開發自動出題 AI Agent，透過 Tool Use 內嵌 Word 工具自主生成完整考卷文件</li>
       </ul></div>
     </div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">系統維運與資料庫管理 — 台科大電子系系辦</span><span class="exp-badge">工作</span></div>
+      <div class="exp-head"><span class="exp-name">伺服器管理（MIS／網管主管） — 應拿實業有限公司</span><span class="exp-badge">2025.08 – 在職</span></div>
       <div class="exp-desc"><ul>
-        <li>維運 PHP + MariaDB 指導教授媒合系統，串接校方學籍資料 API，負責資料庫備份與機房網管</li>
-      </ul></div>
-    </div>
-    <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">資訊管理顧問 — 應拿實業有限公司</span><span class="exp-badge">兼職</span></div>
-      <div class="exp-desc"><ul>
-        <li>公司資料庫定期備份維護、內部電腦與資訊系統支援</li>
+        <li>協助公司內部資訊設備與系統維護，含資料庫、伺服器及打卡機等設備之管理與維護</li>
+        <li>負責資訊設備採購、軟體授權續約及相關行政作業</li>
+        <li>排除網路連線、電腦軟硬體及日常資訊系統使用問題，確保公司資訊環境正常運作</li>
       </ul></div>
     </div>
   </div>
 
   <div class="main-sec">
+    <div class="main-title">專案成就</div>
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">國科會 6G AI/ML 訓練／推論平台 — 建置維運、Agent 與效能工程</span><span class="exp-badge">2025.06 – 進行中</span></div>
+      <div class="exp-desc"><ul>
+        <li>維運 Docker／Kubernetes 混合部署 20+ 容器服務，整合 Kubeflow AI/ML 元件</li>
+        <li>導入 AI Agent 自動化模型訓練與診斷流程，將人工操作自 <strong>6 步驟縮減為 2 個決策節點</strong></li>
+        <li>建置系統與 GPU 可觀測性平台，整合 <strong>2,515 項監控指標</strong></li>
+        <li>優化跨節點網路與物件儲存，<strong>傳輸吞吐提升 894 倍</strong>、單物件處理上限自 470 MB 提升至 <strong>4.7 GB</strong></li>
+        <li>技術：Kubernetes、Docker、Kubeflow、Dify、Prometheus、NVIDIA DCGM</li>
+      </ul></div>
+    </div>
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">5G NR RAN 數位孿生平台 — 工研院產學合作</span><span class="exp-badge">2025.04 – 進行中</span></div>
+      <div class="exp-desc"><ul>
+        <li>建置 O-RAN 數位孿生 RAN Simulator，讓 xApp 可於部署至實體基地台前完成測試與驗證</li>
+        <li>開發 E2 Adapter，支援模擬環境與實體 Near-RT RIC 介接，<strong>xApp 無需修改即可切換測試環境</strong></li>
+        <li>整合 NVIDIA Omniverse 與 Sionna RT，建立 3D 場景與無線通道模擬環境</li>
+        <li>以 OAI rfsim 驗證主要指標達 <strong>90–96% 對齊</strong>，並透過 ML 校正將平均誤差自 <strong>50.1% 降至 2.5%</strong></li>
+        <li>技術：O-RAN、5G NR、OAI、E2AP、Sionna RT、NVIDIA Omniverse、Django</li>
+      </ul></div>
+    </div>
+
+  <div class="main-sec">
     <div class="main-title">學歷</div>
     <div class="edu-row clearfix">
-      <span class="edu-date">2025 – 在學中</span>
+      <span class="edu-date">2025.09 – 2027.06</span>
       <div class="edu-school">國立臺灣科技大學</div>
       <div class="edu-degree">電子工程研究所 碩士班</div>
-      <div class="edu-detail">資訊技術行動化實驗室｜指導教授：呂政修</div>
+      <div class="edu-detail">資訊技術行動化實驗室｜指導教授：呂政修｜GPA：4.18 / 4.30</div>
     </div>
     <div class="edu-row clearfix">
       <span class="edu-date">2021 – 2025</span>
       <div class="edu-school">國立臺灣科技大學</div>
-      <div class="edu-degree">電子工程學系 學士｜GPA：89.73｜班排：5/37（前 13.5%）｜系排：13/109（前 11.9%）</div>
+      <div class="edu-degree">電子工程學系 學士｜GPA：89.73｜班排第 5｜系排前 11%</div>
     </div>
   </div>
 
