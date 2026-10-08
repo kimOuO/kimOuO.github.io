@@ -328,8 +328,10 @@
       <div class="exp-desc"><ul>
         <li>Operate 20+ container services across a Docker / Kubernetes hybrid deployment; integrate Kubeflow AI/ML components</li>
         <li>Introduced an AI agent for automated training and diagnosis, cutting manual operation from 6 steps to <strong>2 decision points</strong></li>
-        <li>Built the observability stack with GPU visibility, covering <strong>2,515 metrics</strong></li>
-        <li>Optimized cross-node networking and storage: throughput up <strong>894x</strong>, single-object ceiling raised from 470 MB to <strong>4.7 GB</strong></li>
+        <li>Built the Kubernetes observability stack (Prometheus, DCGM, Istio, eBPF Retina) covering <strong>1,500+</strong> node, container, GPU, and network metrics</li>
+        <li>Designed four-axis load testing into <strong>9 repeatable experiment suites</strong>, establishing hard limits of 386M parameters per card and 4 concurrent jobs</li>
+        <li><strong>Root-caused and fixed 7 platform-level faults</strong>, cutting the image-build failure rate under load from <strong>27% to 0</strong> and raising the single-object ceiling from 470 MB to <strong>4.7 GB</strong></li>
+        <li>Implemented a <strong>non-invasive GPU allocator</strong> for Kubeflow/Argo (deferred binding, CAS ledger, size-aware scheduling, memory admission): MPS same-card throughput <strong>+21–24%</strong>, batch makespan <strong>&minus;13%</strong>, over-limit jobs rejected in 5.1 s (previously 368 s)</li>
         <li>Stack: Kubernetes, Docker, Kubeflow, Dify, Prometheus, NVIDIA DCGM</li>
       </ul></div>
     </div>

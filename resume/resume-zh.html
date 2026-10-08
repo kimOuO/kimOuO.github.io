@@ -216,8 +216,10 @@
       <div class="exp-desc"><ul>
         <li>維運 Docker／Kubernetes 混合部署 20+ 容器服務，整合 Kubeflow AI/ML 元件</li>
         <li>導入 AI Agent 自動化模型訓練與診斷流程，將人工操作自 <strong>6 步驟縮減為 2 個決策節點</strong></li>
-        <li>建置系統與 GPU 可觀測性平台，整合 <strong>2,515 項監控指標</strong></li>
-        <li>優化跨節點網路與物件儲存，<strong>傳輸吞吐提升 894 倍</strong>、單物件處理上限自 470 MB 提升至 <strong>4.7 GB</strong></li>
+        <li>建置 Kubernetes 可觀測性堆疊（Prometheus、DCGM、Istio、eBPF Retina），涵蓋 <strong>1,500+ 項</strong>節點／容器／GPU／網路指標</li>
+        <li>設計四軸系統性壓力測試並建立 <strong>9 組可重複執行的實驗套件</strong>，定出單卡 386M 參數、並行 4 任務之容量上限</li>
+        <li><strong>定位並修復 7 項平台層故障根因</strong>，負載下映像建置失敗率自 <strong>27% 降至 0</strong>、單物件處理上限自 470 MB 提升至 <strong>4.7 GB</strong></li>
+        <li>於 Kubeflow／Argo 管線實作<strong>不侵入式 GPU 分配器</strong>（延後綁定、CAS 帳本、依模型大小排程與記憶體准入），MPS 同片聚合吞吐 <strong>+21–24%</strong>、整批完成時間 <strong>−13%</strong>，超限任務 5.1 秒內攔截（原需 368 秒）</li>
         <li>技術：Kubernetes、Docker、Kubeflow、Dify、Prometheus、NVIDIA DCGM</li>
       </ul></div>
     </div>
