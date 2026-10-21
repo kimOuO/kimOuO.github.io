@@ -570,24 +570,24 @@
           <div class="pm-row"><span class="pm-k">計畫規模</span><span class="pm-v">總經費逾新臺幣 <strong>1,000 萬元</strong>｜四年期大型研究計畫</span></div>
           <div class="pm-row"><span class="pm-k">個人參與</span><span class="pm-v">〔總計畫負責團隊〕第三、四年｜<strong>AI/ML 平台開發、GPU 資源調度與 Multi-Agent 系統研發</strong></span></div>
         </div>
-        <div class="project-phase" data-i18n="proj1-ph1">建置與維運 · 2025</div>
+        <div class="project-phase" data-i18n="proj1-ph1">第三年｜平台建置與維運 · 2025–2026</div>
         <ul class="project-achievements">
           <li data-i18n="proj1-a2">雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
           <li data-i18n="proj1-a3"><strong>盤點</strong> Kubeflow <strong>20+ 元件</strong>（Pipelines / Katib / KServe / Training Operator / Metadata）之職責、版本與服務相依，產出架構與 API 對照文件作為跨團隊除錯依據</li>
           <li data-i18n="proj1-a7"><strong>修復</strong>跨服務缺陷：補上刪除 Project 時遺漏的 <strong>Kafka topic 連鎖清除</strong>、將 model metadata 自「訓練啟動即建立」改為<strong>依階段回報、訓練完成才落地</strong>，並排除 Harbor 多容器啟動相依導致的重啟失敗</li>
         </ul>
-        <div class="project-phase" data-i18n="proj1-ph3">AI Agent 自動化 · 2025</div>
-        <ul class="project-achievements">
-          <li data-i18n="proj1-b1"><strong>整合</strong>平台 API 為意圖驅動 ML Agent（Dify Multi-Actor ReAct），整合意圖辨識、System Prompt 設計、工具調用與工作流程編排，<strong>實現模型訓練、任務監控與異常診斷的自動化操作</strong></li>
-          <li data-i18n="proj1-b2"><strong>封裝</strong> 17 個低階平台工具為 <strong>10 個高階 Skill</strong>，隔離破壞性 API，降低 LLM 決策複雜度與誤操作風險</li>
-          <li data-i18n="proj1-b3"><strong>設計</strong>獨立 context 診斷 sub-loop，自動產出修補重跑與重訓方案，涵蓋 <strong>5 類 ML 任務</strong>實機驗證</li>
-        </ul>
-        <div class="project-phase" data-i18n="proj1-ph2">可觀測性、壓測與 K8s 除錯 · 2026</div>
+        <div class="project-phase" data-i18n="proj1-ph2">第三年｜可觀測性、壓測與效能最佳化 · 2025–2026</div>
         <ul class="project-achievements">
           <li data-i18n="proj1-a4"><strong>建置</strong> Kubernetes 可觀測性堆疊（kube-prometheus-stack、NVIDIA DCGM Exporter、Istio、eBPF Retina），建立 <strong>100 項以上</strong>系統及 GPU 監控指標（節點／容器／控制平面／GPU／網路，GPU 5 秒級取樣），用於 GPU 算力（MFU）、儲存退化與 CPU 節流等根因分析</li>
           <li data-i18n="proj1-a5"><strong>設計</strong>四軸系統性壓力測試（物件大小／模型規模／並發／多租戶，N≥3），撰寫自動化測試腳本建立 <strong>9 組可重複執行的實驗套件</strong>，內建開跑前環境檢查、結果有效性判定與無效自動重跑，<strong>涵蓋環境檢查、結果驗證與效能分析</strong></li>
           <li data-i18n="proj1-a6"><strong>定位並修復 7 項平台層故障根因</strong>（資料庫反覆崩潰、工作流程被誤刪、儲存節點媒體退化、物件儲存 CPU 節流與探針誤殺），負載下映像建置失敗率自 <strong>27% 降至 0</strong>，單物件處理上限自 470 MB 提升至 <strong>4.7 GB</strong></li>
           <li data-i18n="proj1-a8">於 Kubeflow／Argo 管線以<strong>不侵入方式實作 GPU 分配器</strong>：延後綁定 gate、ConfigMap 帳本（CAS）、依模型大小排程（大模型獨占、小模型 MPS 併片）與建置前記憶體准入；真機驗證 MPS 同片聚合吞吐 <strong>+21–24%</strong>、整批完成時間 <strong>−13%</strong>，並以資源使用門檻檢查機制避免資源超限造成任務執行失敗</li>
+        </ul>
+        <div class="project-phase" data-i18n="proj1-ph3">第四年｜AI Agent 架構設計與自動化 · 2026–</div>
+        <ul class="project-achievements">
+          <li data-i18n="proj1-b1"><strong>整合</strong>平台 API 為意圖驅動 ML Agent（Dify Multi-Actor ReAct），整合意圖辨識、System Prompt 設計、工具調用與工作流程編排，<strong>實現模型訓練、任務監控與異常診斷的自動化操作</strong></li>
+          <li data-i18n="proj1-b2"><strong>封裝</strong> 17 個低階平台工具為 <strong>10 個高階 Skill</strong>，隔離破壞性 API，降低 LLM 決策複雜度與誤操作風險</li>
+          <li data-i18n="proj1-b3"><strong>設計</strong>獨立 context 診斷 sub-loop，自動產出修補重跑與重訓方案，涵蓋 <strong>5 類 ML 任務</strong>實機驗證</li>
         </ul>
         </div>
         
@@ -1022,15 +1022,15 @@
       'proj1-badge': '★ Flagship Project',
       'proj1-period': '2025 – 2026 · NSTC / NTUST',
       'proj1-desc': '<div class="pm-row"><span class="pm-k">Program</span><span class="pm-v">Over <strong>NT$10M</strong> in funding &#124; four-year national research program</span></div><div class="pm-row"><span class="pm-k">My role</span><span class="pm-v">Lead team, years 3–4 &#124; <strong>AI/ML platform engineering, GPU resource scheduling, and multi-agent system design</strong></span></div>',
-      'proj1-ph1': 'Build-out &amp; Operations · 2025',
+      'proj1-ph1': 'Year 3 &#124; Platform Build-out &amp; Operations · 2025–2026',
       'proj1-a2': 'Dual-node hybrid deployment (Agent Node + Inference Node) operating <strong>20+ container services</strong> across Docker Space / Kubernetes Space',
       'proj1-a3': '<strong>Mapped</strong> the responsibilities, versions, and service dependencies of <strong>20+ Kubeflow components</strong> (Pipelines, Katib, KServe, Training Operator, Metadata), producing architecture and API reference docs used as the team&apos;s debugging baseline',
       'proj1-a7': '<strong>Fixed</strong> cross-service defects: added the missing <strong>cascading Kafka topic cleanup</strong> on project deletion, moved model metadata from &quot;created when training starts&quot; to <strong>stage-reported and persisted only on completion</strong>, and resolved Harbor restart failures caused by multi-container startup dependencies',
-      'proj1-ph3': 'AI Agent Automation · 2025',
+      'proj1-ph3': 'Year 4 &#124; AI Agent Architecture &amp; Automation · 2026–',
       'proj1-b1': '<strong>Integrated</strong> the platform APIs into an intent-driven ML agent (Dify multi-actor ReAct), combining intent recognition, system-prompt design, tool calling, and workflow orchestration to <strong>automate model training, job monitoring, and fault diagnosis</strong>',
       'proj1-b2': '<strong>Wrapped</strong> 17 low-level platform tools behind <strong>10 high-level skills</strong>, isolating destructive APIs and reducing both LLM decision complexity and mis-operation risk',
       'proj1-b3': '<strong>Designed</strong> an isolated-context diagnosis sub-loop that auto-generates patch-and-retry and retraining proposals, validated on real runs across <strong>5 ML task families</strong>',
-      'proj1-ph2': 'Observability, Load Testing &amp; K8s Debugging · 2026',
+      'proj1-ph2': 'Year 3 &#124; Observability, Load Testing &amp; Performance Tuning · 2025–2026',
       'proj1-a4': '<strong>Built</strong> the Kubernetes observability stack (kube-prometheus-stack, NVIDIA DCGM Exporter, Istio, eBPF Retina) with <strong>100+</strong> node, container, control-plane, GPU, and network metrics at 5-second GPU sampling, used to root-cause GPU utilization (MFU), storage degradation, and CPU throttling',
       'proj1-a5': '<strong>Designed</strong> four-axis load testing (object size, model scale, concurrency, tenancy; N&ge;3) and wrote automation into <strong>9 repeatable experiment suites</strong> with pre-run environment checks, result-validity gating, and automatic re-runs on invalid results, covering environment checks, result validation, and performance analysis',
       'proj1-a6': '<strong>Root-caused and fixed 7 platform-level faults</strong> (recurring database crashes, workflows silently deleted, storage media degradation, object-storage CPU throttling, probe kills), cutting the image-build failure rate under load from <strong>27% to 0</strong> and raising the single-object ceiling from 470 MB to <strong>4.7 GB</strong>',

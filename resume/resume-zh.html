@@ -59,7 +59,8 @@
 
   .proj-lead { font-size: 7.5pt; color: #555; margin-bottom: 3px; }
   .proj-row { display: flex; gap: 5px; margin-bottom: 2px; align-items: baseline; }
-  .proj-k { flex: 0 0 19mm; font-size: 7pt; font-weight: 700; color: #2c3e6b; letter-spacing: .3px; }
+  .proj-k { flex: 0 0 21mm; font-size: 7pt; font-weight: 700; color: #2c3e6b; letter-spacing: .3px; }
+  .proj-k em { display: block; font-style: normal; font-size: 6.2pt; font-weight: 600; color: #8a93a6; letter-spacing: 0; }
   .proj-v { flex: 1; font-size: 7.5pt; color: #444; line-height: 1.42; }
   .proj-tech { margin-top: 3px; padding-top: 2px; border-top: 1px dotted #ccc; font-size: 6.8pt; color: #777; }
 
@@ -213,9 +214,9 @@
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">國科會 6G AI/ML 訓練平台　—　四年期前瞻技術研發計畫</span><span class="exp-badge">2025.06 – 進行中</span></div>
       <div class="proj-lead">供多人共用的 AI/ML 訓練平台；負責第三年平台工程與第四年 AI Agent 架構設計。</div>
-      <div class="proj-row"><span class="proj-k">平台工程</span><span class="proj-v">部署維運 <b>20+ 容器服務</b>與 <b>Kubeflow／Argo</b> 訓練管線，建立 <b>Prometheus + DCGM</b> 監控與 <b>9 組</b>可重複壓測腳本；<b>定位並修復 7 項平台故障</b>，映像建置失敗率 <b>27% → 0%</b>、單物件處理上限 <b>470 MB → 4.7 GB</b>。</span></div>
-      <div class="proj-row"><span class="proj-k">GPU 資源調度</span><span class="proj-v">於管線外層實作<b>不侵入式 GPU 分配器</b>（資源閘道、資源帳本、依模型大小決定獨占或共用），搭配 <b>NVIDIA MPS</b> 單卡切分：整體吞吐 <b>+21–24%</b>、批次完成時間 <b>−13%</b>。</span></div>
-      <div class="proj-row"><span class="proj-k">AI Agent</span><span class="proj-v">設計 <b>Multi-Agent</b> 架構：訓練執行與結果監測兩個 Agent 形成迭代循環，意圖理解、工作流與記憶皆以 <b>System Prompt</b> 定義；將 <b>17 個低階 API 收斂為 10 項 Skill</b> 並建立介面轉換層，<b>顯著降低多步驟操作錯誤</b>。</span></div>
+      <div class="proj-row"><span class="proj-k"><em>第三年</em>平台工程</span><span class="proj-v">部署維運 <b>20+ 容器服務</b>與 <b>Kubeflow／Argo</b> 訓練管線，建立 <b>Prometheus + DCGM</b> 監控與 <b>9 組</b>可重複壓測腳本；<b>定位並修復 7 項平台故障</b>，映像建置失敗率 <b>27% → 0%</b>、單物件處理上限 <b>470 MB → 4.7 GB</b>。</span></div>
+      <div class="proj-row"><span class="proj-k"><em>第三年</em>GPU 資源調度</span><span class="proj-v">於管線外層實作<b>不侵入式 GPU 分配器</b>（資源閘道、資源帳本、依模型大小決定獨占或共用），搭配 <b>NVIDIA MPS</b> 單卡切分：整體吞吐 <b>+21–24%</b>、批次完成時間 <b>−13%</b>。</span></div>
+      <div class="proj-row"><span class="proj-k"><em>第四年</em>AI Agent</span><span class="proj-v">設計 <b>Multi-Agent</b> 架構：訓練執行與結果監測兩個 Agent 形成迭代循環，意圖理解、工作流與記憶皆以 <b>System Prompt</b> 定義；將 <b>17 個低階 API 收斂為 10 項 Skill</b> 並建立介面轉換層，<b>顯著降低多步驟操作錯誤</b>。</span></div>
       <div class="proj-tech">Kubernetes · Docker · Kubeflow · Argo · NVIDIA MPS · DCGM · Prometheus · Dify</div>
     </div>
     <div class="exp-card">
