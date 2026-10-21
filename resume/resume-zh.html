@@ -55,6 +55,14 @@
   .exp-desc ul { margin: 0; padding-left: 11px; }
   .exp-desc li { margin-bottom: 1px; }
 
+  .exp-desc strong, .proj-v b { color: #111; font-weight: 700; }
+
+  .proj-lead { font-size: 7.5pt; color: #555; margin-bottom: 3px; }
+  .proj-row { display: flex; gap: 5px; margin-bottom: 2px; align-items: baseline; }
+  .proj-k { flex: 0 0 19mm; font-size: 7pt; font-weight: 700; color: #2c3e6b; letter-spacing: .3px; }
+  .proj-v { flex: 1; font-size: 7.5pt; color: #444; line-height: 1.42; }
+  .proj-tech { margin-top: 3px; padding-top: 2px; border-top: 1px dotted #ccc; font-size: 6.8pt; color: #777; }
+
   .edu-row { margin-bottom: 6px; }
   .edu-school { font-weight: 700; font-size: 9pt; }
   .edu-date { font-size: 7.5pt; color: #555; float: right; }
@@ -150,7 +158,7 @@
     </div>
     <div class="personality-item">
       <strong>太空新星飛揚計畫</strong>
-      <p>經濟部產業發展署 · 連續兩年入選（2025、2026）</p>
+      <p>經濟部產業發展署 · 連續兩年入選（2025、2026）· 媒合獵戶科技參與室內定位研發 · 2025 研習實戰計畫「表現優異」</p>
     </div>
   </div>
 </div>
@@ -161,7 +169,7 @@
 
   <div class="main-sec">
     <div class="main-title">關於我</div>
-    <div class="about-text">國立臺灣科技大學電子工程研究所碩士生，研究與專案聚焦雲原生平台、MLOps、AI Agent 與 O-RAN 系統整合，具備平台建置維運、系統整合、自動化到效能分析與故障定位的實作經驗。曾參與國科會 6G AI/ML 平台及工研院 O-RAN 數位孿生研發，具 Kubernetes／Docker、Kubeflow、AI Agent Workflow 與 5G RAN Simulator 開發經驗。工程實作重視量化驗證，曾使跨節點傳輸吞吐提升 894 倍，並將模擬系統主要指標平均誤差自 50.1% 降至 2.5%。具海外實習與國際技術交流經驗，期望投入雲端平台工程、MLOps、AI Infrastructure 或系統整合相關職務。</div>
+    <div class="about-text">國立臺灣科技大學電子工程研究所碩士生。研究與工作聚焦<strong>雲原生平台</strong>、<strong>MLOps</strong>、<strong>AI Agent</strong> 與系統整合，從平台建置維運、GPU 資源調度、自動化測試到故障定位皆有實作經驗。現參與國科會 6G AI/ML 平台與工研院 O-RAN 數位孿生研發，並具美國軟體工程實習與國際技術交流經驗。期望投入<strong>雲端平台工程</strong>、<strong>MLOps</strong> 或 <strong>AI Infrastructure</strong> 相關職務。</div>
   </div>
 
   <div class="main-sec">
@@ -169,42 +177,33 @@
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">系統維運與資料庫管理 — 台科大電子系系辦公室</span><span class="exp-badge">2026.09 – 在職</span></div>
       <div class="exp-desc"><ul>
-        <li>維運系上指導教授媒合系統（PHP + MariaDB）：教授名額上限控管、學生申請與異動審核流程</li>
-        <li>串接校方學籍資料 API，同步新生名單與在學狀態</li>
-        <li>負責資料庫定期備份、功能缺陷修復與系統重建／除錯文件維護</li>
-        <li>負責系所機房網路管理與伺服器日常維運</li>
-      </ul></div>
-    </div>
-    <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">產業研發專案成員 — 獵戶科技股份有限公司</span><span class="exp-badge">2026.07 – 09</span></div>
-      <div class="exp-desc"><ul>
-        <li>連續兩年入選經濟部產業研發實戰計畫，於業師指導下完成需求定義、技術選型、MVP 實作到測試驗證之完整開發迭代</li>
-        <li>研究室內定位平台之研發，並負責文件撰寫與整合技術</li>
+        <li>維運系上<strong>教授媒合系統</strong>（PHP + MariaDB），串接校方<strong>學籍資料 API</strong> 同步在學狀態</li>
+        <li>負責資料庫<strong>定期備份</strong>、缺陷修復與系統重建／除錯文件</li>
+        <li>系所機房網路與伺服器日常維運</li>
       </ul></div>
     </div>
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">後端／DevOps 工程師 — SparkAmplify（美國加州）</span><span class="exp-badge">2026.01 – 02</span></div>
       <div class="exp-desc"><ul>
-        <li>負責資料庫管理與 API 開發，建置學習進度追蹤 API 與 LLM 智能問答 Chat</li>
-        <li>建置前後端分離部署架構：Docker 容器化、Nginx 反向代理、Harbor 私有 Image Registry</li>
-        <li>搭建 GitHub Actions CI/CD Pipeline，並規範團隊 Git Workflow（分支策略、PR 審核）</li>
-        <li>撰寫平台系統分層文件、K8s／Docker 部署架構圖與 Use Case 流程圖</li>
+        <li>後端 <strong>API</strong> 與資料庫 <strong>Schema</strong> 設計，串接 <strong>LLM API</strong> 實作智能問答</li>
+        <li>服務<strong>容器化部署</strong>：Docker、<strong>Nginx 反向代理</strong>與 TLS、<strong>Harbor</strong> 私有映像倉庫</li>
+        <li>建置 <strong>GitHub Actions CI/CD</strong> 並規範團隊 Git Workflow 與部署文件</li>
       </ul></div>
     </div>
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">微積分 EMI 課程助教 — 國立臺灣科技大學</span><span class="exp-badge">2025.09 – 在職</span></div>
       <div class="exp-desc"><ul>
-        <li>協助 EMI 全英語課程教學、設計考試題目與解答學生課業問題</li>
-        <li>為解決課務管理重複作業，獨立以 React + Django + 資料庫全端開發成績登記與考卷管理系統</li>
-        <li>開發自動出題 AI Agent，透過 Tool Use 內嵌 Word 工具自主生成完整考卷文件</li>
+        <li>協助 <strong>EMI 全英語</strong>課程教學、命題與學生課業輔導</li>
+        <li>開發<strong>自動出題 AI Agent</strong>：以 Tool Use 串接 Word 產出完整考卷</li>
+        <li>以 <strong>React + Django</strong> 自建成績登記與考卷管理系統</li>
       </ul></div>
     </div>
     <div class="exp-card">
       <div class="exp-head"><span class="exp-name">伺服器管理（MIS／網管主管） — 應拿實業有限公司</span><span class="exp-badge">2025.08 – 在職</span></div>
       <div class="exp-desc"><ul>
-        <li>協助公司內部資訊設備與系統維護，含資料庫、伺服器及打卡機等設備之管理與維護</li>
-        <li>負責資訊設備採購、軟體授權續約及相關行政作業</li>
-        <li>排除網路連線、電腦軟硬體及日常資訊系統使用問題，確保公司資訊環境正常運作</li>
+        <li>公司伺服器、資料庫與內部資訊系統之維護與<strong>備份管理</strong></li>
+        <li>資訊設備採購與<strong>軟體授權</strong>續約</li>
+        <li>網路連線與軟硬體問題排除</li>
       </ul></div>
     </div>
   </div>
@@ -212,27 +211,22 @@
   <div class="main-sec">
     <div class="main-title">專案成就</div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">國科會 6G AI/ML 訓練／推論平台 — 建置維運、Agent 與效能工程</span><span class="exp-badge">2025.06 – 進行中</span></div>
-      <div class="exp-desc"><ul>
-        <li>維運 Docker／Kubernetes 混合部署 20+ 容器服務，整合 Kubeflow AI/ML 元件</li>
-        <li>導入 AI Agent 自動化模型訓練與診斷流程，將人工操作自 <strong>6 步驟縮減為 2 個決策節點</strong></li>
-        <li>建置 Kubernetes 可觀測性堆疊（Prometheus、DCGM、Istio、eBPF Retina），涵蓋 <strong>1,500+ 項</strong>節點／容器／GPU／網路指標</li>
-        <li>設計四軸系統性壓力測試並建立 <strong>9 組可重複執行的實驗套件</strong>，定出單卡 386M 參數、並行 4 任務之容量上限</li>
-        <li><strong>定位並修復 7 項平台層故障根因</strong>，負載下映像建置失敗率自 <strong>27% 降至 0</strong>、單物件處理上限自 470 MB 提升至 <strong>4.7 GB</strong></li>
-        <li>於 Kubeflow／Argo 管線實作<strong>不侵入式 GPU 分配器</strong>（延後綁定、CAS 帳本、依模型大小排程與記憶體准入），MPS 同片聚合吞吐 <strong>+21–24%</strong>、整批完成時間 <strong>−13%</strong>，超限任務 5.1 秒內攔截（原需 368 秒）</li>
-        <li>技術：Kubernetes、Docker、Kubeflow、Dify、Prometheus、NVIDIA DCGM</li>
-      </ul></div>
+      <div class="exp-head"><span class="exp-name">國科會 6G AI/ML 訓練平台　—　四年期前瞻技術研發計畫</span><span class="exp-badge">2025.06 – 進行中</span></div>
+      <div class="proj-lead">供多人共用的 AI/ML 訓練平台；負責第三年平台工程與第四年 AI Agent 架構設計。</div>
+      <div class="proj-row"><span class="proj-k">平台工程</span><span class="proj-v">部署維運 <b>20+ 容器服務</b>與 <b>Kubeflow／Argo</b> 訓練管線，建立 <b>Prometheus + DCGM</b> 監控與 <b>9 組</b>可重複壓測腳本；<b>定位並修復 7 項平台故障</b>，映像建置失敗率 <b>27% → 0%</b>、單物件處理上限 <b>470 MB → 4.7 GB</b>。</span></div>
+      <div class="proj-row"><span class="proj-k">GPU 資源調度</span><span class="proj-v">於管線外層實作<b>不侵入式 GPU 分配器</b>（資源閘道、資源帳本、依模型大小決定獨占或共用），搭配 <b>NVIDIA MPS</b> 單卡切分：整體吞吐 <b>+21–24%</b>、批次完成時間 <b>−13%</b>。</span></div>
+      <div class="proj-row"><span class="proj-k">AI Agent</span><span class="proj-v">設計 <b>Multi-Agent</b> 架構：訓練執行與結果監測兩個 Agent 形成迭代循環，意圖理解、工作流與記憶皆以 <b>System Prompt</b> 定義；將 <b>17 個低階 API 收斂為 10 項 Skill</b> 並建立介面轉換層，<b>顯著降低多步驟操作錯誤</b>。</span></div>
+      <div class="proj-tech">Kubernetes · Docker · Kubeflow · Argo · NVIDIA MPS · DCGM · Prometheus · Dify</div>
     </div>
     <div class="exp-card">
-      <div class="exp-head"><span class="exp-name">5G NR RAN 數位孿生平台 — 工研院產學合作</span><span class="exp-badge">2025.04 – 進行中</span></div>
-      <div class="exp-desc"><ul>
-        <li>建置 O-RAN 數位孿生 RAN Simulator，讓 xApp 可於部署至實體基地台前完成測試與驗證</li>
-        <li>開發 E2 Adapter，支援模擬環境與實體 Near-RT RIC 介接，<strong>xApp 無需修改即可切換測試環境</strong></li>
-        <li>整合 NVIDIA Omniverse 與 Sionna RT，建立 3D 場景與無線通道模擬環境</li>
-        <li>以 OAI rfsim 驗證主要指標達 <strong>90–96% 對齊</strong>，並透過 ML 校正將平均誤差自 <strong>50.1% 降至 2.5%</strong></li>
-        <li>技術：O-RAN、5G NR、OAI、E2AP、Sionna RT、NVIDIA Omniverse、Django</li>
-      </ul></div>
+      <div class="exp-head"><span class="exp-name">5G NR RAN 數位孿生平台　—　工研院產學合作</span><span class="exp-badge">2026.04 – 進行中</span></div>
+      <div class="proj-lead">以一般運算設備重建基地台環境，讓控制演算法在部署到實體場域前先完成測試與驗證。</div>
+      <div class="proj-row"><span class="proj-k">模擬環境</span><span class="proj-v">建置 <b>O-RAN 架構的 RAN Simulator</b>，整合 <b>NVIDIA Omniverse</b> 與 <b>Sionna RT</b> 建立 3D 場景與無線通道模擬。</span></div>
+      <div class="proj-row"><span class="proj-k">介面整合</span><span class="proj-v">開發通訊介面層銜接模擬環境與 <b>Near-RT RIC</b>，使 <b>xApp 無需修改程式碼即可切換模擬與實機</b>。</span></div>
+      <div class="proj-row"><span class="proj-k">驗證與監控</span><span class="proj-v">自建<b>運作指標監控前端</b>，以 <b>OAI rfsim</b> 比對主要指標達 <b>90–96% 一致</b>，並以<b>機器學習模型校正</b>將平均誤差 <b>50.1% → 2.5%</b>。</span></div>
+      <div class="proj-tech">O-RAN · 5G NR · OpenAirInterface · Sionna RT · NVIDIA Omniverse · Django</div>
     </div>
+  </div>
 
   <div class="main-sec">
     <div class="main-title">學歷</div>

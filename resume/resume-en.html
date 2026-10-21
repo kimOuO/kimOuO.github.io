@@ -113,6 +113,14 @@
   .exp-desc li { margin-bottom: 1px; }
 
   /* Education */
+  .exp-desc strong, .proj-v b { color: #111; font-weight: 700; }
+
+  .proj-lead { font-size: 7.2pt; color: #555; margin-bottom: 3px; }
+  .proj-row { display: flex; gap: 5px; margin-bottom: 2px; align-items: baseline; }
+  .proj-k { flex: 0 0 21mm; font-size: 6.8pt; font-weight: 700; color: #2c3e6b; letter-spacing: .3px; }
+  .proj-v { flex: 1; font-size: 7.3pt; color: #444; line-height: 1.4; }
+  .proj-tech { margin-top: 3px; padding-top: 2px; border-top: 1px dotted #ccc; font-size: 6.6pt; color: #777; }
+
   .edu-row { margin-bottom: 5px; }
   .edu-school { font-weight: 700; font-size: 9pt; }
   .edu-date { font-size: 7.5pt; color: #555; float: right; }
@@ -235,7 +243,7 @@
     </div>
     <div class="personality-item">
       <strong>Space New Star Program</strong>
-      <p>Industrial Development Admin, MOEA · selected twice (2025, 2026)</p>
+      <p>Industrial Development Admin, MOEA · selected twice (2025, 2026) · matched to OrionGo Technology for indoor-positioning R&amp;D · rated Outstanding in the 2025 practicum</p>
     </div>
   </div>
 </div>
@@ -248,7 +256,7 @@
   <div class="main-sec">
     <div class="main-title">About Myself</div>
     <div class="about-text">
-      M.S. student in Electronic Engineering at NTUST, focused on cloud-native platforms, MLOps, AI agents, and O-RAN systems integration. Hands-on experience in platform operations, systems integration, automation, and performance and fault analysis. Contributed to the NSTC 6G AI/ML platform and ITRI&apos;s O-RAN digital twin, working across Kubernetes, Docker, Kubeflow, AI agent workflows, and a 5G RAN simulator. I work from measured evidence: cross-node throughput up 894x, and mean error between the simulator and the real system down from 50.1% to 2.5%. Experienced working abroad and in English-speaking technical exchanges; seeking roles in cloud / platform engineering, MLOps, AI infrastructure, or systems integration.
+      M.S. student in Electronic Engineering at NTUST, focused on <strong>cloud-native platforms</strong>, <strong>MLOps</strong>, <strong>AI agents</strong>, and systems integration. Hands-on experience across platform operations, GPU resource scheduling, automated testing, and fault analysis. Currently contributing to the NSTC 6G AI/ML platform and ITRI&apos;s O-RAN digital twin, with a software engineering internship in the US and international technical exchange experience. Seeking roles in <strong>cloud / platform engineering</strong>, <strong>MLOps</strong>, or <strong>AI infrastructure</strong>.
     </div>
   </div>
 
@@ -261,21 +269,9 @@
         <span class="exp-badge">Sep 2026 – Present</span>
       </div>
       <div class="exp-desc"><ul>
-        <li>Operate the department&apos;s advisor-matching system (PHP + MariaDB): quota control, application and transfer approval workflows</li>
-        <li>Integrate the university student-records API to sync new-student rosters and enrollment status</li>
-        <li>Own scheduled database backups, defect fixes, and system rebuild / debugging documentation</li>
+        <li>Operate the department&apos;s <strong>advisor-matching system</strong> (PHP + MariaDB) and sync enrollment status through the university <strong>student-records API</strong></li>
+        <li>Own <strong>scheduled database backups</strong>, defect fixes, and rebuild / debugging documentation</li>
         <li>Administer the department server room network and day-to-day server operations</li>
-      </ul></div>
-    </div>
-
-    <div class="exp-card">
-      <div class="exp-head">
-        <span class="exp-name">R&amp;D Project Member — OrionGo Technology</span>
-        <span class="exp-badge">Jul – Sep 2026</span>
-      </div>
-      <div class="exp-desc"><ul>
-        <li>Selected two years running for the MOEA industry R&amp;D program; completed a full development cycle from requirements definition and technology selection to MVP implementation and validation under industry mentorship</li>
-        <li>Researched and developed an indoor positioning platform; authored technical documentation and integration notes</li>
       </ul></div>
     </div>
 
@@ -285,10 +281,9 @@
         <span class="exp-badge">Jan – Feb 2026</span>
       </div>
       <div class="exp-desc"><ul>
-        <li>Owned database management and API development, including a learning progress tracking API and an LLM-powered Q&amp;A chat</li>
-        <li>Built a decoupled frontend/backend deployment: Docker containerization, Nginx reverse proxy, Harbor private image registry</li>
-        <li>Set up a GitHub Actions CI/CD pipeline and standardized the team Git workflow (branching strategy, PR review)</li>
-        <li>Authored layered architecture docs, K8s/Docker deployment diagrams, and use-case flow charts</li>
+        <li>Designed backend <strong>APIs</strong> and database <strong>schemas</strong>; integrated an <strong>LLM API</strong> for in-product Q&amp;A</li>
+        <li><strong>Containerized deployment</strong>: Docker, <strong>Nginx reverse proxy</strong> with TLS, and a <strong>Harbor</strong> private image registry</li>
+        <li>Built a <strong>GitHub Actions CI/CD</strong> pipeline and standardized the team Git workflow and deployment docs</li>
       </ul></div>
     </div>
 
@@ -298,9 +293,9 @@
         <span class="exp-badge">Sep 2025 – Present</span>
       </div>
       <div class="exp-desc"><ul>
-        <li>Support English-medium instruction, design exam questions, and answer student questions</li>
-        <li>Independently built a grade registration and exam management system (React + Django + database) to remove repetitive course administration</li>
-        <li>Developed an auto-exam AI agent using Tool Use with an embedded Word tool to generate complete exam documents</li>
+        <li>Support <strong>English-medium instruction</strong>, exam design, and student tutoring</li>
+        <li>Built an <strong>auto-exam AI agent</strong> that generates complete exam documents via Tool Use with Word</li>
+        <li>Developed a grade and exam management system in <strong>React + Django</strong></li>
       </ul></div>
     </div>
 
@@ -310,8 +305,9 @@
         <span class="exp-badge">Aug 2025 – Present</span>
       </div>
       <div class="exp-desc"><ul>
-        <li>Manage and maintain internal IT assets — databases, servers, and attendance systems — plus equipment procurement, software licence renewals, and related administration</li>
-        <li>Troubleshoot network connectivity, PC hardware, and day-to-day systems issues to keep operations running</li>
+        <li>Maintain company servers, databases, and internal systems, including <strong>backup management</strong></li>
+        <li>Handle IT equipment procurement and <strong>software licence</strong> renewals</li>
+        <li>Troubleshoot network connectivity and hardware / software issues</li>
       </ul></div>
     </div>
 
@@ -322,33 +318,29 @@
 
     <div class="exp-card">
       <div class="exp-head">
-        <span class="exp-name">6G AI/ML Training &amp; Inference Platform — NSTC</span>
+        <span class="exp-name">6G AI/ML Training Platform — NSTC Four-Year Research Program</span>
         <span class="exp-badge">Jun 2025 – Present</span>
       </div>
-      <div class="exp-desc"><ul>
-        <li>Operate 20+ container services across a Docker / Kubernetes hybrid deployment; integrate Kubeflow AI/ML components</li>
-        <li>Introduced an AI agent for automated training and diagnosis, cutting manual operation from 6 steps to <strong>2 decision points</strong></li>
-        <li>Built the Kubernetes observability stack (Prometheus, DCGM, Istio, eBPF Retina) covering <strong>1,500+</strong> node, container, GPU, and network metrics</li>
-        <li>Designed four-axis load testing into <strong>9 repeatable experiment suites</strong>, establishing hard limits of 386M parameters per card and 4 concurrent jobs</li>
-        <li><strong>Root-caused and fixed 7 platform-level faults</strong>, cutting the image-build failure rate under load from <strong>27% to 0</strong> and raising the single-object ceiling from 470 MB to <strong>4.7 GB</strong></li>
-        <li>Implemented a <strong>non-invasive GPU allocator</strong> for Kubeflow/Argo (deferred binding, CAS ledger, size-aware scheduling, memory admission): MPS same-card throughput <strong>+21–24%</strong>, batch makespan <strong>&minus;13%</strong>, over-limit jobs rejected in 5.1 s (previously 368 s)</li>
-        <li>Stack: Kubernetes, Docker, Kubeflow, Dify, Prometheus, NVIDIA DCGM</li>
-      </ul></div>
+      <div class="proj-lead">A shared AI/ML training platform; owned platform engineering in year 3 and AI agent architecture in year 4.</div>
+      <div class="proj-row"><span class="proj-k">Platform Eng.</span><span class="proj-v">Operate <b>20+ container services</b> and <b>Kubeflow / Argo</b> pipelines with <b>Prometheus + DCGM</b> monitoring and <b>9 repeatable</b> load-test suites; <b>root-caused and fixed 7 platform faults</b>, cutting image-build failure under load <b>27% &rarr; 0%</b> and raising the single-object ceiling <b>470 MB &rarr; 4.7 GB</b>.</span></div>
+      <div class="proj-row"><span class="proj-k">GPU Scheduling</span><span class="proj-v">Implemented a <b>non-invasive GPU allocator</b> outside the pipeline engine (resource gateway, ledger, size-aware exclusive-or-shared placement) with <b>NVIDIA MPS</b> partitioning: throughput <b>+21&ndash;24%</b>, batch makespan <b>&minus;13%</b>.</span></div>
+      <div class="proj-row"><span class="proj-k">AI Agent</span><span class="proj-v">Designed a <b>multi-agent</b> architecture: a training agent and a monitoring agent in an iterative loop, with intent, workflow, and memory defined in the <b>system prompt</b>; collapsed <b>17 low-level APIs into 10 Skills</b> behind an interface-translation layer, <b>sharply reducing multi-step operation errors</b>.</span></div>
+      <div class="proj-tech">Kubernetes · Docker · Kubeflow · Argo · NVIDIA MPS · DCGM · Prometheus · Dify</div>
     </div>
 
     <div class="exp-card">
       <div class="exp-head">
         <span class="exp-name">5G NR RAN Digital Twin — ITRI Industry-Academia Collaboration</span>
-        <span class="exp-badge">Apr 2025 – Present</span>
+        <span class="exp-badge">Apr 2026 – Present</span>
       </div>
-      <div class="exp-desc"><ul>
-        <li>Built an O-RAN digital-twin RAN simulator so xApps can be tested and validated before deployment to physical base stations</li>
-        <li>Developed an E2 adapter supporting both simulated and physical Near-RT RIC, so <strong>xApps switch environments without code changes</strong></li>
-        <li>Combined NVIDIA Omniverse with Sionna RT to build a 3D scene and wireless channel simulation environment</li>
-        <li>Aligned primary KPMs to <strong>90–96%</strong> against OAI rfsim; an ML calibrator cut mean error from <strong>50.1% to 2.5%</strong></li>
-        <li>Stack: O-RAN, 5G NR, OAI, E2AP, Sionna RT, NVIDIA Omniverse, Django</li>
-      </ul></div>
+      <div class="proj-lead">Rebuilt a base-station environment on commodity hardware so control algorithms can be validated before field deployment.</div>
+      <div class="proj-row"><span class="proj-k">Simulation</span><span class="proj-v">Built an <b>O-RAN RAN simulator</b>, combining <b>NVIDIA Omniverse</b> and <b>Sionna RT</b> for 3D scene and wireless channel simulation.</span></div>
+      <div class="proj-row"><span class="proj-k">Integration</span><span class="proj-v">Developed the interface layer between the simulator and a <b>Near-RT RIC</b> so <b>xApps switch between simulated and physical environments without code changes</b>.</span></div>
+      <div class="proj-row"><span class="proj-k">Validation</span><span class="proj-v">Built the <b>KPI monitoring frontend</b>; aligned primary metrics to <b>90&ndash;96%</b> against <b>OAI rfsim</b> and cut mean error <b>50.1% &rarr; 2.5%</b> with an <b>ML calibrator</b>.</span></div>
+      <div class="proj-tech">O-RAN · 5G NR · OpenAirInterface · Sionna RT · NVIDIA Omniverse · Django</div>
     </div>
+
+  </div>
 
   <div class="main-sec">
     <div class="main-title">Education</div>

@@ -116,6 +116,17 @@
     .download-btn { display: inline-block; margin-top: 12px; padding: 8px 18px; font-size: 0.8rem; font-weight: 600; color: var(--white); background: var(--black); border: 1px solid var(--black); text-align: center; transition: background 0.2s, color 0.2s; }
     .download-btn:hover { background: var(--red); border-color: var(--red); color: var(--white); }
 
+    /* ── 附件 ── */
+    #documents { padding: 80px 0; background: var(--gray-100, #f6f6f6); border-top: 1px solid var(--gray-200); }
+    .doc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; margin-top: 32px; }
+    .doc-card { display: block; background: var(--white); border: 1px solid var(--gray-200); transition: box-shadow .2s, transform .2s; }
+    .doc-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.12); transform: translateY(-3px); }
+    .doc-thumb { width: 100%; aspect-ratio: 1 / 1.3; object-fit: cover; object-position: top center; display: block; border-bottom: 1px solid var(--gray-200); background: #fff; }
+    .doc-thumb.fit { object-fit: contain; object-position: center; padding: 10px; }
+    .doc-meta { padding: 12px 14px; }
+    .doc-name { font-size: 0.875rem; font-weight: 600; color: var(--black); }
+    .doc-sub { margin-top: 2px; font-size: 0.75rem; color: var(--gray-500); }
+
     /* ── STATS ── */
     #stats { background: var(--gray-100); padding: 48px 0; border-bottom: 1px solid var(--black); }
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; text-align: center; }
@@ -258,6 +269,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#documents">Documents</a></li>
       <li><span class="nav-lang" id="desktopLangBtn">EN</span></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="選單">
@@ -270,6 +282,7 @@
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
   <a href="#education">Education</a>
+  <a href="#documents">Documents</a>
   <span class="nav-lang" id="mobileLangBtn">EN</span>
 </div>
 
@@ -314,8 +327,8 @@
           <a href="https://github.com/kimOuO" target="_blank">github.com/kimOuO</a>
           <a href="tel:0958831242">0958-831-242</a>
         </div>
-        <a href="resume/resume-en.html?print=1" target="_blank" rel="noopener" class="download-btn">Download Resume (EN)</a>
-        <a href="resume/resume-zh.html?print=1" target="_blank" rel="noopener" class="download-btn" style="margin-top:6px; background:var(--red); border-color:var(--red);">下載履歷 (中文)</a>
+        <a href="Yao-Ching_Huang_EN_CV.pdf" target="_blank" rel="noopener" class="download-btn">Download CV (EN)</a>
+        <a href="黃耀慶_中文CV.pdf" target="_blank" rel="noopener" class="download-btn" style="margin-top:6px; background:var(--red); border-color:var(--red);" data-i18n="btn-cv-zh">下載履歷 (中文)</a>
       </div>
     </div>
   </div>
@@ -731,7 +744,7 @@
             <div class="award-year">2026</div>
             <div>
               <div class="award-name" data-i18n="talk1-name">2026 智慧網路 SIG 研討會 — AI-RAN 商業化與產業應用</div>
-              <div class="award-desc" data-i18n="talk1-desc">參與並進行成果報告 · 2026.09.15 · 台北</div>
+              <div class="award-desc" data-i18n="talk1-desc">代表實驗室進行成果展示 · 2026.09.15 · 台北</div>
             </div>
           </div>
 
@@ -843,6 +856,44 @@
   </div>
 </section>
 
+<!-- ── DOCUMENTS ── -->
+<section id="documents">
+  <div class="container">
+    <h2 class="section-title" data-i18n="doc-title">附件</h2>
+    <p style="font-size:0.875rem;color:var(--gray-600);margin-top:8px;" data-i18n="doc-desc">履歷、自傳與在學成績證明，點擊可開啟完整檔案。</p>
+    <div class="doc-grid">
+      <a class="doc-card" href="黃耀慶_中文CV.pdf" target="_blank" rel="noopener">
+        <img class="doc-thumb" src="img/docs/cv_zh.png" alt="中文履歷" loading="lazy">
+        <div class="doc-meta">
+          <div class="doc-name" data-i18n="doc1-name">黃耀慶_中文CV</div>
+          <div class="doc-sub">PDF · 1 page</div>
+        </div>
+      </a>
+      <a class="doc-card" href="Yao-Ching_Huang_EN_CV.pdf" target="_blank" rel="noopener">
+        <img class="doc-thumb" src="img/docs/cv_en.png" alt="English CV" loading="lazy">
+        <div class="doc-meta">
+          <div class="doc-name">Yao-Ching Huang_EN_CV</div>
+          <div class="doc-sub">PDF · 1 page</div>
+        </div>
+      </a>
+      <a class="doc-card" href="黃耀慶_自傳.pdf" target="_blank" rel="noopener">
+        <img class="doc-thumb" src="img/docs/bio.png" alt="個人自傳" loading="lazy">
+        <div class="doc-meta">
+          <div class="doc-name" data-i18n="doc2-name">黃耀慶_個人自傳</div>
+          <div class="doc-sub">PDF · 6 pages</div>
+        </div>
+      </a>
+      <a class="doc-card" href="img/docs/rank_cert.png" target="_blank" rel="noopener">
+        <img class="doc-thumb fit" src="img/docs/rank_cert.png" alt="學生名次證明" loading="lazy">
+        <div class="doc-meta">
+          <div class="doc-name" data-i18n="doc3-name">大學成績與排名證明</div>
+          <div class="doc-sub" data-i18n="doc3-sub">GPA 4.04 / 4.30 · 系排 10 / 104 · 班排 3 / 29</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ── FOOTER ── -->
 <footer>
   <div class="container">
@@ -875,6 +926,13 @@
   // ── Language Toggle ──
   const i18n = {
     en: {
+      'btn-cv-zh': 'Download CV (ZH)',
+      'doc-title': 'Documents',
+      'doc-desc': 'Resume, autobiography, and academic records — click to open the full file.',
+      'doc1-name': 'Yao-Ching Huang — CV (Chinese)',
+      'doc2-name': 'Yao-Ching Huang — Autobiography',
+      'doc3-name': 'Undergraduate GPA &amp; Rank Certificate',
+      'doc3-sub': 'GPA 4.04 / 4.30 · Dept. 10 / 104 · Class 3 / 29',
       'stat1-sub': 'ITRI collaboration · NSTC 6G platform',
       'stat2-sub': 'SparkAmplify (US) · New Star Program x2',
       'stat3-sub': 'TA · IT consultant · Dept. website · Server room',
@@ -980,7 +1038,7 @@
       'award3-name': 'MOE Bilingual Learning Program for College Students',
       'award3-desc': 'Selected for the 6G Research Center, Hanyang University (Korea) · Jul 2026',
       'talk1-name': '2026 Smart Networks SIG Seminar — Commercialization and Industrial Applications of AI-RAN',
-      'talk1-desc': 'Attended and presented project results · Sep 15, 2026 · Taipei',
+      'talk1-desc': 'Represented the lab in a results demonstration · Sep 15, 2026 · Taipei',
       'talk4-name': 'Workshop on AI-RAN and O-RAN Open Base Stations',
       'talk4-desc': 'National Yang Ming Chiao Tung University · Oct 28, 2025 · O-RAN environment setup and xApp development',
       'talk2-name': 'EuCNC 2024 (Belgium)',
