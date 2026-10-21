@@ -196,6 +196,9 @@
     .project-title { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
     .project-period { font-size: 0.72rem; color: var(--gray-500); margin-bottom: 12px; }
     .project-desc { font-size: 0.855rem; color: var(--gray-700); margin-bottom: 14px; line-height: 1.65; }
+    .proj-meta { margin-bottom: 16px; }
+    .pm-row { display: grid; grid-template-columns: 68px 1fr; gap: 0 14px; font-size: 0.82rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 3px; }
+    .pm-k { font-size: 0.72rem; font-weight: 700; color: var(--red); letter-spacing: .04em; padding-top: 2px; }
     .project-achievements { margin-bottom: 14px; }
     .project-achievements li {
       font-size: 0.8rem; color: var(--gray-700); margin-bottom: 4px;
@@ -314,7 +317,7 @@
         </p>
         <div class="hero-desc" data-i18n="hero-desc">
           <div class="hd-row"><div class="hd-k">研究領域</div><div class="hd-v">雲端原生平台、全端系統開發、資料庫設計與管理、AI Agent 架構設計、GPU 資源調度、數位孿生與 O-RAN 通訊網路架構。</div></div>
-          <div class="hd-row"><div class="hd-k">研究計畫</div><div class="hd-v"><ul class="hd-list"><li>國科會四年期 6G AI/ML 平台研發計畫</li><li>工研院 5G 通訊數位孿生計畫</li></ul></div></div>
+          <div class="hd-row"><div class="hd-k">研究計畫</div><div class="hd-v">參與兩項研究計畫：<ul class="hd-list"><li>國科會四年期 6G AI/ML 平台研發計畫</li><li>工研院 5G 通訊數位孿生計畫</li></ul></div></div>
           <div class="hd-row"><div class="hd-k">實務經驗</div><div class="hd-v">具備四項實務工作經驗：<ul class="hd-list"><li>海外軟體工程實習</li><li>校內資訊系統管理</li><li>企業資訊維運</li><li>EMI 課程教學助理</li></ul></div></div>
           <div class="hd-row"><div class="hd-k">專業技能</div><div class="hd-v"><div class="skill-chips"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>SQL</span><span>CI/CD</span><span>AI Agent</span><span>NVIDIA Sionna</span><span>NVIDIA Omniverse</span><span>O-RAN</span></div></div></div>
         </div>
@@ -563,10 +566,10 @@
         <div class="project-period" data-i18n="proj1-period">2025 – 2026 · 國科會 / 國立臺灣科技大學</div>
         </div>
         <div class="proj-main">
-        <p class="project-desc" data-i18n="proj1-desc">
-          參與國科會 6G AI/ML 訓練／推論平台，從建置維運到效能壓測與缺陷修復完整參與。
-          平台覆蓋 O-RAN 基礎架構、KubeFlow 訓練環境與 Dify 智慧化操作介面。
-        </p>
+        <div class="proj-meta" data-i18n="proj1-desc">
+          <div class="pm-row"><span class="pm-k">計畫規模</span><span class="pm-v">總經費逾新臺幣 <strong>1,000 萬元</strong>｜四年期大型研究計畫</span></div>
+          <div class="pm-row"><span class="pm-k">個人參與</span><span class="pm-v">〔總計畫負責團隊〕第三、四年｜<strong>AI/ML 平台開發、GPU 資源調度與 Multi-Agent 系統研發</strong></span></div>
+        </div>
         <div class="project-phase" data-i18n="proj1-ph1">建置與維運 · 2025</div>
         <ul class="project-achievements">
           <li data-i18n="proj1-a2">雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
@@ -968,7 +971,7 @@
       'stat3-sub': 'TA · IT consultant · Dept. website · Server room',
       'stat4-sub': 'Smart Networks SIG · Hanyang AI-RAN · NYCU O-RAN',
       'hero-title': 'M.S. Student, Electronic Engineering, NTUST<br>Seeking: Full-Stack Engineer / Cloud Engineer / AI Engineer',
-      'hero-desc': '<div class="hd-row"><div class="hd-k">Research</div><div class="hd-v">Cloud-native platforms, full-stack development, database design, AI agent architecture, GPU resource scheduling, digital twins, and O-RAN networks.</div></div><div class="hd-row"><div class="hd-k">Programs</div><div class="hd-v"><ul class="hd-list"><li>NSTC four-year 6G AI/ML platform program</li><li>ITRI 5G digital twin program</li></ul></div></div><div class="hd-row"><div class="hd-k">Experience</div><div class="hd-v">Four concurrent IT roles:<ul class="hd-list"><li>Software engineering internship (US)</li><li>Campus IT systems administration</li><li>Corporate IT operations</li><li>EMI teaching assistantship</li></ul></div></div><div class="hd-row"><div class="hd-k">Skills</div><div class="hd-v"><div class="skill-chips"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>SQL</span><span>CI/CD</span><span>AI Agent</span><span>NVIDIA Sionna</span><span>NVIDIA Omniverse</span><span>O-RAN</span></div></div></div>',
+      'hero-desc': '<div class="hd-row"><div class="hd-k">Research</div><div class="hd-v">Cloud-native platforms, full-stack development, database design, AI agent architecture, GPU resource scheduling, digital twins, and O-RAN networks.</div></div><div class="hd-row"><div class="hd-k">Programs</div><div class="hd-v">Two research programs:<ul class="hd-list"><li>NSTC four-year 6G AI/ML platform program</li><li>ITRI 5G digital twin program</li></ul></div></div><div class="hd-row"><div class="hd-k">Experience</div><div class="hd-v">Four concurrent IT roles:<ul class="hd-list"><li>Software engineering internship (US)</li><li>Campus IT systems administration</li><li>Corporate IT operations</li><li>EMI teaching assistantship</li></ul></div></div><div class="hd-row"><div class="hd-k">Skills</div><div class="hd-v"><div class="skill-chips"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>SQL</span><span>CI/CD</span><span>AI Agent</span><span>NVIDIA Sionna</span><span>NVIDIA Omniverse</span><span>O-RAN</span></div></div></div>',
       'sidebar-school': '<strong>University:</strong> National Taiwan University of Science and Technology',
       'sidebar-dept': '<strong>Department:</strong> Electronic Engineering (Graduate)',
       'sidebar-status': '<strong>Status:</strong> 2nd-year M.S. student (graduating Jun 2027)',
@@ -1018,7 +1021,7 @@
       'exp4-tag2': 'IT Support',
       'proj1-badge': '★ Flagship Project',
       'proj1-period': '2025 – 2026 · NSTC / NTUST',
-      'proj1-desc': 'Contributed to the NSTC 6G AI/ML training/inference platform end to end — from build-out and operations through performance stress testing and defect remediation. The platform covers O-RAN infrastructure, a KubeFlow training environment, and a Dify intelligent interface.',
+      'proj1-desc': '<div class="pm-row"><span class="pm-k">Program</span><span class="pm-v">Over <strong>NT$10M</strong> in funding &#124; four-year national research program</span></div><div class="pm-row"><span class="pm-k">My role</span><span class="pm-v">Lead team, years 3–4 &#124; <strong>AI/ML platform engineering, GPU resource scheduling, and multi-agent system design</strong></span></div>',
       'proj1-ph1': 'Build-out &amp; Operations · 2025',
       'proj1-a2': 'Dual-node hybrid deployment (Agent Node + Inference Node) operating <strong>20+ container services</strong> across Docker Space / Kubernetes Space',
       'proj1-a3': '<strong>Mapped</strong> the responsibilities, versions, and service dependencies of <strong>20+ Kubeflow components</strong> (Pipelines, Katib, KServe, Training Operator, Metadata), producing architecture and API reference docs used as the team&apos;s debugging baseline',
