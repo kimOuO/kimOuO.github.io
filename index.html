@@ -115,6 +115,8 @@
     .contact-links a { font-size: 0.8rem; color: var(--red); word-break: break-all; }
     .download-btn { display: inline-block; margin-top: 12px; padding: 8px 18px; font-size: 0.8rem; font-weight: 600; color: var(--white); background: var(--black); border: 1px solid var(--black); text-align: center; transition: background 0.2s, color 0.2s; }
     .download-btn:hover { background: var(--red); border-color: var(--red); color: var(--white); }
+    .hero-desc p { margin-bottom: 7px; }
+    .hd-k { display: inline-block; min-width: 68px; margin-right: 10px; font-size: 0.75rem; font-weight: 700; color: var(--red); letter-spacing: .04em; vertical-align: baseline; }
 
     /* ── 附件 ── */
     #documents { padding: 80px 0; background: var(--gray-100, #f6f6f6); border-top: 1px solid var(--gray-200); }
@@ -295,14 +297,15 @@
         <h1 class="hero-name">Yao-Ching Huang</h1>
         <p class="hero-name-zh">黃耀慶</p>
         <p class="hero-title" data-i18n="hero-title">
-          <span>電子工程研究所 碩士一年級</span>，國立臺灣科技大學<br>
+          <span>電子工程研究所 碩士二年級</span>，國立臺灣科技大學<br>
           應徵方向：全端工程師 / 雲端工程師 / AI 工程師
         </p>
-        <p class="hero-desc" data-i18n="hero-desc">
-          具備前後端開發、系統整合、API 設計與容器化部署實作經驗，同時熟悉 Kubernetes 叢集維運與 AI Agent 開發。
-          曾參與 SparkAmplify 冬季實習，培養從需求理解、功能設計、技術選型到測試部署的完整工程觀。
-          擅長將不同技術模組整合為可運作的系統，並持續深耕雲端基礎架構、CI/CD 與 AI Workflow。
-        </p>
+        <div class="hero-desc" data-i18n="hero-desc">
+          <p><span class="hd-k">研究領域</span>雲端原生平台、全端系統開發、資料庫設計與管理、AI Agent 架構設計、GPU 資源調度、數位孿生與 O-RAN 通訊網路架構。</p>
+          <p><span class="hd-k">研究計畫</span>國科會四年期 6G AI/ML 平台研發計畫（負責後兩年）、工研院 5G 通訊數位孿生計畫。</p>
+          <p><span class="hd-k">實務經驗</span>海外軟體工程實習、校內資訊系統管理、企業資訊維運、EMI 課程教學助理，共四項。</p>
+          <p><span class="hd-k">專業技能</span>Python、Kubernetes、Docker、SQL、CI/CD、AI Agent、NVIDIA Sionna、NVIDIA Omniverse、O-RAN。</p>
+        </div>
         <div class="tags">
           <span class="tag red">Full-Stack Dev</span>
           <span class="tag">Docker / K8s</span>
@@ -319,8 +322,9 @@
         <div class="sidebar-info">
           <p data-i18n="sidebar-school"><strong>學校：</strong>國立臺灣科技大學</p>
           <p data-i18n="sidebar-dept"><strong>系所：</strong>電子工程研究所</p>
-          <p data-i18n="sidebar-status"><strong>身份：</strong>碩士一年級（在學中）</p>
-          <p data-i18n="sidebar-gpa"><strong>學士 GPA：</strong>4.04 / 4.30 · 班排 3/29</p>
+          <p data-i18n="sidebar-status"><strong>身份：</strong>碩士二年級（在學中・2027/6 畢業）</p>
+          <p data-i18n="sidebar-gpa-ms"><strong>碩士 GPA：</strong>4.18 / 4.30</p>
+          <p data-i18n="sidebar-gpa"><strong>學士 GPA：</strong>4.04 / 4.30 · 系排 10/104 · 班排 3/29</p>
         </div>
         <div class="contact-links">
           <a href="mailto:kim36991294@gmail.com">kim36991294@gmail.com</a>
@@ -372,18 +376,20 @@
     <div class="about-grid">
       <div class="about-text">
         <p data-i18n="about-p1">
-          目前就讀國立臺灣科技大學電子工程研究所碩士班，具備前後端開發、系統整合、API 設計與部署實作經驗。
-          曾參與 SparkAmplify 冬季實習，涵蓋 system design、software planning、API implementation、
-          AI agent workflow integration 與 QA testing 等完整開發週期。
+          目前為國立臺灣科技大學電子工程研究所碩士二年級，研究與工作集中在<strong>雲端原生平台</strong>與
+          <strong>AI Agent 系統</strong>。在國科會 6G AI/ML 平台負責平台建置維運與 GPU 資源調度，
+          並設計讓使用者以自然語言操作平台的 Multi-Agent 架構；在工研院數位孿生計畫負責模擬環境建置與運作指標監控。
         </p>
         <p data-i18n="about-p2">
-          擅長將不同元件與技術整合成可運作的系統，包含前端介面、後端服務、資料庫、容器化部署與裝置串接。
-          除課內學習外，也持續自學 Kubernetes、n8n、Dify，並具備 Git 協作、技術文件整理與跨模組開發經驗。
+          實務上同時並行四份資訊工作：美國 SparkAmplify 後端／DevOps 實習、台科大電子系系辦系統維運與資料庫管理、
+          企業資訊維運，以及微積分 EMI 課程教學助理。這些工作讓我走過<strong>從需求理解、開發、測試到部署與長期維運</strong>的完整流程，
+          也習慣了面對真的有人在使用的系統。
         </p>
         <p data-i18n="about-p3">
-          具備快速學習與主動自學能力，對實作、系統流程與跨領域整合具高度興趣，
-          願意從需求分析、開發、測試到部署完整參與每個環節。
+          學業表現上，碩士班 <strong>GPA 4.18 / 4.30</strong>，大學 <strong>GPA 4.04 / 4.30</strong>、系排名 10 / 104、班排名 3 / 29。
+          面對不熟悉的技術，我習慣先理解運作原理再動手驗證，並重視系統的穩定性與後續維護成本。
         </p>
+      
       </div>
       <div class="about-highlights">
         <div class="highlight-item">
@@ -400,7 +406,7 @@
         </div>
         <div class="highlight-item">
           <div class="hl-label">Status</div>
-          <div class="hl-value" data-i18n="hl-status">碩士一年級在學 · 積極求職中</div>
+          <div class="hl-value" data-i18n="hl-status">碩士二年級在學 · 2027/6 畢業 · 積極求職中</div>
         </div>
       </div>
     </div>
@@ -537,17 +543,15 @@
 
       <!-- Project 2: Featured -->
       <div class="project-card featured">
-        <div class="project-featured-badge" data-i18n="proj1-badge">★ 國際展示</div>
+        <div class="project-featured-badge" data-i18n="proj1-badge">★ 主力研究計畫</div>
         <div class="project-title">6G AI/ML 訓練／推論平台 — 建置維運 × Agent 自動化 × 效能壓測</div>
-        <div class="project-period" data-i18n="proj1-period">2024 – 2026 · 國科會 / 國立臺灣科技大學 · EuCNC 2024 比利時 · COSCUP 2024</div>
+        <div class="project-period" data-i18n="proj1-period">2025 – 2026 · 國科會 / 國立臺灣科技大學</div>
         <p class="project-desc" data-i18n="proj1-desc">
           參與國科會 6G AI/ML 訓練／推論平台，從建置維運到效能壓測與缺陷修復完整參與。
-          平台覆蓋 O-RAN 基礎架構、KubeFlow 訓練環境與 Dify 智慧化操作介面，以 AR/VR QoS 為核心應用，
-          於 EuCNC 2024（比利時）及 COSCUP 2024 對外展示。
+          平台覆蓋 O-RAN 基礎架構、KubeFlow 訓練環境與 Dify 智慧化操作介面。
         </p>
-        <div class="project-phase" data-i18n="proj1-ph1">建置與維運 · 2024–2025</div>
+        <div class="project-phase" data-i18n="proj1-ph1">建置與維運 · 2025</div>
         <ul class="project-achievements">
-          <li data-i18n="proj1-a1"><strong>EuCNC 2024</strong>（比利時，6 月）AR/VR QoS 即時推論現場展示；<strong>COSCUP 2024</strong> O-RAN + AI/ML 平台成果發表</li>
           <li data-i18n="proj1-a2">雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
           <li data-i18n="proj1-a3"><strong>盤點</strong> Kubeflow <strong>20+ 元件</strong>（Pipelines / Katib / KServe / Training Operator / Metadata）之職責、版本與服務相依，產出架構與 API 對照文件作為跨團隊除錯依據</li>
           <li data-i18n="proj1-a7"><strong>修復</strong>跨服務缺陷：補上刪除 Project 時遺漏的 <strong>Kafka topic 連鎖清除</strong>、將 model metadata 自「訓練啟動即建立」改為<strong>依階段回報、訓練完成才落地</strong>，並排除 Harbor 多容器啟動相依導致的重啟失敗</li>
@@ -694,7 +698,7 @@
         <div class="edu-item">
           <div class="edu-degree">M.S. in Electronic Engineering</div>
           <div class="edu-school" data-i18n="edu-ms-school">國立臺灣科技大學 電子工程研究所</div>
-          <div class="edu-period" data-i18n="edu-ms-period">2025 – 在學中（碩士一年級）</div>
+          <div class="edu-period" data-i18n="edu-ms-period">2025 – 在學中（碩士二年級）</div>
           <div class="edu-period" data-i18n="edu-ms-lab">資訊技術行動化實驗室 · 指導教授：呂政修 · GPA 4.18 / 4.30</div>
         </div>
 
@@ -756,21 +760,7 @@
             </div>
           </div>
 
-          <div class="award-item">
-            <div class="award-year">2024</div>
-            <div>
-              <div class="award-name" data-i18n="talk2-name">EuCNC 2024（比利時）</div>
-              <div class="award-desc" data-i18n="talk2-desc">6G AI/ML 平台 AR/VR QoS 即時推論現場展示 · 2024.06</div>
-            </div>
-          </div>
 
-          <div class="award-item">
-            <div class="award-year">2024</div>
-            <div>
-              <div class="award-name" data-i18n="talk3-name">COSCUP 2024</div>
-              <div class="award-desc" data-i18n="talk3-desc">O-RAN + AI/ML 平台成果發表</div>
-            </div>
-          </div>
         </div>
 
       </div>
@@ -938,18 +928,19 @@
       'stat3-sub': 'TA · IT consultant · Dept. website · Server room',
       'stat4-sub': 'Smart Networks SIG · Hanyang AI-RAN · NYCU O-RAN',
       'hero-title': 'M.S. Student, Electronic Engineering, NTUST<br>Seeking: Full-Stack Engineer / Cloud Engineer / AI Engineer',
-      'hero-desc': 'Experienced in full-stack development, system integration, API design, and containerized deployment, with hands-on Kubernetes cluster operations and AI Agent development. Completed a winter internship at SparkAmplify, gaining end-to-end engineering experience from requirement analysis to deployment. Skilled at integrating diverse tech modules into working systems, continuously deepening cloud infrastructure, CI/CD, and AI Workflow.',
+      'hero-desc': '<p><span class="hd-k">Research</span>Cloud-native platforms, full-stack development, database design, AI agent architecture, GPU resource scheduling, digital twins, and O-RAN networks.</p><p><span class="hd-k">Projects</span>NSTC four-year 6G AI/ML platform program (years 3–4) and ITRI 5G digital twin program.</p><p><span class="hd-k">Experience</span>Software engineering internship in the US, campus IT systems administration, corporate IT operations, and EMI teaching assistantship.</p><p><span class="hd-k">Skills</span>Python, Kubernetes, Docker, SQL, CI/CD, AI agents, NVIDIA Sionna, NVIDIA Omniverse, O-RAN.</p>',
       'sidebar-school': '<strong>University:</strong> National Taiwan University of Science and Technology',
       'sidebar-dept': '<strong>Department:</strong> Electronic Engineering (Graduate)',
-      'sidebar-status': '<strong>Status:</strong> 1st-year M.S. student (enrolled)',
-      'sidebar-gpa': '<strong>B.S. GPA:</strong> 4.04 / 4.30 · Class Rank 3/29',
-      'about-p1': 'Currently a graduate student at NTUST, Department of Electronic Engineering. Experienced in full-stack development, system integration, API design, and deployment. Completed a winter internship at SparkAmplify covering system design, software planning, API implementation, AI agent workflow integration, and QA testing.',
-      'about-p2': 'Skilled at integrating different components into working systems — frontend, backend, databases, containerized deployment, and device integration. Continuously self-learning Kubernetes, n8n, and Dify, with experience in Git collaboration, technical documentation, and cross-module development.',
-      'about-p3': 'Fast learner with strong self-motivation. Passionate about hands-on implementation, system workflows, and cross-domain integration. Willing to participate in every stage from requirements analysis to deployment.',
+      'sidebar-status': '<strong>Status:</strong> 2nd-year M.S. student (graduating Jun 2027)',
+      'sidebar-gpa-ms': '<strong>M.S. GPA:</strong> 4.18 / 4.30',
+      'sidebar-gpa': '<strong>B.S. GPA:</strong> 4.04 / 4.30 · Dept. 10/104 · Class 3/29',
+      'about-p1': 'Second-year M.S. student in Electronic Engineering at NTUST, working mainly on <strong>cloud-native platforms</strong> and <strong>AI agent systems</strong>. On the NSTC 6G AI/ML platform I own platform operations and GPU resource scheduling, and designed the multi-agent architecture that lets users drive the platform in natural language; on the ITRI digital twin program I build the simulation environment and its KPI monitoring.',
+      'about-p2': 'Alongside research I hold four IT roles: a backend / DevOps internship at SparkAmplify in California, systems and database administration for the NTUST EE department office, corporate IT operations, and a calculus EMI teaching assistantship. Together they have taken me through <strong>requirements, development, testing, deployment, and long-term operations</strong> — on systems people actually use every day.',
+      'about-p3': 'Academically: <strong>M.S. GPA 4.18 / 4.30</strong> and <strong>B.S. GPA 4.04 / 4.30</strong>, ranked 10 / 104 in the department and 3 / 29 in class. Facing unfamiliar technology, I prefer to understand how it works before building, and I weigh stability and maintenance cost as part of the design.',
       'hl-research': 'Full-Stack Dev · Cloud Architecture · AI Agent',
       'hl-affiliation': 'National Taiwan Univ. of Science & Technology',
       'hl-intern1': 'SparkAmplify (Winter 2026)',
-      'hl-status': '1st-year M.S. student · Actively seeking opportunities',
+      'hl-status': '2nd-year M.S. · Graduating Jun 2027 · Actively seeking opportunities',
       'exp1-role': 'Backend / DevOps Engineer',
       'exp5-role': 'Workshop Participant (Korea)',
       'exp5-company': '6G Research Center, Hanyang University — International Workshop on AI-Enabled ICT Networks',
@@ -985,11 +976,10 @@
       'exp4-company': 'Ying-Na Industrial Co., Ltd.',
       'exp4-tag1': 'Backup Mgmt',
       'exp4-tag2': 'IT Support',
-      'proj1-badge': '★ International Demo',
-      'proj1-period': '2024 – 2026 · NSTC / NTUST · EuCNC 2024 Belgium · COSCUP 2024',
-      'proj1-desc': 'Contributed to the NSTC 6G AI/ML training/inference platform end to end — from build-out and operations through performance stress testing and defect remediation. The platform covers O-RAN infrastructure, a KubeFlow training environment, and a Dify intelligent interface, focuses on AR/VR QoS, and was demonstrated at EuCNC 2024 (Belgium) and COSCUP 2024.',
-      'proj1-ph1': 'Build-out &amp; Operations · 2024–2025',
-      'proj1-a1': '<strong>EuCNC 2024</strong> (Belgium, June) live AR/VR QoS inference demo; <strong>COSCUP 2024</strong> O-RAN + AI/ML platform presentation',
+      'proj1-badge': '★ Flagship Project',
+      'proj1-period': '2025 – 2026 · NSTC / NTUST',
+      'proj1-desc': 'Contributed to the NSTC 6G AI/ML training/inference platform end to end — from build-out and operations through performance stress testing and defect remediation. The platform covers O-RAN infrastructure, a KubeFlow training environment, and a Dify intelligent interface.',
+      'proj1-ph1': 'Build-out &amp; Operations · 2025',
       'proj1-a2': 'Dual-node hybrid deployment (Agent Node + Inference Node) operating <strong>20+ container services</strong> across Docker Space / Kubernetes Space',
       'proj1-a3': '<strong>Mapped</strong> the responsibilities, versions, and service dependencies of <strong>20+ Kubeflow components</strong> (Pipelines, Katib, KServe, Training Operator, Metadata), producing architecture and API reference docs used as the team&apos;s debugging baseline',
       'proj1-a7': '<strong>Fixed</strong> cross-service defects: added the missing <strong>cascading Kafka topic cleanup</strong> on project deletion, moved model metadata from &quot;created when training starts&quot; to <strong>stage-reported and persisted only on completion</strong>, and resolved Harbor restart failures caused by multi-container startup dependencies',
@@ -1025,7 +1015,7 @@
       'proj3-a1': 'Used <strong>Deep Q-Learning</strong> to predict system idle time and proactively schedule GC, lowering the chance of forced GC and improving tail latency',
       'proj3-a2': 'Bridged a Python RL agent and the C++ simulator <strong>MQSim</strong> via <strong>Cython</strong> for cross-language integration, validated against enterprise I/O traces',
       'edu-ms-school': 'NTUST, Graduate Institute of Electronic Engineering',
-      'edu-ms-period': '2025 – Present (1st-year M.S.)',
+      'edu-ms-period': '2025 – Present (2nd-year M.S.)',
       'edu-ms-lab': 'Mobilization Information Technology Lab · Advisor: Prof. Jenq-Shiou Leu · GPA 4.18 / 4.30',
       'edu-bs-school': 'NTUST, Dept. of Electronic Engineering',
       'edu-bs-period': '2021 – 2025 (Graduated)',
@@ -1041,10 +1031,6 @@
       'talk1-desc': 'Represented the lab in a results demonstration · Sep 15, 2026 · Taipei',
       'talk4-name': 'Workshop on AI-RAN and O-RAN Open Base Stations',
       'talk4-desc': 'National Yang Ming Chiao Tung University · Oct 28, 2025 · O-RAN environment setup and xApp development',
-      'talk2-name': 'EuCNC 2024 (Belgium)',
-      'talk2-desc': 'Live AR/VR QoS inference demo of the 6G AI/ML platform · Jun 2024',
-      'talk3-name': 'COSCUP 2024',
-      'talk3-desc': 'Presented the O-RAN + AI/ML platform',
       'skill-doc': 'Platform system architecture docs, K8s / Docker deployment diagrams, Use Case flow diagrams',
       'skill-others': 'ESP32 embedded dev, HTTP / WebSocket communication, system integration & deployment',
       'trait1': 'Fast learner with strong self-motivation',
