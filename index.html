@@ -115,8 +115,8 @@
     .contact-links a { font-size: 0.8rem; color: var(--red); word-break: break-all; }
     .download-btn { display: inline-block; margin-top: 12px; padding: 8px 18px; font-size: 0.8rem; font-weight: 600; color: var(--white); background: var(--black); border: 1px solid var(--black); text-align: center; transition: background 0.2s, color 0.2s; }
     .download-btn:hover { background: var(--red); border-color: var(--red); color: var(--white); }
-    .hero-desc p { margin-bottom: 7px; }
-    .hd-k { display: inline-block; min-width: 68px; margin-right: 10px; font-size: 0.75rem; font-weight: 700; color: var(--red); letter-spacing: .04em; vertical-align: baseline; }
+    .hero-desc p { display: grid; grid-template-columns: 68px 1fr; gap: 0 14px; margin-bottom: 9px; }
+    .hd-k { font-size: 0.75rem; font-weight: 700; color: var(--red); letter-spacing: .04em; padding-top: 2px; }
 
     /* ── 附件 ── */
     #documents { padding: 80px 0; background: var(--gray-100, #f6f6f6); border-top: 1px solid var(--gray-200); }
@@ -177,8 +177,10 @@
 
     /* ── PROJECTS ── */
     #projects { border-bottom: 1px solid var(--black); }
-    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gap); }
-    .project-card { border: 1px solid var(--black); padding: 26px; transition: border-color 0.2s; position: relative; }
+    .projects-grid { display: flex; flex-direction: column; gap: 26px; }
+    .project-card { display: grid; grid-template-columns: 272px 1fr; gap: 0 38px; border: 1px solid var(--black); padding: 26px 28px; transition: border-color 0.2s; position: relative; }
+    .proj-side { align-self: start; }
+    .proj-main > :first-child { margin-top: 0; }
     .project-card:hover { border-color: var(--red); }
     .project-card.featured { border: 2px solid var(--red); }
     .project-featured-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
@@ -199,6 +201,7 @@
     .project-phase:first-child { margin-top: 0; }
     .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
     .project-tags .tag { font-size: 0.68rem; padding: 2px 8px; border-color: var(--gray-300); color: var(--gray-700); }
+    .proj-side .project-link { display: block; margin-top: 8px; }
     .project-link { font-size: 0.75rem; color: var(--red); margin-top: 10px; display: inline-block; }
 
     /* ── EDUCATION & SKILLS ── */
@@ -254,7 +257,7 @@
       .about-grid { grid-template-columns: 1fr; }
       .about-highlights { border-left: none; border-top: 2px solid var(--black); padding-left: 0; padding-top: 24px; }
       .exp-item { grid-template-columns: 1fr; gap: 6px; }
-      .projects-grid { grid-template-columns: 1fr; }
+      .project-card { grid-template-columns: 1fr; gap: 14px; }
       .edu-grid { grid-template-columns: 1fr; }
       section { padding: 56px 0; }
     }
@@ -332,7 +335,7 @@
           <a href="tel:0958831242">0958-831-242</a>
         </div>
         <a href="Yao-Ching_Huang_EN_CV.pdf" target="_blank" rel="noopener" class="download-btn">Download CV (EN)</a>
-        <a href="黃耀慶_中文CV.pdf" target="_blank" rel="noopener" class="download-btn" style="margin-top:6px; background:var(--red); border-color:var(--red);" data-i18n="btn-cv-zh">下載履歷 (中文)</a>
+        <a href="黃耀慶_中文CV.pdf" target="_blank" rel="noopener" class="download-btn" style="margin-top:6px; background:var(--red); border-color:var(--red);" data-i18n="btn-cv-zh">下載中文 CV</a>
       </div>
     </div>
   </div>
@@ -543,33 +546,10 @@
 
       <!-- Project 2: Featured -->
       <div class="project-card featured">
+        <div class="proj-side">
         <div class="project-featured-badge" data-i18n="proj1-badge">★ 主力研究計畫</div>
         <div class="project-title">6G AI/ML 訓練／推論平台 — 建置維運 × Agent 自動化 × 效能壓測</div>
         <div class="project-period" data-i18n="proj1-period">2025 – 2026 · 國科會 / 國立臺灣科技大學</div>
-        <p class="project-desc" data-i18n="proj1-desc">
-          參與國科會 6G AI/ML 訓練／推論平台，從建置維運到效能壓測與缺陷修復完整參與。
-          平台覆蓋 O-RAN 基礎架構、KubeFlow 訓練環境與 Dify 智慧化操作介面。
-        </p>
-        <div class="project-phase" data-i18n="proj1-ph1">建置與維運 · 2025</div>
-        <ul class="project-achievements">
-          <li data-i18n="proj1-a2">雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
-          <li data-i18n="proj1-a3"><strong>盤點</strong> Kubeflow <strong>20+ 元件</strong>（Pipelines / Katib / KServe / Training Operator / Metadata）之職責、版本與服務相依，產出架構與 API 對照文件作為跨團隊除錯依據</li>
-          <li data-i18n="proj1-a7"><strong>修復</strong>跨服務缺陷：補上刪除 Project 時遺漏的 <strong>Kafka topic 連鎖清除</strong>、將 model metadata 自「訓練啟動即建立」改為<strong>依階段回報、訓練完成才落地</strong>，並排除 Harbor 多容器啟動相依導致的重啟失敗</li>
-        </ul>
-        <div class="project-phase" data-i18n="proj1-ph3">AI Agent 自動化 · 2025</div>
-        <ul class="project-achievements">
-          <li data-i18n="proj1-b1"><strong>整合</strong>平台 API 為意圖驅動 ML Agent（Dify Multi-Actor ReAct），全鏈自動接力，使用者介入自 6 個步驟<strong>降為 2 個節點</strong></li>
-          <li data-i18n="proj1-b2"><strong>封裝</strong> 17 個低階平台工具為 <strong>10 個高階 Skill</strong>，隔離破壞性 API，降低 LLM 決策複雜度與誤操作風險</li>
-          <li data-i18n="proj1-b3"><strong>設計</strong>獨立 context 診斷 sub-loop，自動產出修補重跑與重訓方案，涵蓋 <strong>5 類 ML 任務</strong>實機驗證</li>
-        </ul>
-
-        <div class="project-phase" data-i18n="proj1-ph2">可觀測性、壓測與 K8s 除錯 · 2026</div>
-        <ul class="project-achievements">
-          <li data-i18n="proj1-a4"><strong>建置</strong> Kubernetes 可觀測性堆疊（kube-prometheus-stack、NVIDIA DCGM Exporter、Istio、eBPF Retina），涵蓋 <strong>1,500+ 項</strong>節點／容器／控制平面／GPU／網路指標，GPU 5 秒級取樣；以其中 <strong>31 項指標</strong>完成 GPU 算力（MFU）、儲存退化與 CPU 節流等根因分析</li>
-          <li data-i18n="proj1-a5"><strong>設計</strong>四軸系統性壓力測試（物件大小／模型規模／並發／多租戶，N≥3），撰寫自動化測試腳本建立 <strong>9 組可重複執行的實驗套件</strong>，內建開跑前環境檢查、結果有效性判定與無效自動重跑；將平台容量自無依據轉為量化上限：<strong>單卡 386M 參數、並行 4 任務</strong></li>
-          <li data-i18n="proj1-a6"><strong>定位並修復 7 項平台層故障根因</strong>（資料庫反覆崩潰、工作流程被誤刪、儲存節點媒體退化、物件儲存 CPU 節流與探針誤殺），負載下映像建置失敗率自 <strong>27% 降至 0</strong>，單物件處理上限自 470 MB 提升至 <strong>4.7 GB</strong></li>
-          <li data-i18n="proj1-a8">於 Kubeflow／Argo 管線以<strong>不侵入方式實作 GPU 分配器</strong>：延後綁定 gate、ConfigMap 帳本（CAS）、依模型大小排程（大模型獨占、小模型 MPS 併片）與建置前記憶體准入；真機驗證 MPS 同片聚合吞吐 <strong>+21–24%</strong>、整批完成時間 <strong>−13%</strong>、吞吐 +15%、平均完成時間 −17%，超限任務 <strong>5.1 秒內攔截</strong>（原需 368 秒才失敗）</li>
-        </ul>
         <div class="project-tags">
           <span class="tag">KubeFlow</span>
           <span class="tag">O-RAN</span>
@@ -590,24 +570,40 @@
           <span class="tag">6G</span>
         </div>
         <a class="project-link" href="https://github.com/kimOuO/aiml_dashboard_agentic" target="_blank">→ GitHub</a>
+        </div>
+        <div class="proj-main">
+        <p class="project-desc" data-i18n="proj1-desc">
+          參與國科會 6G AI/ML 訓練／推論平台，從建置維運到效能壓測與缺陷修復完整參與。
+          平台覆蓋 O-RAN 基礎架構、KubeFlow 訓練環境與 Dify 智慧化操作介面。
+        </p>
+        <div class="project-phase" data-i18n="proj1-ph1">建置與維運 · 2025</div>
+        <ul class="project-achievements">
+          <li data-i18n="proj1-a2">雙節點混合部署（Agent Node + Inference Node）維運 <strong>20+ 容器服務</strong>，跨 Docker Space / Kubernetes Space</li>
+          <li data-i18n="proj1-a3"><strong>盤點</strong> Kubeflow <strong>20+ 元件</strong>（Pipelines / Katib / KServe / Training Operator / Metadata）之職責、版本與服務相依，產出架構與 API 對照文件作為跨團隊除錯依據</li>
+          <li data-i18n="proj1-a7"><strong>修復</strong>跨服務缺陷：補上刪除 Project 時遺漏的 <strong>Kafka topic 連鎖清除</strong>、將 model metadata 自「訓練啟動即建立」改為<strong>依階段回報、訓練完成才落地</strong>，並排除 Harbor 多容器啟動相依導致的重啟失敗</li>
+        </ul>
+        <div class="project-phase" data-i18n="proj1-ph3">AI Agent 自動化 · 2025</div>
+        <ul class="project-achievements">
+          <li data-i18n="proj1-b1"><strong>整合</strong>平台 API 為意圖驅動 ML Agent（Dify Multi-Actor ReAct），全鏈自動接力，使用者介入自 6 個步驟<strong>降為 2 個節點</strong></li>
+          <li data-i18n="proj1-b2"><strong>封裝</strong> 17 個低階平台工具為 <strong>10 個高階 Skill</strong>，隔離破壞性 API，降低 LLM 決策複雜度與誤操作風險</li>
+          <li data-i18n="proj1-b3"><strong>設計</strong>獨立 context 診斷 sub-loop，自動產出修補重跑與重訓方案，涵蓋 <strong>5 類 ML 任務</strong>實機驗證</li>
+        </ul>
+        <div class="project-phase" data-i18n="proj1-ph2">可觀測性、壓測與 K8s 除錯 · 2026</div>
+        <ul class="project-achievements">
+          <li data-i18n="proj1-a4"><strong>建置</strong> Kubernetes 可觀測性堆疊（kube-prometheus-stack、NVIDIA DCGM Exporter、Istio、eBPF Retina），涵蓋 <strong>1,500+ 項</strong>節點／容器／控制平面／GPU／網路指標，GPU 5 秒級取樣；以其中 <strong>31 項指標</strong>完成 GPU 算力（MFU）、儲存退化與 CPU 節流等根因分析</li>
+          <li data-i18n="proj1-a5"><strong>設計</strong>四軸系統性壓力測試（物件大小／模型規模／並發／多租戶，N≥3），撰寫自動化測試腳本建立 <strong>9 組可重複執行的實驗套件</strong>，內建開跑前環境檢查、結果有效性判定與無效自動重跑；將平台容量自無依據轉為量化上限：<strong>單卡 386M 參數、並行 4 任務</strong></li>
+          <li data-i18n="proj1-a6"><strong>定位並修復 7 項平台層故障根因</strong>（資料庫反覆崩潰、工作流程被誤刪、儲存節點媒體退化、物件儲存 CPU 節流與探針誤殺），負載下映像建置失敗率自 <strong>27% 降至 0</strong>，單物件處理上限自 470 MB 提升至 <strong>4.7 GB</strong></li>
+          <li data-i18n="proj1-a8">於 Kubeflow／Argo 管線以<strong>不侵入方式實作 GPU 分配器</strong>：延後綁定 gate、ConfigMap 帳本（CAS）、依模型大小排程（大模型獨占、小模型 MPS 併片）與建置前記憶體准入；真機驗證 MPS 同片聚合吞吐 <strong>+21–24%</strong>、整批完成時間 <strong>−13%</strong>、吞吐 +15%、平均完成時間 −17%，超限任務 <strong>5.1 秒內攔截</strong>（原需 368 秒才失敗）</li>
+        </ul>
+        </div>
       </div>
 
       <!-- Project 3: Featured -->
       <div class="project-card featured">
+        <div class="proj-side">
         <div class="project-featured-badge" data-i18n="proj2-badge">★ 赴美實習</div>
         <div class="project-title" data-i18n="proj2-title">MySphere — 英文分級故事學習平台</div>
         <div class="project-period" data-i18n="proj2-period">2025 – 2026 · 學海計畫 × SparkAmplify（洛杉磯）× 東華書局 · 赴美實習 2026/01–02</div>
-        <p class="project-desc" data-i18n="proj2-desc">
-          透過學海計畫赴美，與洛杉磯新創公司 SparkAmplify 及東華書局合作開發 MySphere。
-          平台依英文程度分級提供互動故事內容，內建學習狀態追蹤 API 與 LLM 智能問答，
-          讓學習者在閱讀過程中即時與 AI 互動、確認理解程度。
-        </p>
-        <ul class="project-achievements">
-          <li data-i18n="proj2-a1"><strong>東華書局合作</strong>，平台服務書局周邊英文學習需求，英文故事依程度<strong>分級選材</strong></li>
-          <li data-i18n="proj2-a2">內建<strong>學習進度追蹤 API</strong> 與 <strong>LLM 智能問答 Chat</strong>，負責資料庫管理與 API 開發</li>
-          <li data-i18n="proj2-a3">Docker 容器化部署、Nginx 反向代理轉發，搭建完整服務架構</li>
-          <li data-i18n="proj2-a4">建立 <strong>Harbor</strong> Image 管理流程與 <strong>GitHub Actions CI/CD</strong>，規範團隊 Git Workflow 協作</li>
-        </ul>
         <div class="project-tags">
           <span class="tag">LLM</span>
           <span class="tag">REST API</span>
@@ -620,24 +616,28 @@
           <span class="tag">Git Workflow</span>
           <span class="tag" data-i18n="proj2-tag1">學海計畫</span>
         </div>
+        </div>
+        <div class="proj-main">
+        <p class="project-desc" data-i18n="proj2-desc">
+          透過學海計畫赴美，與洛杉磯新創公司 SparkAmplify 及東華書局合作開發 MySphere。
+          平台依英文程度分級提供互動故事內容，內建學習狀態追蹤 API 與 LLM 智能問答，
+          讓學習者在閱讀過程中即時與 AI 互動、確認理解程度。
+        </p>
+        <ul class="project-achievements">
+          <li data-i18n="proj2-a1"><strong>東華書局合作</strong>，平台服務書局周邊英文學習需求，英文故事依程度<strong>分級選材</strong></li>
+          <li data-i18n="proj2-a2">內建<strong>學習進度追蹤 API</strong> 與 <strong>LLM 智能問答 Chat</strong>，負責資料庫管理與 API 開發</li>
+          <li data-i18n="proj2-a3">Docker 容器化部署、Nginx 反向代理轉發，搭建完整服務架構</li>
+          <li data-i18n="proj2-a4">建立 <strong>Harbor</strong> Image 管理流程與 <strong>GitHub Actions CI/CD</strong>，規範團隊 Git Workflow 協作</li>
+        </ul>
+        </div>
       </div>
 
       <!-- Project: 工研院產學合作 DT -->
       <div class="project-card featured">
+        <div class="proj-side">
         <div class="project-featured-badge" data-i18n="proj4-badge">★ 產學合作</div>
         <div class="project-title" data-i18n="proj4-title">5G NR RAN 數位孿生平台 — 工研院產學合作</div>
         <div class="project-period" data-i18n="proj4-period">2025.04 – 進行中 · 工業技術研究院 × 國立臺灣科技大學</div>
-        <p class="project-desc" data-i18n="proj4-desc">
-          xApp 控制決策過去只能在實體 RAN 上試錯，環境成本高、故障情境難以重現；
-          而 NVIDIA AODT 等商用數位孿生又綁定特定硬體規格。
-          本平台以 Sionna RT 光追加數學通道模型自建輕量替代方案，讓 xApp 先在孿生環境重現問題、驗證修復，再部署到實體 RAN。
-        </p>
-        <ul class="project-achievements">
-          <li data-i18n="proj4-a1"><strong>整合</strong> Sionna RT 光追與 Omniverse 3D，以數學通道模型取代 NVIDIA AODT 的專用硬體需求，於單機 GPU 重現場景建模、通道模擬與視覺化，並<strong>免除實體 UE 設備</strong>（直接注入流量、由 Sionna 計算通道誤差）</li>
-          <li data-i18n="proj4-a2"><strong>降低</strong>孿生與真實 RAN 的量測落差：以 OAI rfsim 為 ground truth 對齊，DL 吞吐 <strong>95%</strong>、PDCP Volume <strong>96%</strong>、PRB <strong>104%</strong>、UL 吞吐 <strong>90%</strong>，DL-UL 相關係數 <strong>0.99</strong>，6 項 KPM 主指標對齊 5 項</li>
-          <li data-i18n="proj4-a3"><strong>優化</strong>殘差誤差：自建<strong>可插拔 ML 校正器</strong>（quantile GBT，不污染 DT 物理層），整體平均誤差自 <strong>50.1% 降至 2.5%</strong>（PRB 114.8%→<strong>3.0%</strong>、延遲 79.5%→<strong>0.8%</strong>），並將 PRB 分佈標準差自 6.93 收斂至 0.53，CDF 貼合 OAI</li>
-          <li data-i18n="proj4-a4"><strong>拆解</strong> CU / DU / RU / UE 為獨立 Django 微服務並自製 <strong>HTTP ↔ ASN.1 / SCTP E2 Adapter</strong>，xApp 無需改碼即可在孿生與實體 Near-RT RIC 間切換；Docker Compose 整合 10+ 服務一鍵啟動，支援 10 gNB / 多 cell、最長 24 小時劇本重播</li>
-        </ul>
         <div class="project-tags">
           <span class="tag">O-RAN</span>
           <span class="tag">5G NR</span>
@@ -652,21 +652,28 @@
           <span class="tag">PostgreSQL</span>
         </div>
         <a class="project-link" href="https://github.com/kimOuO/RAN-sim-OAI" target="_blank">→ GitHub · RAN-sim-OAI</a>
-        <a class="project-link" href="https://github.com/kimOuO/Omnivers_platform" target="_blank" style="margin-left:14px;">→ GitHub · Omnivers_platform</a>
+        <a class="project-link" href="https://github.com/kimOuO/Omnivers_platform" target="_blank">→ GitHub · Omnivers_platform</a>
+        </div>
+        <div class="proj-main">
+        <p class="project-desc" data-i18n="proj4-desc">
+          xApp 控制決策過去只能在實體 RAN 上試錯，環境成本高、故障情境難以重現；
+          而 NVIDIA AODT 等商用數位孿生又綁定特定硬體規格。
+          本平台以 Sionna RT 光追加數學通道模型自建輕量替代方案，讓 xApp 先在孿生環境重現問題、驗證修復，再部署到實體 RAN。
+        </p>
+        <ul class="project-achievements">
+          <li data-i18n="proj4-a1"><strong>整合</strong> Sionna RT 光追與 Omniverse 3D，以數學通道模型取代 NVIDIA AODT 的專用硬體需求，於單機 GPU 重現場景建模、通道模擬與視覺化，並<strong>免除實體 UE 設備</strong>（直接注入流量、由 Sionna 計算通道誤差）</li>
+          <li data-i18n="proj4-a2"><strong>降低</strong>孿生與真實 RAN 的量測落差：以 OAI rfsim 為 ground truth 對齊，DL 吞吐 <strong>95%</strong>、PDCP Volume <strong>96%</strong>、PRB <strong>104%</strong>、UL 吞吐 <strong>90%</strong>，DL-UL 相關係數 <strong>0.99</strong>，6 項 KPM 主指標對齊 5 項</li>
+          <li data-i18n="proj4-a3"><strong>優化</strong>殘差誤差：自建<strong>可插拔 ML 校正器</strong>（quantile GBT，不污染 DT 物理層），整體平均誤差自 <strong>50.1% 降至 2.5%</strong>（PRB 114.8%→<strong>3.0%</strong>、延遲 79.5%→<strong>0.8%</strong>），並將 PRB 分佈標準差自 6.93 收斂至 0.53，CDF 貼合 OAI</li>
+          <li data-i18n="proj4-a4"><strong>拆解</strong> CU / DU / RU / UE 為獨立 Django 微服務並自製 <strong>HTTP ↔ ASN.1 / SCTP E2 Adapter</strong>，xApp 無需改碼即可在孿生與實體 Near-RT RIC 間切換；Docker Compose 整合 10+ 服務一鍵啟動，支援 10 gNB / 多 cell、最長 24 小時劇本重播</li>
+        </ul>
+        </div>
       </div>
 
       <!-- Project: 大學部實務專題 -->
       <div class="project-card">
+        <div class="proj-side">
         <div class="project-title" data-i18n="proj3-title">SSD 長尾延遲優化 — Deep Q-Learning 閒置時間 GC 排程</div>
         <div class="project-period" data-i18n="proj3-period">2024 · 國立臺灣科技大學 電子工程系</div>
-        <p class="project-desc" data-i18n="proj3-desc">
-          以 Deep Q-Learning 預測 SSD 系統閒置時間，主動在 Idle Time 排程 GC，降低 Forced GC 觸發頻率以改善長尾延遲。
-          以 Cython 橋接 Python RL Agent 與 C++ SSD 模擬器 MQSim 實現跨語言整合。
-        </p>
-        <ul class="project-achievements">
-          <li data-i18n="proj3-a1">以 <strong>Deep Q-Learning</strong> 預測系統閒置時間並主動排程 GC，降低 Forced GC 的觸發機率以改善長尾延遲</li>
-          <li data-i18n="proj3-a2">以 <strong>Cython</strong> 橋接 Python RL Agent 與 C++ 模擬器 <strong>MQSim</strong> 完成跨語言整合，並於企業級 I/O trace 上驗證可行性</li>
-        </ul>
         <div class="project-tags">
           <span class="tag">Reinforcement Learning</span>
           <span class="tag">Deep Q-Learning</span>
@@ -675,6 +682,17 @@
           <span class="tag">Cython</span>
           <span class="tag">MQSim</span>
           <span class="tag">SSD / Storage</span>
+        </div>
+        </div>
+        <div class="proj-main">
+        <p class="project-desc" data-i18n="proj3-desc">
+          以 Deep Q-Learning 預測 SSD 系統閒置時間，主動在 Idle Time 排程 GC，降低 Forced GC 觸發頻率以改善長尾延遲。
+          以 Cython 橋接 Python RL Agent 與 C++ SSD 模擬器 MQSim 實現跨語言整合。
+        </p>
+        <ul class="project-achievements">
+          <li data-i18n="proj3-a1">以 <strong>Deep Q-Learning</strong> 預測系統閒置時間並主動排程 GC，降低 Forced GC 的觸發機率以改善長尾延遲</li>
+          <li data-i18n="proj3-a2">以 <strong>Cython</strong> 橋接 Python RL Agent 與 C++ 模擬器 <strong>MQSim</strong> 完成跨語言整合，並於企業級 I/O trace 上驗證可行性</li>
+        </ul>
         </div>
       </div>
 
@@ -916,7 +934,7 @@
   // ── Language Toggle ──
   const i18n = {
     en: {
-      'btn-cv-zh': 'Download CV (ZH)',
+      'btn-cv-zh': 'Download CV (Chinese)',
       'doc-title': 'Documents',
       'doc-desc': 'Resume, autobiography, and academic records — click to open the full file.',
       'doc1-name': 'Yao-Ching Huang — CV (Chinese)',
