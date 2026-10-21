@@ -85,10 +85,10 @@
       text-transform: uppercase; color: var(--gray-600); margin-bottom: 16px;
     }
     .hero-name {
-      font-size: 3.8rem; font-weight: 700;
-      line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 6px;
+      font-size: 3.6rem; font-weight: 700;
+      line-height: 1.1; letter-spacing: 0.02em; margin-bottom: 4px;
     }
-    .hero-name-zh { font-size: 1.4rem; font-weight: 500; color: var(--gray-600); margin-bottom: 24px; }
+    .hero-name-en { font-size: 1.25rem; font-weight: 600; color: var(--gray-600); letter-spacing: 0.01em; margin-bottom: 24px; }
     .hero-title { font-size: 0.95rem; font-weight: 500; color: var(--gray-700); margin-bottom: 6px; line-height: 1.6; }
     .hero-title span { color: var(--red); font-weight: 700; }
     .hero-desc { font-size: 0.9rem; color: var(--gray-600); margin-top: 18px; margin-bottom: 24px; max-width: 540px; line-height: 1.75; }
@@ -256,7 +256,8 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      .hero-name { font-size: 2.5rem; }
+      .hero-name { font-size: 2.6rem; }
+      .hero-name-en { font-size: 1.05rem; }
       .hero-grid { grid-template-columns: 1fr; }
       .hero-sidebar { display: none; }
       .nav-links { display: none; }
@@ -305,8 +306,8 @@
     <div class="hero-grid">
       <div class="hero-left">
         <p class="hero-label">Portfolio / Resume</p>
-        <h1 class="hero-name">Yao-Ching Huang</h1>
-        <p class="hero-name-zh">黃耀慶</p>
+        <h1 class="hero-name">黃耀慶</h1>
+        <p class="hero-name-en">Yao-Ching Huang</p>
         <p class="hero-title" data-i18n="hero-title">
           <span>電子工程研究所 碩士二年級</span>，國立臺灣科技大學<br>
           應徵方向：全端工程師 / 雲端工程師 / AI 工程師
