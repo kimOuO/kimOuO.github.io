@@ -314,7 +314,7 @@
         </p>
         <div class="hero-desc" data-i18n="hero-desc">
           <div class="hd-row"><div class="hd-k">研究領域</div><div class="hd-v">雲端原生平台、全端系統開發、資料庫設計與管理、AI Agent 架構設計、GPU 資源調度、數位孿生與 O-RAN 通訊網路架構。</div></div>
-          <div class="hd-row"><div class="hd-k">研究計畫</div><div class="hd-v"><ul class="hd-list"><li>國科會四年期 6G AI/ML 平台研發計畫（負責後兩年）</li><li>工研院 5G 通訊數位孿生計畫</li></ul></div></div>
+          <div class="hd-row"><div class="hd-k">研究計畫</div><div class="hd-v"><ul class="hd-list"><li>國科會四年期 6G AI/ML 平台研發計畫</li><li>工研院 5G 通訊數位孿生計畫</li></ul></div></div>
           <div class="hd-row"><div class="hd-k">實務經驗</div><div class="hd-v">具備四項實務工作經驗：<ul class="hd-list"><li>海外軟體工程實習</li><li>校內資訊系統管理</li><li>企業資訊維運</li><li>EMI 課程教學助理</li></ul></div></div>
           <div class="hd-row"><div class="hd-k">專業技能</div><div class="hd-v"><div class="skill-chips"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>SQL</span><span>CI/CD</span><span>AI Agent</span><span>NVIDIA Sionna</span><span>NVIDIA Omniverse</span><span>O-RAN</span></div></div></div>
         </div>
@@ -575,16 +575,16 @@
         </ul>
         <div class="project-phase" data-i18n="proj1-ph3">AI Agent 自動化 · 2025</div>
         <ul class="project-achievements">
-          <li data-i18n="proj1-b1"><strong>整合</strong>平台 API 為意圖驅動 ML Agent（Dify Multi-Actor ReAct），全鏈自動接力，使用者介入自 6 個步驟<strong>降為 2 個節點</strong></li>
+          <li data-i18n="proj1-b1"><strong>整合</strong>平台 API 為意圖驅動 ML Agent（Dify Multi-Actor ReAct），整合意圖辨識、System Prompt 設計、工具調用與工作流程編排，<strong>實現模型訓練、任務監控與異常診斷的自動化操作</strong></li>
           <li data-i18n="proj1-b2"><strong>封裝</strong> 17 個低階平台工具為 <strong>10 個高階 Skill</strong>，隔離破壞性 API，降低 LLM 決策複雜度與誤操作風險</li>
           <li data-i18n="proj1-b3"><strong>設計</strong>獨立 context 診斷 sub-loop，自動產出修補重跑與重訓方案，涵蓋 <strong>5 類 ML 任務</strong>實機驗證</li>
         </ul>
         <div class="project-phase" data-i18n="proj1-ph2">可觀測性、壓測與 K8s 除錯 · 2026</div>
         <ul class="project-achievements">
-          <li data-i18n="proj1-a4"><strong>建置</strong> Kubernetes 可觀測性堆疊（kube-prometheus-stack、NVIDIA DCGM Exporter、Istio、eBPF Retina），涵蓋 <strong>1,500+ 項</strong>節點／容器／控制平面／GPU／網路指標，GPU 5 秒級取樣；以其中 <strong>31 項指標</strong>完成 GPU 算力（MFU）、儲存退化與 CPU 節流等根因分析</li>
-          <li data-i18n="proj1-a5"><strong>設計</strong>四軸系統性壓力測試（物件大小／模型規模／並發／多租戶，N≥3），撰寫自動化測試腳本建立 <strong>9 組可重複執行的實驗套件</strong>，內建開跑前環境檢查、結果有效性判定與無效自動重跑；將平台容量自無依據轉為量化上限：<strong>單卡 386M 參數、並行 4 任務</strong></li>
+          <li data-i18n="proj1-a4"><strong>建置</strong> Kubernetes 可觀測性堆疊（kube-prometheus-stack、NVIDIA DCGM Exporter、Istio、eBPF Retina），建立 <strong>100 項以上</strong>系統及 GPU 監控指標（節點／容器／控制平面／GPU／網路，GPU 5 秒級取樣），用於 GPU 算力（MFU）、儲存退化與 CPU 節流等根因分析</li>
+          <li data-i18n="proj1-a5"><strong>設計</strong>四軸系統性壓力測試（物件大小／模型規模／並發／多租戶，N≥3），撰寫自動化測試腳本建立 <strong>9 組可重複執行的實驗套件</strong>，內建開跑前環境檢查、結果有效性判定與無效自動重跑，<strong>涵蓋環境檢查、結果驗證與效能分析</strong></li>
           <li data-i18n="proj1-a6"><strong>定位並修復 7 項平台層故障根因</strong>（資料庫反覆崩潰、工作流程被誤刪、儲存節點媒體退化、物件儲存 CPU 節流與探針誤殺），負載下映像建置失敗率自 <strong>27% 降至 0</strong>，單物件處理上限自 470 MB 提升至 <strong>4.7 GB</strong></li>
-          <li data-i18n="proj1-a8">於 Kubeflow／Argo 管線以<strong>不侵入方式實作 GPU 分配器</strong>：延後綁定 gate、ConfigMap 帳本（CAS）、依模型大小排程（大模型獨占、小模型 MPS 併片）與建置前記憶體准入；真機驗證 MPS 同片聚合吞吐 <strong>+21–24%</strong>、整批完成時間 <strong>−13%</strong>、吞吐 +15%、平均完成時間 −17%，超限任務 <strong>5.1 秒內攔截</strong>（原需 368 秒才失敗）</li>
+          <li data-i18n="proj1-a8">於 Kubeflow／Argo 管線以<strong>不侵入方式實作 GPU 分配器</strong>：延後綁定 gate、ConfigMap 帳本（CAS）、依模型大小排程（大模型獨占、小模型 MPS 併片）與建置前記憶體准入；真機驗證 MPS 同片聚合吞吐 <strong>+21–24%</strong>、整批完成時間 <strong>−13%</strong>，並以資源使用門檻檢查機制避免資源超限造成任務執行失敗</li>
         </ul>
         </div>
         
@@ -968,7 +968,7 @@
       'stat3-sub': 'TA · IT consultant · Dept. website · Server room',
       'stat4-sub': 'Smart Networks SIG · Hanyang AI-RAN · NYCU O-RAN',
       'hero-title': 'M.S. Student, Electronic Engineering, NTUST<br>Seeking: Full-Stack Engineer / Cloud Engineer / AI Engineer',
-      'hero-desc': '<div class="hd-row"><div class="hd-k">Research</div><div class="hd-v">Cloud-native platforms, full-stack development, database design, AI agent architecture, GPU resource scheduling, digital twins, and O-RAN networks.</div></div><div class="hd-row"><div class="hd-k">Programs</div><div class="hd-v"><ul class="hd-list"><li>NSTC four-year 6G AI/ML platform program (years 3–4)</li><li>ITRI 5G digital twin program</li></ul></div></div><div class="hd-row"><div class="hd-k">Experience</div><div class="hd-v">Four concurrent IT roles:<ul class="hd-list"><li>Software engineering internship (US)</li><li>Campus IT systems administration</li><li>Corporate IT operations</li><li>EMI teaching assistantship</li></ul></div></div><div class="hd-row"><div class="hd-k">Skills</div><div class="hd-v"><div class="skill-chips"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>SQL</span><span>CI/CD</span><span>AI Agent</span><span>NVIDIA Sionna</span><span>NVIDIA Omniverse</span><span>O-RAN</span></div></div></div>',
+      'hero-desc': '<div class="hd-row"><div class="hd-k">Research</div><div class="hd-v">Cloud-native platforms, full-stack development, database design, AI agent architecture, GPU resource scheduling, digital twins, and O-RAN networks.</div></div><div class="hd-row"><div class="hd-k">Programs</div><div class="hd-v"><ul class="hd-list"><li>NSTC four-year 6G AI/ML platform program</li><li>ITRI 5G digital twin program</li></ul></div></div><div class="hd-row"><div class="hd-k">Experience</div><div class="hd-v">Four concurrent IT roles:<ul class="hd-list"><li>Software engineering internship (US)</li><li>Campus IT systems administration</li><li>Corporate IT operations</li><li>EMI teaching assistantship</li></ul></div></div><div class="hd-row"><div class="hd-k">Skills</div><div class="hd-v"><div class="skill-chips"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>SQL</span><span>CI/CD</span><span>AI Agent</span><span>NVIDIA Sionna</span><span>NVIDIA Omniverse</span><span>O-RAN</span></div></div></div>',
       'sidebar-school': '<strong>University:</strong> National Taiwan University of Science and Technology',
       'sidebar-dept': '<strong>Department:</strong> Electronic Engineering (Graduate)',
       'sidebar-status': '<strong>Status:</strong> 2nd-year M.S. student (graduating Jun 2027)',
@@ -1024,14 +1024,14 @@
       'proj1-a3': '<strong>Mapped</strong> the responsibilities, versions, and service dependencies of <strong>20+ Kubeflow components</strong> (Pipelines, Katib, KServe, Training Operator, Metadata), producing architecture and API reference docs used as the team&apos;s debugging baseline',
       'proj1-a7': '<strong>Fixed</strong> cross-service defects: added the missing <strong>cascading Kafka topic cleanup</strong> on project deletion, moved model metadata from &quot;created when training starts&quot; to <strong>stage-reported and persisted only on completion</strong>, and resolved Harbor restart failures caused by multi-container startup dependencies',
       'proj1-ph3': 'AI Agent Automation · 2025',
-      'proj1-b1': '<strong>Integrated</strong> the platform APIs into an intent-driven ML agent (Dify multi-actor ReAct) that chains the full workflow automatically, cutting user involvement from 6 steps to <strong>2 decision points</strong>',
+      'proj1-b1': '<strong>Integrated</strong> the platform APIs into an intent-driven ML agent (Dify multi-actor ReAct), combining intent recognition, system-prompt design, tool calling, and workflow orchestration to <strong>automate model training, job monitoring, and fault diagnosis</strong>',
       'proj1-b2': '<strong>Wrapped</strong> 17 low-level platform tools behind <strong>10 high-level skills</strong>, isolating destructive APIs and reducing both LLM decision complexity and mis-operation risk',
       'proj1-b3': '<strong>Designed</strong> an isolated-context diagnosis sub-loop that auto-generates patch-and-retry and retraining proposals, validated on real runs across <strong>5 ML task families</strong>',
       'proj1-ph2': 'Observability, Load Testing &amp; K8s Debugging · 2026',
-      'proj1-a4': '<strong>Built</strong> the Kubernetes observability stack (kube-prometheus-stack, NVIDIA DCGM Exporter, Istio, eBPF Retina) covering <strong>1,500+</strong> node, container, control-plane, GPU, and network metrics with 5-second GPU sampling; used <strong>31 of them</strong> to root-cause GPU utilization (MFU), storage degradation, and CPU throttling',
-      'proj1-a5': '<strong>Designed</strong> four-axis load testing (object size, model scale, concurrency, tenancy; N&ge;3) and wrote automation into <strong>9 repeatable experiment suites</strong> with pre-run environment checks, result-validity gating, and automatic re-runs on invalid results — turning platform capacity from guesswork into hard limits: <strong>386M parameters per card, 4 concurrent jobs</strong>',
+      'proj1-a4': '<strong>Built</strong> the Kubernetes observability stack (kube-prometheus-stack, NVIDIA DCGM Exporter, Istio, eBPF Retina) with <strong>100+</strong> node, container, control-plane, GPU, and network metrics at 5-second GPU sampling, used to root-cause GPU utilization (MFU), storage degradation, and CPU throttling',
+      'proj1-a5': '<strong>Designed</strong> four-axis load testing (object size, model scale, concurrency, tenancy; N&ge;3) and wrote automation into <strong>9 repeatable experiment suites</strong> with pre-run environment checks, result-validity gating, and automatic re-runs on invalid results, covering environment checks, result validation, and performance analysis',
       'proj1-a6': '<strong>Root-caused and fixed 7 platform-level faults</strong> (recurring database crashes, workflows silently deleted, storage media degradation, object-storage CPU throttling, probe kills), cutting the image-build failure rate under load from <strong>27% to 0</strong> and raising the single-object ceiling from 470 MB to <strong>4.7 GB</strong>',
-      'proj1-a8': 'Implemented a <strong>non-invasive GPU allocator</strong> for Kubeflow/Argo pipelines: deferred-binding gate, ConfigMap ledger with CAS, size-aware scheduling (large models exclusive, small models sharing a card via MPS), and pre-build memory admission. Measured on real hardware: MPS same-card aggregate throughput <strong>+21–24%</strong>, batch makespan <strong>&minus;13%</strong>, throughput +15%, mean completion time &minus;17%, and over-limit jobs rejected in <strong>5.1 s</strong> (previously 368 s to fail)',
+      'proj1-a8': 'Implemented a <strong>non-invasive GPU allocator</strong> for Kubeflow/Argo pipelines: deferred-binding gate, ConfigMap ledger with CAS, size-aware scheduling (large models exclusive, small models sharing a card via MPS), and pre-build memory admission. Measured on real hardware: MPS same-card aggregate throughput <strong>+21–24%</strong> and batch makespan <strong>&minus;13%</strong>, with a memory-admission check that stops over-limit jobs from failing mid-run',
       'proj4-badge': '★ Industry Collaboration',
       'proj4-title': '5G NR RAN Digital Twin — ITRI Industry-Academia Project',
       'proj4-period': 'Apr 2025 – Present · Industrial Technology Research Institute (ITRI) × NTUST',
