@@ -115,8 +115,14 @@
     .contact-links a { font-size: 0.8rem; color: var(--red); word-break: break-all; }
     .download-btn { display: inline-block; margin-top: 12px; padding: 8px 18px; font-size: 0.8rem; font-weight: 600; color: var(--white); background: var(--black); border: 1px solid var(--black); text-align: center; transition: background 0.2s, color 0.2s; }
     .download-btn:hover { background: var(--red); border-color: var(--red); color: var(--white); }
-    .hero-desc p { display: grid; grid-template-columns: 68px 1fr; gap: 0 14px; margin-bottom: 9px; }
-    .hd-k { font-size: 0.75rem; font-weight: 700; color: var(--red); letter-spacing: .04em; padding-top: 2px; }
+    .hd-row { display: grid; grid-template-columns: 72px 1fr; gap: 0 16px; margin-bottom: 11px; }
+    .hd-k { font-size: 0.75rem; font-weight: 700; color: var(--red); letter-spacing: .04em; padding-top: 3px; }
+    .hd-v { font-size: 0.875rem; color: var(--gray-700); line-height: 1.65; }
+    .hd-list { margin: 2px 0 0; padding: 0; list-style: none; }
+    .hd-list li { position: relative; padding-left: 14px; }
+    .hd-list li::before { content: '·'; position: absolute; left: 2px; color: var(--red); font-weight: 700; }
+    .skill-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 3px; }
+    .skill-chips span { font-size: 0.72rem; padding: 2px 9px; background: var(--gray-100); border: 1px solid var(--gray-300); color: var(--gray-700); }
 
     /* ── 附件 ── */
     #documents { padding: 80px 0; background: var(--gray-100, #f6f6f6); border-top: 1px solid var(--gray-200); }
@@ -162,7 +168,9 @@
       padding: 20px 0; border-bottom: 1px solid var(--gray-200);
     }
     .exp-summary { font-size: 0.82rem; color: var(--gray-600); margin-bottom: 8px; line-height: 1.6; }
-    .exp-item:last-child { border-bottom: none; }
+    .exp-group { margin-bottom: 44px; }
+    .exp-group:last-child { margin-bottom: 0; }
+    .exp-group .exp-item:last-child { border-bottom: none; }
     .exp-date { font-size: 0.8rem; color: var(--gray-600); font-weight: 500; padding-top: 3px; }
     .exp-role { font-size: 1.05rem; font-weight: 700; margin-bottom: 3px; }
     .exp-company { font-size: 0.88rem; color: var(--red); font-weight: 600; margin-bottom: 6px; }
@@ -179,6 +187,7 @@
     #projects { border-bottom: 1px solid var(--black); }
     .projects-grid { display: flex; flex-direction: column; gap: 26px; }
     .project-card { display: grid; grid-template-columns: 272px 1fr; gap: 0 38px; border: 1px solid var(--black); padding: 26px 28px; transition: border-color 0.2s; position: relative; }
+    .proj-foot { grid-column: 1 / -1; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--gray-200); }
     .proj-side { align-self: start; }
     .proj-main > :first-child { margin-top: 0; }
     .project-card:hover { border-color: var(--red); }
@@ -201,7 +210,6 @@
     .project-phase:first-child { margin-top: 0; }
     .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
     .project-tags .tag { font-size: 0.68rem; padding: 2px 8px; border-color: var(--gray-300); color: var(--gray-700); }
-    .proj-side .project-link { display: block; margin-top: 8px; }
     .project-link { font-size: 0.75rem; color: var(--red); margin-top: 10px; display: inline-block; }
 
     /* ── EDUCATION & SKILLS ── */
@@ -304,10 +312,10 @@
           應徵方向：全端工程師 / 雲端工程師 / AI 工程師
         </p>
         <div class="hero-desc" data-i18n="hero-desc">
-          <p><span class="hd-k">研究領域</span>雲端原生平台、全端系統開發、資料庫設計與管理、AI Agent 架構設計、GPU 資源調度、數位孿生與 O-RAN 通訊網路架構。</p>
-          <p><span class="hd-k">研究計畫</span>國科會四年期 6G AI/ML 平台研發計畫（負責後兩年）、工研院 5G 通訊數位孿生計畫。</p>
-          <p><span class="hd-k">實務經驗</span>海外軟體工程實習、校內資訊系統管理、企業資訊維運、EMI 課程教學助理，共四項。</p>
-          <p><span class="hd-k">專業技能</span>Python、Kubernetes、Docker、SQL、CI/CD、AI Agent、NVIDIA Sionna、NVIDIA Omniverse、O-RAN。</p>
+          <div class="hd-row"><div class="hd-k">研究領域</div><div class="hd-v">雲端原生平台、全端系統開發、資料庫設計與管理、AI Agent 架構設計、GPU 資源調度、數位孿生與 O-RAN 通訊網路架構。</div></div>
+          <div class="hd-row"><div class="hd-k">研究計畫</div><div class="hd-v"><ul class="hd-list"><li>國科會四年期 6G AI/ML 平台研發計畫（負責後兩年）</li><li>工研院 5G 通訊數位孿生計畫</li></ul></div></div>
+          <div class="hd-row"><div class="hd-k">實務經驗</div><div class="hd-v">具備四項實務工作經驗：<ul class="hd-list"><li>海外軟體工程實習</li><li>校內資訊系統管理</li><li>企業資訊維運</li><li>EMI 課程教學助理</li></ul></div></div>
+          <div class="hd-row"><div class="hd-k">專業技能</div><div class="hd-v"><div class="skill-chips"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>SQL</span><span>CI/CD</span><span>AI Agent</span><span>NVIDIA Sionna</span><span>NVIDIA Omniverse</span><span>O-RAN</span></div></div></div>
         </div>
         <div class="tags">
           <span class="tag red">Full-Stack Dev</span>
@@ -424,46 +432,8 @@
       <h2 class="section-title">Experience</h2>
     </div>
 
-    <div class="exp-item">
-      <div class="exp-date">2026.07</div>
-      <div class="exp-content">
-        <div class="exp-role" data-i18n="exp5-role">國際工作坊學員（赴韓）</div>
-        <div class="exp-company" data-i18n="exp5-company">韓國漢陽大學 6G 通訊研究中心</div>
-        <p class="exp-summary" data-i18n="exp5-sum">教育部雙語化學習計畫選送，全英語 O-RAN / AI-RAN 實作訓練。</p>
-        <ul class="exp-bullets">
-          <li data-i18n="exp5-b1">部署 <strong>Open5GS + srsRAN + FlexRIC Near-RT RIC</strong>，完成 KPM monitoring xApp 之 E2 訂閱與量測驗證</li>
-          <li data-i18n="exp5-b2">參訪 <strong>NVIDIA AODT</strong> 數位孿生平台與 O-RU 波束量測環境，結訓獲頒 Certificate of Attendance</li>
-        </ul>
-        <div class="exp-tags">
-          <span class="tag">O-RAN</span>
-          <span class="tag">AI-RAN</span>
-          <span class="tag">xApp / KPM</span>
-          <span class="tag">FlexRIC</span>
-          <span class="tag">srsRAN</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-date">2026.01 – 2026.02</div>
-      <div class="exp-content">
-        <div class="exp-role" data-i18n="exp1-role">後端／DevOps 工程師</div>
-        <div class="exp-company">SparkAmplify（美國加州）</div>
-        <p class="exp-summary" data-i18n="exp1-sum">赴美實習，負責 MySphere 學習平台的容器化部署與團隊協作流程建置。</p>
-        <ul class="exp-bullets">
-          <li data-i18n="exp1-b1">建立並維護 <strong>Git Workflow</strong> 協作流程（分支策略、PR 審核）</li>
-          <li data-i18n="exp1-b2">撰寫 Dockerfile 完成容器化部署，並以 <strong>Harbor</strong> 私有 Registry 管理 Image 版本</li>
-          <li data-i18n="exp1-b3">建置前後端分離架構，調整 <strong>Nginx</strong> 反向代理串接後端服務</li>
-        </ul>
-        <div class="exp-tags">
-          <span class="tag">Git Workflow</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Harbor</span>
-          <span class="tag">Nginx</span>
-        </div>
-      </div>
-    </div>
-
+    <div class="exp-group">
+      <div class="sub-title" data-i18n="exp-g1">工作經歷</div>
     <div class="exp-item">
       <div class="exp-date">2026.09 – 2027.08</div>
       <div class="exp-content">
@@ -484,7 +454,25 @@
         </div>
       </div>
     </div>
-
+    <div class="exp-item">
+      <div class="exp-date">2026.01 – 2026.02</div>
+      <div class="exp-content">
+        <div class="exp-role" data-i18n="exp1-role">後端／DevOps 工程師</div>
+        <div class="exp-company">SparkAmplify（美國加州）</div>
+        <p class="exp-summary" data-i18n="exp1-sum">赴美實習，負責 MySphere 學習平台的容器化部署與團隊協作流程建置。</p>
+        <ul class="exp-bullets">
+          <li data-i18n="exp1-b1">建立並維護 <strong>Git Workflow</strong> 協作流程（分支策略、PR 審核）</li>
+          <li data-i18n="exp1-b2">撰寫 Dockerfile 完成容器化部署，並以 <strong>Harbor</strong> 私有 Registry 管理 Image 版本</li>
+          <li data-i18n="exp1-b3">建置前後端分離架構，調整 <strong>Nginx</strong> 反向代理串接後端服務</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">Git Workflow</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Harbor</span>
+          <span class="tag">Nginx</span>
+        </div>
+      </div>
+    </div>
     <div class="exp-item">
       <div class="exp-date" data-i18n="exp3-date">2025.09 – 2027.08</div>
       <div class="exp-content">
@@ -504,20 +492,6 @@
         </div>
       </div>
     </div>
-
-    <div class="exp-item">
-      <div class="exp-date">2025.07 – 09<br>2026.07 – 09</div>
-      <div class="exp-content">
-        <div class="exp-role" data-i18n="exp2-role">產業研發專案成員</div>
-        <div class="exp-company" data-i18n="exp2-company">獵戶科技股份有限公司（經濟部新星飛揚計畫）</div>
-        <p class="exp-summary" data-i18n="exp2-sum">連續兩年入選經濟部產業實戰計畫（各三個月），首年題目為室內定位平台之研發。</p>
-        <div class="exp-tags">
-          <span class="tag" data-i18n="exp2-tag1">新星飛揚計畫</span>
-          <span class="tag" data-i18n="exp2-tag2">產業實訓</span>
-        </div>
-      </div>
-    </div>
-
     <div class="exp-item">
       <div class="exp-date">2025.08 – 現在</div>
       <div class="exp-content">
@@ -530,6 +504,42 @@
           <span class="tag" data-i18n="exp4-tag2">IT 支援</span>
         </div>
       </div>
+    </div>
+    </div>
+
+    <div class="exp-group">
+      <div class="sub-title" data-i18n="exp-g2">計畫與研習</div>
+    <div class="exp-item">
+      <div class="exp-date">2025.07 – 09<br>2026.07 – 09</div>
+      <div class="exp-content">
+        <div class="exp-role" data-i18n="exp2-role">產業研發專案成員</div>
+        <div class="exp-company" data-i18n="exp2-company">獵戶科技股份有限公司（經濟部新星飛揚計畫）</div>
+        <p class="exp-summary" data-i18n="exp2-sum">連續兩年入選經濟部產業實戰計畫（各三個月），首年題目為室內定位平台之研發。</p>
+        <div class="exp-tags">
+          <span class="tag" data-i18n="exp2-tag1">新星飛揚計畫</span>
+          <span class="tag" data-i18n="exp2-tag2">產業實訓</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2026.07</div>
+      <div class="exp-content">
+        <div class="exp-role" data-i18n="exp5-role">國際工作坊學員（赴韓）</div>
+        <div class="exp-company" data-i18n="exp5-company">韓國漢陽大學 6G 通訊研究中心</div>
+        <p class="exp-summary" data-i18n="exp5-sum">教育部雙語化學習計畫選送，全英語 O-RAN / AI-RAN 實作訓練。</p>
+        <ul class="exp-bullets">
+          <li data-i18n="exp5-b1">部署 <strong>Open5GS + srsRAN + FlexRIC Near-RT RIC</strong>，完成 KPM monitoring xApp 之 E2 訂閱與量測驗證</li>
+          <li data-i18n="exp5-b2">參訪 <strong>NVIDIA AODT</strong> 數位孿生平台與 O-RU 波束量測環境，結訓獲頒 Certificate of Attendance</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">O-RAN</span>
+          <span class="tag">AI-RAN</span>
+          <span class="tag">xApp / KPM</span>
+          <span class="tag">FlexRIC</span>
+          <span class="tag">srsRAN</span>
+        </div>
+      </div>
+    </div>
     </div>
 
   </div>
@@ -550,26 +560,6 @@
         <div class="project-featured-badge" data-i18n="proj1-badge">★ 主力研究計畫</div>
         <div class="project-title">6G AI/ML 訓練／推論平台 — 建置維運 × Agent 自動化 × 效能壓測</div>
         <div class="project-period" data-i18n="proj1-period">2025 – 2026 · 國科會 / 國立臺灣科技大學</div>
-        <div class="project-tags">
-          <span class="tag">KubeFlow</span>
-          <span class="tag">O-RAN</span>
-          <span class="tag">Dify</span>
-          <span class="tag">AI Agent / ReAct</span>
-          <span class="tag">LLM Tool Use</span>
-          <span class="tag">Kubernetes</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Kafka</span>
-          <span class="tag">Prometheus</span>
-          <span class="tag">PromQL</span>
-          <span class="tag">Istio</span>
-          <span class="tag">cgroup / cAdvisor</span>
-          <span class="tag">SeaweedFS</span>
-          <span class="tag">DCGM / vGPU</span>
-          <span class="tag">Cilium / VXLAN</span>
-          <span class="tag">AR/VR QoS</span>
-          <span class="tag">6G</span>
-        </div>
-        <a class="project-link" href="https://github.com/kimOuO/aiml_dashboard_agentic" target="_blank">→ GitHub</a>
         </div>
         <div class="proj-main">
         <p class="project-desc" data-i18n="proj1-desc">
@@ -596,6 +586,28 @@
           <li data-i18n="proj1-a8">於 Kubeflow／Argo 管線以<strong>不侵入方式實作 GPU 分配器</strong>：延後綁定 gate、ConfigMap 帳本（CAS）、依模型大小排程（大模型獨占、小模型 MPS 併片）與建置前記憶體准入；真機驗證 MPS 同片聚合吞吐 <strong>+21–24%</strong>、整批完成時間 <strong>−13%</strong>、吞吐 +15%、平均完成時間 −17%，超限任務 <strong>5.1 秒內攔截</strong>（原需 368 秒才失敗）</li>
         </ul>
         </div>
+        
+        <div class="proj-foot">
+        <div class="project-tags">
+          <span class="tag">KubeFlow</span>
+          <span class="tag">O-RAN</span>
+          <span class="tag">Dify</span>
+          <span class="tag">AI Agent / ReAct</span>
+          <span class="tag">LLM Tool Use</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Kafka</span>
+          <span class="tag">Prometheus</span>
+          <span class="tag">PromQL</span>
+          <span class="tag">Istio</span>
+          <span class="tag">cgroup / cAdvisor</span>
+          <span class="tag">SeaweedFS</span>
+          <span class="tag">DCGM / vGPU</span>
+          <span class="tag">Cilium / VXLAN</span>
+          <span class="tag">AR/VR QoS</span>
+          <span class="tag">6G</span>
+        </div>
+        </div>
       </div>
 
       <!-- Project 3: Featured -->
@@ -604,18 +616,6 @@
         <div class="project-featured-badge" data-i18n="proj2-badge">★ 赴美實習</div>
         <div class="project-title" data-i18n="proj2-title">MySphere — 英文分級故事學習平台</div>
         <div class="project-period" data-i18n="proj2-period">2025 – 2026 · 學海計畫 × SparkAmplify（洛杉磯）× 東華書局 · 赴美實習 2026/01–02</div>
-        <div class="project-tags">
-          <span class="tag">LLM</span>
-          <span class="tag">REST API</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Nginx</span>
-          <span class="tag">Harbor</span>
-          <span class="tag">GitHub Actions</span>
-          <span class="tag">CI/CD</span>
-          <span class="tag">Database</span>
-          <span class="tag">Git Workflow</span>
-          <span class="tag" data-i18n="proj2-tag1">學海計畫</span>
-        </div>
         </div>
         <div class="proj-main">
         <p class="project-desc" data-i18n="proj2-desc">
@@ -630,6 +630,21 @@
           <li data-i18n="proj2-a4">建立 <strong>Harbor</strong> Image 管理流程與 <strong>GitHub Actions CI/CD</strong>，規範團隊 Git Workflow 協作</li>
         </ul>
         </div>
+        
+        <div class="proj-foot">
+        <div class="project-tags">
+          <span class="tag">LLM</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Nginx</span>
+          <span class="tag">Harbor</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Database</span>
+          <span class="tag">Git Workflow</span>
+          <span class="tag" data-i18n="proj2-tag1">學海計畫</span>
+        </div>
+        </div>
       </div>
 
       <!-- Project: 工研院產學合作 DT -->
@@ -638,21 +653,6 @@
         <div class="project-featured-badge" data-i18n="proj4-badge">★ 產學合作</div>
         <div class="project-title" data-i18n="proj4-title">5G NR RAN 數位孿生平台 — 工研院產學合作</div>
         <div class="project-period" data-i18n="proj4-period">2025.04 – 進行中 · 工業技術研究院 × 國立臺灣科技大學</div>
-        <div class="project-tags">
-          <span class="tag">O-RAN</span>
-          <span class="tag">5G NR</span>
-          <span class="tag">Digital Twin</span>
-          <span class="tag">E2AP / ASN.1</span>
-          <span class="tag">SCTP</span>
-          <span class="tag">Sionna RT</span>
-          <span class="tag">NVIDIA Omniverse</span>
-          <span class="tag">Django</span>
-          <span class="tag">Next.js</span>
-          <span class="tag">Docker Compose</span>
-          <span class="tag">PostgreSQL</span>
-        </div>
-        <a class="project-link" href="https://github.com/kimOuO/RAN-sim-OAI" target="_blank">→ GitHub · RAN-sim-OAI</a>
-        <a class="project-link" href="https://github.com/kimOuO/Omnivers_platform" target="_blank">→ GitHub · Omnivers_platform</a>
         </div>
         <div class="proj-main">
         <p class="project-desc" data-i18n="proj4-desc">
@@ -667,6 +667,22 @@
           <li data-i18n="proj4-a4"><strong>拆解</strong> CU / DU / RU / UE 為獨立 Django 微服務並自製 <strong>HTTP ↔ ASN.1 / SCTP E2 Adapter</strong>，xApp 無需改碼即可在孿生與實體 Near-RT RIC 間切換；Docker Compose 整合 10+ 服務一鍵啟動，支援 10 gNB / 多 cell、最長 24 小時劇本重播</li>
         </ul>
         </div>
+        
+        <div class="proj-foot">
+        <div class="project-tags">
+          <span class="tag">O-RAN</span>
+          <span class="tag">5G NR</span>
+          <span class="tag">Digital Twin</span>
+          <span class="tag">E2AP / ASN.1</span>
+          <span class="tag">SCTP</span>
+          <span class="tag">Sionna RT</span>
+          <span class="tag">NVIDIA Omniverse</span>
+          <span class="tag">Django</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Docker Compose</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+        </div>
       </div>
 
       <!-- Project: 大學部實務專題 -->
@@ -674,15 +690,6 @@
         <div class="proj-side">
         <div class="project-title" data-i18n="proj3-title">SSD 長尾延遲優化 — Deep Q-Learning 閒置時間 GC 排程</div>
         <div class="project-period" data-i18n="proj3-period">2024 · 國立臺灣科技大學 電子工程系</div>
-        <div class="project-tags">
-          <span class="tag">Reinforcement Learning</span>
-          <span class="tag">Deep Q-Learning</span>
-          <span class="tag">Python</span>
-          <span class="tag">C++</span>
-          <span class="tag">Cython</span>
-          <span class="tag">MQSim</span>
-          <span class="tag">SSD / Storage</span>
-        </div>
         </div>
         <div class="proj-main">
         <p class="project-desc" data-i18n="proj3-desc">
@@ -693,6 +700,18 @@
           <li data-i18n="proj3-a1">以 <strong>Deep Q-Learning</strong> 預測系統閒置時間並主動排程 GC，降低 Forced GC 的觸發機率以改善長尾延遲</li>
           <li data-i18n="proj3-a2">以 <strong>Cython</strong> 橋接 Python RL Agent 與 C++ 模擬器 <strong>MQSim</strong> 完成跨語言整合，並於企業級 I/O trace 上驗證可行性</li>
         </ul>
+        </div>
+        
+        <div class="proj-foot">
+        <div class="project-tags">
+          <span class="tag">Reinforcement Learning</span>
+          <span class="tag">Deep Q-Learning</span>
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">Cython</span>
+          <span class="tag">MQSim</span>
+          <span class="tag">SSD / Storage</span>
+        </div>
         </div>
       </div>
 
@@ -941,12 +960,14 @@
       'doc2-name': 'Yao-Ching Huang — Autobiography',
       'doc3-name': 'Undergraduate GPA &amp; Rank Certificate',
       'doc3-sub': 'GPA 4.04 / 4.30 · Dept. 10 / 104 · Class 3 / 29',
+      'exp-g1': 'Professional Experience',
+      'exp-g2': 'Programs &amp; Workshops',
       'stat1-sub': 'ITRI collaboration · NSTC 6G platform',
       'stat2-sub': 'SparkAmplify (US) · New Star Program x2',
       'stat3-sub': 'TA · IT consultant · Dept. website · Server room',
       'stat4-sub': 'Smart Networks SIG · Hanyang AI-RAN · NYCU O-RAN',
       'hero-title': 'M.S. Student, Electronic Engineering, NTUST<br>Seeking: Full-Stack Engineer / Cloud Engineer / AI Engineer',
-      'hero-desc': '<p><span class="hd-k">Research</span>Cloud-native platforms, full-stack development, database design, AI agent architecture, GPU resource scheduling, digital twins, and O-RAN networks.</p><p><span class="hd-k">Projects</span>NSTC four-year 6G AI/ML platform program (years 3–4) and ITRI 5G digital twin program.</p><p><span class="hd-k">Experience</span>Software engineering internship in the US, campus IT systems administration, corporate IT operations, and EMI teaching assistantship.</p><p><span class="hd-k">Skills</span>Python, Kubernetes, Docker, SQL, CI/CD, AI agents, NVIDIA Sionna, NVIDIA Omniverse, O-RAN.</p>',
+      'hero-desc': '<div class="hd-row"><div class="hd-k">Research</div><div class="hd-v">Cloud-native platforms, full-stack development, database design, AI agent architecture, GPU resource scheduling, digital twins, and O-RAN networks.</div></div><div class="hd-row"><div class="hd-k">Programs</div><div class="hd-v"><ul class="hd-list"><li>NSTC four-year 6G AI/ML platform program (years 3–4)</li><li>ITRI 5G digital twin program</li></ul></div></div><div class="hd-row"><div class="hd-k">Experience</div><div class="hd-v">Four concurrent IT roles:<ul class="hd-list"><li>Software engineering internship (US)</li><li>Campus IT systems administration</li><li>Corporate IT operations</li><li>EMI teaching assistantship</li></ul></div></div><div class="hd-row"><div class="hd-k">Skills</div><div class="hd-v"><div class="skill-chips"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>SQL</span><span>CI/CD</span><span>AI Agent</span><span>NVIDIA Sionna</span><span>NVIDIA Omniverse</span><span>O-RAN</span></div></div></div>',
       'sidebar-school': '<strong>University:</strong> National Taiwan University of Science and Technology',
       'sidebar-dept': '<strong>Department:</strong> Electronic Engineering (Graduate)',
       'sidebar-status': '<strong>Status:</strong> 2nd-year M.S. student (graduating Jun 2027)',
