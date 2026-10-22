@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>YAO-CHING HUANG</title><style>
+@page { size: A4; margin: 10mm 13mm 9mm 13mm; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans CJK TC', 'Noto Sans TC', Arial, sans-serif;
+       font-size: 8.4pt; line-height: 1.44; color: #22262e; }
+a { color: #2E50CA; text-decoration: none; }
+
+.head { display: flex; gap: 11px; align-items: flex-start; margin-bottom: 9px; }
+.head img { width: 20mm; border-radius: 2px; }
+.head-txt { flex: 1; }
+.name { font-size: 20pt; font-weight: 700; letter-spacing: -0.01em; line-height: 1.1; }
+.name small { font-size: 10.5pt; font-weight: 500; color: #5b6475; margin-left: 7px; letter-spacing: 0; }
+.affil { font-size: 8pt; color: #5b6475; margin-top: 2px; }
+.contact { font-size: 8pt; color: #2E50CA; margin-top: 2px; }
+.contact span { color: #b9c0cd; margin: 0 9px; }
+
+.skills { border-left: 2.5px solid #2E50CA; padding-left: 9px; margin: 9px 0 4px; }
+.skills table { width: 100%; border-collapse: collapse; }
+.skills td { padding: 0.7px 0; vertical-align: top; }
+.sk-k { width: 46mm; font-weight: 700; font-size: 8pt; color: #1f2740; }
+.sk-s { width: 5mm; color: #c7cedb; }
+.sk-v { font-size: 8pt; color: #3a4150; }
+
+h2 { font-size: 10.5pt; font-weight: 700; color: #2E50CA; margin: 9px 0 1px;
+     padding-bottom: 2px; border-bottom: 1px solid #d8e0f0; }
+
+.entry { margin-top: 5.5px; }
+.entry.tight { margin-top: 4px; }
+.e-head { display: flex; align-items: baseline; gap: 8px; }
+.e-title { flex: 1; font-size: 8.8pt; font-weight: 700; color: #1b2030; }
+.e-date { font-size: 7.6pt; color: #868f9e; white-space: nowrap; }
+.e-sub { font-size: 8pt; color: #4a5160; margin-top: 1px; }
+ul { list-style: none; margin-top: 1.5px; }
+li { position: relative; padding-left: 10px; margin-bottom: 1.2px; }
+li::before { content: '\2022'; position: absolute; left: 1px; color: #9aa3b4; }
+b { font-weight: 700; color: #11151d; }
+.awards li { margin-bottom: 3.5px; }
+body { font-size: 8.1pt; } .e-title { font-size: 8.6pt; } .awards li { margin-bottom: 2.5px; }</style></head>
+<body>
+<div class="head"><div class="head-txt">
+  <div class="name">YAO-CHING HUANG</div>
+  <div class="affil">M.S. in Electronic Engineering, NTUST | Mobile Information Technology Lab (MITLab)</div>
+  <div class="contact">kim36991294@gmail.com<span>|</span>github.com/kimOuO<span>|</span>0958-831-242</div>
+</div></div>
+<div class="skills"><table><tr><td class="sk-k">Programming Languages</td><td class="sk-s">|</td><td class="sk-v">Python, Go, SQL, Cython, JavaScript</td></tr><tr><td class="sk-k">Full-Stack & Database</td><td class="sk-s">|</td><td class="sk-v">React, Django, REST API, PostgreSQL, MariaDB, MySQL</td></tr><tr><td class="sk-k">AI & Agent</td><td class="sk-s">|</td><td class="sk-v">Dify, Multi-Agent, ReAct, LangGraph, MCP, CLI, RAG, n8n</td></tr><tr><td class="sk-k">Cloud Infrastructure</td><td class="sk-s">|</td><td class="sk-v">Linux, Docker, Kubernetes, Nginx, Harbor, Rancher, Harvester</td></tr><tr><td class="sk-k">DevOps</td><td class="sk-s">|</td><td class="sk-v">Git, GitHub Actions, CI/CD</td></tr><tr><td class="sk-k">GPU Computing</td><td class="sk-s">|</td><td class="sk-v">NVIDIA MPS, CUDA, NVIDIA DCGM</td></tr><tr><td class="sk-k">Monitoring & Testing</td><td class="sk-s">|</td><td class="sk-v">Prometheus, Istio, eBPF</td></tr><tr><td class="sk-k">Digital Twin & Simulation</td><td class="sk-s">|</td><td class="sk-v">NVIDIA Omniverse, NVIDIA Sionna RT</td></tr><tr><td class="sk-k">5G & Networking</td><td class="sk-s">|</td><td class="sk-v">O-RAN, 5G NR, OpenAirInterface (OAI), E2AP</td></tr></table></div>
+<h2>Education</h2>
+<div class="entry tight"><div class="e-head"><div class="e-title">NTUST | M.S. in Electronic Engineering | <b>GPA 4.18 / 4.30</b></div><div class="e-date">Sep 2025 – Jul 2027 (expected)</div></div></div>
+<div class="entry tight"><div class="e-head"><div class="e-title">NTUST | B.S. in Electronic Engineering | <b>GPA 4.04 / 4.30</b></div><div class="e-date">Sep 2021 – Jun 2025</div></div><div class="e-sub">Class rank <b>3 / 29</b> | Department rank <b>10 / 104</b></div></div>
+<h2>Research &amp; Industry Projects</h2>
+<div class="entry"><div class="e-head"><div class="e-title">NSTC Four-Year 6G Initiative | AI/ML Platform &amp; AI Agents</div><div class="e-date">Jun 2025 – Present</div></div><ul><li><b>Platform Integration:</b> Integrated <b>20+ Docker/Kubernetes</b> services and <b>Kubeflow/Argo</b> workflows to support AI/ML operations.</li><li><b>Platform Reliability:</b> Built monitoring with <b>Prometheus/NVIDIA DCGM</b>, developed nine automated stress-test suites, and resolved <b>seven</b> platform-level issues.</li><li>Designed an <b>NVIDIA MPS</b> GPU scheduler, increasing aggregate throughput by <b>21–24%</b> and reducing batch completion time by <b>13%</b>.</li><li>Developed <b>Dify Multi-Agent ReAct</b> workflows with intent-aware tools and backend execution logic for automated model training, monitoring, and diagnosis.</li></ul></div>
+<div class="entry"><div class="e-head"><div class="e-title">ITRI | 5G NR RAN Digital Twin &amp; O-RAN Integration</div><div class="e-date">Apr 2026 – Present</div></div><ul><li>Developed an <b>E2 Adapter</b> connecting simulated RAN to <b>Near-RT RIC</b>; integrated <b>NVIDIA Omniverse/Sionna RT</b> for 3D radio-channel simulation.</li><li>Achieved <b>90–96%</b> agreement with <b>OAI rfsim</b> metrics; reduced mean simulation error from <b>50.1%</b> to <b>2.5%</b> using ML calibration.</li></ul></div>
+<h2>Professional Experience</h2>
+<div class="entry"><div class="e-head"><div class="e-title">SparkAmplify (California, USA) | Backend / DevOps Engineering Intern</div><div class="e-date">Jan – Mar 2026</div></div><ul><li>Developed <b>REST APIs</b>, database <b>schemas</b>, and <b>LLM API</b> chatbot integration for the MySphere platform.</li><li>Deployed containerized services using <b>Docker/Nginx/Harbor</b> and automated image builds and deployment with <b>GitHub Actions CI/CD</b>.</li></ul></div>
+<div class="entry"><div class="e-head"><div class="e-title">NTUST | Systems Operations &amp; Database Administrator</div><div class="e-date">Sep 2026 – Present</div></div><ul><li>Maintained <b>PHP/MariaDB</b> systems, developed backend features in <b>Go</b>, and resolved system and user-reported issues.</li></ul></div>
+<div class="entry"><div class="e-head"><div class="e-title">NTUST | Calculus Teaching Assistant (EMI)</div><div class="e-date">Sep 2025 – Present</div></div><ul><li>Built a course system with <b>React/Django</b> and a <b>RAG-powered AI Agent</b> for automated exam and Word document generation.</li></ul></div>
+<div class="entry"><div class="e-head"><div class="e-title">Ying Na Industrial Co., Ltd. | IT Systems Administrator</div><div class="e-date">Aug 2025 – Present</div></div><ul><li>Maintained servers, databases, internal IT systems and backups; handled equipment procurement, licensing, and employee IT support.</li></ul></div>
+<h2>Awards &amp; International Activities</h2>
+<ul class="awards"><li><b>2026 Hanyang University 6G AI-RAN/O-RAN Workshop:</b> Deployed <b>Open5GS, srsRAN, FlexRIC</b> and a KPM monitoring xApp.</li><li><b>2026 Intelligent Networking SIG Seminar:</b> Presented <b>6G RAN Digital Twin</b> and <b>AI Agent</b> demonstrations.</li><li><b>2025–2026 MOEA Space &amp; Networking R&amp;D Program:</b> Selected in two consecutive years; received a <b>2025 Outstanding Performance</b> certificate.</li></ul>
+<h2>Selected Projects</h2>
+<div class="entry tight"><div class="e-head"><div class="e-title">1st NTUST Youth Startup Hackathon</div><div class="e-date">Aug 2026</div></div><ul><li>Entry <b>FairWinds</b> &mdash; an IoT fan-sharing rental service. Built the <b>ESP32</b> locker firmware and cloud integration, <b>backend APIs and database schema</b>, and frontend animation wiring; a full rent-to-return prototype in three days.</li></ul></div>
+<div class="entry tight"><div class="e-head"><div class="e-title">LLM-Powered Productivity Assistant</div></div><ul><li>Built <b>LangGraph/ReAct</b> agent workflows with short- and long-term memory, <b>MySQL</b> queries, and <b>MCP</b> tools for email and calendar tasks.</li></ul></div>
+<div class="entry tight"><div class="e-head"><div class="e-title">SSD Garbage Collection Scheduling Optimization</div></div><ul><li>Studied <b>Deep Q-Learning</b> scheduling; connected Python to an existing C++ simulator via <b>Cython</b> and evaluated 100,000 I/O traces.</li></ul></div>
+</body></html>

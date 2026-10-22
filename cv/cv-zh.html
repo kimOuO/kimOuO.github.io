@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8"><title>黃耀慶</title><style>
+@page { size: A4; margin: 10mm 13mm 9mm 13mm; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans CJK TC', 'Noto Sans TC', Arial, sans-serif;
+       font-size: 8.4pt; line-height: 1.44; color: #22262e; }
+a { color: #2E50CA; text-decoration: none; }
+
+.head { display: flex; gap: 11px; align-items: flex-start; margin-bottom: 9px; }
+.head img { width: 20mm; border-radius: 2px; }
+.head-txt { flex: 1; }
+.name { font-size: 20pt; font-weight: 700; letter-spacing: -0.01em; line-height: 1.1; }
+.name small { font-size: 10.5pt; font-weight: 500; color: #5b6475; margin-left: 7px; letter-spacing: 0; }
+.affil { font-size: 8pt; color: #5b6475; margin-top: 2px; }
+.contact { font-size: 8pt; color: #2E50CA; margin-top: 2px; }
+.contact span { color: #b9c0cd; margin: 0 9px; }
+
+.skills { border-left: 2.5px solid #2E50CA; padding-left: 9px; margin: 9px 0 4px; }
+.skills table { width: 100%; border-collapse: collapse; }
+.skills td { padding: 0.7px 0; vertical-align: top; }
+.sk-k { width: 46mm; font-weight: 700; font-size: 8pt; color: #1f2740; }
+.sk-s { width: 5mm; color: #c7cedb; }
+.sk-v { font-size: 8pt; color: #3a4150; }
+
+h2 { font-size: 10.5pt; font-weight: 700; color: #2E50CA; margin: 9px 0 1px;
+     padding-bottom: 2px; border-bottom: 1px solid #d8e0f0; }
+
+.entry { margin-top: 5.5px; }
+.entry.tight { margin-top: 4px; }
+.e-head { display: flex; align-items: baseline; gap: 8px; }
+.e-title { flex: 1; font-size: 8.8pt; font-weight: 700; color: #1b2030; }
+.e-date { font-size: 7.6pt; color: #868f9e; white-space: nowrap; }
+.e-sub { font-size: 8pt; color: #4a5160; margin-top: 1px; }
+ul { list-style: none; margin-top: 1.5px; }
+li { position: relative; padding-left: 10px; margin-bottom: 1.2px; }
+li::before { content: '\2022'; position: absolute; left: 1px; color: #9aa3b4; }
+b { font-weight: 700; color: #11151d; }
+.awards li { margin-bottom: 3.5px; }
+</style></head>
+<body>
+<div class="head"><img src="photo.jpg" alt=""><div class="head-txt">
+  <div class="name">黃耀慶 <small>HUANG, YAO-CHING</small></div>
+  <div class="affil">國立臺灣科技大學 電子工程研究所｜資訊技術行動化實驗室（MITLab）</div>
+  <div class="contact">kim36991294@gmail.com<span>|</span>github.com/kimOuO<span>|</span>0958-831-242</div>
+</div></div>
+<div class="skills"><table><tr><td class="sk-k">Programming Languages</td><td class="sk-s">|</td><td class="sk-v">Python, Go, SQL, Cython, JavaScript</td></tr><tr><td class="sk-k">Full-Stack & Database</td><td class="sk-s">|</td><td class="sk-v">React, Django, REST API, PostgreSQL, MariaDB, MySQL</td></tr><tr><td class="sk-k">AI & Agent</td><td class="sk-s">|</td><td class="sk-v">Dify, Multi-Agent, ReAct, LangGraph, MCP, CLI, RAG, n8n</td></tr><tr><td class="sk-k">Cloud Infrastructure</td><td class="sk-s">|</td><td class="sk-v">Linux, Docker, Kubernetes, Nginx, Harbor, Rancher, Harvester</td></tr><tr><td class="sk-k">DevOps</td><td class="sk-s">|</td><td class="sk-v">Git, GitHub Actions, CI/CD</td></tr><tr><td class="sk-k">GPU Computing</td><td class="sk-s">|</td><td class="sk-v">NVIDIA MPS, CUDA, NVIDIA DCGM</td></tr><tr><td class="sk-k">Monitoring & Testing</td><td class="sk-s">|</td><td class="sk-v">Prometheus, Istio, eBPF</td></tr><tr><td class="sk-k">Digital Twin & Simulation</td><td class="sk-s">|</td><td class="sk-v">NVIDIA Omniverse, NVIDIA Sionna RT</td></tr><tr><td class="sk-k">5G & Networking</td><td class="sk-s">|</td><td class="sk-v">O-RAN, 5G NR, OpenAirInterface (OAI), E2AP</td></tr></table></div>
+<h2>學歷｜Education</h2>
+<div class="entry tight"><div class="e-head"><div class="e-title">國立臺灣科技大學 電子工程研究所｜碩士班　<b>GPA 4.18 / 4.30</b></div><div class="e-date">2025.09 – 2027.07（預計）</div></div></div>
+<div class="entry tight"><div class="e-head"><div class="e-title">國立臺灣科技大學 電子工程學系｜學士班　<b>GPA 4.04 / 4.30</b></div><div class="e-date">2021.09 – 2025.06</div></div><div class="e-sub">大學班排名 <b>3 / 29</b>｜系排名 <b>10 / 104</b></div></div>
+<h2>產學研究｜Industry–Academia Research</h2>
+<div class="entry"><div class="e-head"><div class="e-title">國科會四年期 6G 前瞻技術研發計畫｜AI/ML 平台與 AI Agent</div><div class="e-date">2025.06 – 進行中</div></div><ul><li><b>平台整合</b>：整合 <b>20+ Docker / Kubernetes</b> 服務與 <b>Kubeflow / Argo</b> 工作流程，支援 AI/ML 平台運作。</li><li><b>平台維運</b>：透過 <b>Prometheus</b>、<b>NVIDIA DCGM</b> 建立監控及 <b>9 組</b>自動化壓測，定位並解決 <b>7 項</b>平台問題。</li><li>設計 <b>NVIDIA MPS</b> GPU 調度機制，提升整體吞吐量 <b>21–24%</b>，批次任務完成時間縮短 <b>13%</b>。</li><li>開發 <b>Dify Multi-Agent ReAct</b> 工作流程，結合意圖辨識、工具調用與後端邏輯，實現模型訓練、監控與診斷自動化。</li></ul></div>
+<div class="entry"><div class="e-head"><div class="e-title">工研院｜5G NR RAN 數位孿生與 O-RAN 系統整合</div><div class="e-date">2026.04 – 進行中</div></div><ul><li>開發 <b>E2 Adapter</b> 串接模擬 RAN 與 <b>Near-RT RIC</b>，整合 <b>NVIDIA Omniverse</b>、<b>Sionna RT</b> 建置 3D 無線通道模擬環境。</li><li>與 <b>OAI rfsim</b> 關鍵指標達 <b>90–96%</b> 一致性；以 ML 校正將平均誤差從 <b>50.1%</b> 降至 <b>2.5%</b>。</li></ul></div>
+<h2>工作經驗｜Professional Experience</h2>
+<div class="entry"><div class="e-head"><div class="e-title">SparkAmplify（美國加州）｜Backend / DevOps 實習生</div><div class="e-date">2026.01 – 2026.03</div></div><ul><li>參與 MySphere 平台開發，設計後端 <b>REST API</b>、資料庫 <b>Schema</b>，並整合 <b>LLM API</b> 聊天機器人。</li><li>使用 <b>Docker</b>、<b>Nginx</b>、<b>Harbor</b> 建置容器化服務與私有映像檔儲存庫，透過 <b>GitHub Actions CI/CD</b> 自動完成建置及部署。</li></ul></div>
+<div class="entry"><div class="e-head"><div class="e-title">國立臺灣科技大學｜系所資訊系統維運與資料庫管理</div><div class="e-date">2026.09 – 迄今</div></div><ul><li>維護 <b>PHP / MariaDB</b> 系統，使用 <b>Go</b> 開發後端功能，負責系統異常排除及使用者需求處理。</li></ul></div>
+<div class="entry"><div class="e-head"><div class="e-title">國立臺灣科技大學｜EMI 微積分教學助理</div><div class="e-date">2025.09 – 迄今</div></div><ul><li>使用 <b>React</b>、<b>Django</b>、<b>RAG</b>、<b>AI Agent</b> 開發教學管理與智慧出題系統，整合工具調用自動產製 Word 考卷。</li></ul></div>
+<div class="entry"><div class="e-head"><div class="e-title">應拿實業有限公司｜IT 系統管理員</div><div class="e-date">2025.08 – 迄今</div></div><ul><li>負責公司伺服器、資料庫與資訊系統維運、資料備份，以及設備採購、軟體授權與同仁 IT 技術支援。</li></ul></div>
+<h2>獲選與研習｜Awards & Activities</h2>
+<ul class="awards"><li><b>2026 韓國漢陽大學 6G AI-RAN / O-RAN 國際工作坊</b>：實作 <b>Open5GS</b>、<b>srsRAN</b>、<b>FlexRIC</b> 系統建置及 KPM xApp。</li><li><b>2026 智慧網路 SIG 研討會</b>：代表實驗室展示 <b>6G RAN Digital Twin</b> 與 <b>AI Agent</b> 技術。</li><li><b>2025–2026 經濟部太空產業暨網通新星飛揚計畫</b>：連續兩年入選，2025 年獲頒「<b>表現優異</b>」證書。</li></ul>
+<h2>其他實作專題｜Selected Projects</h2>
+<div class="entry tight"><div class="e-head"><div class="e-title">第一屆臺科青創－創業黑客松</div><div class="e-date">2026.08</div></div><ul><li>參賽作品「<b>FairWinds 借風</b>」IoT 風扇共享租借服務，負責 <b>ESP32</b> 智慧櫃韌體與雲端串接、<b>後端 API 與資料庫設計</b>及前端動畫串接，三天內完成下單、開櫃、計時計費至跨站歸還結算之完整原型。</li></ul></div>
+<div class="entry tight"><div class="e-head"><div class="e-title">LLM 智慧工作助理系統</div></div><ul><li>使用 <b>LangGraph</b>、<b>ReAct</b> 設計 Agent 流程，整合短／長期記憶、<b>MySQL</b> 查詢及 <b>MCP</b> 工具，支援郵件與行事曆操作。</li></ul></div>
+<div class="entry tight"><div class="e-head"><div class="e-title">SSD 垃圾回收排程最佳化</div></div><ul><li>以 <b>Deep Q-Learning</b> 分析 SSD 排程，使用 <b>Cython</b> 串接既有 C++ 模擬器，並以十萬筆 I/O trace 驗證。</li></ul></div>
+</body></html>
