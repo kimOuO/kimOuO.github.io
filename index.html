@@ -186,6 +186,16 @@
     .projects-grid { display: flex; flex-direction: column; gap: 26px; }
     .project-card { display: grid; grid-template-columns: 272px 1fr; gap: 0 38px; border: 1px solid var(--black); padding: 26px 28px; transition: border-color 0.2s; position: relative; }
     .proj-foot { grid-column: 1 / -1; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--gray-200); }
+    .proj-video { margin-top: 16px; }
+    .yt-embed { display: block; position: relative; width: 100%; max-width: 620px; padding: 0; border: 1px solid var(--gray-300); background: #000; cursor: pointer; line-height: 0; }
+    .yt-embed img { display: block; width: 100%; height: auto; }
+    .yt-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 62px; height: 44px; border-radius: 10px; background: rgba(0,0,0,0.72); transition: background 0.2s; }
+    .yt-play::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-40%, -50%); border-style: solid; border-width: 10px 0 10px 17px; border-color: transparent transparent transparent #fff; }
+    .yt-embed:hover .yt-play { background: var(--red); }
+    .proj-video iframe { display: block; width: 100%; max-width: 620px; aspect-ratio: 16 / 9; border: 1px solid var(--gray-300); }
+    .proj-video figcaption { font-size: 0.72rem; color: var(--gray-500); margin-top: 5px; }
+    .proj-link { display: inline-block; margin-top: 10px; font-size: 0.78rem; font-weight: 600; color: var(--red); }
+    .proj-link:hover { text-decoration: underline; }
     .proj-side { align-self: start; }
     .proj-main > :first-child { margin-top: 0; }
     .project-card:hover { border-color: var(--red); }
@@ -511,6 +521,25 @@
     <div class="exp-group">
       <div class="sub-title" data-i18n="exp-g2">計畫與研習</div>
     <div class="exp-item">
+      <div class="exp-date">2026.08</div>
+      <div class="exp-content">
+        <div class="exp-role" data-i18n="exp7-role">參賽團隊成員（3 人）</div>
+        <div class="exp-company" data-i18n="exp7-company">第一屆 臺科青創－創業黑客松　｜　團隊「順風順水 FairWinds」</div>
+        <p class="exp-summary" data-i18n="exp7-sum">臺科大傑出校友聯誼會發起、創新育成中心承辦之校內創業選拔，提案為 IoT 風扇共享租借服務。</p>
+        <ul class="exp-bullets">
+          <li data-i18n="exp7-b1">負責 <strong>ESP32 智慧櫃</strong>韌體與串接、<strong>後端服務與資料庫設計</strong>、前端動畫串接</li>
+          <li data-i18n="exp7-b2">與商管背景隊友分工，從市場與單位經濟試算到可操作原型完整走過一輪創業提案流程</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">ESP32 / IoT</span>
+          <span class="tag">後端 API</span>
+          <span class="tag">資料庫設計</span>
+          <span class="tag">創業提案</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
       <div class="exp-date">2025.07 – 09<br>2026.07 – 09</div>
       <div class="exp-content">
         <div class="exp-role" data-i18n="exp2-role">產業研發專案成員</div>
@@ -586,6 +615,13 @@
           <li data-i18n="proj1-b2"><strong>封裝</strong> 17 個低階平台工具為 <strong>10 個高階 Skill</strong>，隔離破壞性 API，降低 LLM 決策複雜度與誤操作風險</li>
           <li data-i18n="proj1-b3"><strong>設計</strong>獨立 context 診斷 sub-loop，自動產出修補重跑與重訓方案，涵蓋 <strong>5 類 ML 任務</strong>實機驗證</li>
         </ul>
+        <figure class="proj-video">
+          <button class="yt-embed" type="button" data-yt="omLVW4IhBlM" aria-label="播放 Agent Demo">
+            <img src="img/docs/poster_agent.jpg" alt="AI/ML 平台 Agent Demo" loading="lazy">
+            <span class="yt-play" aria-hidden="true"></span>
+          </button>
+          <figcaption data-i18n="vid-agent">實機錄影　以對話完成訓練專案建立、資料集掛載與結果回報（2 分 44 秒）</figcaption>
+        </figure>
         </div>
         
         <div class="proj-foot">
@@ -667,6 +703,13 @@
           <li data-i18n="proj4-a3"><strong>優化</strong>殘差誤差：自建<strong>可插拔 ML 校正器</strong>（quantile GBT，不污染 DT 物理層），整體平均誤差自 <strong>50.1% 降至 2.5%</strong>（PRB 114.8%→<strong>3.0%</strong>、延遲 79.5%→<strong>0.8%</strong>），並將 PRB 分佈標準差自 6.93 收斂至 0.53，CDF 貼合 OAI</li>
           <li data-i18n="proj4-a4"><strong>拆解</strong> CU / DU / RU / UE 為獨立 Django 微服務並自製 <strong>HTTP ↔ ASN.1 / SCTP E2 Adapter</strong>，xApp 無需改碼即可在孿生與實體 Near-RT RIC 間切換；Docker Compose 整合 10+ 服務一鍵啟動，支援 10 gNB / 多 cell、最長 24 小時劇本重播</li>
         </ul>
+        <figure class="proj-video">
+          <button class="yt-embed" type="button" data-yt="i-GVQKOymVs" aria-label="播放 RAN Simulator Demo">
+            <img src="img/docs/poster_dt.jpg" alt="RAN Simulator Demo" loading="lazy">
+            <span class="yt-play" aria-hidden="true"></span>
+          </button>
+          <figcaption data-i18n="vid-dt">實機錄影　場景編輯、網路元件佈建到模擬執行與指標監控的完整流程（4 分 41 秒）</figcaption>
+        </figure>
         </div>
         
         <div class="proj-foot">
@@ -682,6 +725,41 @@
           <span class="tag">Next.js</span>
           <span class="tag">Docker Compose</span>
           <span class="tag">PostgreSQL</span>
+        </div>
+        </div>
+      </div>
+
+      <!-- Project: 創業黑客松 -->
+      <div class="project-card">
+        <div class="proj-side">
+        <div class="project-featured-badge" style="color:var(--gray-500);" data-i18n="proj5-badge">創業黑客松　參賽作品</div>
+        <div class="project-title" data-i18n="proj5-title">FairWinds 借風 — 風扇共享租借服務</div>
+        <div class="project-period" data-i18n="proj5-period">2026.08 · 第一屆臺科青創－創業黑客松 · 團隊「順風順水」（3 人）</div>
+        </div>
+        <div class="proj-main">
+        <div class="proj-meta">
+          <div class="pm-row"><span class="pm-k" data-i18n="proj5-k1">題目</span><span class="pm-v" data-i18n="proj5-v1">以 IoT 智慧櫃提供手持製冷風扇的定點租借與跨站歸還，租借、計費與結算全程在 App 完成，站點無需人員值守。</span></div>
+          <div class="pm-row"><span class="pm-k" data-i18n="proj5-k2">我負責</span><span class="pm-v" data-i18n="proj5-v2"><strong>ESP32 智慧櫃韌體與串接、後端服務與資料庫設計、前端動畫串接</strong></span></div>
+        </div>
+        <ul class="project-achievements">
+          <li data-i18n="proj5-a1"><strong>ESP32 智慧櫃</strong>：電磁鎖控制、格位與風扇狀態回報、充電狀態偵測，並與雲端服務串接完成開櫃授權流程</li>
+          <li data-i18n="proj5-a2"><strong>後端與資料庫設計</strong>：站點、櫃位、設備與租借紀錄的資料模型，以及租借、計費與跨站歸還結算的 API</li>
+          <li data-i18n="proj5-a3"><strong>前端動畫串接</strong>：將 App 的租借流程動畫與後端狀態同步，讓開櫃、取用與歸還的每一步都有即時回饋</li>
+          <li data-i18n="proj5-a4">三天內完成可實際操作的原型：手機下單 → ESP32 開櫃 → 計時計費 → 歸還結算全鏈路跑通</li>
+        </ul>
+        <a class="proj-link" href="https://youtu.be/1UKHYQvWR44" target="_blank" rel="noopener" data-i18n="proj5-demo">▶ 系統 Demo 影片（YouTube）</a>
+        <a class="proj-link" href="順風順水_初審簡報.pdf" target="_blank" rel="noopener" style="margin-left:18px;" data-i18n="proj5-deck">初審簡報 PDF</a>
+        </div>
+        
+        <div class="proj-foot">
+        <div class="project-tags">
+          <span class="tag">ESP32</span>
+          <span class="tag">IoT</span>
+          <span class="tag">韌體串接</span>
+          <span class="tag">REST API</span>
+          <span class="tag">資料庫設計</span>
+          <span class="tag">前端動畫</span>
+          <span class="tag">行動支付</span>
         </div>
         </div>
       </div>
@@ -911,6 +989,13 @@
           <div class="doc-sub">PDF · 6 pages</div>
         </div>
       </a>
+      <a class="doc-card" href="順風順水_初審簡報.pdf" target="_blank" rel="noopener">
+        <img class="doc-thumb" src="img/docs/fairwinds_deck.png" alt="FairWinds 初審簡報" loading="lazy">
+        <div class="doc-meta">
+          <div class="doc-name" data-i18n="doc7-name">FairWinds 借風　創業黑客松初審簡報</div>
+          <div class="doc-sub" data-i18n="doc7-sub">第一屆臺科青創－創業黑客松 · 2026.08</div>
+        </div>
+      </a>
       <a class="doc-card" href="img/docs/rank_cert.png" target="_blank" rel="noopener">
         <img class="doc-thumb fit" src="img/docs/rank_cert.png" alt="學生名次證明" loading="lazy">
         <div class="doc-meta">
@@ -958,6 +1043,18 @@
 </footer>
 
 <script>
+  // YouTube: 點擊才載入 iframe，首頁不會因為兩部影片而變慢
+  document.querySelectorAll('.yt-embed').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + btn.dataset.yt + '?autoplay=1&rel=0';
+      f.title = btn.getAttribute('aria-label') || 'YouTube';
+      f.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
+      f.allowFullscreen = true;
+      btn.replaceWith(f);
+    });
+  });
+
   // Mobile menu
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -988,6 +1085,28 @@
       'doc5-name': 'Hanyang University 6G Workshop — Certificate',
       'doc5-sub': 'MOE Bilingual Learning Program · 2026',
       'doc3-sub': 'GPA 4.04 / 4.30 · Dept. 10 / 104 · Class 3 / 29',
+      'vid-agent': 'Screen capture — creating a training project, attaching a dataset, and reporting results, all through conversation (2 min 44 s)',
+      'vid-dt': 'Screen capture — scene editing, network element placement, simulation run, and KPI monitoring end to end (4 min 41 s)',
+      'proj5-badge': 'Startup Hackathon Entry',
+      'proj5-title': 'FairWinds — Shared Portable-Fan Rental Service',
+      'proj5-period': 'Aug 2026 · 1st NTUST Youth Startup Hackathon · Team FairWinds (3 members)',
+      'proj5-k1': 'Concept',
+      'proj5-v1': 'IoT lockers that rent out handheld cooling fans and accept returns at any station; renting, metering, and settlement all happen in the app, with no staff on site.',
+      'proj5-k2': 'My scope',
+      'proj5-v2': '<strong>ESP32 locker firmware and integration, backend services and database design, frontend animation wiring</strong>',
+      'proj5-a1': '<strong>ESP32 locker</strong>: solenoid lock control, slot and fan status reporting, charge detection, wired to the cloud service for the unlock authorization flow',
+      'proj5-a2': '<strong>Backend and database</strong>: data model for stations, slots, devices, and rental records, plus the APIs for renting, metering, and cross-station settlement',
+      'proj5-a3': '<strong>Frontend animation wiring</strong>: synchronized the app\u2019s rental animations with backend state so every step gives immediate feedback',
+      'proj5-a4': 'Delivered a working prototype in three days: order on the phone, ESP32 opens the locker, metering runs, return settles the charge',
+      'proj5-demo': '\u25b6 System demo (YouTube)',
+      'proj5-deck': 'Pitch deck (PDF)',
+      'exp7-role': 'Team member (3-person team)',
+      'exp7-company': '1st NTUST Youth Startup Hackathon \u2014 Team FairWinds',
+      'exp7-sum': 'A campus startup selection run by the NTUST Innovation Incubation Center; our entry was an IoT fan-sharing rental service.',
+      'exp7-b1': 'Owned the <strong>ESP32 locker</strong> firmware and integration, <strong>backend services and database design</strong>, and frontend animation wiring',
+      'exp7-b2': 'Worked alongside teammates from business backgrounds, covering market sizing and unit economics through to a working prototype',
+      'doc7-name': 'FairWinds \u2014 Startup Hackathon Pitch Deck',
+      'doc7-sub': '1st NTUST Youth Startup Hackathon · Aug 2026',
       'exp-g1': 'Professional Experience',
       'exp-g2': 'Programs &amp; Workshops',
       'stat1-sub': 'ITRI collaboration · NSTC 6G platform',
