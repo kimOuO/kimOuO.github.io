@@ -8,7 +8,7 @@ CONTACT = {
 }
 
 SKILLS = [
-    ('Programming Languages', 'Python, Go, SQL, Cython, JavaScript'),
+    ('Programming Languages', 'Python, SQL, Cython, JavaScript'),
     ('Full-Stack & Database', 'React, Django, REST API, PostgreSQL, MariaDB, MySQL'),
     ('AI & Agent', 'Dify, Multi-Agent, ReAct, LangGraph, MCP, CLI, RAG, n8n'),
     ('Cloud Infrastructure', 'Linux, Docker, Kubernetes, Nginx, Harbor, Rancher, Harvester'),
@@ -55,7 +55,7 @@ ZH = {
              ]},
             {'title': '國立臺灣科技大學｜系所資訊系統維運與資料庫管理',
              'date': '2026.09 – 迄今', 'sub': '', 'items': [
-                 '維護 <b>PHP / MariaDB</b> 系統，使用 <b>Go</b> 開發後端功能，負責系統異常排除及使用者需求處理。',
+                 '維護 <b>PHP / MariaDB</b> 系統，開發與修改後端功能，負責系統異常排除及使用者需求處理。',
              ]},
             {'title': '國立臺灣科技大學｜EMI 微積分教學助理',
              'date': '2025.09 – 迄今', 'sub': '', 'items': [
@@ -126,7 +126,7 @@ EN = {
              ]},
             {'title': 'NTUST | Systems Operations &amp; Database Administrator',
              'date': 'Sep 2026 – Present', 'sub': '', 'items': [
-                 'Maintained <b>PHP/MariaDB</b> systems, developed backend features in <b>Go</b>, and resolved system and user-reported issues.',
+                 'Maintained <b>PHP/MariaDB</b> systems, developed and extended backend features, and resolved system and user-reported issues.',
              ]},
             {'title': 'NTUST | Calculus Teaching Assistant (EMI)',
              'date': 'Sep 2025 – Present', 'sub': '', 'items': [
