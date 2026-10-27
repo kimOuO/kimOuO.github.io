@@ -75,7 +75,7 @@ ZH = {
         ]),
         ('其他實作專題｜Selected Projects', 'proj', [
             {'title': '第一屆臺科青創－創業黑客松', 'date': '2026.08', 'sub': '', 'items': [
-                '參賽作品「<b>FairWinds 借風</b>」IoT 風扇共享租借服務，負責 <b>ESP32</b> 智慧櫃韌體與雲端串接、'
+                '擔任<b>組長</b>，參賽作品「<b>FairWinds 借風</b>」IoT 風扇共享租借服務，負責 <b>ESP32</b> 智慧櫃韌體與雲端串接、'
                 '<b>後端 API 與資料庫設計</b>及前端動畫串接，三天內完成下單、開櫃、計時計費至跨站歸還結算之完整原型。',
             ]},
             {'title': 'LLM 智慧工作助理系統', 'date': '', 'sub': '', 'items': [
@@ -146,7 +146,7 @@ EN = {
         ]),
         ('Selected Projects', 'proj', [
             {'title': '1st NTUST Youth Startup Hackathon', 'date': 'Aug 2026', 'sub': '', 'items': [
-                'Entry <b>FairWinds</b> &mdash; an IoT fan-sharing rental service. Built the <b>ESP32</b> locker firmware and cloud '
+                '<b>Team lead.</b> Entry <b>FairWinds</b> &mdash; an IoT fan-sharing rental service. Built the <b>ESP32</b> locker firmware and cloud '
                 'integration, <b>backend APIs and database schema</b>, and frontend animation wiring; a full rent-to-return prototype in three days.',
             ]},
             {'title': 'LLM-Powered Productivity Assistant', 'date': '', 'sub': '', 'items': [
